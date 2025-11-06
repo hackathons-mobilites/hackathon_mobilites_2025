@@ -1,0 +1,40 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            2.12187,
+            48.897868
+          ],
+          [
+            2.12182,
+            48.897935
+          ],
+          [
+            2.121714,
+            48.898074
+          ]
+        ]
+      },
+      "properties": {
+        "arret_id": "479329",
+        "arret_nom": "Le Vésinet - Le Pecq",
+        "arret_type": "rail",
+        "poi_id": "way/1250582575",
+        "poi_nom": "Parking vélo",
+        "poi_type": "Parking vélo",
+        "distance_vol_oiseau": 31.85,
+        "distance_reelle": 25,
+        "duree_marche": 0.0,
+        "code_insee": "78650",
+        "commune": "Le Vésinet",
+        "epci": "CA Saint Germain Boucles de Seine",
+        "departement": "Yvelines"
+      }
+    }
+  ]
+}

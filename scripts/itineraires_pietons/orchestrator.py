@@ -1,6 +1,7 @@
 """
 Orchestrateur principal - coordonne les différents services (Application Layer).
 """
+
 import random
 import logging
 from pathlib import Path
@@ -37,6 +38,7 @@ class ItineraryOrchestrator:
         output_folder: Optional[Path] = None,
         max_distance: float = MAX_DISTANCE,
         limit: Optional[int] = None,
+        communes: Optional[list] = None,
     ) -> int:
         """
         Pipeline complet de génération des itinéraires.
@@ -47,6 +49,7 @@ class ItineraryOrchestrator:
             output_folder: dossier de sortie
             max_distance: rayon de recherche (m)
             limit: limite du nombre d'itinéraires à générer (pour tests)
+            communes: liste de codes INSEE de communes à filtrer (optionnel)
 
         Returns:
             Nombre d'itinéraires générés
@@ -56,10 +59,21 @@ class ItineraryOrchestrator:
         # 1. Chargement des données
         df_poi, df_arrets = DataLoader.load_data(poi_path, arrets_path)
 
+        # 1b. Filtrage par communes si spécifié
+        if communes:
+            logger.info(f"Filtrage des arrêts pour les communes: {communes}")
+            # Convertir INSEE_COM en string pour la comparaison
+            df_arrets["INSEE_COM"] = df_arrets["INSEE_COM"].astype(str)
+            communes_str = [str(c) for c in communes]
+            df_arrets = df_arrets[df_arrets["INSEE_COM"].isin(communes_str)]
+            logger.info(f"{len(df_arrets)} arrêts après filtrage par communes")
+
+            if len(df_arrets) == 0:
+                logger.warning(f"Aucun arrêt trouvé pour les communes: {communes}")
+                return 0
+
         # 2. Recherche spatiale
-        pairs = self.spatial_service.find_nearby_pois(
-            df_arrets, df_poi, max_distance
-        )
+        pairs = self.spatial_service.find_nearby_pois(df_arrets, df_poi, max_distance)
 
         if not pairs:
             logger.warning("Aucune paire arrêt-POI trouvée dans le rayon spécifié")
@@ -98,7 +112,9 @@ class ItineraryOrchestrator:
                 generated_count += 1
 
             except Exception as e:
-                logger.error(f"Erreur lors du traitement de la paire {arret_id}-{poi_id}: {e}")
+                logger.error(
+                    f"Erreur lors du traitement de la paire {arret_id}-{poi_id}: {e}"
+                )
                 continue
 
         logger.info(

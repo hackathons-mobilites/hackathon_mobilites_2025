@@ -1,6 +1,7 @@
 """
 Services de chargement et préparation des données (Data Layer).
 """
+
 import logging
 import pandas as pd
 from typing import Tuple

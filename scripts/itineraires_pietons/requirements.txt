@@ -1,0 +1,20 @@
+# Requirements pour le package itineraires_pietons
+# Génération d'itinéraires piétons entre arrêts de transport et POI
+
+# Data manipulation et analyse
+pandas>=2.0.0
+numpy>=1.24.0
+pyarrow>=10.0.0  # pour lecture parquet
+
+# Calculs spatiaux et géométriques
+scipy>=1.10.0  # pour cKDTree et calculs haversine
+
+# Routing et cartographie
+routingpy>=1.3.0  # interface avec Valhalla
+
+# Interface utilisateur et progression
+tqdm>=4.65.0  # barres de progression
+
+# Optionnel pour améliorer les performances
+# geopandas>=0.14.0  # pour projections EPSG:2154 (précision métrique)
+# shapely>=2.0.0  # manipulations géométriques avancées

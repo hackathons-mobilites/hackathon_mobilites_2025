@@ -19,45 +19,18 @@ itineraires_pietons/
 └── export_service.py    # Export GeoJSON (Business Logic)
 ```
 
-### Couches
-
-1. **Presentation Layer** (`cli.py`)
-   - Interface en ligne de commande
-   - Parsing des arguments
-   - Configuration du logging
-
-2. **Application Layer** (`orchestrator.py`)
-   - Orchestre le workflow complet
-   - Coordonne les services métier
-   - Gère les erreurs et le logging
-
-3. **Business Logic Layer**
-   - `spatial_service.py`: recherche spatiale (KDTree, haversine)
-   - `routing_service.py`: calcul d'itinéraires via Valhalla
-   - `export_service.py`: création et export de GeoJSON
-
-4. **Data Layer** (`data_loader.py`)
-   - Chargement des fichiers POI et arrêts
-   - Nettoyage et filtrage des données
-   - Validation des colonnes
-
-5. **Configuration** (`config.py`)
-   - Constantes et paramètres
-   - Chemins de fichiers
-   - Types de POI pertinents
-
 ## Utilisation
 
 ### Installation des dépendances
 
 ```powershell
-pip install pandas numpy scipy routingpy tqdm
+pip install -r requirements.txt
 ```
 
 ### Exécution basique
 
 ```powershell
-# Depuis le dossier 'autres'
+# Depuis le dossier 'scripts'
 python -m itineraires_pietons
 
 # Ou avec options
@@ -75,43 +48,36 @@ Options:
   --output PATH           Dossier de sortie
   --distance METERS       Rayon de recherche (défaut: 500m)
   --limit N               Limiter à N itinéraires (tests)
+  --communes CODE [CODE ...] Filtrer par code(s) INSEE (ex: 75056 92050)
   --valhalla-url URL      URL serveur Valhalla
   -v, --verbose           Mode debug
 ```
 
-### Utilisation programmatique
-
-```python
-from itineraires_pietons import ItineraryOrchestrator
-
-orchestrator = ItineraryOrchestrator()
-count = orchestrator.generate_itineraries(
-    limit=50,  # Test sur 50 itinéraires
-    max_distance=750  # Rayon de 750m
-)
-print(f"{count} itinéraires générés")
-```
-
-## Avantages de cette architecture
-
-1. **Séparation des responsabilités** : chaque module a un rôle clair
-2. **Testabilité** : chaque service peut être testé indépendamment
-3. **Maintenabilité** : modifications localisées sans impact sur les autres couches
-4. **Réutilisabilité** : les services peuvent être utilisés dans d'autres contextes
-5. **Extensibilité** : facile d'ajouter de nouveaux services (ex: manifest CSV, validation)
-
-## Tests rapides
+### Exemples d'utilisation
 
 ```powershell
-# Test avec 10 itinéraires seulement
-python -m itineraires_pietons --limit 10 -v
+# Générer des itinéraires uniquement pour Paris (75056)
+python -m itineraires_pietons --communes 75056
 
-# Test avec rayon différent
-python -m itineraires_pietons --distance 300 --limit 5
+# Générer pour plusieurs communes (Paris et Nanterre)
+python -m itineraires_pietons --communes 75056 92050
+
+# Combiner avec d'autres filtres
+python -m itineraires_pietons --communes 75056 --distance 300 --limit 20 -v
 ```
 
-## Prochaines évolutions
+⚠️ Il est aussi possible de restreindre ou de changer les types de POI considérés via le fichier *poi_types_relevant.txt*.
+Pour ce faire choisissez les POI qui vous sont pertinents dans le fichier *all_poi_types.txt* et reportez-les dans le fichier *relevant*.
+Ainsi vous pouvez par exemple générer uniquement les tracés des gares vers les boulangeries de la commune de Versailles (78000).
 
-- Tests unitaires (pytest) pour chaque service
-- Projection EPSG:2154 pour distances métriques exactes
-- Parallélisation des calculs Valhalla
+## Scripts utilitaires
+
+### unify_geojsons.py
+
+Script utilitaire pour agréger plusieurs fichiers GeoJSON en un seul fichier unifié. Utile pour consolider les itinéraires générés par commune ou par zone géographique.
+
+```powershell
+python unify_geojsons.py
+```
+
+Ce script parcourt les fichiers GeoJSON de sortie et les combine en une seule FeatureCollection, facilitant ainsi l'analyse globale et la visualisation cartographique des données.

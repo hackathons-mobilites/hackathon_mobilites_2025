@@ -1,0 +1,100 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            1.960062,
+            48.830712
+          ],
+          [
+            1.960061,
+            48.830692
+          ],
+          [
+            1.9603,
+            48.830689
+          ],
+          [
+            1.960359,
+            48.830674
+          ],
+          [
+            1.960309,
+            48.830641
+          ],
+          [
+            1.960372,
+            48.830558
+          ],
+          [
+            1.960431,
+            48.830543
+          ],
+          [
+            1.960566,
+            48.830515
+          ],
+          [
+            1.960606,
+            48.830514
+          ],
+          [
+            1.960652,
+            48.830512
+          ],
+          [
+            1.960656,
+            48.830462
+          ],
+          [
+            1.960915,
+            48.830458
+          ],
+          [
+            1.961094,
+            48.830455
+          ],
+          [
+            1.961502,
+            48.830449
+          ],
+          [
+            1.961939,
+            48.830442
+          ],
+          [
+            1.962259,
+            48.830437
+          ],
+          [
+            1.962264,
+            48.830575
+          ],
+          [
+            1.962268,
+            48.830686
+          ]
+        ]
+      },
+      "properties": {
+        "arret_id": "471108",
+        "arret_nom": "Plaisir - Les Clayes",
+        "arret_type": "rail",
+        "poi_id": "way/2330001707",
+        "poi_nom": "Komomarché",
+        "poi_type": "Supermarché",
+        "distance_vol_oiseau": 151.23,
+        "distance_reelle": 210,
+        "duree_marche": 0.0,
+        "code_insee": "78490",
+        "commune": "Plaisir",
+        "epci": "CA de Saint-Quentin-en-Yvelines",
+        "departement": "Yvelines"
+      }
+    }
+  ]
+}

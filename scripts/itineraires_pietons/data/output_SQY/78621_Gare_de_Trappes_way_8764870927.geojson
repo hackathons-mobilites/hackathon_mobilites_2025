@@ -1,0 +1,88 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            2.006929,
+            48.77508
+          ],
+          [
+            2.006877,
+            48.775163
+          ],
+          [
+            2.006687,
+            48.775112
+          ],
+          [
+            2.006574,
+            48.775095
+          ],
+          [
+            2.006318,
+            48.775031
+          ],
+          [
+            2.006191,
+            48.774995
+          ],
+          [
+            2.006052,
+            48.774959
+          ],
+          [
+            2.005977,
+            48.774937
+          ],
+          [
+            2.005791,
+            48.774892
+          ],
+          [
+            2.005735,
+            48.774895
+          ],
+          [
+            2.005685,
+            48.774907
+          ],
+          [
+            2.005634,
+            48.774924
+          ],
+          [
+            2.00542,
+            48.775065
+          ],
+          [
+            2.00527,
+            48.775187
+          ],
+          [
+            2.005044,
+            48.775369
+          ]
+        ]
+      },
+      "properties": {
+        "arret_id": "41250",
+        "arret_nom": "Gare de Trappes",
+        "arret_type": "rail",
+        "poi_id": "way/8764870927",
+        "poi_nom": "Mille Feuille",
+        "poi_type": "Librairie",
+        "distance_vol_oiseau": 141.52,
+        "distance_reelle": 173,
+        "duree_marche": 0.0,
+        "code_insee": "78621",
+        "commune": "Trappes",
+        "epci": "CA de Saint-Quentin-en-Yvelines",
+        "departement": "Yvelines"
+      }
+    }
+  ]
+}

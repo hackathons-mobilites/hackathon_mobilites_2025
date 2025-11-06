@@ -1,6 +1,7 @@
 """
 Point d'entrée CLI pour la génération d'itinéraires piétons.
 """
+
 import argparse
 import logging
 import sys
@@ -62,6 +63,14 @@ def main():
     )
 
     parser.add_argument(
+        "--communes",
+        type=str,
+        nargs="+",
+        default=None,
+        help="Filtrer par code(s) INSEE de commune(s) (ex: 75056 pour Paris, 92050 pour Nanterre)",
+    )
+
+    parser.add_argument(
         "--valhalla-url",
         type=str,
         default=None,
@@ -91,6 +100,7 @@ def main():
             output_folder=Path(args.output),
             max_distance=args.distance,
             limit=args.limit,
+            communes=args.communes,
         )
         print(f"\n✓ {count} itinéraires générés avec succès")
         return 0

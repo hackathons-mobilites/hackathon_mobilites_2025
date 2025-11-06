@@ -1,0 +1,72 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            1.992726,
+            48.823566
+          ],
+          [
+            1.992669,
+            48.823606
+          ],
+          [
+            1.992351,
+            48.823828
+          ],
+          [
+            1.991779,
+            48.824248
+          ],
+          [
+            1.991692,
+            48.82417
+          ],
+          [
+            1.991426,
+            48.823931
+          ],
+          [
+            1.991355,
+            48.823868
+          ],
+          [
+            1.991272,
+            48.823798
+          ],
+          [
+            1.991078,
+            48.823636
+          ],
+          [
+            1.991042,
+            48.823604
+          ],
+          [
+            1.990483,
+            48.823118
+          ]
+        ]
+      },
+      "properties": {
+        "arret_id": "471442",
+        "arret_nom": "Villepreux - Les Clayes",
+        "arret_type": "rail",
+        "poi_id": "way/4677850581",
+        "poi_nom": "Caisse d'Épargne",
+        "poi_type": "Banque",
+        "distance_vol_oiseau": 188.14,
+        "distance_reelle": 260,
+        "duree_marche": 0.0,
+        "code_insee": "78165",
+        "commune": "Les Clayes-sous-Bois",
+        "epci": "CA de Saint-Quentin-en-Yvelines",
+        "departement": "Yvelines"
+      }
+    }
+  ]
+}

@@ -1,6 +1,7 @@
 """
 Service de calcul d'itinéraires via Valhalla (Business Logic Layer).
 """
+
 import logging
 from routingpy import Valhalla
 from typing import Optional
@@ -25,7 +26,9 @@ class RoutingService:
             valhalla_url: URL du serveur Valhalla (optionnel, utilise le défaut si None)
         """
         if valhalla_url:
-            self.client = Valhalla(base_url=valhalla_url, retry_over_query_limit=VALHALLA_RETRY_OVER_LIMIT)
+            self.client = Valhalla(
+                base_url=valhalla_url, retry_over_query_limit=VALHALLA_RETRY_OVER_LIMIT
+            )
         else:
             self.client = Valhalla(retry_over_query_limit=VALHALLA_RETRY_OVER_LIMIT)
         logger.info("Service de routing Valhalla initialisé")
@@ -49,5 +52,7 @@ class RoutingService:
             )
             return route
         except Exception as e:
-            logger.error(f"Erreur lors du calcul d'itinéraire {origin} -> {destination}: {e}")
+            logger.error(
+                f"Erreur lors du calcul d'itinéraire {origin} -> {destination}: {e}"
+            )
             return None

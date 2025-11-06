@@ -1,0 +1,56 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            2.134257,
+            48.89009
+          ],
+          [
+            2.134409,
+            48.8903
+          ],
+          [
+            2.134484,
+            48.890397
+          ],
+          [
+            2.134668,
+            48.890341
+          ],
+          [
+            2.134923,
+            48.89026
+          ],
+          [
+            2.134973,
+            48.890205
+          ],
+          [
+            2.135012,
+            48.890101
+          ]
+        ]
+      },
+      "properties": {
+        "arret_id": "473911",
+        "arret_nom": "Le Vésinet-Centre",
+        "arret_type": "rail",
+        "poi_id": "way/6335558129",
+        "poi_nom": "Parking vélo",
+        "poi_type": "Parking vélo",
+        "distance_vol_oiseau": 44.56,
+        "distance_reelle": 92,
+        "duree_marche": 0.0,
+        "code_insee": "78650",
+        "commune": "Le Vésinet",
+        "epci": "CA Saint Germain Boucles de Seine",
+        "departement": "Yvelines"
+      }
+    }
+  ]
+}

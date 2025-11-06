@@ -1,0 +1,100 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            1.992628,
+            48.823746
+          ],
+          [
+            1.992537,
+            48.823812
+          ],
+          [
+            1.992521,
+            48.823823
+          ],
+          [
+            1.992357,
+            48.823717
+          ],
+          [
+            1.992344,
+            48.823681
+          ],
+          [
+            1.992348,
+            48.823658
+          ],
+          [
+            1.992359,
+            48.823641
+          ],
+          [
+            1.992374,
+            48.82363
+          ],
+          [
+            1.99236,
+            48.823614
+          ],
+          [
+            1.992349,
+            48.823601
+          ],
+          [
+            1.992338,
+            48.823608
+          ],
+          [
+            1.992332,
+            48.823587
+          ],
+          [
+            1.992316,
+            48.823535
+          ],
+          [
+            1.992369,
+            48.823539
+          ],
+          [
+            1.992425,
+            48.823531
+          ],
+          [
+            1.992525,
+            48.823503
+          ],
+          [
+            1.992559,
+            48.82349
+          ],
+          [
+            1.992623,
+            48.82345
+          ]
+        ]
+      },
+      "properties": {
+        "arret_id": "41233",
+        "arret_nom": "Gare de Villepreux les Clayes",
+        "arret_type": "rail",
+        "poi_id": "way/10225444813",
+        "poi_nom": "Parking vélo",
+        "poi_type": "Parking vélo",
+        "distance_vol_oiseau": 26.04,
+        "distance_reelle": 78,
+        "duree_marche": 0.0,
+        "code_insee": "78165",
+        "commune": "Les Clayes-sous-Bois",
+        "epci": "CA de Saint-Quentin-en-Yvelines",
+        "departement": "Yvelines"
+      }
+    }
+  ]
+}

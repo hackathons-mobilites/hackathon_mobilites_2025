@@ -1,6 +1,7 @@
 """
 Configuration et constantes pour la génération d'itinéraires piétons.
 """
+
 from pathlib import Path
 
 # Chemins de base
@@ -44,9 +45,7 @@ VALHALLA_RETRY_OVER_LIMIT = True
 def load_poi_types():
     """Charge la liste des types de POI pertinents depuis le fichier de configuration."""
     if not POI_TYPES_FILE.exists():
-        raise FileNotFoundError(
-            f"Fichier des types POI introuvable : {POI_TYPES_FILE}"
-        )
+        raise FileNotFoundError(f"Fichier des types POI introuvable : {POI_TYPES_FILE}")
     with open(POI_TYPES_FILE, "r", encoding="utf-8") as f:
         return [line.strip() for line in f if line.strip()]
 

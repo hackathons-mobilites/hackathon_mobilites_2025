@@ -1,0 +1,80 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            1.922133,
+            48.744627
+          ],
+          [
+            1.92221,
+            48.744667
+          ],
+          [
+            1.922125,
+            48.744767
+          ],
+          [
+            1.922025,
+            48.744866
+          ],
+          [
+            1.922062,
+            48.744881
+          ],
+          [
+            1.922252,
+            48.74497
+          ],
+          [
+            1.922146,
+            48.745071
+          ],
+          [
+            1.921912,
+            48.744984
+          ],
+          [
+            1.921693,
+            48.745232
+          ],
+          [
+            1.921573,
+            48.745313
+          ],
+          [
+            1.921444,
+            48.74543
+          ],
+          [
+            1.921297,
+            48.745529
+          ],
+          [
+            1.921232,
+            48.745575
+          ]
+        ]
+      },
+      "properties": {
+        "arret_id": "472242",
+        "arret_nom": "Coignières",
+        "arret_type": "rail",
+        "poi_id": "way/12463550980",
+        "poi_nom": "Pharmacie des Halles",
+        "poi_type": "Pharmacie",
+        "distance_vol_oiseau": 156.47,
+        "distance_reelle": 170,
+        "duree_marche": 0.0,
+        "code_insee": "78168",
+        "commune": "Coignières",
+        "epci": "CA de Saint-Quentin-en-Yvelines",
+        "departement": "Yvelines"
+      }
+    }
+  ]
+}

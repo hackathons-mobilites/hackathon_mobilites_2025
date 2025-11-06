@@ -75,9 +75,3 @@ Ces GeoJSONs sont pensés pour être immédiatement utilisables par des scripts,
 
 	- Analysez les durées et distances réelles fournies par Valhalla pour détecter des itinéraires qui semblent longs par rapport à la distance à vol d'oiseau (zones qui pourraient gagner en accessibilité via améliorations d'infrastructures ou équipements pour l'accessibilité PMR).
 	- Croiser les données d'itinéraires piétons avec les données de marchabilité à l'ombre ou l'indice canopée de SQY par exemple pour favoriser la plantation d'arbres à proximité des stations.
-
-## Conseils rapides
-
-- Vérifiez que vos fichiers source respectent les colonnes minimales listées ci‑dessus avant d'exécuter le pipeline.
-- Si `id` n'est pas unique ou absent, activez la génération de `poi_uid` dans le DataLoader (prévu dans le code) pour éviter des collisions de noms.
-- Les coordonnées utilisées par Valhalla sont (lon, lat) ; le GeoJSON stocke la géométrie en (lon, lat) conformément à la spécification.

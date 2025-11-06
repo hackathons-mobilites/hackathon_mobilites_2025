@@ -6,6 +6,7 @@ Usage:
     ou
     python main.py
 """
+
 from itineraires_pietons.cli import main
 
 if __name__ == "__main__":

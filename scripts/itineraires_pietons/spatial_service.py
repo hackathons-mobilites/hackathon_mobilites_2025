@@ -1,6 +1,7 @@
 """
 Service de recherche spatiale et calculs de distance (Business Logic Layer).
 """
+
 import logging
 import numpy as np
 import pandas as pd

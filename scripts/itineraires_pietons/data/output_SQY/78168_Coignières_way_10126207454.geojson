@@ -1,0 +1,76 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            1.922133,
+            48.744627
+          ],
+          [
+            1.921908,
+            48.744511
+          ],
+          [
+            1.921269,
+            48.744089
+          ],
+          [
+            1.921191,
+            48.744054
+          ],
+          [
+            1.92118,
+            48.74405
+          ],
+          [
+            1.921107,
+            48.744017
+          ],
+          [
+            1.921274,
+            48.74395
+          ],
+          [
+            1.921119,
+            48.743844
+          ],
+          [
+            1.921131,
+            48.74381
+          ],
+          [
+            1.921129,
+            48.743787
+          ],
+          [
+            1.921148,
+            48.743776
+          ],
+          [
+            1.921066,
+            48.743724
+          ]
+        ]
+      },
+      "properties": {
+        "arret_id": "472242",
+        "arret_nom": "Coignières",
+        "arret_type": "rail",
+        "poi_id": "way/10126207454",
+        "poi_nom": "Parking vélo",
+        "poi_type": "Parking vélo",
+        "distance_vol_oiseau": 123.35,
+        "distance_reelle": 148,
+        "duree_marche": 0.0,
+        "code_insee": "78168",
+        "commune": "Coignières",
+        "epci": "CA de Saint-Quentin-en-Yvelines",
+        "departement": "Yvelines"
+      }
+    }
+  ]
+}

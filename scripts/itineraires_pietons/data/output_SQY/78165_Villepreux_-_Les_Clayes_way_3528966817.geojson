@@ -1,0 +1,92 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            1.992726,
+            48.823566
+          ],
+          [
+            1.992669,
+            48.823606
+          ],
+          [
+            1.992351,
+            48.823828
+          ],
+          [
+            1.991779,
+            48.824248
+          ],
+          [
+            1.991692,
+            48.82417
+          ],
+          [
+            1.991426,
+            48.823931
+          ],
+          [
+            1.991355,
+            48.823868
+          ],
+          [
+            1.991308,
+            48.823891
+          ],
+          [
+            1.991249,
+            48.823906
+          ],
+          [
+            1.991184,
+            48.82391
+          ],
+          [
+            1.99112,
+            48.823901
+          ],
+          [
+            1.991063,
+            48.823881
+          ],
+          [
+            1.991017,
+            48.82385
+          ],
+          [
+            1.990945,
+            48.823848
+          ],
+          [
+            1.990878,
+            48.823846
+          ],
+          [
+            1.990762,
+            48.823861
+          ]
+        ]
+      },
+      "properties": {
+        "arret_id": "471442",
+        "arret_nom": "Villepreux - Les Clayes",
+        "arret_type": "rail",
+        "poi_id": "way/3528966817",
+        "poi_nom": "Pharmacie Imbert Duthoit",
+        "poi_type": "Pharmacie",
+        "distance_vol_oiseau": 159.89,
+        "distance_reelle": 202,
+        "duree_marche": 0.0,
+        "code_insee": "78165",
+        "commune": "Les Clayes-sous-Bois",
+        "epci": "CA de Saint-Quentin-en-Yvelines",
+        "departement": "Yvelines"
+      }
+    }
+  ]
+}
