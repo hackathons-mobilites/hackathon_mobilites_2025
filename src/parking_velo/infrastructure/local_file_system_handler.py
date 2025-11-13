@@ -17,3 +17,6 @@ class LocalFileSystemHandler(FileSystemHandler):
     def save_filtered_parking_velo_data(self, df: gpd.GeoDataFrame, filter: ParkingVeloFilters) -> None:
         os.makedirs(os.path.dirname(filter.get_path()), exist_ok=True)
         df.to_parquet(filter.get_path(), index=False)
+
+    def get_filtered_parking_velo_data(self, filter: ParkingVeloFilters) -> None:
+        return gpd.read_parquet(filter.get_path())

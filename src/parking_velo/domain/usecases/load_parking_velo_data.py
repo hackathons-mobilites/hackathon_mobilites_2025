@@ -1,6 +1,6 @@
 from src.parking_velo.domain.entities.parking_velo_to_gpd import parking_velo_to_gpd
-from parking_velo.domain.ports.file_system_handler import FileSystemHandler
-from parking_velo.domain.ports.source_handler import SourceHandler
+from src.parking_velo.domain.ports.file_system_handler import FileSystemHandler
+from src.parking_velo.domain.ports.source_handler import SourceHandler
 
 
 def load_parking_velo_data(source_handler: SourceHandler, file_system_handler: FileSystemHandler) -> None:

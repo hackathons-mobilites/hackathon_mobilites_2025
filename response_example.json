@@ -1,0 +1,239 @@
+[
+  {
+    "sections": [
+      {
+        "transportMode": "BIKE",
+        "duration": 1306,
+        "waypointsIndices": [
+          0,
+          234
+        ],
+        "geometry": "}h|e|AyyjmCN@LLBH~@[?ODSJKv@WB}DmKcDdE}IpAqC`IuPbKeVnGyJnRyGnJaDzE_BlFgBrHgC\\\\h]r[fBjBfBjBxA`B`g@xb@\\tBlAzHxCaAn@Sd@OJE~ElFnCbCpAfA`~@py@fA`AbF{]^wCxAv@nMdHdCtAoDdWpK`Gbi@fY|AyBlDgQ~ChB~S~K~d@dWtAt@~At@pz@ne@nBjAzA~@~A`AhA{EhSm}@jAoF~Gc[`EsQ`AoEj@cCjAkFp[{uA~@iEDQ`UgdAbA{ElAx@^VhIxFdEjCvMfKlMhPjB`CxGlIFjD\\dDp@xC`AhCrArB~AzAfB~@nB^nB?nB_@fB}@~AyArAsBbAiCtDjBzBfA~KtFxCxAfEtBdJ`E~BrEtFtCFDl@PzEbC~CzAnCe@nAZz@V~y@t_@vIdGzAhAxAvApCbG\\_Bn@sDXmCvC`BdB?vN}o@rBzAfUvPvEfDlCnBtB`Bz\\~W`At@|ZnUnKlIxAjArAjAfCjBv_@pXtClB~XvRrFvC|FlBdVdIbBp@jDxAxA~@fBqItFe^rDuVr@wEbCjBrA`Apo@tf@d@h@bPnQpWnSxOfJ~@h@pA`AxG`FzG|I`ExClHtFvRnQ~`@rp@nXdg@`A|AhBjD|GfMlBnDbFtHrC|DbO~VbCdEvAlCfAjCbEpJtJjTrArCjJnSpBpEvBiAbN}G~~Awy@hEkCdCkAPnEbFjV`@nB`@`C\\fBr^pjB~@xE\\hB\\fBLb@rDxSh@rCdAk@tAk@JEbtAci@nAkAl@}A|AoElEdEvLpLt@n@tAlAzBzSXbClC~VrH}CpBmB|KoV~@sBdCiClCqAxCa@fCNbBf@dBbAxPdUVV`o@xy@lA~AtH`KtAtBnDvEdg@lo@pClDt@z@jAt@nAJ`BUvJ_DZItCw@|@`C`@dA^bAGb@",
+        "estimatedDatetimeOfDeparture": "2022-01-31T12:00:00+02:00",
+        "estimatedDatetimeOfArrival": "2022-01-31T12:21:46+02:00",
+        "details": {
+          "distances": {
+            "total": 4704,
+            "normalRoads": 2056,
+            "recommendedRoads": 1845,
+            "discouragedRoads": 803,
+            "cycleway": 874,
+            "greenway": 0,
+            "lane": 141,
+            "livingstreet": 586,
+            "sharebusway": 813,
+            "footway": 10,
+            "pedestrian": 7,
+            "opposite": 0,
+            "steps": 0,
+            "zone30": 0,
+            "residential": 1378
+          },
+          "instructions": null,
+          "profile": "MEDIAN",
+          "direction": "Rue des Saints-Pères, Rue du Cherche-Midi",
+          "verticalGain": 19,
+          "verticalLoss": 0,
+          "calories": 113361,
+          "elevations": null,
+          "ridesets": [],
+          "averageSpeed": 16,
+          "bikeType": "TRADITIONAL"
+        },
+        "waypoints": [
+          {
+            "longitude": 2.33261,
+            "latitude": 48.872096,
+            "title": "Métro-Opéra, Place de l'Opéra 75009 Paris"
+          },
+          {
+            "longitude": 2.32134,
+            "latitude": 48.84059,
+            "title": "Gare Montparnasse Océane, 46 Avenue du Maine 75015 Paris"
+          }
+        ]
+      }
+    ],
+    "distances": {
+      "total": 4704,
+      "normalRoads": 2056,
+      "recommendedRoads": 1845,
+      "discouragedRoads": 803
+    },
+    "title": "RECOMMENDED",
+    "waypoints": [
+      {
+        "longitude": 2.33261,
+        "latitude": 48.872096,
+        "title": "Métro-Opéra, Place de l'Opéra 75009 Paris"
+      },
+      {
+        "longitude": 2.32134,
+        "latitude": 48.84059,
+        "title": "Gare Montparnasse Océane, 46 Avenue du Maine 75015 Paris"
+      }
+    ],
+    "estimatedDatetimeOfDeparture": "2022-01-31T12:00:00+02:00",
+    "estimatedDatetimeOfArrival": "2022-01-31T12:21:46+02:00",
+    "duration": 1306,
+    "id": "bG9jPTQ4Ljg3MjA5NiwyLjMzMjYxJmxvYz00OC44NDA1OSwyLjMyMTM0I01FRElBTiNGYWxzZSNNRURJQU4jMTYjRmFsc2UjTm9uZSMyMDIyLTAxLTMxIDEyOjAwOjAwKzAyOjAwI1RSQURJVElPTkFMIzAjMCNSRUNPTU1FTkRFRCNGYWxzZSNGYWxzZQ=="
+  },
+  {
+    "sections": [
+      {
+        "transportMode": "BIKE",
+        "duration": 1608,
+        "waypointsIndices": [
+          0,
+          300
+        ],
+        "geometry": "}h|e|AyyjmCN@LLBH~@[?ODSJKv@WB}DmKcDdE}IpAqC`IuPbKeVnGyJnRyGnJaDzE_BlFgBrHgC\\\\h]r[fBjBx@mH\\eDl@}Er@oGpDu\\`@eE`@oDbIat@TuBLwAXcDXiC\\iDLkA`E{_@P}A\\gDd@sEP_BjE_`@dD}YbGyh@P{Ab@}Dn@{FJcAxDa\\l@qFvDk^VcCb@cEn@gFbMceArD{Zj@_Fb@wDjBgQfOyeAz@uFJw@r@sFdTc`Bh@mGzA{I`AoJnDsXxBoPfA{HrGqe@n@mFp@kEzAiLtUqeBlAqJ|TscBV_C\\iCjIcn@\\oCnC}Sb@sDpAj@rB~@f@Tb@Tnt@r\\`Bv@dChA\\NJFb`@jQlGrCfAvAdA`@bA^b@LlBj@nBz@rAj@h@RnCrAxWjMnHnDnCrAbCjAnBz@|@`@fVrKb@Rd@T`ZjNj@Vb@R`XnLf@T|@^^Pd@Tx@^~j@nWpPjIfSjJtAn@t@\\`[xMhAf@x@^nAl@lYhNrAn@d@TdAf@lr@f\\zAn@dBt@~@\\fAd@b@Rr@Z`NbGvTfKrFjCbEnBrB`AjKhFtBrB`AbBf@|B@lAGtAe@tCzB~AbDtBb@VRN~s@z_@^PJFxBh@`CjEbYfPlFlDdNzJxBfBdGbEjk@xm@fDnD`ChChXnZPVfAnBe@jDp@vBvBtBhFpFRLpCWjBg@l@oA|@sAr@QVG|@?nCv@x^bN~Bx@fBz@pp@fVtBv@rBl@z@ThOdGdE|AlBn@jAd@hBn@na@~NlC`AzAn@rH~Cf@ZdC~AtAp@vBhAbClApJ|E~JhFju@d`@`EhBzHjEdQnJ|`@xSnDjCxIbE`FzB|Av@bGpChAn@|BlAvGzCdBfAjAt@rJlFvAl@nY|LV@jBFrhChjAt@ZpBv@g@zD}A`MyArJgD|VcDrUk@vDS~QIl\\QpQIzFMpWkAbmAqA|iBI~FoThTeCxBaCtBfAdDlq@zfB|@|BdAzBhClFjJrO|BfDj[fg@`CvDjFtHbDk@lT{DdReDnB]bEu@|Co@lDm@tBpH~KjuAz@dLn@dIbAtNVjDd@rGzFnz@hGr}@t@pPqC|Ji_@jyAs@lA}C`M_@xAoAxEwBlHtH`KtAtBnDvEdg@lo@pClDt@z@jAt@nAJ`BUvJ_DZItCw@|@`C`@dA^bAGb@",
+        "estimatedDatetimeOfDeparture": "2022-01-31T12:00:00+02:00",
+        "estimatedDatetimeOfArrival": "2022-01-31T12:26:48+02:00",
+        "details": {
+          "distances": {
+            "total": 6144,
+            "normalRoads": 1419,
+            "recommendedRoads": 4192,
+            "discouragedRoads": 533,
+            "cycleway": 4144,
+            "greenway": 0,
+            "lane": 31,
+            "livingstreet": 164,
+            "sharebusway": 0,
+            "footway": 10,
+            "pedestrian": 7,
+            "opposite": 0,
+            "steps": 0,
+            "zone30": 0,
+            "residential": 1241
+          },
+          "instructions": null,
+          "profile": "BEGINNER",
+          "direction": "Piste Cyclable Paul Varry, Boulevard Saint-Michel",
+          "verticalGain": 32,
+          "verticalLoss": 13,
+          "calories": 147647,
+          "elevations": null,
+          "ridesets": [],
+          "averageSpeed": 16,
+          "bikeType": "TRADITIONAL"
+        },
+        "waypoints": [
+          {
+            "longitude": 2.33261,
+            "latitude": 48.872096,
+            "title": "Métro-Opéra, Place de l'Opéra 75009 Paris"
+          },
+          {
+            "longitude": 2.32134,
+            "latitude": 48.84059,
+            "title": "Gare Montparnasse Océane, 46 Avenue du Maine 75015 Paris"
+          }
+        ]
+      }
+    ],
+    "distances": {
+      "total": 6144,
+      "normalRoads": 1419,
+      "recommendedRoads": 4192,
+      "discouragedRoads": 533
+    },
+    "title": "SAFER",
+    "waypoints": [
+      {
+        "longitude": 2.33261,
+        "latitude": 48.872096,
+        "title": "Métro-Opéra, Place de l'Opéra 75009 Paris"
+      },
+      {
+        "longitude": 2.32134,
+        "latitude": 48.84059,
+        "title": "Gare Montparnasse Océane, 46 Avenue du Maine 75015 Paris"
+      }
+    ],
+    "estimatedDatetimeOfDeparture": "2022-01-31T12:00:00+02:00",
+    "estimatedDatetimeOfArrival": "2022-01-31T12:26:48+02:00",
+    "duration": 1608,
+    "id": "bG9jPTQ4Ljg3MjA5NiwyLjMzMjYxJmxvYz00OC44NDA1OSwyLjMyMTM0I0JFR0lOTkVSI0ZhbHNlI01FRElBTiMxNiNGYWxzZSNOb25lIzIwMjItMDEtMzEgMTI6MDA6MDArMDI6MDAjVFJBRElUSU9OQUwjMCMwI1NBRkVSI0ZhbHNlI0ZhbHNl"
+  },
+  {
+    "sections": [
+      {
+        "transportMode": "BIKE",
+        "duration": 1288,
+        "waypointsIndices": [
+          0,
+          235
+        ],
+        "geometry": "}h|e|AyyjmCN@LLBH~@[?ODSJKv@WB}DmKcDdE}IpAqC`IuPbKeVnGyJnRyGnJaDzE_BlFgBrHgC\\\\h]r[fBjBfBjB~@yI^sDhBr@v[eEpBUxAnB|[~b@`AnAX`@zBhCt@z@dF`GrFpFbB|Aji@|e@nAxAxAv@nMdHdCtAoDdWpK`Gbi@fY|AyBlDgQ~ChB~S~K~d@dWtAt@~At@pz@ne@nBjAzA~@~A`AhA{EhSm}@jAoF~Gc[`EsQ`AoEj@cCjAkFp[{uA~@iEDQ`UgdAbA{ElAx@^VhIxFdEjCvMfKlMhPjB`CxGlIFjD\\dDp@xC`AhCrArB~AzAfB~@nB^nB?nB_@fB}@~AyArAsBbAiCtDjBzBfA~KtFxCxAfEtBdJ`E~BrEtFtCFDl@PzEbC~CzAnCe@nAZz@V~y@t_@vIdGzAhAxAvApCbG_ArEkOxq@{Tl~@cAbEbCpAnCbBjQvKvRtLfBdAnAt@r^~T~@j@~@j@f^|SnBlAlAdAtU~RX`C^zCxAvLzF~d@bHnl@rBpEpAdChCxFtAxChB|DjJrW`BnE^dAbAzCnApDbBjD~BhDjKe@xHwAzu@yNfDu@hHcAzK{Bl@Md[mGpN}CdEu@|Du@ns@yMjDw@tDy@lFkAhGyAfNiDnEu@bQmDfJqA|RmDrJeBpe@{I~Ck@tDk@dcBe[zNqCn@Q|HuAlIpHv@r@\\ZlSfR~DhDjEfE`EzDJJhFhF`F~EtApAdC~BjWxVfG`Gf[pZpAnAjAhA|DvDrApApV`V`UpTrIfI`C`ClEdEvLpLt@n@tAlAzBzSXbClC~VrH}CpBmB|KoV~@sBdCiClCqAxCa@fCNbBf@dBbAxPdUVV`o@xy@lA~AtH`KtAtBnDvEdg@lo@pClDt@z@jAt@nAJ`BUvJ_DZItCw@|@`C`@dA^bAGb@",
+        "estimatedDatetimeOfDeparture": "2022-01-31T12:00:00+02:00",
+        "estimatedDatetimeOfArrival": "2022-01-31T12:21:28+02:00",
+        "details": {
+          "distances": {
+            "total": 4680,
+            "normalRoads": 1384,
+            "recommendedRoads": 2987,
+            "discouragedRoads": 309,
+            "cycleway": 787,
+            "greenway": 0,
+            "lane": 581,
+            "livingstreet": 165,
+            "sharebusway": 1602,
+            "footway": 10,
+            "pedestrian": 7,
+            "opposite": 0,
+            "steps": 0,
+            "zone30": 0,
+            "residential": 1205
+          },
+          "instructions": null,
+          "profile": "EXPERT",
+          "direction": "Boulevard Raspail, Rue de Rennes",
+          "verticalGain": 19,
+          "verticalLoss": 0,
+          "calories": 112045,
+          "elevations": null,
+          "ridesets": [],
+          "averageSpeed": 16,
+          "bikeType": "TRADITIONAL"
+        },
+        "waypoints": [
+          {
+            "longitude": 2.33261,
+            "latitude": 48.872096,
+            "title": "Métro-Opéra, Place de l'Opéra 75009 Paris"
+          },
+          {
+            "longitude": 2.32134,
+            "latitude": 48.84059,
+            "title": "Gare Montparnasse Océane, 46 Avenue du Maine 75015 Paris"
+          }
+        ]
+      }
+    ],
+    "distances": {
+      "total": 4680,
+      "normalRoads": 1384,
+      "recommendedRoads": 2987,
+      "discouragedRoads": 309
+    },
+    "title": "FASTER",
+    "waypoints": [
+      {
+        "longitude": 2.33261,
+        "latitude": 48.872096,
+        "title": "Métro-Opéra, Place de l'Opéra 75009 Paris"
+      },
+      {
+        "longitude": 2.32134,
+        "latitude": 48.84059,
+        "title": "Gare Montparnasse Océane, 46 Avenue du Maine 75015 Paris"
+      }
+    ],
+    "estimatedDatetimeOfDeparture": "2022-01-31T12:00:00+02:00",
+    "estimatedDatetimeOfArrival": "2022-01-31T12:21:28+02:00",
+    "duration": 1288,
+    "id": "bG9jPTQ4Ljg3MjA5NiwyLjMzMjYxJmxvYz00OC44NDA1OSwyLjMyMTM0I0VYUEVSVCNGYWxzZSNNRURJQU4jMTYjRmFsc2UjTm9uZSMyMDIyLTAxLTMxIDEyOjAwOjAwKzAyOjAwI1RSQURJVElPTkFMIzAjMCNGQVNURVIjRmFsc2UjRmFsc2U="
+  }
+]

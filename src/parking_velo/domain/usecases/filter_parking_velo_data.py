@@ -21,8 +21,8 @@ def filter_parking_velo_data(
 
     df_gpd_parking_velo = file_system_handler.get_parking_velo_data()
 
-    for filter_name, filter_function in FILTER_LIST:
+    for filter, filter_function in FILTER_LIST:
         filtered_df_gpd = df_gpd_parking_velo.copy()
         filtered_df_gpd = filter_function(filtered_df_gpd)
 
-        file_system_handler.save_filtered_parking_velo_data(filtered_df_gpd, filter_name)
+        file_system_handler.save_filtered_parking_velo_data(filtered_df_gpd, filter)

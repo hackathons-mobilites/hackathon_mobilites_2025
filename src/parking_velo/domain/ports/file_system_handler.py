@@ -2,6 +2,8 @@ import geopandas as gpd
 
 from abc import ABC, abstractmethod
 
+from src.parking_velo.config.filters import ParkingVeloFilters
+
 
 class FileSystemHandler(ABC):
     @abstractmethod
@@ -13,5 +15,9 @@ class FileSystemHandler(ABC):
         pass
 
     @abstractmethod
-    def save_filtered_parking_velo_data(self, df: gpd.GeoDataFrame, filter_name: str) -> None:
+    def save_filtered_parking_velo_data(self, df: gpd.GeoDataFrame, filter: ParkingVeloFilters) -> None:
+        pass
+
+    @abstractmethod
+    def get_filtered_parking_velo_data(self, filter: ParkingVeloFilters) -> None:
         pass
