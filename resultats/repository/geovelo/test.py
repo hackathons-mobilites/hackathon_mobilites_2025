@@ -29,10 +29,12 @@ def parse_args():
                         action="store_true")
     parser.add_argument("--geometry",
                         help="geometry",
-                        action="store_true")
+                        action="store_true",
+                        default=True)
     parser.add_argument("--single_result",
                         help="single_result",
-                        action="store_true")
+                        action="store_true",
+                        default=True)
     parser.add_argument("--bike_stations",
                         help="bike_stations",
                         action="store_true")
