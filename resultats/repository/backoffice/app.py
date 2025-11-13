@@ -28,35 +28,75 @@ if not st.session_state.onboarding_done:
     st.title("🚀 Onboarding Entreprise - Predict'Mob")
     st.markdown("Bienvenue ! Configurons votre espace en quelques étapes.")
     
-    # Template Excel en dehors du formulaire
-    st.subheader("👥 Étape préliminaire : Préparez votre fichier Excel")
-    st.markdown("""
-    **Format Excel attendu** (colonnes obligatoires) :
-    - `email` : adresse email du salarié
-    - `code_postal_domicile` : code postal du domicile
-    - `gare_depart` (optionnel) : gare habituelle de départ
-    """)
+    # Choix du mode d'import
+    st.subheader("👥 Étape préliminaire : Choisissez votre méthode d'import")
     
-    # Créer un template Excel exemple
-    template_df = pd.DataFrame({
-        "email": ["employe1@example.com", "employe2@example.com", "employe3@example.com"],
-        "code_postal_domicile": ["75001", "92400", "91190"],
-        "gare_depart": ["Gare de Lyon", "La Défense", "Massy-Palaiseau"]
-    })
-    
-    # Convertir en bytes pour le bouton de téléchargement
-    from io import BytesIO
-    buffer = BytesIO()
-    with pd.ExcelWriter(buffer, engine='openpyxl') as writer:
-        template_df.to_excel(writer, index=False)
-    
-    st.download_button(
-        label="📥 Télécharger le template Excel",
-        data=buffer.getvalue(),
-        file_name="template_salaries_predictmob.xlsx",
-        mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-        help="Téléchargez ce template, remplissez-le avec vos données, puis importez-le ci-dessous"
+    import_method = st.radio(
+        "Comment souhaitez-vous importer vos salariés ?",
+        ["🔌 Connexion LDAP/Active Directory (Recommandé pour grandes entreprises)", 
+         "📁 Import fichier Excel (PME/TPE)"],
+        help="LDAP permet une synchronisation automatique avec votre annuaire d'entreprise"
     )
+    
+    st.divider()
+    
+    if "🔌 Connexion LDAP" in import_method:
+        # === MODE LDAP ===
+        st.success("🌟 **Mode Entreprise** : Synchronisation avec votre annuaire LDAP/Active Directory")
+        st.markdown("""
+        **Avantages :**
+        - ✅ Import automatique de tous les salariés
+        - ✅ Synchronisation temps réel avec votre SI
+        - ✅ Récupération automatique des emails, sites, départements
+        - ✅ Pas de saisie manuelle
+        """)
+        
+        with st.expander("ℹ️ Qu'est-ce que LDAP/Active Directory ?", expanded=False):
+            st.markdown("""
+            **LDAP** (Lightweight Directory Access Protocol) et **Active Directory** (Microsoft) 
+            sont des annuaires d'entreprise qui centralisent les informations des employés.
+            
+            En vous connectant à votre annuaire, Predict'Mob peut automatiquement :
+            - Récupérer la liste des salariés
+            - Obtenir leurs emails professionnels
+            - Identifier leurs départements/services
+            - Se synchroniser automatiquement lors des arrivées/départs
+            """)
+        
+        # Formulaire LDAP (sera en dehors du form principal)
+        if "ldap_config" not in st.session_state:
+            st.session_state.ldap_config = None
+            
+    else:
+        # === MODE EXCEL ===
+        st.info("📁 **Mode fichier** : Import manuel via Excel")
+        st.markdown("""
+        **Format Excel attendu** (colonnes obligatoires) :
+        - `email` : adresse email du salarié
+        - `code_postal_domicile` : code postal du domicile
+        - `gare_depart` (optionnel) : gare habituelle de départ
+        """)
+        
+        # Créer un template Excel exemple
+        template_df = pd.DataFrame({
+            "email": ["employe1@example.com", "employe2@example.com", "employe3@example.com"],
+            "code_postal_domicile": ["75001", "92400", "91190"],
+            "gare_depart": ["Gare de Lyon", "La Défense", "Massy-Palaiseau"]
+        })
+        
+        # Convertir en bytes pour le bouton de téléchargement
+        from io import BytesIO
+        buffer = BytesIO()
+        with pd.ExcelWriter(buffer, engine='openpyxl') as writer:
+            template_df.to_excel(writer, index=False)
+        
+        st.download_button(
+            label="📥 Télécharger le template Excel",
+            data=buffer.getvalue(),
+            file_name="template_salaries_predictmob.xlsx",
+            mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+            help="Téléchargez ce template, remplissez-le avec vos données, puis importez-le ci-dessous"
+        )
     
     st.divider()
     
@@ -75,12 +115,47 @@ if not st.session_state.onboarding_done:
         site_name = st.text_input("Nom du site", placeholder="Ex: Siège Paris")
         site_address = st.text_area("Adresse", placeholder="10 rue de Rivoli, 75001 Paris", height=80)
         
-        st.subheader("👥 Étape 3 : Import des salariés")
-        uploaded_file = st.file_uploader(
-            "📤 Importer le fichier Excel des salariés", 
-            type=["xlsx", "xls"],
-            help="Utilisez le template téléchargé ci-dessus"
-        )
+        st.subheader("👥 Étape 3 : Configuration des salariés")
+        
+        # Afficher le formulaire selon le mode choisi
+        if "🔌 Connexion LDAP" in import_method:
+            st.markdown("**🔌 Configuration LDAP/Active Directory**")
+            
+            col1, col2 = st.columns(2)
+            with col1:
+                ldap_server = st.text_input(
+                    "Serveur LDAP *", 
+                    placeholder="Ex: ldap://ldap.example.com ou ldap.acme.local",
+                    help="Adresse du serveur LDAP ou Active Directory"
+                )
+                ldap_port = st.number_input("Port", value=389, min_value=1, max_value=65535)
+                ldap_user = st.text_input(
+                    "DN de connexion", 
+                    placeholder="Ex: cn=admin,dc=example,dc=com",
+                    help="Distinguished Name pour l'authentification"
+                )
+            
+            with col2:
+                ldap_base_dn = st.text_input(
+                    "Base DN *", 
+                    placeholder="Ex: ou=employees,dc=example,dc=com",
+                    help="Point de départ de la recherche dans l'annuaire"
+                )
+                use_ssl = st.checkbox("Utiliser SSL/TLS", value=True, help="Recommandé pour la sécurité")
+                ldap_password = st.text_input("Mot de passe", type="password")
+            
+            st.info("💡 Predict'Mob va se connecter à votre annuaire et importer automatiquement les salariés avec leurs attributs (email, département, site, etc.)")
+            
+            uploaded_file = None  # Pas de fichier en mode LDAP
+            
+        else:
+            # Mode Excel
+            uploaded_file = st.file_uploader(
+                "📤 Importer le fichier Excel des salariés", 
+                type=["xlsx", "xls"],
+                help="Utilisez le template téléchargé ci-dessus"
+            )
+            ldap_server = None
         
         st.info("💡 Tous les champs marqués d'un * sont obligatoires")
         
@@ -103,6 +178,61 @@ if not st.session_state.onboarding_done:
                 st.error("❌ Veuillez remplir au minimum le nom et le SIREN de l'entreprise.")
             elif len(company_siren) != 9 or not company_siren.isdigit():
                 st.error("❌ Le SIREN doit contenir exactement 9 chiffres.")
+            elif "🔌 Connexion LDAP" in import_method:
+                # MODE LDAP
+                if not ldap_server or not ldap_base_dn:
+                    st.error("❌ Veuillez renseigner au minimum le serveur LDAP et le Base DN.")
+                else:
+                    # Simuler une connexion LDAP
+                    with st.spinner("🔌 Connexion au serveur LDAP en cours..."):
+                        import time
+                        time.sleep(2)  # Simuler le temps de connexion
+                    
+                    # Simuler la récupération de salariés depuis LDAP
+                    st.success("✅ Connexion LDAP réussie !")
+                    
+                    # Données fictives simulant une réponse LDAP
+                    ldap_employees = pd.DataFrame({
+                        "email": [f"employe{i}@{company_name.lower().replace(' ', '')}.com" for i in range(1, 46)],
+                        "prenom": [f"Prénom{i}" for i in range(1, 46)],
+                        "nom": [f"Nom{i}" for i in range(1, 46)],
+                        "departement": [random.choice(["IT", "Marketing", "RH", "Commercial", "Ops"]) for _ in range(45)],
+                        "site": [random.choice([site_name, "Site secondaire"]) for _ in range(45)],
+                        "code_postal_domicile": [random.choice(["75001", "92400", "91190", "77000", "94000"]) for _ in range(45)]
+                    })
+                    
+                    st.info(f"""
+                    **🎉 Import LDAP réussi !**
+                    - ✅ **{len(ldap_employees)} salariés** récupérés depuis l'annuaire
+                    - 📧 Emails d'invitation automatiques programmés
+                    - 🔄 Synchronisation automatique activée (quotidienne)
+                    """)
+                    
+                    # Aperçu des données importées
+                    with st.expander("👀 Aperçu des salariés importés depuis LDAP"):
+                        st.dataframe(ldap_employees.head(15), use_container_width=True)
+                    
+                    st.success("🌟 **Mode Entreprise activé** : Synchronisation LDAP configurée avec succès !")
+                    
+                    # Finaliser l'onboarding
+                    st.session_state.onboarding_done = True
+                    st.session_state.current_company = {
+                        "name": company_name,
+                        "siren": company_siren,
+                        "sector": company_sector,
+                        "nb_employees": len(ldap_employees),
+                        "import_mode": "LDAP",
+                        "ldap_config": {
+                            "server": ldap_server,
+                            "base_dn": ldap_base_dn,
+                            "port": ldap_port,
+                            "ssl": use_ssl
+                        }
+                    }
+                    st.session_state.current_company_id = 1
+                    st.balloons()
+                    st.rerun()
+                    
             elif uploaded_file is None:
                 st.warning("⚠️ Aucun fichier importé. Vous pourrez ajouter des salariés plus tard.")
                 # Finaliser sans fichier
@@ -111,13 +241,15 @@ if not st.session_state.onboarding_done:
                     "name": company_name,
                     "siren": company_siren,
                     "sector": company_sector,
-                    "nb_employees": 0
+                    "nb_employees": 0,
+                    "import_mode": "Excel"
                 }
                 st.session_state.current_company_id = 1
                 st.success("✅ Entreprise créée ! Redirection vers le dashboard...")
                 st.balloons()
                 st.rerun()
             else:
+                # MODE EXCEL
                 # Traiter le fichier Excel
                 df, error = process_employee_file(uploaded_file)
                 if error:
@@ -141,7 +273,8 @@ if not st.session_state.onboarding_done:
                         "name": company_name,
                         "siren": company_siren,
                         "sector": company_sector,
-                        "nb_employees": len(df)
+                        "nb_employees": len(df),
+                        "import_mode": "Excel"
                     }
                     st.session_state.current_company_id = 1
                     st.balloons()
@@ -178,7 +311,16 @@ else:
     st.title("🏠 Tableau de Bord Entreprise")
     
     company_data = next(c for c in COMPANIES if c["id"] == st.session_state.current_company_id)
-    st.markdown(f"### {company_data['name']} ({company_data['sector']})")
+    
+    # Afficher le badge du mode d'import si disponible
+    col1, col2 = st.columns([3, 1])
+    with col1:
+        st.markdown(f"### {company_data['name']} ({company_data['sector']})")
+    with col2:
+        if st.session_state.get("current_company", {}).get("import_mode") == "LDAP":
+            st.success("🔌 **Mode Entreprise** (LDAP)")
+        elif st.session_state.get("current_company", {}).get("import_mode") == "Excel":
+            st.info("📁 Mode Import Excel")
     
     # Récupérer les métriques
     metrics = get_rse_metrics(st.session_state.current_company_id)
@@ -247,4 +389,3 @@ else:
         **Privacy by design** : Seuls les salariés ayant activé l'option "Partager mes mobilités" 
         contribuent aux métriques de l'entreprise.
         """)
-
