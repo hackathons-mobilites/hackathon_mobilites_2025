@@ -2,7 +2,7 @@ from urllib.parse import urljoin
 
 import pandas as pd
 
-from src.parking_velo.domain.ports.SourceHandler import SourceHandler
+from parking_velo.domain.ports.source_handler import SourceHandler
 
 OPEN_DATA_BASE_URL = "https://data.iledefrance-mobilites.fr/api/explore/v2.1/catalog/datasets/"
 
