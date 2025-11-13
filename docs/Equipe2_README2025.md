@@ -6,9 +6,10 @@ Ce projet a été développé dans le cadre du Hackathon Mobilités 2025, organi
 
 
 ### Le problème et la proposition de valeur 
-> Rendre accessible le réseau de transport en île de France est un vrai défi et va durer plusieurs années. La priorisation des actions est essentielle pour les personnes en charge de la maintenance des équipements et des de celles en charge des programmes de mécanisation des stations, de rénovation des stations et des gares ou bien du programme "Métro pour tous".
 
-> Nos usagers cibles sont les porteurs de handicap : 
+Rendre accessible le réseau de transport en île de France est un vrai défi et va durer plusieurs années. La priorisation des actions est essentielle pour les personnes en charge de la maintenance des équipements et des de celles en charge des programmes de mécanisation des stations, de rénovation des stations et des gares ou bien du programme "Métro pour tous".
+
+**Nos usagers cibles** sont les porteurs de handicap : 
 * mental
 * moteur
 * visuel
@@ -16,20 +17,20 @@ Ce projet a été développé dans le cadre du Hackathon Mobilités 2025, organi
 * du à l'âge
 
 ### La solution
-> Il s'agit d'un démonstrateur représentant sur une même carte la facilité d'accès des gares et stations, les lieux générateurs de flux PMR, les stations et gares sur lesquelles les validations de personnes âgées sont les plus importante et de proposer, l'état des ascenseurs et escaliers mécaniques des espaces.
+Il s'agit d'un démonstrateur représentant sur une même carte la facilité d'accès des gares et stations, les lieux générateurs de flux PMR, les stations et gares sur lesquelles les validations de personnes âgées sont les plus importante et de proposer, l'état des ascenseurs et escaliers mécaniques des espaces.
 Différentes vues des stations et gares peuvent être proposées à l'utilisateur :
 - selon leur facilité d'accès (nomenclature IDFM)
 - selon leur niveau de criticité (adéquation offre/demande d'accessibilité), avec les recommandations d'actions associées : ajout d'ascenseur ou d'escalier mécanique
 - selon leur besoin en maintenance : priorisation des réparations/remplacements d'ascenseurs ou d'escalier mécanique en fonction de la demande d'accessibilité
 
 ### Les données mobilisées :
-*Données des niveaux d'accessibilité des stations extraites du [Plan PMR](https://eu.ftp.opendatasoft.com/stif/PlansRegion/Plans/Paris_PMR.pdf)
+- Données des niveaux d'accessibilité des stations extraites du [Plan PMR](https://eu.ftp.opendatasoft.com/stif/PlansRegion/Plans/Paris_PMR.pdf)
 
-*Données open sources utilisées : 
-    +[Référentiel IDFM des stations]()
-    +[Metro Connexion]() 
-    +[Données de validation] () 
-    +Lieux générateurs de flux PMR : 
+- Données open sources utilisées : 
+    -[Référentiel IDFM des stations]()
+    -[Metro Connexion]() 
+    -[Données de validation] () 
+    -Lieux générateurs de flux PMR : 
         - [Hôpitaux] ()
         - [Etablissements d'accueil d'adultes en situation de handicap] ()
         - [Etablissements d'accueil d'enfants en situation de handicap] ()
