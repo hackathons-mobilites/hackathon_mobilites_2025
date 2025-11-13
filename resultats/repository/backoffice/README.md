@@ -7,8 +7,14 @@ Interface Streamlit pour les entreprises permettant de gérer l'onboarding des s
 ### 🚀 Onboarding Entreprise
 - Création d'entreprise (nom, SIREN, secteur)
 - Ajout de sites
-- Import Excel des salariés
-- Template Excel fourni
+- **🔌 Connexion LDAP/Active Directory** (Mode Entreprise - Recommandé)
+  - Synchronisation automatique avec l'annuaire d'entreprise
+  - Import automatique de tous les salariés
+  - Récupération des emails, départements, sites
+  - Mise à jour quotidienne automatique
+- **📁 Import Excel des salariés** (Mode PME/TPE)
+  - Template Excel fourni
+  - Import manuel simple
 
 ### 📊 Dashboard RSE
 - Métriques clés : CO₂ évité, taux de covoiturage, trajets durables
