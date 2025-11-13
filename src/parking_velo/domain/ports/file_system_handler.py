@@ -19,5 +19,5 @@ class FileSystemHandler(ABC):
         pass
 
     @abstractmethod
-    def get_filtered_parking_velo_data(self, filter: ParkingVeloFilters) -> None:
+    def get_filtered_parking_velo_data(self, filter: ParkingVeloFilters) -> gpd.GeoDataFrame:
         pass
