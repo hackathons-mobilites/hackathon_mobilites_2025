@@ -1,0 +1,1325 @@
+{"duration": 6931, "nb_transfers": 2, "departure_date_time": "20251114T122329", "arrival_date_time": "20251114T141900", "requested_date_time": "20251114T120000", "type": "best", "status": "", "tags": ["walking", "reliable", "ecologic"
+    ], "co2_emission": {"value": 384.9969853875, "unit": "gEC"
+    }, "air_pollutants": {"unit": "g", "values": {"nox": 0.0, "pm": 0.0
+        }
+    }, "durations": {"total": 6931, "walking": 0, "bike": 0, "car": 0, "ridesharing": 0, "taxi": 0
+    }, "distances": {"walking": 0, "bike": 0, "car": 0, "ridesharing": 0, "taxi": 0
+    }, "fare": {"found": True, "total": {"value": "250.0", "currency": "centime"
+        }, "links": [
+            {"templated": False, "rel": "tickets", "internal": True, "type": "ticket", "id": "ticket_1_0"
+            }
+        ]
+    }, "calendars": [
+        {"week_pattern": {"monday": False, "tuesday": False, "wednesday": False, "thursday": False, "friday": True, "saturday": False, "sunday": False
+            }, "active_periods": [
+                {"begin": "20251114", "end": "20251114"
+                }
+            ]
+        }
+    ], "sections": [
+        {"id": "section_0_0_0", "duration": 1380, "co2_emission": {"value": 64.4042577051, "unit": "gEC"
+            }, "departure_date_time": "20251114T122329", "arrival_date_time": "20251114T124629", "base_departure_date_time": "20251114T122329", "base_arrival_date_time": "20251114T124629", "data_freshness": "base_schedule", "to": {"id": "stop_point:IDFM:monomodalStopPlace: 45102", "name": "Châtelet les Halles (Paris)", "quality": 0, "stop_point": {"id": "stop_point:IDFM:monomodalStopPlace: 45102", "name": "Châtelet les Halles", "codes": [
+                        {"type": "netex_monomodal_stopplace", "value": "monomodalStopPlace: 45102"
+                        },
+                        {"type": "netex_zder_quay", "value": "412815"
+                        },
+                        {"type": "netex_zder_quay", "value": "471322"
+                        },
+                        {"type": "netex_zder_quay", "value": "471719"
+                        },
+                        {"type": "netex_zder_quay", "value": "471817"
+                        },
+                        {"type": "netex_zder_quay", "value": "472634"
+                        },
+                        {"type": "netex_zder_quay", "value": "472764"
+                        },
+                        {"type": "netex_zder_quay", "value": "472996"
+                        },
+                        {"type": "netex_zder_quay", "value": "473921"
+                        },
+                        {"type": "netex_zder_quay", "value": "473989"
+                        },
+                        {"type": "netex_zder_quay", "value": "473990"
+                        },
+                        {"type": "netex_zder_quay", "value": "473993"
+                        },
+                        {"type": "netex_zder_quay", "value": "monomodalStopPlace: 45102"
+                        },
+                        {"type": "source", "value": "FR: :monomodalStopPlace: 45102:FR1"
+                        }
+                    ], "label": "Châtelet les Halles (Paris)", "coord": {"lon": "2.34697651043533", "lat": "48.86174503191322"
+                    }, "links": [], "administrative_regions": [
+                        {"id": "admin:fr: 75056", "name": "Paris", "level": 8, "zip_code": "75000;75001;75002;75003;75004;75005;75006;75007;75008;75009;75010;75011;75012;75013;75014;75015;75016;75017;75018;75019;75020;75116", "label": "Paris (75000-75116)", "insee": "75056", "coord": {"lon": "2.3483915", "lat": "48.8534951"
+                            }
+                        },
+                        {"id": "admin:fr: 75101", "name": "Paris 1er Arrondissement", "level": 9, "zip_code": "75001", "label": "Paris 1er Arrondissement (75001)", "insee": "75101", "coord": {"lon": "2.334396", "lat": "48.8646144"
+                            }
+                        },
+                        {"id": "admin:admin:osm:relation: 2172737", "name": "Quartier Les Halles", "level": 10, "zip_code": "75001", "label": "Quartier Les Halles (75001)", "insee": "", "coord": {"lon": "2.344893034344164", "lat": "48.86228515804053"
+                            }
+                        }
+                    ], "stop_area": {"id": "stop_area:IDFM: 474151", "name": "Châtelet les Halles", "codes": [
+                            {"type": "TN_PA", "value": "446"
+                            },
+                            {"type": "source", "value": "FR: :multimodalStopPlace: 474151:FR1"
+                            }
+                        ], "timezone": "Europe/Paris", "label": "Châtelet les Halles (Paris)", "coord": {"lon": "2.34697651043533", "lat": "48.86174503191322"
+                        }, "links": []
+                    }, "equipments": [], "address": {"id": "2.34697651043533;48.86174503191322", "name": "Rue Pierre Lescot", "house_number": 1, "coord": {"lon": "2.34697651043533", "lat": "48.86174503191322"
+                        }, "label": "1 Rue Pierre Lescot (Paris)"
+                    }, "fare_zone": {"name": "1"
+                    }
+                }, "embedded_type": "stop_point"
+            }, "from": {"id": "stop_point:IDFM:monomodalStopPlace: 43125", "name": "Fontenay-aux-Roses (Fontenay-aux-Roses)", "quality": 0, "stop_point": {"id": "stop_point:IDFM:monomodalStopPlace: 43125", "name": "Fontenay-aux-Roses", "codes": [
+                        {"type": "netex_monomodal_stopplace", "value": "monomodalStopPlace: 43125"
+                        },
+                        {"type": "netex_zder_quay", "value": "412840"
+                        },
+                        {"type": "netex_zder_quay", "value": "473952"
+                        },
+                        {"type": "netex_zder_quay", "value": "473953"
+                        },
+                        {"type": "netex_zder_quay", "value": "479255"
+                        },
+                        {"type": "netex_zder_quay", "value": "monomodalStopPlace: 43125"
+                        },
+                        {"type": "source", "value": "FR: :monomodalStopPlace: 43125:FR1"
+                        }
+                    ], "label": "Fontenay-aux-Roses (Fontenay-aux-Roses)", "coord": {"lon": "2.292908", "lat": "48.787567"
+                    }, "links": [], "administrative_regions": [
+                        {"id": "admin:fr: 92032", "name": "Fontenay-aux-Roses", "level": 8, "zip_code": "92260", "label": "Fontenay-aux-Roses (92260)", "insee": "92032", "coord": {"lon": "2.287037", "lat": "48.791105"
+                            }
+                        }
+                    ], "stop_area": {"id": "stop_area:IDFM: 70133", "name": "Fontenay-aux-Roses", "codes": [
+                            {"type": "TN_PA", "value": "529"
+                            },
+                            {"type": "source", "value": "FR: :multimodalStopPlace: 70133:FR1"
+                            }
+                        ], "timezone": "Europe/Paris", "label": "Fontenay-aux-Roses (Fontenay-aux-Roses)", "coord": {"lon": "2.29317", "lat": "48.78787"
+                        }, "links": []
+                    }, "equipments": ["has_wheelchair_boarding"
+                    ], "address": {"id": "2.292908;48.787567", "name": "Rue Félix Pécaut", "house_number": 0, "coord": {"lon": "2.292908", "lat": "48.787567"
+                        }, "label": "Rue Félix Pécaut (Fontenay-aux-Roses)"
+                    }, "fare_zone": {"name": "3"
+                    }
+                }, "embedded_type": "stop_point"
+            }, "additional_informations": ["regular"
+            ], "geojson": {"type": "LineString", "coordinates": [
+                    [
+                        2.292908382,
+                        48.7875669822
+                    ],
+                    [
+                        2.2979282159,
+                        48.7813079209
+                    ],
+                    [
+                        2.3122783118,
+                        48.7802643688
+                    ],
+                    [
+                        2.3220087047,
+                        48.7933369063
+                    ],
+                    [
+                        2.3280932761,
+                        48.7986976723
+                    ],
+                    [
+                        2.3343440159,
+                        48.8083601372
+                    ],
+                    [
+                        2.3409268308,
+                        48.8152280926
+                    ],
+                    [
+                        2.338857681,
+                        48.8215060068
+                    ],
+                    [
+                        2.3332206346,
+                        48.8331864368
+                    ],
+                    [
+                        2.3371383996,
+                        48.8400643502
+                    ],
+                    [
+                        2.3398088878,
+                        48.8454317784
+                    ],
+                    [
+                        2.34495978,
+                        48.8530237937
+                    ],
+                    [
+                        2.3469765104,
+                        48.8617450319
+                    ]
+                ], "properties": [
+                    {"length": 11709
+                    }
+                ]
+            }, "type": "public_transport", "display_informations": {"commercial_mode": "RER", "network": "RER", "direction": "Mitry - Claye (Mitry-Mory)", "label": "B", "color": "5091CB", "code": "B", "headsign": "ILUS", "name": "B", "links": [
+                    {"templated": False, "rel": "disruptions", "internal": True, "type": "disruption", "id": "991c458c-a928-11f0-bcab-0a58a9feac02"
+                    },
+                    {"templated": False, "rel": "terminus", "internal": True, "type": "stop_area", "id": "stop_area:IDFM: 69065"
+                    }
+                ], "text_color": "FFFFFF", "trip_short_name": "ILUS17", "company": "SNCF", "description": "", "physical_mode": "RER", "equipments": ["has_wheelchair_accessibility"
+                ]
+            }, "links": [
+                {"type": "company", "id": "company:IDFM: 800"
+                },
+                {"type": "vehicle_journey", "id": "vehicle_journey:IDFM:TN:SNCF: 49c4e993-4266-4499-8559-01d9c359bbc2"
+                },
+                {"type": "line", "id": "line:IDFM:C01743"
+                },
+                {"type": "route", "id": "route:IDFM:SNCF: 34d780d4-66e2-3f4c-a564-f08f512f0c6e"
+                },
+                {"type": "commercial_mode", "id": "commercial_mode:RapidTransit"
+                },
+                {"type": "physical_mode", "id": "physical_mode:RapidTransit"
+                },
+                {"type": "network", "id": "network:IDFM: 71"
+                },
+                {"templated": False, "rel": "tickets", "internal": True, "type": "ticket", "id": "ticket_1_0"
+                }
+            ], "stop_date_times": [
+                {"departure_date_time": "20251114T122329", "base_departure_date_time": "20251114T122329", "arrival_date_time": "20251114T122304", "base_arrival_date_time": "20251114T122304", "stop_point": {"id": "stop_point:IDFM:monomodalStopPlace: 43125", "name": "Fontenay-aux-Roses", "codes": [
+                            {"type": "netex_monomodal_stopplace", "value": "monomodalStopPlace: 43125"
+                            },
+                            {"type": "netex_zder_quay", "value": "412840"
+                            },
+                            {"type": "netex_zder_quay", "value": "473952"
+                            },
+                            {"type": "netex_zder_quay", "value": "473953"
+                            },
+                            {"type": "netex_zder_quay", "value": "479255"
+                            },
+                            {"type": "netex_zder_quay", "value": "monomodalStopPlace: 43125"
+                            },
+                            {"type": "source", "value": "FR: :monomodalStopPlace: 43125:FR1"
+                            }
+                        ], "label": "Fontenay-aux-Roses (Fontenay-aux-Roses)", "coord": {"lon": "2.292908382045532", "lat": "48.78756698215643"
+                        }, "links": [], "equipments": ["has_wheelchair_boarding"
+                        ], "address": {"id": "2.2929083820455323;48.78756698215643", "name": "Avenue René Isidore", "house_number": 0, "coord": {"lon": "2.292908382045532", "lat": "48.78756698215643"
+                            }, "label": "Avenue René Isidore (Fontenay-aux-Roses)"
+                        }, "fare_zone": {"name": "3"
+                        }
+                    }, "additional_informations": [], "links": []
+                },
+                {"departure_date_time": "20251114T122508", "base_departure_date_time": "20251114T122508", "arrival_date_time": "20251114T122443", "base_arrival_date_time": "20251114T122443", "stop_point": {"id": "stop_point:IDFM:monomodalStopPlace: 59206", "name": "Sceaux", "codes": [
+                            {"type": "netex_monomodal_stopplace", "value": "monomodalStopPlace: 59206"
+                            },
+                            {"type": "netex_zder_quay", "value": "412841"
+                            },
+                            {"type": "netex_zder_quay", "value": "474018"
+                            },
+                            {"type": "netex_zder_quay", "value": "474019"
+                            },
+                            {"type": "netex_zder_quay", "value": "monomodalStopPlace: 59206"
+                            },
+                            {"type": "source", "value": "FR: :monomodalStopPlace: 59206:FR1"
+                            }
+                        ], "label": "Sceaux (Sceaux)", "coord": {"lon": "2.29792821594393", "lat": "48.78130792093751"
+                        }, "links": [], "equipments": ["has_wheelchair_boarding"
+                        ], "address": {"id": "2.2979282159439305;48.781307920937515", "name": "Rue Jean Louis Sinet", "house_number": 0, "coord": {"lon": "2.29792821594393", "lat": "48.78130792093751"
+                            }, "label": "Rue Jean Louis Sinet (Sceaux)"
+                        }, "fare_zone": {"name": "3"
+                        }
+                    }, "additional_informations": [], "links": []
+                },
+                {"departure_date_time": "20251114T122711", "base_departure_date_time": "20251114T122711", "arrival_date_time": "20251114T122636", "base_arrival_date_time": "20251114T122636", "stop_point": {"id": "stop_point:IDFM:monomodalStopPlace: 43097", "name": "Bourg-la-Reine", "codes": [
+                            {"type": "netex_monomodal_stopplace", "value": "monomodalStopPlace: 43097"
+                            },
+                            {"type": "netex_zder_quay", "value": "412842"
+                            },
+                            {"type": "netex_zder_quay", "value": "473969"
+                            },
+                            {"type": "netex_zder_quay", "value": "473970"
+                            },
+                            {"type": "netex_zder_quay", "value": "473971"
+                            },
+                            {"type": "netex_zder_quay", "value": "473972"
+                            },
+                            {"type": "netex_zder_quay", "value": "monomodalStopPlace: 43097"
+                            },
+                            {"type": "source", "value": "FR: :monomodalStopPlace: 43097:FR1"
+                            }
+                        ], "label": "Bourg-la-Reine (Bourg-la-Reine)", "coord": {"lon": "2.312278311834309", "lat": "48.78026436884244"
+                        }, "links": [], "equipments": ["has_wheelchair_boarding"
+                        ], "address": {"id": "2.312278311834309;48.78026436884244", "name": "Rue des Blagis", "house_number": 0, "coord": {"lon": "2.312278311834309", "lat": "48.78026436884244"
+                            }, "label": "Rue des Blagis (Bourg-la-Reine)"
+                        }, "fare_zone": {"name": "3"
+                        }
+                    }, "additional_informations": [], "links": []
+                },
+                {"departure_date_time": "20251114T122946", "base_departure_date_time": "20251114T122946", "arrival_date_time": "20251114T122916", "base_arrival_date_time": "20251114T122916", "stop_point": {"id": "stop_point:IDFM:monomodalStopPlace: 44493", "name": "Bagneux", "codes": [
+                            {"type": "netex_monomodal_stopplace", "value": "monomodalStopPlace: 44493"
+                            },
+                            {"type": "netex_zder_quay", "value": "412843"
+                            },
+                            {"type": "netex_zder_quay", "value": "473981"
+                            },
+                            {"type": "netex_zder_quay", "value": "473986"
+                            },
+                            {"type": "netex_zder_quay", "value": "monomodalStopPlace: 44493"
+                            },
+                            {"type": "source", "value": "FR: :monomodalStopPlace: 44493:FR1"
+                            }
+                        ], "label": "Bagneux (Cachan)", "coord": {"lon": "2.322008704742158", "lat": "48.79333690627149"
+                        }, "links": [], "equipments": ["has_wheelchair_boarding"
+                        ], "address": {"id": "2.3220087047421583;48.79333690627149", "name": "Avenue du Pont Royal", "house_number": 22, "coord": {"lon": "2.322008704742158", "lat": "48.79333690627149"
+                            }, "label": "22 Avenue du Pont Royal (Cachan)"
+                        }, "fare_zone": {"name": "3"
+                        }
+                    }, "additional_informations": [], "links": []
+                },
+                {"departure_date_time": "20251114T123126", "base_departure_date_time": "20251114T123126", "arrival_date_time": "20251114T123056", "base_arrival_date_time": "20251114T123056", "stop_point": {"id": "stop_point:IDFM:monomodalStopPlace: 43067", "name": "Arcueil - Cachan", "codes": [
+                            {"type": "netex_monomodal_stopplace", "value": "monomodalStopPlace: 43067"
+                            },
+                            {"type": "netex_zder_quay", "value": "412836"
+                            },
+                            {"type": "netex_zder_quay", "value": "473979"
+                            },
+                            {"type": "netex_zder_quay", "value": "473983"
+                            },
+                            {"type": "netex_zder_quay", "value": "monomodalStopPlace: 43067"
+                            },
+                            {"type": "source", "value": "FR: :monomodalStopPlace: 43067:FR1"
+                            }
+                        ], "label": "Arcueil - Cachan (Cachan)", "coord": {"lon": "2.328093276131277", "lat": "48.79869767228883"
+                        }, "links": [], "equipments": ["has_wheelchair_boarding"
+                        ], "address": {"id": "2.328093276131277;48.79869767228883", "name": "Rue du Docteur Gosselin", "house_number": 0, "coord": {"lon": "2.328093276131277", "lat": "48.79869767228883"
+                            }, "label": "8BIS Rue du Docteur Gosselin (Cachan)"
+                        }, "fare_zone": {"name": "3"
+                        }
+                    }, "additional_informations": [], "links": []
+                },
+                {"departure_date_time": "20251114T123329", "base_departure_date_time": "20251114T123329", "arrival_date_time": "20251114T123259", "base_arrival_date_time": "20251114T123259", "stop_point": {"id": "stop_point:IDFM:monomodalStopPlace: 43607", "name": "Laplace", "codes": [
+                            {"type": "netex_monomodal_stopplace", "value": "monomodalStopPlace: 43607"
+                            },
+                            {"type": "netex_zder_quay", "value": "412837"
+                            },
+                            {"type": "netex_zder_quay", "value": "473926"
+                            },
+                            {"type": "netex_zder_quay", "value": "473927"
+                            },
+                            {"type": "netex_zder_quay", "value": "473932"
+                            },
+                            {"type": "netex_zder_quay", "value": "monomodalStopPlace: 43607"
+                            },
+                            {"type": "source", "value": "FR: :monomodalStopPlace: 43607:FR1"
+                            }
+                        ], "label": "Laplace (Arcueil)", "coord": {"lon": "2.334344015870189", "lat": "48.80836013720283"
+                        }, "links": [], "equipments": ["has_wheelchair_boarding"
+                        ], "address": {"id": "2.3343440158701894;48.808360137202826", "name": "Rue Ernest Renan", "house_number": 0, "coord": {"lon": "2.334344015870189", "lat": "48.80836013720283"
+                            }, "label": "Rue Ernest Renan (Arcueil)"
+                        }, "fare_zone": {"name": "2"
+                        }
+                    }, "additional_informations": [], "links": []
+                },
+                {"departure_date_time": "20251114T123516", "base_departure_date_time": "20251114T123516", "arrival_date_time": "20251114T123446", "base_arrival_date_time": "20251114T123446", "stop_point": {"id": "stop_point:IDFM:monomodalStopPlace: 45877", "name": "Gentilly", "codes": [
+                            {"type": "netex_monomodal_stopplace", "value": "monomodalStopPlace: 45877"
+                            },
+                            {"type": "netex_zder_quay", "value": "412838"
+                            },
+                            {"type": "netex_zder_quay", "value": "473956"
+                            },
+                            {"type": "netex_zder_quay", "value": "473957"
+                            },
+                            {"type": "netex_zder_quay", "value": "monomodalStopPlace: 45877"
+                            },
+                            {"type": "source", "value": "FR: :monomodalStopPlace: 45877:FR1"
+                            }
+                        ], "label": "Gentilly (Gentilly)", "coord": {"lon": "2.340926830790754", "lat": "48.81522809261133"
+                        }, "links": [], "equipments": ["has_wheelchair_boarding"
+                        ], "address": {"id": "2.340926830790754;48.815228092611335", "name": "Rue Auguste Blanqui", "house_number": 18, "coord": {"lon": "2.340926830790754", "lat": "48.81522809261133"
+                            }, "label": "18 Rue Auguste Blanqui (Gentilly)"
+                        }, "fare_zone": {"name": "2"
+                        }
+                    }, "additional_informations": [], "links": []
+                },
+                {"departure_date_time": "20251114T123652", "base_departure_date_time": "20251114T123652", "arrival_date_time": "20251114T123622", "base_arrival_date_time": "20251114T123622", "stop_point": {"id": "stop_point:IDFM:monomodalStopPlace: 473843", "name": "Cité Universitaire", "codes": [
+                            {"type": "netex_monomodal_stopplace", "value": "monomodalStopPlace: 473843"
+                            },
+                            {"type": "netex_zder_quay", "value": "412839"
+                            },
+                            {"type": "netex_zder_quay", "value": "473991"
+                            },
+                            {"type": "netex_zder_quay", "value": "473995"
+                            },
+                            {"type": "netex_zder_quay", "value": "monomodalStopPlace: 473843"
+                            },
+                            {"type": "source", "value": "FR: :monomodalStopPlace: 473843:FR1"
+                            }
+                        ], "label": "Cité Universitaire (Paris)", "coord": {"lon": "2.338857680977704", "lat": "48.82150600684166"
+                        }, "links": [], "equipments": ["has_wheelchair_boarding"
+                        ], "address": {"id": "2.3388576809777035;48.82150600684166", "name": "Sentier du Chemin de Fer", "house_number": 0, "coord": {"lon": "2.338857680977704", "lat": "48.82150600684166"
+                            }, "label": "Sentier du Chemin de Fer (Paris)"
+                        }, "fare_zone": {"name": "1"
+                        }
+                    }, "additional_informations": [], "links": []
+                },
+                {"departure_date_time": "20251114T123932", "base_departure_date_time": "20251114T123932", "arrival_date_time": "20251114T123842", "base_arrival_date_time": "20251114T123842", "stop_point": {"id": "stop_point:IDFM:monomodalStopPlace: 473890", "name": "Denfert-Rochereau", "codes": [
+                            {"type": "netex_monomodal_stopplace", "value": "monomodalStopPlace: 473890"
+                            },
+                            {"type": "netex_zder_quay", "value": "412819"
+                            },
+                            {"type": "netex_zder_quay", "value": "473994"
+                            },
+                            {"type": "netex_zder_quay", "value": "473997"
+                            },
+                            {"type": "netex_zder_quay", "value": "480170"
+                            },
+                            {"type": "netex_zder_quay", "value": "monomodalStopPlace: 473890"
+                            },
+                            {"type": "source", "value": "FR: :monomodalStopPlace: 473890:FR1"
+                            }
+                        ], "label": "Denfert-Rochereau (Paris)", "coord": {"lon": "2.333220634641387", "lat": "48.83318643678081"
+                        }, "links": [], "equipments": ["has_wheelchair_boarding"
+                        ], "address": {"id": "2.333220634641387;48.83318643678081", "name": "Avenue René Coty", "house_number": 4, "coord": {"lon": "2.333220634641387", "lat": "48.83318643678081"
+                            }, "label": "4 Avenue René Coty (Paris)"
+                        }, "fare_zone": {"name": "1"
+                        }
+                    }, "additional_informations": [], "links": []
+                },
+                {"departure_date_time": "20251114T124119", "base_departure_date_time": "20251114T124119", "arrival_date_time": "20251114T124049", "base_arrival_date_time": "20251114T124049", "stop_point": {"id": "stop_point:IDFM:monomodalStopPlace: 44500", "name": "Port Royal", "codes": [
+                            {"type": "netex_monomodal_stopplace", "value": "monomodalStopPlace: 44500"
+                            },
+                            {"type": "netex_zder_quay", "value": "412818"
+                            },
+                            {"type": "netex_zder_quay", "value": "473917"
+                            },
+                            {"type": "netex_zder_quay", "value": "473918"
+                            },
+                            {"type": "netex_zder_quay", "value": "monomodalStopPlace: 44500"
+                            },
+                            {"type": "source", "value": "FR: :monomodalStopPlace: 44500:FR1"
+                            }
+                        ], "label": "Port Royal (Paris)", "coord": {"lon": "2.337138399594449", "lat": "48.84006435021826"
+                        }, "links": [], "equipments": ["has_wheelchair_boarding"
+                        ], "address": {"id": "2.3371383995944486;48.840064350218256", "name": "Avenue Georges Bernanos", "house_number": 39, "coord": {"lon": "2.337138399594449", "lat": "48.84006435021826"
+                            }, "label": "39 Avenue Georges Bernanos (Paris)"
+                        }, "fare_zone": {"name": "1"
+                        }
+                    }, "additional_informations": [], "links": []
+                },
+                {"departure_date_time": "20251114T124253", "base_departure_date_time": "20251114T124253", "arrival_date_time": "20251114T124223", "base_arrival_date_time": "20251114T124223", "stop_point": {"id": "stop_point:IDFM:monomodalStopPlace: 43833", "name": "Luxembourg", "codes": [
+                            {"type": "netex_monomodal_stopplace", "value": "monomodalStopPlace: 43833"
+                            },
+                            {"type": "netex_zder_quay", "value": "412817"
+                            },
+                            {"type": "netex_zder_quay", "value": "473907"
+                            },
+                            {"type": "netex_zder_quay", "value": "473908"
+                            },
+                            {"type": "netex_zder_quay", "value": "monomodalStopPlace: 43833"
+                            },
+                            {"type": "source", "value": "FR: :monomodalStopPlace: 43833:FR1"
+                            }
+                        ], "label": "Luxembourg (Paris)", "coord": {"lon": "2.33980888782037", "lat": "48.84543177842458"
+                        }, "links": [], "equipments": ["has_wheelchair_boarding"
+                        ], "address": {"id": "2.3398088878203698;48.84543177842458", "name": "Boulevard Saint-Michel", "house_number": 85, "coord": {"lon": "2.33980888782037", "lat": "48.84543177842458"
+                            }, "label": "85 Boulevard Saint-Michel (Paris)"
+                        }, "fare_zone": {"name": "1"
+                        }
+                    }, "additional_informations": [], "links": []
+                },
+                {"departure_date_time": "20251114T124509", "base_departure_date_time": "20251114T124509", "arrival_date_time": "20251114T124429", "base_arrival_date_time": "20251114T124429", "stop_point": {"id": "stop_point:IDFM:monomodalStopPlace: 44877", "name": "Saint-Michel Notre-Dame", "codes": [
+                            {"type": "netex_monomodal_stopplace", "value": "monomodalStopPlace: 44877"
+                            },
+                            {"type": "netex_zder_quay", "value": "412816"
+                            },
+                            {"type": "netex_zder_quay", "value": "470634"
+                            },
+                            {"type": "netex_zder_quay", "value": "472262"
+                            },
+                            {"type": "netex_zder_quay", "value": "473915"
+                            },
+                            {"type": "netex_zder_quay", "value": "473916"
+                            },
+                            {"type": "netex_zder_quay", "value": "monomodalStopPlace: 44877"
+                            },
+                            {"type": "source", "value": "FR: :monomodalStopPlace: 44877:FR1"
+                            }
+                        ], "label": "Saint-Michel Notre-Dame (Paris)", "coord": {"lon": "2.344959780029387", "lat": "48.85302379374016"
+                        }, "links": [], "equipments": [], "address": {"id": "2.344959780029387;48.853023793740164", "name": "Rue de la Huchette", "house_number": 29, "coord": {"lon": "2.344959780029387", "lat": "48.85302379374016"
+                            }, "label": "29 Rue de la Huchette (Paris)"
+                        }, "fare_zone": {"name": "1"
+                        }
+                    }, "additional_informations": [], "links": []
+                },
+                {"departure_date_time": "20251114T124700", "base_departure_date_time": "20251114T124700", "arrival_date_time": "20251114T124629", "base_arrival_date_time": "20251114T124629", "stop_point": {"id": "stop_point:IDFM:monomodalStopPlace: 45102", "name": "Châtelet les Halles", "codes": [
+                            {"type": "netex_monomodal_stopplace", "value": "monomodalStopPlace: 45102"
+                            },
+                            {"type": "netex_zder_quay", "value": "412815"
+                            },
+                            {"type": "netex_zder_quay", "value": "471322"
+                            },
+                            {"type": "netex_zder_quay", "value": "471719"
+                            },
+                            {"type": "netex_zder_quay", "value": "471817"
+                            },
+                            {"type": "netex_zder_quay", "value": "472634"
+                            },
+                            {"type": "netex_zder_quay", "value": "472764"
+                            },
+                            {"type": "netex_zder_quay", "value": "472996"
+                            },
+                            {"type": "netex_zder_quay", "value": "473921"
+                            },
+                            {"type": "netex_zder_quay", "value": "473989"
+                            },
+                            {"type": "netex_zder_quay", "value": "473990"
+                            },
+                            {"type": "netex_zder_quay", "value": "473993"
+                            },
+                            {"type": "netex_zder_quay", "value": "monomodalStopPlace: 45102"
+                            },
+                            {"type": "source", "value": "FR: :monomodalStopPlace: 45102:FR1"
+                            }
+                        ], "label": "Châtelet les Halles (Paris)", "coord": {"lon": "2.34697651043533", "lat": "48.86174503191322"
+                        }, "links": [], "equipments": [], "address": {"id": "2.34697651043533;48.86174503191322", "name": "Rue Pierre Lescot", "house_number": 1, "coord": {"lon": "2.34697651043533", "lat": "48.86174503191322"
+                            }, "label": "1 Rue Pierre Lescot (Paris)"
+                        }, "fare_zone": {"name": "1"
+                        }
+                    }, "additional_informations": [], "links": []
+                }
+            ]
+        },
+        {"id": "section_0_1_0", "duration": 841, "co2_emission": {"value": 0.0, "unit": "gEC"
+            }, "departure_date_time": "20251114T124629", "arrival_date_time": "20251114T130030", "type": "waiting", "links": []
+        },
+        {"id": "section_0_2_0", "duration": 1890, "co2_emission": {"value": 142.74768135, "unit": "gEC"
+            }, "departure_date_time": "20251114T130030", "arrival_date_time": "20251114T133200", "base_departure_date_time": "20251114T130030", "base_arrival_date_time": "20251114T133200", "data_freshness": "base_schedule", "to": {"id": "stop_point:IDFM:monomodalStopPlace: 43114", "name": "Conflans Fin d"Oise (Conflans-Sainte-Honorine)", "quality": 0, "stop_point": {"id": "stop_point:IDFM:monomodalStopPlace: 43114", "name": "Conflans Fin d"Oise", "codes": [
+                        {"type": "netex_monomodal_stopplace", "value": "monomodalStopPlace: 43114"
+                        },
+                        {"type": "netex_zder_quay", "value": "411350"
+                        },
+                        {"type": "netex_zder_quay", "value": "471418"
+                        },
+                        {"type": "netex_zder_quay", "value": "471534"
+                        },
+                        {"type": "netex_zder_quay", "value": "471751"
+                        },
+                        {"type": "netex_zder_quay", "value": "472478"
+                        },
+                        {"type": "netex_zder_quay", "value": "monomodalStopPlace: 43114"
+                        },
+                        {"type": "source", "value": "FR: :monomodalStopPlace: 43114:FR1"
+                        }
+                    ], "label": "Conflans Fin d"Oise (Conflans-Sainte-Honorine)", "coord": {"lon": "2.074649924571019", "lat": "48.99115628725848"
+                    }, "links": [], "administrative_regions": [
+                        {"id": "admin:fr: 78172", "name": "Conflans-Sainte-Honorine", "level": 8, "zip_code": "78700", "label": "Conflans-Sainte-Honorine (78700)", "insee": "78172", "coord": {"lon": "2.0949768", "lat": "48.9938791"
+                            }
+                        },
+                        {"id": "admin:admin:osm:relation: 9813291", "name": "Fin d"Oise", "level": 10, "zip_code": "", "label": "Fin d"Oise", "insee": "", "coord": {"lon": "2.0756166", "lat": "48.9906307"
+                            }
+                        }
+                    ], "stop_area": {"id": "stop_area:IDFM: 73605", "name": "Conflans Fin d"Oise", "codes": [
+                            {"type": "TN_PA", "value": "273"
+                            },
+                            {"type": "source", "value": "FR: :multimodalStopPlace: 73605:FR1"
+                            }
+                        ], "timezone": "Europe/Paris", "label": "Conflans Fin d"Oise (Conflans-Sainte-Honorine)", "coord": {"lon": "2.074666817381697", "lat": "48.99020768701453"
+                        }, "links": []
+                    }, "equipments": ["has_wheelchair_boarding"
+                    ], "address": {"id": "2.0746499245710193;48.991156287258484", "name": "Rue du Maréchal Maunoury", "house_number": 73, "coord": {"lon": "2.074649924571019", "lat": "48.99115628725848"
+                        }, "label": "73 Rue du Maréchal Maunoury (Conflans-Sainte-Honorine)"
+                    }, "fare_zone": {"name": "5"
+                    }
+                }, "embedded_type": "stop_point"
+            }, "from": {"id": "stop_point:IDFM:monomodalStopPlace: 45102", "name": "Châtelet les Halles (Paris)", "quality": 0, "stop_point": {"id": "stop_point:IDFM:monomodalStopPlace: 45102", "name": "Châtelet les Halles", "codes": [
+                        {"type": "netex_monomodal_stopplace", "value": "monomodalStopPlace: 45102"
+                        },
+                        {"type": "netex_zder_quay", "value": "412815"
+                        },
+                        {"type": "netex_zder_quay", "value": "471322"
+                        },
+                        {"type": "netex_zder_quay", "value": "471719"
+                        },
+                        {"type": "netex_zder_quay", "value": "471817"
+                        },
+                        {"type": "netex_zder_quay", "value": "472634"
+                        },
+                        {"type": "netex_zder_quay", "value": "472764"
+                        },
+                        {"type": "netex_zder_quay", "value": "472996"
+                        },
+                        {"type": "netex_zder_quay", "value": "473921"
+                        },
+                        {"type": "netex_zder_quay", "value": "473989"
+                        },
+                        {"type": "netex_zder_quay", "value": "473990"
+                        },
+                        {"type": "netex_zder_quay", "value": "473993"
+                        },
+                        {"type": "netex_zder_quay", "value": "monomodalStopPlace: 45102"
+                        },
+                        {"type": "source", "value": "FR: :monomodalStopPlace: 45102:FR1"
+                        }
+                    ], "label": "Châtelet les Halles (Paris)", "coord": {"lon": "2.34697651043533", "lat": "48.86174503191322"
+                    }, "links": [], "administrative_regions": [
+                        {"id": "admin:fr: 75056", "name": "Paris", "level": 8, "zip_code": "75000;75001;75002;75003;75004;75005;75006;75007;75008;75009;75010;75011;75012;75013;75014;75015;75016;75017;75018;75019;75020;75116", "label": "Paris (75000-75116)", "insee": "75056", "coord": {"lon": "2.3483915", "lat": "48.8534951"
+                            }
+                        },
+                        {"id": "admin:fr: 75101", "name": "Paris 1er Arrondissement", "level": 9, "zip_code": "75001", "label": "Paris 1er Arrondissement (75001)", "insee": "75101", "coord": {"lon": "2.334396", "lat": "48.8646144"
+                            }
+                        },
+                        {"id": "admin:admin:osm:relation: 2172737", "name": "Quartier Les Halles", "level": 10, "zip_code": "75001", "label": "Quartier Les Halles (75001)", "insee": "", "coord": {"lon": "2.344893034344164", "lat": "48.86228515804053"
+                            }
+                        }
+                    ], "stop_area": {"id": "stop_area:IDFM: 474151", "name": "Châtelet les Halles", "codes": [
+                            {"type": "TN_PA", "value": "446"
+                            },
+                            {"type": "source", "value": "FR: :multimodalStopPlace: 474151:FR1"
+                            }
+                        ], "timezone": "Europe/Paris", "label": "Châtelet les Halles (Paris)", "coord": {"lon": "2.34697651043533", "lat": "48.86174503191322"
+                        }, "links": []
+                    }, "equipments": [], "address": {"id": "2.34697651043533;48.86174503191322", "name": "Rue Pierre Lescot", "house_number": 1, "coord": {"lon": "2.34697651043533", "lat": "48.86174503191322"
+                        }, "label": "1 Rue Pierre Lescot (Paris)"
+                    }, "fare_zone": {"name": "1"
+                    }
+                }, "embedded_type": "stop_point"
+            }, "additional_informations": ["regular"
+            ], "geojson": {"type": "LineString", "coordinates": [
+                    [
+                        2.3469765104,
+                        48.8617450319
+                    ],
+                    [
+                        2.3296591496,
+                        48.8723488407
+                    ],
+                    [
+                        2.2952314476,
+                        48.8741727596
+                    ],
+                    [
+                        2.2384185963,
+                        48.8922298016
+                    ],
+                    [
+                        2.222986243,
+                        48.8958867731
+                    ],
+                    [
+                        2.1851757042,
+                        48.9203475791
+                    ],
+                    [
+                        2.1572200389,
+                        48.9376952936
+                    ],
+                    [
+                        2.1446722659,
+                        48.9457406075
+                    ],
+                    [
+                        2.0777265247,
+                        48.9706435708
+                    ],
+                    [
+                        2.0746499246,
+                        48.9911562873
+                    ]
+                ], "properties": [
+                    {"length": 25954
+                    }
+                ]
+            }, "type": "public_transport", "display_informations": {"commercial_mode": "RER", "network": "RER", "direction": "Cergy le Haut (Cergy)", "label": "A", "color": "EB2132", "code": "A", "headsign": "UZAR", "name": "A", "links": [
+                    {"templated": False, "rel": "disruptions", "internal": True, "type": "disruption", "id": "991c458c-a928-11f0-bcab-0a58a9feac02"
+                    },
+                    {"templated": False, "rel": "disruptions", "internal": True, "type": "disruption", "id": "0efee43a-bb21-11f0-81fc-0a58a9feac02"
+                    },
+                    {"templated": False, "rel": "terminus", "internal": True, "type": "stop_area", "id": "stop_area:IDFM: 66834"
+                    }
+                ], "text_color": "FFFFFF", "trip_short_name": "UZAR75", "company": "SNCF", "description": "", "physical_mode": "RER", "equipments": ["has_wheelchair_accessibility", "has_air_conditioned"
+                ]
+            }, "links": [
+                {"type": "company", "id": "company:IDFM: 800"
+                },
+                {"type": "vehicle_journey", "id": "vehicle_journey:IDFM:TN:SNCF: 607a3528-1935-4535-9426-d4177a169dbd"
+                },
+                {"type": "line", "id": "line:IDFM:C01742"
+                },
+                {"type": "route", "id": "route:IDFM:SNCF: 67e33873-faad-384a-b9a9-175c5a776e27"
+                },
+                {"type": "commercial_mode", "id": "commercial_mode:RapidTransit"
+                },
+                {"type": "physical_mode", "id": "physical_mode:RapidTransit"
+                },
+                {"type": "network", "id": "network:IDFM: 71"
+                },
+                {"templated": False, "rel": "tickets", "internal": True, "type": "ticket", "id": "ticket_1_0"
+                }
+            ], "stop_date_times": [
+                {"departure_date_time": "20251114T130030", "base_departure_date_time": "20251114T130030", "arrival_date_time": "20251114T125940", "base_arrival_date_time": "20251114T125940", "stop_point": {"id": "stop_point:IDFM:monomodalStopPlace: 45102", "name": "Châtelet les Halles", "codes": [
+                            {"type": "netex_monomodal_stopplace", "value": "monomodalStopPlace: 45102"
+                            },
+                            {"type": "netex_zder_quay", "value": "412815"
+                            },
+                            {"type": "netex_zder_quay", "value": "471322"
+                            },
+                            {"type": "netex_zder_quay", "value": "471719"
+                            },
+                            {"type": "netex_zder_quay", "value": "471817"
+                            },
+                            {"type": "netex_zder_quay", "value": "472634"
+                            },
+                            {"type": "netex_zder_quay", "value": "472764"
+                            },
+                            {"type": "netex_zder_quay", "value": "472996"
+                            },
+                            {"type": "netex_zder_quay", "value": "473921"
+                            },
+                            {"type": "netex_zder_quay", "value": "473989"
+                            },
+                            {"type": "netex_zder_quay", "value": "473990"
+                            },
+                            {"type": "netex_zder_quay", "value": "473993"
+                            },
+                            {"type": "netex_zder_quay", "value": "monomodalStopPlace: 45102"
+                            },
+                            {"type": "source", "value": "FR: :monomodalStopPlace: 45102:FR1"
+                            }
+                        ], "label": "Châtelet les Halles (Paris)", "coord": {"lon": "2.34697651043533", "lat": "48.86174503191322"
+                        }, "links": [], "equipments": [], "address": {"id": "2.34697651043533;48.86174503191322", "name": "Rue Pierre Lescot", "house_number": 1, "coord": {"lon": "2.34697651043533", "lat": "48.86174503191322"
+                            }, "label": "1 Rue Pierre Lescot (Paris)"
+                        }, "fare_zone": {"name": "1"
+                        }
+                    }, "additional_informations": [], "links": []
+                },
+                {"departure_date_time": "20251114T130305", "base_departure_date_time": "20251114T130305", "arrival_date_time": "20251114T130225", "base_arrival_date_time": "20251114T130225", "stop_point": {"id": "stop_point:IDFM:monomodalStopPlace: 45873", "name": "Auber", "codes": [
+                            {"type": "netex_monomodal_stopplace", "value": "monomodalStopPlace: 45873"
+                            },
+                            {"type": "netex_zder_quay", "value": "412806"
+                            },
+                            {"type": "netex_zder_quay", "value": "473924"
+                            },
+                            {"type": "netex_zder_quay", "value": "473925"
+                            },
+                            {"type": "netex_zder_quay", "value": "monomodalStopPlace: 45873"
+                            },
+                            {"type": "source", "value": "FR: :monomodalStopPlace: 45873:FR1"
+                            }
+                        ], "label": "Auber (Paris)", "coord": {"lon": "2.329659149579359", "lat": "48.8723488407182"
+                        }, "links": [], "equipments": ["has_wheelchair_boarding"
+                        ], "address": {"id": "2.3296591495793595;48.872348840718196", "name": "Rue Auber", "house_number": 0, "coord": {"lon": "2.329659149579359", "lat": "48.8723488407182"
+                            }, "label": "6B Rue Auber (Paris)"
+                        }, "fare_zone": {"name": "1"
+                        }
+                    }, "additional_informations": [], "links": []
+                },
+                {"departure_date_time": "20251114T130611", "base_departure_date_time": "20251114T130611", "arrival_date_time": "20251114T130531", "base_arrival_date_time": "20251114T130531", "stop_point": {"id": "stop_point:IDFM:monomodalStopPlace: 58759", "name": "Charles de Gaulle - Etoile", "codes": [
+                            {"type": "netex_monomodal_stopplace", "value": "monomodalStopPlace: 58759"
+                            },
+                            {"type": "netex_zder_quay", "value": "412807"
+                            },
+                            {"type": "netex_zder_quay", "value": "473922"
+                            },
+                            {"type": "netex_zder_quay", "value": "473923"
+                            },
+                            {"type": "netex_zder_quay", "value": "monomodalStopPlace: 58759"
+                            },
+                            {"type": "source", "value": "FR: :monomodalStopPlace: 58759:FR1"
+                            }
+                        ], "label": "Charles de Gaulle - Etoile (Paris)", "coord": {"lon": "2.295231447641207", "lat": "48.87417275956538"
+                        }, "links": [], "equipments": ["has_wheelchair_boarding"
+                        ], "address": {"id": "2.295231447641207;48.874172759565376", "name": "Place Charles de Gaulle", "house_number": 0, "coord": {"lon": "2.295231447641207", "lat": "48.87417275956538"
+                            }, "label": "Place Charles de Gaulle (Paris)"
+                        }, "fare_zone": {"name": "1"
+                        }
+                    }, "additional_informations": [], "links": []
+                },
+                {"departure_date_time": "20251114T131014", "base_departure_date_time": "20251114T131014", "arrival_date_time": "20251114T130945", "base_arrival_date_time": "20251114T130945", "stop_point": {"id": "stop_point:IDFM:monomodalStopPlace: 470549", "name": "La Défense", "codes": [
+                            {"type": "netex_monomodal_stopplace", "value": "monomodalStopPlace: 470549"
+                            },
+                            {"type": "netex_zder_quay", "value": "40951"
+                            },
+                            {"type": "netex_zder_quay", "value": "470974"
+                            },
+                            {"type": "netex_zder_quay", "value": "472137"
+                            },
+                            {"type": "netex_zder_quay", "value": "472283"
+                            },
+                            {"type": "netex_zder_quay", "value": "473934"
+                            },
+                            {"type": "netex_zder_quay", "value": "473935"
+                            },
+                            {"type": "netex_zder_quay", "value": "473936"
+                            },
+                            {"type": "netex_zder_quay", "value": "473937"
+                            },
+                            {"type": "netex_zder_quay", "value": "484165"
+                            },
+                            {"type": "netex_zder_quay", "value": "484166"
+                            },
+                            {"type": "netex_zder_quay", "value": "monomodalStopPlace: 470549"
+                            },
+                            {"type": "source", "value": "FR: :monomodalStopPlace: 470549:FR1"
+                            }
+                        ], "label": "La Défense (Puteaux)", "coord": {"lon": "2.238418596250407", "lat": "48.89222980156821"
+                        }, "links": [], "equipments": ["has_wheelchair_boarding"
+                        ], "address": {"id": "2.238418596250407;48.892229801568206", "name": "Parvis de la Défense", "house_number": 2, "coord": {"lon": "2.238418596250407", "lat": "48.89222980156821"
+                            }, "label": "2 Parvis de la Défense (Puteaux)"
+                        }, "fare_zone": {"name": "3"
+                        }
+                    }, "additional_informations": [], "links": []
+                },
+                {"departure_date_time": "20251114T131400", "base_departure_date_time": "20251114T131400", "arrival_date_time": "20251114T131150", "base_arrival_date_time": "20251114T131150", "stop_point": {"id": "stop_point:IDFM:monomodalStopPlace: 43169", "name": "Nanterre Préfecture", "codes": [
+                            {"type": "netex_monomodal_stopplace", "value": "monomodalStopPlace: 43169"
+                            },
+                            {"type": "netex_zder_quay", "value": "40916"
+                            },
+                            {"type": "netex_zder_quay", "value": "474051"
+                            },
+                            {"type": "netex_zder_quay", "value": "474052"
+                            },
+                            {"type": "netex_zder_quay", "value": "474054"
+                            },
+                            {"type": "netex_zder_quay", "value": "474057"
+                            },
+                            {"type": "netex_zder_quay", "value": "monomodalStopPlace: 43169"
+                            },
+                            {"type": "source", "value": "FR: :monomodalStopPlace: 43169:FR1"
+                            }
+                        ], "label": "Nanterre Préfecture (Nanterre)", "coord": {"lon": "2.222986242991368", "lat": "48.89588677306467"
+                        }, "links": [], "equipments": ["has_wheelchair_boarding"
+                        ], "address": {"id": "2.2229862429913676;48.895886773064674", "name": "Esplanade Charles de Gaulle", "house_number": 6, "coord": {"lon": "2.222986242991368", "lat": "48.89588677306467"
+                            }, "label": "6 Esplanade Charles de Gaulle (Nanterre)"
+                        }, "fare_zone": {"name": "3"
+                        }
+                    }, "additional_informations": [], "links": []
+                },
+                {"departure_date_time": "20251114T131820", "base_departure_date_time": "20251114T131820", "arrival_date_time": "20251114T131750", "base_arrival_date_time": "20251114T131750", "stop_point": {"id": "stop_point:IDFM:monomodalStopPlace: 43082", "name": "Houilles - Carrières-sur-Seine", "codes": [
+                            {"type": "netex_monomodal_stopplace", "value": "monomodalStopPlace: 43082"
+                            },
+                            {"type": "netex_zder_quay", "value": "411357"
+                            },
+                            {"type": "netex_zder_quay", "value": "470891"
+                            },
+                            {"type": "netex_zder_quay", "value": "471638"
+                            },
+                            {"type": "netex_zder_quay", "value": "472203"
+                            },
+                            {"type": "netex_zder_quay", "value": "472389"
+                            },
+                            {"type": "netex_zder_quay", "value": "472409"
+                            },
+                            {"type": "netex_zder_quay", "value": "monomodalStopPlace: 43082"
+                            },
+                            {"type": "source", "value": "FR: :monomodalStopPlace: 43082:FR1"
+                            }
+                        ], "label": "Houilles - Carrières-sur-Seine (Houilles)", "coord": {"lon": "2.185175704201871", "lat": "48.92034757911033"
+                        }, "links": [], "equipments": ["has_wheelchair_boarding"
+                        ], "address": {"id": "2.1851757042018707;48.92034757911033", "name": "Rue du 4 Septembre", "house_number": 6, "coord": {"lon": "2.185175704201871", "lat": "48.92034757911033"
+                            }, "label": "6 Rue du 4 Septembre (Houilles)"
+                        }, "fare_zone": {"name": "4"
+                        }
+                    }, "additional_informations": [], "links": []
+                },
+                {"departure_date_time": "20251114T132130", "base_departure_date_time": "20251114T132130", "arrival_date_time": "20251114T132100", "base_arrival_date_time": "20251114T132100", "stop_point": {"id": "stop_point:IDFM:monomodalStopPlace: 43191", "name": "Sartrouville", "codes": [
+                            {"type": "netex_monomodal_stopplace", "value": "monomodalStopPlace: 43191"
+                            },
+                            {"type": "netex_zder_quay", "value": "411360"
+                            },
+                            {"type": "netex_zder_quay", "value": "470846"
+                            },
+                            {"type": "netex_zder_quay", "value": "471244"
+                            },
+                            {"type": "netex_zder_quay", "value": "471763"
+                            },
+                            {"type": "netex_zder_quay", "value": "472009"
+                            },
+                            {"type": "netex_zder_quay", "value": "472440"
+                            },
+                            {"type": "netex_zder_quay", "value": "480207"
+                            },
+                            {"type": "netex_zder_quay", "value": "monomodalStopPlace: 43191"
+                            },
+                            {"type": "source", "value": "FR: :monomodalStopPlace: 43191:FR1"
+                            }
+                        ], "label": "Sartrouville (Sartrouville)", "coord": {"lon": "2.157220038850732", "lat": "48.93769529363442"
+                        }, "links": [], "equipments": ["has_wheelchair_boarding"
+                        ], "address": {"id": "2.1572200388507317;48.93769529363442", "name": "Rue Turgot", "house_number": 4, "coord": {"lon": "2.157220038850732", "lat": "48.93769529363442"
+                            }, "label": "4 Rue Turgot (Sartrouville)"
+                        }, "fare_zone": {"name": "4"
+                        }
+                    }, "additional_informations": [], "links": []
+                },
+                {"departure_date_time": "20251114T132330", "base_departure_date_time": "20251114T132330", "arrival_date_time": "20251114T132300", "base_arrival_date_time": "20251114T132300", "stop_point": {"id": "stop_point:IDFM:monomodalStopPlace: 473109", "name": "Maisons-Laffitte", "codes": [
+                            {"type": "netex_monomodal_stopplace", "value": "monomodalStopPlace: 473109"
+                            },
+                            {"type": "netex_zder_quay", "value": "41527"
+                            },
+                            {"type": "netex_zder_quay", "value": "470784"
+                            },
+                            {"type": "netex_zder_quay", "value": "471617"
+                            },
+                            {"type": "netex_zder_quay", "value": "471907"
+                            },
+                            {"type": "netex_zder_quay", "value": "472928"
+                            },
+                            {"type": "netex_zder_quay", "value": "monomodalStopPlace: 473109"
+                            },
+                            {"type": "source", "value": "FR: :monomodalStopPlace: 473109:FR1"
+                            }
+                        ], "label": "Maisons-Laffitte (Maisons-Laffitte)", "coord": {"lon": "2.144672265933885", "lat": "48.94574060746957"
+                        }, "links": [], "equipments": ["has_wheelchair_boarding"
+                        ], "address": {"id": "2.1446722659338855;48.94574060746957", "name": "Pont Jean Monnet", "house_number": 0, "coord": {"lon": "2.144672265933885", "lat": "48.94574060746957"
+                            }, "label": "Pont Jean Monnet (Maisons-Laffitte)"
+                        }, "fare_zone": {"name": "4"
+                        }
+                    }, "additional_informations": [], "links": []
+                },
+                {"departure_date_time": "20251114T132950", "base_departure_date_time": "20251114T132950", "arrival_date_time": "20251114T132920", "base_arrival_date_time": "20251114T132920", "stop_point": {"id": "stop_point:IDFM:monomodalStopPlace: 46647", "name": "Achères Ville", "codes": [
+                            {"type": "netex_monomodal_stopplace", "value": "monomodalStopPlace: 46647"
+                            },
+                            {"type": "netex_zder_quay", "value": "41528"
+                            },
+                            {"type": "netex_zder_quay", "value": "471010"
+                            },
+                            {"type": "netex_zder_quay", "value": "473017"
+                            },
+                            {"type": "netex_zder_quay", "value": "monomodalStopPlace: 46647"
+                            },
+                            {"type": "source", "value": "FR: :monomodalStopPlace: 46647:FR1"
+                            }
+                        ], "label": "Achères Ville (Achères)", "coord": {"lon": "2.077726524656543", "lat": "48.97064357081442"
+                        }, "links": [], "equipments": ["has_wheelchair_boarding"
+                        ], "address": {"id": "2.0777265246565433;48.970643570814424", "name": "Rue Camille Jenatzy", "house_number": 2, "coord": {"lon": "2.077726524656543", "lat": "48.97064357081442"
+                            }, "label": "2 Rue Camille Jenatzy (Achères)"
+                        }, "fare_zone": {"name": "5"
+                        }
+                    }, "additional_informations": [], "links": []
+                },
+                {"departure_date_time": "20251114T133230", "base_departure_date_time": "20251114T133230", "arrival_date_time": "20251114T133200", "base_arrival_date_time": "20251114T133200", "stop_point": {"id": "stop_point:IDFM:monomodalStopPlace: 43114", "name": "Conflans Fin d"Oise", "codes": [
+                            {"type": "netex_monomodal_stopplace", "value": "monomodalStopPlace: 43114"
+                            },
+                            {"type": "netex_zder_quay", "value": "411350"
+                            },
+                            {"type": "netex_zder_quay", "value": "471418"
+                            },
+                            {"type": "netex_zder_quay", "value": "471534"
+                            },
+                            {"type": "netex_zder_quay", "value": "471751"
+                            },
+                            {"type": "netex_zder_quay", "value": "472478"
+                            },
+                            {"type": "netex_zder_quay", "value": "monomodalStopPlace: 43114"
+                            },
+                            {"type": "source", "value": "FR: :monomodalStopPlace: 43114:FR1"
+                            }
+                        ], "label": "Conflans Fin d"Oise (Conflans-Sainte-Honorine)", "coord": {"lon": "2.074649924571019", "lat": "48.99115628725848"
+                        }, "links": [], "equipments": ["has_wheelchair_boarding"
+                        ], "address": {"id": "2.0746499245710193;48.991156287258484", "name": "Rue du Maréchal Maunoury", "house_number": 73, "coord": {"lon": "2.074649924571019", "lat": "48.99115628725848"
+                            }, "label": "73 Rue du Maréchal Maunoury (Conflans-Sainte-Honorine)"
+                        }, "fare_zone": {"name": "5"
+                        }
+                    }, "additional_informations": [], "links": []
+                }
+            ]
+        },
+        {"id": "section_0_3_0", "duration": 840, "co2_emission": {"value": 0.0, "unit": "gEC"
+            }, "departure_date_time": "20251114T133200", "arrival_date_time": "20251114T134600", "type": "waiting", "links": []
+        },
+        {"id": "section_0_4_0", "duration": 1980, "co2_emission": {"value": 177.8450463324, "unit": "gEC"
+            }, "departure_date_time": "20251114T134600", "arrival_date_time": "20251114T141900", "base_departure_date_time": "20251114T134600", "base_arrival_date_time": "20251114T141900", "data_freshness": "base_schedule", "to": {"id": "stop_point:IDFM:monomodalStopPlace: 43151", "name": "Limay (Limay)", "quality": 0, "stop_point": {"id": "stop_point:IDFM:monomodalStopPlace: 43151", "name": "Limay", "codes": [
+                        {"type": "netex_monomodal_stopplace", "value": "monomodalStopPlace: 43151"
+                        },
+                        {"type": "netex_zder_quay", "value": "41154"
+                        },
+                        {"type": "netex_zder_quay", "value": "471926"
+                        },
+                        {"type": "netex_zder_quay", "value": "472175"
+                        },
+                        {"type": "netex_zder_quay", "value": "monomodalStopPlace: 43151"
+                        },
+                        {"type": "source", "value": "FR: :monomodalStopPlace: 43151:FR1"
+                        }
+                    ], "label": "Limay (Limay)", "coord": {"lon": "1.747413", "lat": "48.984202"
+                    }, "links": [], "administrative_regions": [
+                        {"id": "admin:fr: 78335", "name": "Limay", "level": 8, "zip_code": "78520", "label": "Limay (78520)", "insee": "78335", "coord": {"lon": "1.735368", "lat": "48.992101"
+                            }
+                        }
+                    ], "stop_area": {"id": "stop_area:IDFM: 65788", "name": "Limay", "codes": [
+                            {"type": "TN_PA", "value": "60"
+                            },
+                            {"type": "source", "value": "FR: :multimodalStopPlace: 65788:FR1"
+                            }
+                        ], "timezone": "Europe/Paris", "label": "Limay (Limay)", "coord": {"lon": "1.746369", "lat": "48.984767"
+                        }, "links": []
+                    }, "equipments": [], "address": {"id": "1.747413;48.984202", "name": "Boulevard Pasteur", "house_number": 1, "coord": {"lon": "1.747413", "lat": "48.984202"
+                        }, "label": "1 Boulevard Pasteur (Limay)"
+                    }, "fare_zone": {"name": "5"
+                    }
+                }, "embedded_type": "stop_point"
+            }, "from": {"id": "stop_point:IDFM:monomodalStopPlace: 43114", "name": "Conflans Fin d"Oise (Conflans-Sainte-Honorine)", "quality": 0, "stop_point": {"id": "stop_point:IDFM:monomodalStopPlace: 43114", "name": "Conflans Fin d"Oise", "codes": [
+                        {"type": "netex_monomodal_stopplace", "value": "monomodalStopPlace: 43114"
+                        },
+                        {"type": "netex_zder_quay", "value": "411350"
+                        },
+                        {"type": "netex_zder_quay", "value": "471418"
+                        },
+                        {"type": "netex_zder_quay", "value": "471534"
+                        },
+                        {"type": "netex_zder_quay", "value": "471751"
+                        },
+                        {"type": "netex_zder_quay", "value": "472478"
+                        },
+                        {"type": "netex_zder_quay", "value": "monomodalStopPlace: 43114"
+                        },
+                        {"type": "source", "value": "FR: :monomodalStopPlace: 43114:FR1"
+                        }
+                    ], "label": "Conflans Fin d"Oise (Conflans-Sainte-Honorine)", "coord": {"lon": "2.074649924571019", "lat": "48.99115628725848"
+                    }, "links": [], "administrative_regions": [
+                        {"id": "admin:fr: 78172", "name": "Conflans-Sainte-Honorine", "level": 8, "zip_code": "78700", "label": "Conflans-Sainte-Honorine (78700)", "insee": "78172", "coord": {"lon": "2.0949768", "lat": "48.9938791"
+                            }
+                        },
+                        {"id": "admin:admin:osm:relation: 9813291", "name": "Fin d"Oise", "level": 10, "zip_code": "", "label": "Fin d"Oise", "insee": "", "coord": {"lon": "2.0756166", "lat": "48.9906307"
+                            }
+                        }
+                    ], "stop_area": {"id": "stop_area:IDFM: 73605", "name": "Conflans Fin d"Oise", "codes": [
+                            {"type": "TN_PA", "value": "273"
+                            },
+                            {"type": "source", "value": "FR: :multimodalStopPlace: 73605:FR1"
+                            }
+                        ], "timezone": "Europe/Paris", "label": "Conflans Fin d"Oise (Conflans-Sainte-Honorine)", "coord": {"lon": "2.074666817381697", "lat": "48.99020768701453"
+                        }, "links": []
+                    }, "equipments": ["has_wheelchair_boarding"
+                    ], "address": {"id": "2.0746499245710193;48.991156287258484", "name": "Rue du Maréchal Maunoury", "house_number": 73, "coord": {"lon": "2.074649924571019", "lat": "48.99115628725848"
+                        }, "label": "73 Rue du Maréchal Maunoury (Conflans-Sainte-Honorine)"
+                    }, "fare_zone": {"name": "5"
+                    }
+                }, "embedded_type": "stop_point"
+            }, "additional_informations": ["regular"
+            ], "geojson": {"type": "LineString", "coordinates": [
+                    [
+                        2.0746499246,
+                        48.9911562873
+                    ],
+                    [
+                        2.059634534,
+                        48.9868624121
+                    ],
+                    [
+                        2.0486677679,
+                        48.9746207526
+                    ],
+                    [
+                        2.0276211498,
+                        48.9703570759
+                    ],
+                    [
+                        2.0057094441,
+                        48.981416007
+                    ],
+                    [
+                        1.9630264473,
+                        49.0073550144
+                    ],
+                    [
+                        1.9191705897,
+                        49.0066734422
+                    ],
+                    [
+                        1.9021289902,
+                        49.0058161561
+                    ],
+                    [
+                        1.8449525723,
+                        48.9922404875
+                    ],
+                    [
+                        1.809011059,
+                        48.9830038728
+                    ],
+                    [
+                        1.7838404357,
+                        48.9793069192
+                    ],
+                    [
+                        1.7474125099,
+                        48.9842021275
+                    ]
+                ], "properties": [
+                    {"length": 26946
+                    }
+                ]
+            }, "type": "public_transport", "display_informations": {"commercial_mode": "Train Transilien", "network": "Transilien", "direction": "Mantes-la-Jolie (Mantes-la-Jolie)", "label": "J", "color": "CEC73D", "code": "J", "headsign": "MOCA", "name": "J", "links": [
+                    {"templated": False, "rel": "disruptions", "internal": True, "type": "disruption", "id": "0efee43a-bb21-11f0-81fc-0a58a9feac02"
+                    },
+                    {"templated": False, "rel": "terminus", "internal": True, "type": "stop_area", "id": "stop_area:IDFM: 65931"
+                    }
+                ], "text_color": "000000", "trip_short_name": "136873", "company": "SNCF", "description": "", "physical_mode": "Train Transilien", "equipments": ["has_wheelchair_accessibility", "has_air_conditioned"
+                ]
+            }, "links": [
+                {"type": "company", "id": "company:IDFM: 800"
+                },
+                {"type": "vehicle_journey", "id": "vehicle_journey:IDFM:TN:SNCF:b2938e7c-5d5a-4a89-b756-5b90d50ffa1d"
+                },
+                {"type": "line", "id": "line:IDFM:C01739"
+                },
+                {"type": "route", "id": "route:IDFM:SNCF:d00cf633-a6ba-3717-85b9-794bab00085a"
+                },
+                {"type": "commercial_mode", "id": "commercial_mode:LocalTrain"
+                },
+                {"type": "physical_mode", "id": "physical_mode:LocalTrain"
+                },
+                {"type": "network", "id": "network:IDFM: 1046"
+                },
+                {"templated": False, "rel": "tickets", "internal": True, "type": "ticket", "id": "ticket_1_0"
+                }
+            ], "stop_date_times": [
+                {"departure_date_time": "20251114T134600", "base_departure_date_time": "20251114T134600", "arrival_date_time": "20251114T134520", "base_arrival_date_time": "20251114T134520", "stop_point": {"id": "stop_point:IDFM:monomodalStopPlace: 43114", "name": "Conflans Fin d"Oise", "codes": [
+                            {"type": "netex_monomodal_stopplace", "value": "monomodalStopPlace: 43114"
+                            },
+                            {"type": "netex_zder_quay", "value": "411350"
+                            },
+                            {"type": "netex_zder_quay", "value": "471418"
+                            },
+                            {"type": "netex_zder_quay", "value": "471534"
+                            },
+                            {"type": "netex_zder_quay", "value": "471751"
+                            },
+                            {"type": "netex_zder_quay", "value": "472478"
+                            },
+                            {"type": "netex_zder_quay", "value": "monomodalStopPlace: 43114"
+                            },
+                            {"type": "source", "value": "FR: :monomodalStopPlace: 43114:FR1"
+                            }
+                        ], "label": "Conflans Fin d"Oise (Conflans-Sainte-Honorine)", "coord": {"lon": "2.074649924571019", "lat": "48.99115628725848"
+                        }, "links": [], "equipments": ["has_wheelchair_boarding"
+                        ], "address": {"id": "2.0746499245710193;48.991156287258484", "name": "Rue du Maréchal Maunoury", "house_number": 73, "coord": {"lon": "2.074649924571019", "lat": "48.99115628725848"
+                            }, "label": "73 Rue du Maréchal Maunoury (Conflans-Sainte-Honorine)"
+                        }, "fare_zone": {"name": "5"
+                        }
+                    }, "additional_informations": [], "links": []
+                },
+                {"departure_date_time": "20251114T134830", "base_departure_date_time": "20251114T134830", "arrival_date_time": "20251114T134750", "base_arrival_date_time": "20251114T134750", "stop_point": {"id": "stop_point:IDFM:monomodalStopPlace: 43160", "name": "Maurecourt", "codes": [
+                            {"type": "netex_monomodal_stopplace", "value": "monomodalStopPlace: 43160"
+                            },
+                            {"type": "netex_zder_quay", "value": "41148"
+                            },
+                            {"type": "netex_zder_quay", "value": "471595"
+                            },
+                            {"type": "netex_zder_quay", "value": "472476"
+                            },
+                            {"type": "netex_zder_quay", "value": "monomodalStopPlace: 43160"
+                            },
+                            {"type": "source", "value": "FR: :monomodalStopPlace: 43160:FR1"
+                            }
+                        ], "label": "Maurecourt (Andrésy)", "coord": {"lon": "2.059634534011659", "lat": "48.98686241205721"
+                        }, "links": [], "equipments": [], "address": {"id": "2.059634534011659;48.986862412057214", "name": "Rue de la Halte", "house_number": 5, "coord": {"lon": "2.059634534011659", "lat": "48.98686241205721"
+                            }, "label": "5 Rue de la Halte (Andrésy)"
+                        }, "fare_zone": {"name": "5"
+                        }
+                    }, "additional_informations": [], "links": []
+                },
+                {"departure_date_time": "20251114T135100", "base_departure_date_time": "20251114T135100", "arrival_date_time": "20251114T135020", "base_arrival_date_time": "20251114T135020", "stop_point": {"id": "stop_point:IDFM:monomodalStopPlace: 47916", "name": "Andrésy", "codes": [
+                            {"type": "netex_monomodal_stopplace", "value": "monomodalStopPlace: 47916"
+                            },
+                            {"type": "netex_zder_quay", "value": "41149"
+                            },
+                            {"type": "netex_zder_quay", "value": "471059"
+                            },
+                            {"type": "netex_zder_quay", "value": "472150"
+                            },
+                            {"type": "netex_zder_quay", "value": "monomodalStopPlace: 47916"
+                            },
+                            {"type": "source", "value": "FR: :monomodalStopPlace: 47916:FR1"
+                            }
+                        ], "label": "Andrésy (Andrésy)", "coord": {"lon": "2.0486677678528", "lat": "48.97462075263292"
+                        }, "links": [], "equipments": [], "address": {"id": "2.0486677678528;48.974620752632916", "name": "Avenue Maurice Berteaux", "house_number": 2, "coord": {"lon": "2.0486677678528", "lat": "48.97462075263292"
+                            }, "label": "2 Avenue Maurice Berteaux (Andrésy)"
+                        }, "fare_zone": {"name": "5"
+                        }
+                    }, "additional_informations": [], "links": []
+                },
+                {"departure_date_time": "20251114T135340", "base_departure_date_time": "20251114T135340", "arrival_date_time": "20251114T135300", "base_arrival_date_time": "20251114T135300", "stop_point": {"id": "stop_point:IDFM:monomodalStopPlace: 47929", "name": "Chanteloup-les-Vignes", "codes": [
+                            {"type": "netex_monomodal_stopplace", "value": "monomodalStopPlace: 47929"
+                            },
+                            {"type": "netex_zder_quay", "value": "41147"
+                            },
+                            {"type": "netex_zder_quay", "value": "472114"
+                            },
+                            {"type": "netex_zder_quay", "value": "472603"
+                            },
+                            {"type": "netex_zder_quay", "value": "monomodalStopPlace: 47929"
+                            },
+                            {"type": "source", "value": "FR: :monomodalStopPlace: 47929:FR1"
+                            }
+                        ], "label": "Chanteloup-les-Vignes (Chanteloup-les-Vignes)", "coord": {"lon": "2.027621149765165", "lat": "48.97035707590211"
+                        }, "links": [], "equipments": [], "address": {"id": "2.0276211497651646;48.97035707590211", "name": "Place de la Gare", "house_number": 0, "coord": {"lon": "2.027621149765165", "lat": "48.97035707590211"
+                            }, "label": "Place de la Gare (Chanteloup-les-Vignes)"
+                        }, "fare_zone": {"name": "5"
+                        }
+                    }, "additional_informations": [], "links": []
+                },
+                {"departure_date_time": "20251114T135640", "base_departure_date_time": "20251114T135640", "arrival_date_time": "20251114T135600", "base_arrival_date_time": "20251114T135600", "stop_point": {"id": "stop_point:IDFM:monomodalStopPlace: 46926", "name": "Triel-sur-Seine", "codes": [
+                            {"type": "netex_monomodal_stopplace", "value": "monomodalStopPlace: 46926"
+                            },
+                            {"type": "netex_zder_quay", "value": "41162"
+                            },
+                            {"type": "netex_zder_quay", "value": "470997"
+                            },
+                            {"type": "netex_zder_quay", "value": "472640"
+                            },
+                            {"type": "netex_zder_quay", "value": "monomodalStopPlace: 46926"
+                            },
+                            {"type": "source", "value": "FR: :monomodalStopPlace: 46926:FR1"
+                            }
+                        ], "label": "Triel-sur-Seine (Triel-sur-Seine)", "coord": {"lon": "2.005709444143668", "lat": "48.98141600700941"
+                        }, "links": [], "equipments": [], "address": {"id": "2.005709444143668;48.98141600700941", "name": "Place de la Gare", "house_number": 0, "coord": {"lon": "2.005709444143668", "lat": "48.98141600700941"
+                            }, "label": "Place de la Gare (Triel-sur-Seine)"
+                        }, "fare_zone": {"name": "5"
+                        }
+                    }, "additional_informations": [], "links": []
+                },
+                {"departure_date_time": "20251114T140030", "base_departure_date_time": "20251114T140030", "arrival_date_time": "20251114T135950", "base_arrival_date_time": "20251114T135950", "stop_point": {"id": "stop_point:IDFM:monomodalStopPlace: 43217", "name": "Vaux-sur-Seine", "codes": [
+                            {"type": "netex_monomodal_stopplace", "value": "monomodalStopPlace: 43217"
+                            },
+                            {"type": "netex_zder_quay", "value": "41163"
+                            },
+                            {"type": "netex_zder_quay", "value": "470629"
+                            },
+                            {"type": "netex_zder_quay", "value": "472999"
+                            },
+                            {"type": "netex_zder_quay", "value": "monomodalStopPlace: 43217"
+                            },
+                            {"type": "source", "value": "FR: :monomodalStopPlace: 43217:FR1"
+                            }
+                        ], "label": "Vaux-sur-Seine (Vaux-sur-Seine)", "coord": {"lon": "1.963026447316257", "lat": "49.0073550143858"
+                        }, "links": [], "equipments": [], "address": {"id": "1.9630264473162566;49.0073550143858", "name": "Sente Quiete", "house_number": 0, "coord": {"lon": "1.963026447316257", "lat": "49.0073550143858"
+                            }, "label": "Sente Quiete (Vaux-sur-Seine)"
+                        }, "fare_zone": {"name": "5"
+                        }
+                    }, "additional_informations": [], "links": []
+                },
+                {"departure_date_time": "20251114T140410", "base_departure_date_time": "20251114T140410", "arrival_date_time": "20251114T140330", "base_arrival_date_time": "20251114T140330", "stop_point": {"id": "stop_point:IDFM:monomodalStopPlace: 46902", "name": "Thun le Paradis", "codes": [
+                            {"type": "netex_monomodal_stopplace", "value": "monomodalStopPlace: 46902"
+                            },
+                            {"type": "netex_zder_quay", "value": "41164"
+                            },
+                            {"type": "netex_zder_quay", "value": "470612"
+                            },
+                            {"type": "netex_zder_quay", "value": "471382"
+                            },
+                            {"type": "netex_zder_quay", "value": "monomodalStopPlace: 46902"
+                            },
+                            {"type": "source", "value": "FR: :monomodalStopPlace: 46902:FR1"
+                            }
+                        ], "label": "Thun le Paradis (Meulan-en-Yvelines)", "coord": {"lon": "1.919170589720022", "lat": "49.00667344220741"
+                        }, "links": [], "equipments": [], "address": {"id": "1.919170589720022;49.006673442207415", "name": "Rue des Annonciades", "house_number": 0, "coord": {"lon": "1.919170589720022", "lat": "49.00667344220741"
+                            }, "label": "Rue des Annonciades (Meulan-en-Yvelines)"
+                        }, "fare_zone": {"name": "5"
+                        }
+                    }, "additional_informations": [], "links": []
+                },
+                {"departure_date_time": "20251114T140620", "base_departure_date_time": "20251114T140620", "arrival_date_time": "20251114T140540", "base_arrival_date_time": "20251114T140540", "stop_point": {"id": "stop_point:IDFM:monomodalStopPlace: 46897", "name": "Meulan - Hardricourt", "codes": [
+                            {"type": "netex_monomodal_stopplace", "value": "monomodalStopPlace: 46897"
+                            },
+                            {"type": "netex_zder_quay", "value": "41165"
+                            },
+                            {"type": "netex_zder_quay", "value": "471626"
+                            },
+                            {"type": "netex_zder_quay", "value": "472350"
+                            },
+                            {"type": "netex_zder_quay", "value": "monomodalStopPlace: 46897"
+                            },
+                            {"type": "source", "value": "FR: :monomodalStopPlace: 46897:FR1"
+                            }
+                        ], "label": "Meulan - Hardricourt (Hardricourt)", "coord": {"lon": "1.9021289902435", "lat": "49.00581615609435"
+                        }, "links": [], "equipments": [], "address": {"id": "1.9021289902435004;49.00581615609435", "name": "Boulevard Carnot", "house_number": 0, "coord": {"lon": "1.9021289902435", "lat": "49.00581615609435"
+                            }, "label": "Boulevard Carnot (Hardricourt)"
+                        }, "fare_zone": {"name": "5"
+                        }
+                    }, "additional_informations": [], "links": []
+                },
+                {"departure_date_time": "20251114T141030", "base_departure_date_time": "20251114T141030", "arrival_date_time": "20251114T140950", "base_arrival_date_time": "20251114T140950", "stop_point": {"id": "stop_point:IDFM:monomodalStopPlace: 43137", "name": "Juziers", "codes": [
+                            {"type": "netex_monomodal_stopplace", "value": "monomodalStopPlace: 43137"
+                            },
+                            {"type": "netex_zder_quay", "value": "41151"
+                            },
+                            {"type": "netex_zder_quay", "value": "471760"
+                            },
+                            {"type": "netex_zder_quay", "value": "472000"
+                            },
+                            {"type": "netex_zder_quay", "value": "monomodalStopPlace: 43137"
+                            },
+                            {"type": "source", "value": "FR: :monomodalStopPlace: 43137:FR1"
+                            }
+                        ], "label": "Juziers (Juziers)", "coord": {"lon": "1.844952572258715", "lat": "48.99224048747195"
+                        }, "links": [], "equipments": [], "address": {"id": "1.8449525722587152;48.99224048747195", "name": "Avenue de la Gare", "house_number": 14, "coord": {"lon": "1.844952572258715", "lat": "48.99224048747195"
+                            }, "label": "14 Avenue de la Gare (Juziers)"
+                        }, "fare_zone": {"name": "5"
+                        }
+                    }, "additional_informations": [], "links": []
+                },
+                {"departure_date_time": "20251114T141350", "base_departure_date_time": "20251114T141350", "arrival_date_time": "20251114T141310", "base_arrival_date_time": "20251114T141310", "stop_point": {"id": "stop_point:IDFM:monomodalStopPlace: 43129", "name": "Gargenville", "codes": [
+                            {"type": "netex_monomodal_stopplace", "value": "monomodalStopPlace: 43129"
+                            },
+                            {"type": "netex_zder_quay", "value": "41152"
+                            },
+                            {"type": "netex_zder_quay", "value": "471040"
+                            },
+                            {"type": "netex_zder_quay", "value": "472345"
+                            },
+                            {"type": "netex_zder_quay", "value": "monomodalStopPlace: 43129"
+                            },
+                            {"type": "source", "value": "FR: :monomodalStopPlace: 43129:FR1"
+                            }
+                        ], "label": "Gargenville (Gargenville)", "coord": {"lon": "1.809011059016627", "lat": "48.98300387276142"
+                        }, "links": [], "equipments": [], "address": {"id": "1.8090110590166268;48.983003872761415", "name": "Rue Bernard Palissy", "house_number": 3, "coord": {"lon": "1.809011059016627", "lat": "48.98300387276142"
+                            }, "label": "3 Rue Bernard Palissy (Gargenville)"
+                        }, "fare_zone": {"name": "5"
+                        }
+                    }, "additional_informations": [], "links": []
+                },
+                {"departure_date_time": "20251114T141630", "base_departure_date_time": "20251114T141630", "arrival_date_time": "20251114T141550", "base_arrival_date_time": "20251114T141550", "stop_point": {"id": "stop_point:IDFM:monomodalStopPlace: 46975", "name": "Issou - Porcheville", "codes": [
+                            {"type": "netex_monomodal_stopplace", "value": "monomodalStopPlace: 46975"
+                            },
+                            {"type": "netex_zder_quay", "value": "41153"
+                            },
+                            {"type": "netex_zder_quay", "value": "471290"
+                            },
+                            {"type": "netex_zder_quay", "value": "473015"
+                            },
+                            {"type": "netex_zder_quay", "value": "monomodalStopPlace: 46975"
+                            },
+                            {"type": "source", "value": "FR: :monomodalStopPlace: 46975:FR1"
+                            }
+                        ], "label": "Issou - Porcheville (Porcheville)", "coord": {"lon": "1.783840435683065", "lat": "48.9793069192499"
+                        }, "links": [], "equipments": [], "address": {"id": "1.7838404356830648;48.9793069192499", "name": "Rue du Pied de Chêne", "house_number": 0, "coord": {"lon": "1.783840435683065", "lat": "48.9793069192499"
+                            }, "label": "Rue du Pied de Chêne (Porcheville)"
+                        }, "fare_zone": {"name": "5"
+                        }
+                    }, "additional_informations": [], "links": []
+                },
+                {"departure_date_time": "20251114T141940", "base_departure_date_time": "20251114T141940", "arrival_date_time": "20251114T141900", "base_arrival_date_time": "20251114T141900", "stop_point": {"id": "stop_point:IDFM:monomodalStopPlace: 43151", "name": "Limay", "codes": [
+                            {"type": "netex_monomodal_stopplace", "value": "monomodalStopPlace: 43151"
+                            },
+                            {"type": "netex_zder_quay", "value": "41154"
+                            },
+                            {"type": "netex_zder_quay", "value": "471926"
+                            },
+                            {"type": "netex_zder_quay", "value": "472175"
+                            },
+                            {"type": "netex_zder_quay", "value": "monomodalStopPlace: 43151"
+                            },
+                            {"type": "source", "value": "FR: :monomodalStopPlace: 43151:FR1"
+                            }
+                        ], "label": "Limay (Limay)", "coord": {"lon": "1.747412509898415", "lat": "48.98420212754175"
+                        }, "links": [], "equipments": [], "address": {"id": "1.7474125098984148;48.98420212754175", "name": "Boulevard Pasteur", "house_number": 1, "coord": {"lon": "1.747412509898415", "lat": "48.98420212754175"
+                            }, "label": "1 Boulevard Pasteur (Limay)"
+                        }, "fare_zone": {"name": "5"
+                        }
+                    }, "additional_informations": [], "links": []
+                }
+            ]
+        }
+    ], "links": [
+        {"href": "https: //api-idfm.navitia.io/v1/coverage/idfm/journeys?allowed_id%5B%5D=stop_point%3AIDFM%3AmonomodalStopPlace%3A43125&allowed_id%5B%5D=stop_point%3AIDFM%3AmonomodalStopPlace%3A43151&allowed_id%5B%5D=stop_point%3AIDFM%3AmonomodalStopPlace%3A45102&allowed_id%5B%5D=stop_point%3AIDFM%3AmonomodalStopPlace%3A43114&datetime=20251114T122329&datetime_represents=departure&from=stop_point%3AIDFM%3AmonomodalStopPlace%3A43125&max_duration=14400&to=stop_point%3AIDFM%3AmonomodalStopPlace%3A43151&first_section_mode%5B%5D=walking&last_section_mode%5B%5D=walking&min_nb_transfers=2&direct_path=none&min_nb_journeys=5&is_journey_schedules=True&_pt_planner=kraken", "templated": False, "rel": "same_journey_schedules", "type": "journeys"}, {"href": "https://api-idfm.navitia.io/v1/coverage/idfm/journeys?allowed_id%5B%5D=stop_point%3AIDFM%3AmonomodalStopPlace%3A43125&allowed_id%5B%5D=stop_point%3AIDFM%3AmonomodalStopPlace%3A43151&allowed_id%5B%5D=stop_point%3AIDFM%3AmonomodalStopPlace%3A45102&allowed_id%5B%5D=stop_point%3AIDFM%3AmonomodalStopPlace%3A43114&datetime=20251114T122329&datetime_represents=departure&from=stop_point%3AIDFM%3AmonomodalStopPlace%3A43125&max_duration=14400&to=stop_point%3AIDFM%3AmonomodalStopPlace%3A43151&first_section_mode%5B%5D=walking&last_section_mode%5B%5D=walking&min_nb_transfers=2&direct_path=none&min_nb_journeys=1&is_journey_schedules=True&count=1", "templated": False, "rel": "this_journey", "type": "journeys"}]}
