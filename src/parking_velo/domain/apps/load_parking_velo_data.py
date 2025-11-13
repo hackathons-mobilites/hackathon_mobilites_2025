@@ -1,4 +1,5 @@
 import logging
+
 from src.parking_velo.infrastructure.api_handler import ApiHandler
 from src.parking_velo.infrastructure.local_file_system_handler import LocalFileSystemHandler
 from src.parking_velo.domain.usecases.load_parking_velo_data import load_parking_velo_data
