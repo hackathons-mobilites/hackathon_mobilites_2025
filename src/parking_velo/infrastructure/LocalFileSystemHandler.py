@@ -1,18 +1,13 @@
-from posixpath import join
+import geopandas as gpd
 
-import pandas as pd
-
-from data import DATA_PATH
+from data import PATH_PARKING_VELO
 from src.parking_velo.domain.ports.FileSystemHandler import FileSystemHandler
-
-
-PATH_PARKING_VELO = join(DATA_PATH, "parking_velo.parquet")
 
 
 class LocalFileSystemHandler(FileSystemHandler):
 
-    def save_parking_velo_data(self, df: pd.DataFrame) -> None:
+    def save_parking_velo_data(self, df: gpd.GeoDataFrame) -> None:
         df.to_parquet(PATH_PARKING_VELO, index=False)
 
-    def get_parking_velo_data(self) -> pd.DataFrame:
-        return pd.read_parquet(PATH_PARKING_VELO)
+    def get_parking_velo_data(self) -> gpd.GeoDataFrame:
+        return gpd.read_parquet(PATH_PARKING_VELO)
