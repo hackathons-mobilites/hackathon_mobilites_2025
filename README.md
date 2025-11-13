@@ -135,7 +135,7 @@ Vous disposez d'un certain nombre de ressources. **Le but n'est pas de toutes le
 | Ressource | Description | Lien |
 |-----------|-------------|------|
 | Les ressources IA | Accès aux LLM déployés sur Azure par Ile-de-France Mobilités | [Snippet de code](notebooks/HM2025%20-%20Snippets%20de%20code.ipynb) + URL endpoint et secrets communiqués via Slack|
-| Les données et documents | Liste de toutes les données et documents | [Airtable](https://airtable.com/appGp6Hwf0NrmXQ9L/shrnmQYmL0lDKgS76/tblC8dlSqeplzyg0A) |
+| Les données et documents | Liste de toutes les données et documents | [Airtable](https://airtable.com/appoPX9ywWeRtE2ZX/shrEP0lYtNSixQRZE/tblC8dlSqeplzyg0A) |
 | Le notebook de prise en main des ressources | Notebook pour prendre en main certains jeux de données et ressources | [Snippet de code](notebooks/HM2025%20-%20Snippets%20de%20code.ipynb) |
 | Le script de génération d'itineraires piétons | Module Python permettant de générer des itinéraires entre une gare et un POI | [ReadMe](scripts/itineraires_pietons/README.md) |
 
