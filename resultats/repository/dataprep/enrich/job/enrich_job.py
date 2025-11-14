@@ -41,7 +41,7 @@ class EnrichJob(JobRunner):
         self.etablissements_path = "/home/onyxia/work/hackathon_mobilites_2025/data/interim/etablissements.gpq"
         self.ascenseurs_path = "/home/onyxia/work/hackathon_mobilites_2025/data/raw/etat-des-ascenseurs.csv"
         self.corr_nombre_etape_path = "/home/onyxia/work/hackathon_mobilites_2025/data/interim/metro_connexion_nombre_etape.parquet"
-        self.corr_path = "/home/onyxia/work/hackathon_mobilites_2025/data/metro_conexion_qualif.parquet"
+        self.corr_path = "/home/onyxia/work/hackathon_mobilites_2025/data/interim/metro_conexion_qualif.parquet"
         self.out_path = "/home/onyxia/work/hackathon_mobilites_2025/data/enrich/final_table.gpq"
 
     def process(self):
