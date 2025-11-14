@@ -1,10 +1,11 @@
 from abc import ABC, abstractmethod
+
 from shapely.geometry import Point
 
 
 class SourceHandler(ABC):
     @abstractmethod
-    def get_itinerary_transport(self, departure_coordinates: Point, arrival_coordinates: Point) -> dict:
+    def get_itinerary_transport(self, departure_coordinates: Point, arrival_coordinates: Point, travel_datetime: str | None, datetime_represents: str) -> list[dict]:
         pass
 
     @abstractmethod

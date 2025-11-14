@@ -1,11 +1,13 @@
+import datetime
 import json
 from urllib.parse import urljoin
-from shapely.geometry import Point
+
 import pyproj
-
 import requests
+from shapely.geometry import Point
 
-from config.var_env import API_KEY_PRIM, BASE_URL_PRIM, PATH_GEOVELO, PATH_CALCULATEUR_IDFM
+from config.var_env import (API_KEY_PRIM, BASE_URL_PRIM, PATH_CALCULATEUR_IDFM,
+                            PATH_GEOVELO)
 from src.itineraire.domain.ports.source_handler import SourceHandler
 
 
@@ -56,13 +58,30 @@ class ApiHandler(SourceHandler):
         except Exception as e:
             raise ValueError(f"Erreur conversion coordonnées pour {address_name}: {e}")
 
-    def get_itinerary_transport(self, departure_coordinates: Point, arrival_coordinates: Point) -> dict:
-        params = {
-            'from': f"{departure_coordinates.x};{departure_coordinates.y}",
-            'to': f"{arrival_coordinates.x};{arrival_coordinates.y}",
-        }
+    def get_itinerary_transport(
+            self,
+            departure_coordinates: Point,
+            arrival_coordinates: Point,
+            travel_datetime: str | None,
+            datetime_represents: str
+        ) -> list[dict]:
+        if travel_datetime:
+            params = {
+                'from': f"{departure_coordinates.x};{departure_coordinates.y}",
+                'to': f"{arrival_coordinates.x};{arrival_coordinates.y}",
+                'datetime': travel_datetime,
+                'datetime_representss': datetime_represents,
+                'allowed_id[]': ["commercial_mode:LocalTrain", "commercial_mode:RapidTransit"]
+            }
+        else:
+            params = {
+                'from': f"{departure_coordinates.x};{departure_coordinates.y}",
+                'to': f"{arrival_coordinates.x};{arrival_coordinates.y}",
+                'allowed_id[]': ["commercial_mode:LocalTrain", "commercial_mode:RapidTransit"]
+            }
         r = self.session.get(f"{self.url_prim}/journeys", params=params)
-        return r.json()
+        list_journeys = r.json().get("journeys")
+        return list_journeys
 
     def get_itinerary_marche(self, departure_coordinates: Point, arrival_coordinates: Point) -> dict:
         params = {
