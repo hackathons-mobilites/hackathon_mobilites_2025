@@ -1,4 +1,6 @@
-# Template ReadMe des projets - [Nom du projet]
+# MobiPuzzle - Décarbonation grâce à la gamification
+
+![Presentation GIF](./mobipuzzle.gif)
 
 Développée pour le Hackathon IDFM 2025, cette application incite les employés à préférer le  vélo par rapport a la voiture en "gamifiant" leurs trajets domicile-travail via des défis ludiques et réguliers, basés sur un calculateur intermodal innovant.
 
