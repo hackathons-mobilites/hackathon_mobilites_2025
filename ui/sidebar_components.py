@@ -9,6 +9,7 @@ import streamlit as st
 from streamlit_searchbox import st_searchbox  # type: ignore
 
 from src.parking_velo.config.filters import ParkingVeloFilters
+from src.parking_velo.domain.apps.get_parking_velo import get_parking_velo
 
 from .constants import PARIS_CENTER, MAP_STYLES
 from .styles import EXPANDER_CSS
@@ -68,7 +69,12 @@ def create_sidebar(gmaps):
         calculation_requested = _create_calculation_button(departure, arrival)
 
         # Options avancées
-        show_parking, map_style, to_parking, get_forecast, parking_filter = _create_advanced_options()
+        (show_parking,
+         map_style,
+         to_parking,
+         use_train,
+         get_forecast,
+         parking_filter) = _create_advanced_options()
 
         return (
             departure,
@@ -78,9 +84,20 @@ def create_sidebar(gmaps):
             show_parking,
             map_style,
             to_parking,
+            use_train,
             get_forecast,
             parking_filter,
         )
+
+
+@st.cache_data(show_spinner=False)
+def _get_parking_count(parking_filter: ParkingVeloFilters) -> int:
+    """Renvoie le nombre de parkings pour un filtre donné."""
+    try:
+        parking_data = get_parking_velo(filter=parking_filter)
+        return int(parking_data.shape[0])
+    except Exception:
+        return 0
 
 
 def _create_address_inputs(gmaps):
@@ -162,6 +179,13 @@ def _create_advanced_options():
             help=("Si décoché: le vélo va directement à la destination, "
                   "sans segment marche ajouté."),
         )
+        use_train_default = st.session_state.get("use_train_enabled", True)
+        use_train = st.checkbox(
+            "Autoriser les transports en commun",
+            value=use_train_default,
+            help="Quand activé, intègre les segments transport (train, RER, etc.) compatibles vélo.",
+        )
+        st.session_state.use_train_enabled = use_train
         map_style = st.selectbox(
             "Style carte",
             options=MAP_STYLES,
@@ -193,10 +217,13 @@ def _create_advanced_options():
         )
         st.session_state.parking_filter = parking_filter
 
+        parking_count = _get_parking_count(parking_filter)
+        st.caption(f"✅ {parking_count} parkings vélo chargés")
+
         get_forecast = st.checkbox(
             "Afficher les prévisions météo du trajet",
             value=True,
             help="Récupère et affiche la température et les conditions prévues pour l'horaire choisi.",
         )
 
-    return show_parking, map_style, to_parking, get_forecast, parking_filter
+    return show_parking, map_style, to_parking, use_train, get_forecast, parking_filter

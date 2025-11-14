@@ -153,6 +153,5 @@ def _add_parking_markers(m, parking_filter: ParkingVeloFilters):
                 )
             ).add_to(marker_cluster)
 
-        st.write(f"✅ {len(parking_data)} parkings vélo chargés")
     except Exception as e:
         st.error(f"❌ Erreur chargement parkings: {e}")

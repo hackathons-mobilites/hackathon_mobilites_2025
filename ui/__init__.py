@@ -15,7 +15,9 @@ from .map_components import create_base_map
 from .route_components import (
     add_bike_routes_to_map,
     add_departure_arrival_markers,
-    add_walking_route_to_map
+    add_walking_route_to_map,
+    add_transport_route_to_map,
+    display_transport_itinerary,
 )
 
 from .sidebar_components import create_sidebar
@@ -30,6 +32,8 @@ __all__ = [
     'add_bike_routes_to_map',
     'add_departure_arrival_markers',
     'add_walking_route_to_map',
+    'add_transport_route_to_map',
+    'display_transport_itinerary',
     'create_sidebar',
     'display_weather_forecast'
 ]

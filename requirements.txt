@@ -10,3 +10,4 @@ streamlit-folium==0.25.3
 polyline==2.0.3
 googlemaps==4.10.0
 streamlit-searchbox==0.1.6
+holidays==0.84

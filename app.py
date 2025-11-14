@@ -16,8 +16,10 @@ from ui import (
     add_bike_routes_to_map,
     add_departure_arrival_markers,
     add_walking_route_to_map,
+    add_transport_route_to_map,
     create_sidebar,
     display_weather_forecast,
+    display_transport_itinerary,
 )
 
 # Configuration de la page
@@ -40,6 +42,7 @@ def main():
         show_parking,
         map_style,
         to_parking,
+        use_train,
         get_forecast,
         parking_filter,
     ) = create_sidebar(gmaps)
@@ -50,6 +53,7 @@ def main():
             departure,
             arrival,
             to_parking,
+            use_train,
             travel_datetime,
             get_forecast,
             parking_filter,
@@ -66,6 +70,8 @@ def main():
     if has_itinerary_result():
         try:
             itinerary_data = get_itinerary_result()
+            if isinstance(itinerary_data, list):
+                itinerary_data = next((item for item in itinerary_data if isinstance(item, dict)), {})
             if itinerary_data.get("meteo_forecast"):
                 display_weather_forecast(
                     itinerary_data["meteo_forecast"],
@@ -74,6 +80,9 @@ def main():
             add_departure_arrival_markers(m, itinerary_data)
             add_bike_routes_to_map(m, itinerary_data)
             add_walking_route_to_map(m, itinerary_data)
+            add_transport_route_to_map(m, itinerary_data)
+            transport_info = itinerary_data.get("itinerary_transport")
+            display_transport_itinerary(transport_info)
         except Exception as e:
             st.error(f"❌ Erreur affichage: {e}")
 
