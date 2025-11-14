@@ -4,8 +4,8 @@ Constantes pour l'interface utilisateur de CycloFlow
 
 # Configuration DEBUG (à supprimer plus tard)
 DEBUG_ADDRESSES = {
-    "departure": "14 Rue du Prévôt, Paris, France",
-    "arrival": "34 Avenue des Champs-Élysées, Paris, France"
+    "departure": "Fresnes",
+    "arrival": "Rue de Châteaudun, Paris, France"
 }
 
 # Constantes géographiques
