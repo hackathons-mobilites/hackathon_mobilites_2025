@@ -10,7 +10,7 @@ Ce projet implémente une application "fullstack" (complète) pour le défi "Aid
 
 ### Le problème et la proposition de valeur
 
-Le report modal vers des modes de transport plus écologiques reste un défi majeur. Les données de l'étude 2022 sur les émissions de gaz à effet de serre en Île-de-France sont parlantes : malgré une forte utilisation des transports en commun (plus de 50 %), plus d'un tiers des usagers (35 %) continue d'utiliser la voiture, tandis que le vélo ne représente que 4 %. Sur le territoire d'IDFM, 13 % des émissions de GES liées aux transports proviennent des déplacements domicile-travail, et la région compte 6 millions d'emplois salariés. Le potentiel de décarbonation est donc considérable.
+Le report modal vers des modes de transport plus écologiques reste un défi majeur. Les données de l'étude 2022 sur les émissions de gaz à effet de serre en France metropolitaine sont parlantes : en Ile de France malgré une forte utilisation des transports en commun (plus de 50 %), plus d'un tiers des usagers (35 %) continue d'utiliser la voiture, tandis que le vélo ne représente que 4 %. Sur le territoire d'IDFM, 13 % des émissions de GES liées aux transports proviennent des déplacements domicile-travail, et la région compte 6 millions d'emplois salariés. Le potentiel de décarbonation est donc considérable.
 
 ### La solution
 
