@@ -2,6 +2,10 @@
 Logique métier pour l'application CycloFlow
 """
 
+import logging
+from datetime import datetime
+from typing import Optional
+
 import streamlit as st
 
 from .constants import DEBUG_ADDRESSES
@@ -20,7 +24,13 @@ def init_session_state():
     st.session_state.arrival_selected = DEBUG_ADDRESSES["arrival"]
 
 
-def calculate_itinerary(departure, arrival, to_parking: bool = True):
+def calculate_itinerary(
+    departure,
+    arrival,
+    to_parking: bool = True,
+    travel_datetime: Optional[datetime] = None,
+    get_forecast: bool = False,
+):
     """Calcule l'itinéraire entre deux points.
 
     to_parking: si True, l'itinéraire vélo s'arrête au parking puis ajoute un segment de marche.
@@ -28,7 +38,20 @@ def calculate_itinerary(departure, arrival, to_parking: bool = True):
     """
     with st.spinner("Calcul en cours..."):
         try:
-            result = itineraire_parking_velo(departure, arrival, to_parking)
+            if travel_datetime:
+                logging.info("Itinéraire demandé pour %s", travel_datetime.isoformat())
+            else:
+                logging.info("Itinéraire demandé sans date/heure spécifique")
+
+            st.session_state.get_forecast_requested = get_forecast
+
+            result = itineraire_parking_velo(
+                departure,
+                arrival,
+                to_parking,
+                travel_datetime=travel_datetime,
+                get_forecast=get_forecast,
+            )
 
             # Vérifier que le résultat contient des données valides
             if not result:

@@ -283,12 +283,8 @@ def add_walking_route_to_map(map_obj, itinerary_data):
     if not walk_data:
         return
 
-    st.write("**🚶‍♂️ Itinéraire à pied (parking → destination)**")
-
     duration_min = walk_data.get('duration', 0) // 60
     distance_m = walk_data.get('distances', {}).get('walking', 0)
-
-    st.write(f"**Trajet à pied** : {duration_min} min • {distance_m} m")
 
     # Ajouter le tracé à pied
     for section in walk_data.get('sections', []):

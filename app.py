@@ -16,7 +16,8 @@ from ui import (
     add_bike_routes_to_map,
     add_departure_arrival_markers,
     add_walking_route_to_map,
-    create_sidebar
+    create_sidebar,
+    display_weather_forecast,
 )
 
 # Configuration de la page
@@ -31,11 +32,26 @@ def main():
     gmaps = googlemaps.Client(key=GOOGLE_MAP_API_KEY)
 
     # Interface utilisateur - Sidebar
-    departure, arrival, calculation_requested, show_parking, map_style, to_parking = create_sidebar(gmaps)
+    (
+        departure,
+        arrival,
+        travel_datetime,
+        calculation_requested,
+        show_parking,
+        map_style,
+        to_parking,
+        get_forecast,
+    ) = create_sidebar(gmaps)
 
     # Calcul d'itinéraire si demandé
     if calculation_requested:
-        calculate_itinerary(departure, arrival, to_parking)
+        calculate_itinerary(
+            departure,
+            arrival,
+            to_parking,
+            travel_datetime,
+            get_forecast,
+        )
 
     # Créer la carte avec les options sélectionnées
     m = create_base_map(show_parking, map_style)
@@ -44,6 +60,11 @@ def main():
     if has_itinerary_result():
         try:
             itinerary_data = get_itinerary_result()
+            if itinerary_data.get("meteo_forecast"):
+                display_weather_forecast(
+                    itinerary_data["meteo_forecast"],
+                    st.session_state.get("travel_datetime"),
+                )
             add_departure_arrival_markers(m, itinerary_data)
             add_bike_routes_to_map(m, itinerary_data)
             add_walking_route_to_map(m, itinerary_data)
