@@ -21,7 +21,7 @@ def itineraire_transport_velo_autorise(
 
 if __name__ == "__main__":
     itinerary = itineraire_transport_velo_autorise(
-        "34 avenue de l'opera", "Cergy"
+        "34 avenue de l'opera", "Cergy", "20251114T184000"
     )
     print(itinerary)
     logging.info(itinerary.get("itinerary_transport"))
