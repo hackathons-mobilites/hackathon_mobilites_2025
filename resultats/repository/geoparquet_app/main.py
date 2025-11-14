@@ -2,11 +2,19 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 import numpy as np
+import plotly.graph_objects as go
 from pathlib import Path
 import geopandas as gpd
 
 p = Path(__file__).parent
 p = p. parent.parent.parent
+
+color_map = {
+    'Etablissements adultes handicapés': '#FFC0CB',  # Light Pink
+    'Etablissements enfants handicapés': "#88F3E5",  # Light Coral
+    'Etablissements hospitaliers': "#96FD96"         # Peach Puff
+}
+
 
 
 # Set page config
@@ -34,12 +42,25 @@ def load_data():
     df = gpd.read_parquet(PARQUET_FILE)
     df["Lon"] = df.geometry.x
     df["Lat"] = df.geometry.y
-    return df
 
-df = load_data()
+    PARQUET_ET = p / "data/interim/etablissements.gpq"  # Corrected file path
+
+    # Ensure the path is resolved correctly
+    if not PARQUET_ET.exists():
+        raise FileNotFoundError(f"The file {PARQUET_ET} does not exist.")
+
+    dfe = gpd.read_parquet(PARQUET_ET)
+    dfe["Lon"] = dfe.geometry.x
+    dfe["Lat"] = dfe.geometry.y
+
+    dfe["color_code"] = dfe["type_etablissement"].map(color_map)
+
+    return df, dfe 
+
+df, dfe = load_data()
 
 # --- 2. Map Generation ---
-def create_map(dataframe, color_col):
+def create_map(dataframe, dataframe_e, color_col):
     """Creates the Plotly Express Mapbox figure."""
 
     
@@ -53,6 +74,38 @@ def create_map(dataframe, color_col):
         color_continuous_scale=px.colors.cyclical.IceFire,
         zoom=10,
         height=600
+    )
+
+    fig.add_trace(
+        go.Scattermapbox(
+        lat=dataframe_e['Lat'],
+        lon=dataframe_e['Lon'],
+        mode='markers',
+        marker = go.scattermapbox.Marker( 
+            size=7,
+            color="black", 
+            # 🎯 MODIFICATION HERE: Set the marker symbol to 'square' 🎯
+        ),
+        name='Source 2: Etablissement (Edge)',
+        text=dataframe_e['raison_social'],
+        hoverinfo='text'
+        )
+    )
+
+    fig.add_trace(
+        go.Scattermapbox(
+        lat=dataframe_e['Lat'],
+        lon=dataframe_e['Lon'],
+        mode='markers',
+        marker = go.scattermapbox.Marker( 
+            size=5,
+            color=dataframe_e['color_code'], 
+            # 🎯 MODIFICATION HERE: Set the marker symbol to 'square' 🎯
+        ),
+        name='Source 2: Etablissement',
+        text=dataframe_e['raison_social'],
+        hoverinfo='text'
+        )
     )
     
     # Optional: Customize map style (requires a Mapbox token for some styles)
@@ -69,6 +122,8 @@ color_option = st.selectbox(
     ('facilite_acces_code')
 )
 
-# Render the Plotly chart
-fig = create_map(df, color_option)
-st.plotly_chart(fig, use_container_width=True)
+
+if __name__ == "__main__":
+    # Render the Plotly chart
+    fig = create_map(df,dfe,  color_option)
+    st.plotly_chart(fig, use_container_width=True)
