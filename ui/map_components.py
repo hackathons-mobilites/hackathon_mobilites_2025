@@ -24,7 +24,7 @@ def load_parking_data(parking_filter: ParkingVeloFilters):
 
 def create_base_map(
     show_parking: bool = True,
-    map_style: str = 'OpenStreetMap',
+    map_style: str = 'CartoDB positron',
     parking_filter: ParkingVeloFilters = ParkingVeloFilters.default,
 ):
     """Crée la carte de base avec marqueur utilisateur et parkings."""

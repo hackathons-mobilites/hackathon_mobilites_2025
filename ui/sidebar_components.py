@@ -186,10 +186,14 @@ def _create_advanced_options():
             help="Quand activé, intègre les segments transport (train, RER, etc.) compatibles vélo.",
         )
         st.session_state.use_train_enabled = use_train
+        default_map_index = 0
+        if 'CartoDB positron' in MAP_STYLES:
+            default_map_index = MAP_STYLES.index('CartoDB positron')
+
         map_style = st.selectbox(
             "Style carte",
             options=MAP_STYLES,
-            index=0
+            index=default_map_index
         )
         available_filters = list(ParkingVeloFilters)
         default_filter = st.session_state.get("parking_filter", ParkingVeloFilters.default)
