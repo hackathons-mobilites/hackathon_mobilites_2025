@@ -8,6 +8,8 @@ from zoneinfo import ZoneInfo
 import streamlit as st
 from streamlit_searchbox import st_searchbox  # type: ignore
 
+from src.parking_velo.config.filters import ParkingVeloFilters
+
 from .constants import PARIS_CENTER, MAP_STYLES
 from .styles import EXPANDER_CSS
 
@@ -66,7 +68,7 @@ def create_sidebar(gmaps):
         calculation_requested = _create_calculation_button(departure, arrival)
 
         # Options avancées
-        show_parking, map_style, to_parking, get_forecast = _create_advanced_options()
+        show_parking, map_style, to_parking, get_forecast, parking_filter = _create_advanced_options()
 
         return (
             departure,
@@ -77,6 +79,7 @@ def create_sidebar(gmaps):
             map_style,
             to_parking,
             get_forecast,
+            parking_filter,
         )
 
 
@@ -164,10 +167,36 @@ def _create_advanced_options():
             options=MAP_STYLES,
             index=0
         )
+        available_filters = list(ParkingVeloFilters)
+        default_filter = st.session_state.get("parking_filter", ParkingVeloFilters.default)
+        try:
+            default_index = available_filters.index(default_filter)
+        except ValueError:
+            default_index = available_filters.index(ParkingVeloFilters.default)
+
+        def _format_filter(filter_value: ParkingVeloFilters) -> str:
+            labels = {
+                ParkingVeloFilters.privee_abris: "Privé (abri)",
+                ParkingVeloFilters.clientele_abris: "Clientèle (abri)",
+                ParkingVeloFilters.casier: "Casier sécurisé",
+                ParkingVeloFilters.surveille: "Surveillé",
+                ParkingVeloFilters.default: "Tous parkings",
+            }
+            return labels.get(filter_value, str(filter_value))
+
+        parking_filter = st.selectbox(
+            "Type de parking vélo",
+            options=available_filters,
+            index=default_index,
+            format_func=_format_filter,
+            help="Sélectionne le type d'abri vélo privilégié pour la recherche.",
+        )
+        st.session_state.parking_filter = parking_filter
+
         get_forecast = st.checkbox(
             "Afficher les prévisions météo du trajet",
             value=True,
             help="Récupère et affiche la température et les conditions prévues pour l'horaire choisi.",
         )
 
-    return show_parking, map_style, to_parking, get_forecast
+    return show_parking, map_style, to_parking, get_forecast, parking_filter

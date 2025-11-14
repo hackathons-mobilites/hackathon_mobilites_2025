@@ -16,13 +16,17 @@ from src.parking_velo.domain.apps.get_parking_velo import get_parking_velo
 from src.parking_velo.config.filters import ParkingVeloFilters
 
 
-@st.cache_data
-def load_parking_data():
-    """Charge les données des parkings vélo."""
-    return get_parking_velo(filter=ParkingVeloFilters.privee_abris)
+@st.cache_data(show_spinner=False)
+def load_parking_data(parking_filter: ParkingVeloFilters):
+    """Charge les données des parkings vélo pour le filtre demandé."""
+    return get_parking_velo(filter=parking_filter)
 
 
-def create_base_map(show_parking=True, map_style='OpenStreetMap'):
+def create_base_map(
+    show_parking: bool = True,
+    map_style: str = 'OpenStreetMap',
+    parking_filter: ParkingVeloFilters = ParkingVeloFilters.default,
+):
     """Crée la carte de base avec marqueur utilisateur et parkings."""
     m = _create_map_with_style(map_style)
 
@@ -30,7 +34,7 @@ def create_base_map(show_parking=True, map_style='OpenStreetMap'):
     st.markdown(MAP_ATTRIBUTION_CSS, unsafe_allow_html=True)
 
     # Ajouter les marqueurs par défaut
-    m = add_default_markers(m, show_parking)
+    m = add_default_markers(m, show_parking, parking_filter)
 
     return m
 
@@ -94,7 +98,11 @@ def _create_standard_map(map_style):
     )
 
 
-def add_default_markers(m, show_parking=True):
+def add_default_markers(
+    m,
+    show_parking: bool = True,
+    parking_filter: ParkingVeloFilters = ParkingVeloFilters.default,
+):
     """Ajoute les marqueurs par défaut (utilisateur et parkings)."""
     # Marqueur utilisateur
     folium.Marker(
@@ -109,13 +117,13 @@ def add_default_markers(m, show_parking=True):
 
     # Ajouter parkings vélo si demandé
     if show_parking:
-        _add_parking_markers(m)
+        _add_parking_markers(m, parking_filter)
 
     return m
 
 
-def _add_parking_markers(m):
-    """Ajoute les marqueurs de parkings vélo."""
+def _add_parking_markers(m, parking_filter: ParkingVeloFilters):
+    """Ajoute les marqueurs de parkings vélo pour le filtre choisi."""
     # Cluster pour parkings avec configuration pour bulles plus petites
     marker_cluster = MarkerCluster(
         max_cluster_radius=30,
@@ -133,7 +141,7 @@ def _add_parking_markers(m):
     ).add_to(m)
 
     try:
-        parking_data = load_parking_data()
+        parking_data = load_parking_data(parking_filter)
         for _, row in parking_data.iterrows():
             folium.Marker(
                 location=[row.geometry.y, row.geometry.x],

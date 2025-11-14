@@ -9,6 +9,7 @@ from typing import Optional
 import streamlit as st
 
 from .constants import DEBUG_ADDRESSES
+from src.parking_velo.config.filters import ParkingVeloFilters
 from src.itineraire.domain.apps.itineraire_velo import itineraire_parking_velo
 
 
@@ -18,6 +19,8 @@ def init_session_state():
         st.session_state.departure_selected = DEBUG_ADDRESSES["departure"]
     if "arrival_selected" not in st.session_state:
         st.session_state.arrival_selected = DEBUG_ADDRESSES["arrival"]
+    if "parking_filter" not in st.session_state:
+        st.session_state.parking_filter = ParkingVeloFilters.default
 
     # DEBUG: Forcer les valeurs pour les tests
     st.session_state.departure_selected = DEBUG_ADDRESSES["departure"]
@@ -30,6 +33,7 @@ def calculate_itinerary(
     to_parking: bool = True,
     travel_datetime: Optional[datetime] = None,
     get_forecast: bool = False,
+    parking_filter: ParkingVeloFilters = ParkingVeloFilters.default,
 ):
     """Calcule l'itinéraire entre deux points.
 
@@ -44,6 +48,7 @@ def calculate_itinerary(
                 logging.info("Itinéraire demandé sans date/heure spécifique")
 
             st.session_state.get_forecast_requested = get_forecast
+            st.session_state.parking_filter = parking_filter
 
             result = itineraire_parking_velo(
                 departure,
@@ -51,6 +56,7 @@ def calculate_itinerary(
                 to_parking,
                 travel_datetime=travel_datetime,
                 get_forecast=get_forecast,
+                parking_filter=parking_filter,
             )
 
             # Vérifier que le résultat contient des données valides

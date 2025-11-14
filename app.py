@@ -41,6 +41,7 @@ def main():
         map_style,
         to_parking,
         get_forecast,
+        parking_filter,
     ) = create_sidebar(gmaps)
 
     # Calcul d'itinéraire si demandé
@@ -51,10 +52,15 @@ def main():
             to_parking,
             travel_datetime,
             get_forecast,
+            parking_filter,
         )
 
     # Créer la carte avec les options sélectionnées
-    m = create_base_map(show_parking, map_style)
+    m = create_base_map(
+        show_parking=show_parking,
+        map_style=map_style,
+        parking_filter=parking_filter,
+    )
 
     # Affichage des résultats d'itinéraire
     if has_itinerary_result():
