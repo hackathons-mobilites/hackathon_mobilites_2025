@@ -10,15 +10,16 @@ from app.schemas import (
     CompanyRseSnapshot, LeaderboardResponse, LeaderboardEntry,
     RiskLevel, AlternativeType, TransportMode
 )
+from app.dependencies import AlternativeServiceDep
 
 router = APIRouter(prefix="/v1")
 
-# Données mock pour les tests
+# Données mock pour les hotspots (conservées car non refactorisées pour l'instant)
 MOCK_HOTSPOTS = [
     {
         "id": 1,
         "gare_code": "8775810",
-        "gare_name": "Paris Gare du Nord",
+        "gare_name": "Plaisir - Grignon",
         "datetime_debut": datetime.fromisoformat("2025-11-14T08:00:00"),
         "datetime_fin": datetime.fromisoformat("2025-11-14T10:00:00"),
         "nb_trajets_affectes": 150,
@@ -38,42 +39,6 @@ MOCK_HOTSPOTS = [
         "prob_retard_moyenne": 0.45,
         "risk_level": "medium",
         "created_at": datetime.fromisoformat("2025-11-14T17:00:00")
-    }
-]
-
-MOCK_ALTERNATIVES = [
-    {
-        "id": 1,
-        "hotspot_id": 1,
-        "type": "covoiturage",
-        "offre": "Covoiturage Paris Nord - La Défense, départ 8h15",
-        "partenaire": "BlaBlaCar",
-        "places_disponibles": 3,
-        "deeplink": "https://blablacar.com/ride/12345",
-        "score_rse": 8.5,
-        "created_at": datetime.fromisoformat("2025-11-14T07:45:00")
-    },
-    {
-        "id": 2,
-        "hotspot_id": 1,
-        "type": "velo",
-        "offre": "Vélib' disponible à 200m de la gare",
-        "partenaire": "Vélib'",
-        "places_disponibles": 5,
-        "deeplink": "https://velib-metropole.fr/map",
-        "score_rse": 9.0,
-        "created_at": datetime.fromisoformat("2025-11-14T07:50:00")
-    },
-    {
-        "id": 3,
-        "hotspot_id": 2,
-        "type": "transport_public",
-        "offre": "Bus 73 - fréquence renforcée",
-        "partenaire": "RATP",
-        "places_disponibles": None,
-        "deeplink": "https://citymapper.com/bus/73",
-        "score_rse": 7.5,
-        "created_at": datetime.fromisoformat("2025-11-14T17:15:00")
     }
 ]
 
@@ -125,7 +90,8 @@ def get_hotspots(
     tags=["Privé - Core API"],
     description="Récupère les alternatives de transport pour un trajet donné et des préférences"
 )
-def get_alternatives(
+async def get_alternatives(
+    alternative_service: AlternativeServiceDep,
     departure_station: Optional[str] = Query(None, description="Code de la gare de départ"),
     arrival_station: Optional[str] = Query(None, description="Code de la gare d'arrivée"),
     departure_time: Optional[datetime] = Query(None, description="Heure de départ souhaitée"),
@@ -142,18 +108,31 @@ def get_alternatives(
     - **employee_id**: ID employé pour personnalisation
     """
     
-    # Pour la demo, on retourne des alternatives basées sur les hotspots actifs
-    alternatives = MOCK_ALTERNATIVES.copy()
-    
-    # Filtrage par préférences de transport
-    if transport_preferences:
-        prefs = [p.strip() for p in transport_preferences.split(",")]
-        alternatives = [a for a in alternatives if a["type"] in prefs]
-    
-    # Tri par score RSE décroissant
-    alternatives.sort(key=lambda x: x.get("score_rse", 0), reverse=True)
-    
-    return [Alternative(**a) for a in alternatives]
+    try:
+        # Conversion des préférences de transport en liste
+        transport_types = None
+        if transport_preferences:
+            transport_types = [p.strip() for p in transport_preferences.split(",")]
+        
+        # Appel du service pour récupérer les alternatives
+        alternatives = await alternative_service.get_alternatives_for_route(
+            departure_station=departure_station,
+            arrival_station=arrival_station,
+            departure_time=departure_time,
+            transport_preferences=transport_types,
+            employee_id=employee_id
+        )
+        
+        # Conversion en schémas Pydantic pour la réponse API
+        return [Alternative.model_validate(alt.__dict__) for alt in alternatives]
+        
+    except Exception as e:
+        # Log de l'erreur et retour d'une erreur HTTP appropriée
+        print(f"Erreur lors de la récupération des alternatives: {e}")
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail="Erreur interne lors de la récupération des alternatives"
+        )
 
 @router.post(
     "/commute-log",

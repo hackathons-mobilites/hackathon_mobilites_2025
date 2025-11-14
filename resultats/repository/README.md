@@ -7,13 +7,17 @@ Ce dossier contient l'ensemble du code source du projet Predict'Mob développé 
 ```
 repository/
 ├── backoffice/              # Back-office Entreprise (Streamlit)
+├── docs/                    # Documentation technique complète
+│   └── environement.md     # Guide Docker et environnement
 ├── services/                # Services backend et ML
-│   ├── backend/            # API FastAPI
+│   ├── backend/            # API FastAPI (architecture propre)
 │   ├── database/           # Configuration PostgreSQL
-│   ├── migration/          # Migrations Flyway (schéma v3)
-│   └── predict-delays/     # Module ML de prédiction (XGBoost)
+│   ├── migration/          # Migrations Flyway (schéma v3 + données de démo)
+│   ├── predict-delays/     # Module ML de prédiction (XGBoost)
+│   └── Mobile/             # Application mobile Android (Kotlin)
 ├── docker-compose.yml       # Orchestration complète
-└── docker-compose.build.yml # Build des images Docker
+├── docker-compose.build.yml # Build des images Docker
+└── .env.example             # Template de configuration
 ```
 
 ---
@@ -24,27 +28,38 @@ repository/
 
 - Docker & Docker Compose 20+
 - Python 3.11+ (pour développement local)
+- Android Studio (pour l'application mobile)
 
 ### Lancer tous les services
 
 ```bash
 cd resultats/repository/
+
+# 1. Copier le fichier de configuration
+cp .env.example .env
+
+# 2. Démarrer tous les services
 docker-compose up -d
 ```
 
 Cela démarre :
 - 🗄️ **PostgreSQL** (port 5432) - Base de données
 - ⚡ **Backend API** (port 8000) - FastAPI
+- 🖥️ **Adminer** (port 9000) - Interface DB
 - 📊 **Back-office** (port 8501) - Streamlit
 - 🤖 **Module Predict** - Service de prédiction ML
+
+📖 **Documentation complète** : [docs/environement.md](docs/environement.md)
 
 ### Accéder aux services
 
 | Service | URL | Description |
 |---------|-----|-------------|
 | API Backend | http://localhost:8000 | API REST (doc: `/docs`) |
+| Adminer | http://localhost:9000 | Interface d'administration DB |
 | Back-office | http://localhost:8501 | Dashboard entreprise |
 | PostgreSQL | localhost:5432 | BDD (user: `predictmob`) |
+| Mobile App | Android APK | Application Android native |
 
 ---
 
@@ -92,6 +107,19 @@ Interface Streamlit pour :
 
 📖 [Documentation back-office](backoffice/README.md)
 
+### 5️⃣ Application Mobile (`services/Mobile/`)
+
+Application Android native en Kotlin avec Jetpack Compose :
+- **Interface moderne** : Material3 Design
+- **Visualisation trajet** : Aperçu carte et alternatives
+- **Alternatives éco-responsables** : Options durables avec score RSE
+- **Tracking carbone** : Suivi des émissions et XP
+- **Notifications** : Alertes hotspots en temps réel
+
+**Technologies** : Kotlin, Jetpack Compose, Material3, Gradle
+
+📖 [Documentation mobile](services/Mobile/DOCUMENTATION.md)
+
 ---
 
 ## 🔧 Développement local
@@ -118,6 +146,21 @@ streamlit run app.py
 cd services/predict-delays
 pip install -r requirements.txt
 python train/model_building/train_model.py
+```
+
+### Application Mobile
+
+```bash
+cd services/Mobile
+
+# Avec Android Studio
+# 1. Ouvrir le projet dans Android Studio
+# 2. Sync Gradle
+# 3. Run sur émulateur ou device
+
+# Ou en ligne de commande
+./gradlew assembleDebug
+./gradlew installDebug
 ```
 
 ---
@@ -214,65 +257,77 @@ docker-compose down -v  # Supprime aussi les volumes
 
 ## 🔐 Variables d'environnement
 
-Créer un fichier `.env` à la racine :
+Créer un fichier `.env` à la racine (copier `.env.example`) :
+
+```bash
+cp .env.example .env
+```
+
+Configuration par défaut :
 
 ```env
-# Database
-POSTGRES_USER=predictmob
-POSTGRES_PASSWORD=hackathon2025
+# Configuration PostgreSQL
+POSTGRES_SERVICE_PORT=5432
 POSTGRES_DB=predictmob
-DATABASE_URL=postgresql://predictmob:hackathon2025@database:5432/predictmob
+POSTGRES_USER=predictmob
+POSTGRES_PASSWORD=predictmob_pwd
 
-# API
-API_HOST=0.0.0.0
-API_PORT=8000
-API_RELOAD=true
+# Configuration Backend API
+BACKEND_SERVICE_PORT=8000
+API_DEBUG=false
+API_LOG_LEVEL=INFO
 
-# API Keys (optionnel)
-PRIM_API_KEY=your_key
-METEO_API_KEY=your_key
+# Configuration Adminer
+ADMINER_SERVICE_PORT=9000
 
-# Streamlit
-STREAMLIT_SERVER_PORT=8501
-BACKEND_API_URL=http://backend:8000
+# Configuration pour le développement local (optionnel)
+# DATABASE_URL=postgresql://predictmob:predictmob_pwd@localhost:5432/predictmob
 ```
+
+📖 Voir [docs/environement.md](docs/environement.md) pour la documentation complète
 
 ---
 
 ## 📝 Architecture technique
 
 ```
-┌─────────────────────────────────────────────────────────┐
-│                     UTILISATEURS                         │
-└────────────┬────────────────────────────┬───────────────┘
-             │                            │
-    ┌────────▼──────────┐      ┌─────────▼──────────┐
-    │  App Mobile Web   │      │   Back-office      │
-    │  (HTML/CSS/JS)    │      │   (Streamlit)      │
-    └────────┬──────────┘      └─────────┬──────────┘
-             │                            │
-             └────────────┬───────────────┘
-                          │
-                 ┌────────▼─────────┐
-                 │   Backend API    │
-                 │   (FastAPI)      │
-                 │                  │
-                 │  /v1/hotspots    │
-                 │  /v1/alternatives│
-                 │  /v1/rse-report  │
-                 └────────┬─────────┘
-                          │
-      ┌───────────────────┼───────────────────┐
-      │                   │                   │
- ┌────▼────┐      ┌──────▼──────┐     ┌─────▼─────┐
- │ Module  │      │  PostgreSQL │     │   APIs    │
- │ Predict │      │     v15     │     │ Externes  │
- │ XGBoost │      │             │     │           │
- │         │      │ - companies │     │ - PRIM    │
- └─────────┘      │ - employees │     │ - GTFS-RT │
-                  │ - hotspots  │     │ - Météo   │
-                  │ - mobility  │     └───────────┘
-                  └─────────────┘
+┌──────────────────────────────────────────────────────────────────┐
+│                        UTILISATEURS                               │
+└────────────┬──────────────────────────────┬──────────────────────┘
+             │                              │
+    ┌────────▼──────────┐        ┌─────────▼──────────┐
+    │  App Mobile       │        │   Back-office      │
+    │  (Android Kotlin) │        │   (Streamlit)      │
+    │  Jetpack Compose  │        │                    │
+    └────────┬──────────┘        └─────────┬──────────┘
+             │                              │
+             └─────────────┬────────────────┘
+                           │
+                  ┌────────▼─────────┐
+                  │   Backend API    │
+                  │   (FastAPI)      │
+                  │                  │
+                  │  /v1/hotspots    │
+                  │  /v1/alternatives│
+                  │  /v1/rse-report  │
+                  └────────┬─────────┘
+                           │
+       ┌───────────────────┼──────────────────────┐
+       │                   │                      │
+  ┌────▼────┐      ┌──────▼──────┐       ┌──────▼──────┐
+  │ Module  │      │  PostgreSQL │       │   Adminer   │
+  │ Predict │◄─────│     v15     │◄──────│  (Web UI)   │
+  │ XGBoost │      │             │       │   Port 9000 │
+  │         │      │ - companies │       └─────────────┘
+  │         │      │ - employees │              │
+  │         │      │ - hotspots  │       ┌──────▼──────┐
+  └─────────┘      │ - mobility  │       │   APIs      │
+                   │ + Données   │       │  Externes   │
+                   │   de démo   │       │             │
+                   └─────────────┘       │ - PRIM      │
+                                         │ - GTFS-RT   │
+                                         │ - Météo     │
+                                         └─────────────┘
 ```
 
 ---

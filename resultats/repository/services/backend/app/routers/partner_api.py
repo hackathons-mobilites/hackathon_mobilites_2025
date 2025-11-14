@@ -74,7 +74,7 @@ def get_partner_hotspots(
         Hotspot(
             id=1,
             gare_code="8775810",
-            gare_name="Paris Gare du Nord",
+            gare_name="Plaisir - Grignon",
             datetime_debut=datetime(2025, 11, 14, 8, 0),
             datetime_fin=datetime(2025, 11, 14, 10, 0),
             nb_trajets_affectes=1500,

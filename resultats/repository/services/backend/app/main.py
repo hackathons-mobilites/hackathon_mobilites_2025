@@ -1,6 +1,36 @@
 from fastapi import FastAPI
 from fastapi.openapi.utils import get_openapi
+from contextlib import asynccontextmanager
 from app.routers import api_v1, partner_api
+from app.database import init_db, close_db, check_db_connection
+from app.config import get_settings
+
+settings = get_settings()
+
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    """Gestionnaire du cycle de vie de l'application FastAPI."""
+    
+    # Startup: Initialisation de la base de données
+    print("🚀 Démarrage de l'application PredictMob...")
+    
+    # Vérification de la connexion DB
+    if await check_db_connection():
+        print("✅ Connexion à la base de données établie")
+        # Note: En production, utilisez Alembic au lieu de init_db()
+        await init_db()
+        print("✅ Base de données initialisée")
+    else:
+        print("❌ Impossible de se connecter à la base de données")
+        print("⚠️  L'application démarrera mais les endpoints DB ne fonctionneront pas")
+    
+    yield
+    
+    # Shutdown: Nettoyage des ressources
+    print("🔄 Arrêt de l'application...")
+    await close_db()
+    print("✅ Connexions fermées")
 
 tags_metadata = [
     {
@@ -15,9 +45,10 @@ tags_metadata = [
 ]
 
 app = FastAPI(
-    title="PredictMob API",
-    version="1.0.0",
+    title=settings.api.title,
+    version=settings.api.version,
     description="API pour la prédiction des aléas de transport et alternatives de mobilité",
+    lifespan=lifespan,
     contact={
         "name": "Équipe PredictMob",
         "email": "contact@predictmob.fr"
@@ -96,10 +127,12 @@ async def root():
 )
 async def health_check():
     """Vérification de l'état de santé du service"""
+    db_status = await check_db_connection()
     return {
-        "status": "healthy",
+        "status": "healthy" if db_status else "degraded",
+        "database": "connected" if db_status else "disconnected",
         "timestamp": "2025-11-14T12:00:00Z",
-        "version": "1.0.0"
+        "version": settings.api.version
     }
 
 # Routes principales

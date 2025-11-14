@@ -46,7 +46,7 @@ class Hotspot(BaseModel):
             "example": {
                 "id": 1,
                 "gare_code": "8775810",
-                "gare_name": "Paris Gare du Nord",
+                "gare_name": "Plaisir - Grignon",
                 "datetime_debut": "2025-11-14T08:00:00Z",
                 "datetime_fin": "2025-11-14T10:00:00Z",
                 "nb_trajets_affectes": 150,
@@ -75,7 +75,7 @@ class Alternative(BaseModel):
                 "id": 1,
                 "hotspot_id": 1,
                 "type": "covoiturage",
-                "offre": "Covoiturage Paris Nord - La Défense, départ 8h15",
+                "offre": "Covoiturage Plaisir - Grignon - La Défense, départ 8h15",
                 "partenaire": "BlaBlaCar",
                 "places_disponibles": 3,
                 "deeplink": "https://blablacar.com/ride/12345",
