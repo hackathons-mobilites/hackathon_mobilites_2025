@@ -1,7 +1,0 @@
-boto3==1.40.60
-pandas==2.2.3
-requests==2.32.4
-llama_cpp_python==0.3.16
-ipykernel==7.1.0
-openai==2.6.1
-huggingface_hub==1.1.2

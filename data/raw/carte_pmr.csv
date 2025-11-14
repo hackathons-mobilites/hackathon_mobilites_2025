@@ -1,0 +1,543 @@
+ligne;lettre_station;station;facilite_acces_code;facilite_acces;nombre_facilite_acces_station
+;A;Abbesses;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;A;Adrienne Bolland;green;très facile d'accès (ascenseur ou plain-pied);1
+;A;Aimé Césaire;black;facile d'accès, équipée d'escalator ou ascenseur sur tout le parcours entre la rue et le quai;1
+;A;Alésia;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;A;Alexandra David-Néel;green;très facile d'accès (ascenseur ou plain-pied);1
+;A;Alexandre Dumas;grey;comportant uniquement des escaliers et profonde;1
+;A;Alma Marceau;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;A;Anatole France;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;A;Angélique Compoint - Porte de Montmartre;green;très facile d'accès (ascenseur ou plain-pied);1
+;A;Anna de Noailles​;green;très facile d'accès (ascenseur ou plain-pied);1
+;A;Anny Flore;green;très facile d'accès (ascenseur ou plain-pied);1
+;A;Anvers;white;comportant uniquement des escaliers et peu profonde;1
+;A;Arcueil - Cachan;green;très facile d'accès (ascenseur ou plain-pied);1
+;A;Argentine;white;comportant uniquement des escaliers et peu profonde;1
+METRO 3;A;Arts et Métiers;white;comportant uniquement des escaliers et peu profonde;2
+METRO 11;A;Arts et Métiers;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;2
+;A;Asnières - Gennevilliers - Les Courtilles;green;très facile d'accès (ascenseur ou plain-pied);1
+;A;Quatre Routes;green;très facile d'accès (ascenseur ou plain-pied);1
+;A;Asnières-sur-Seine;green;très facile d'accès (ascenseur ou plain-pied);1
+;A;Assemblée Nationale;white;comportant uniquement des escaliers et peu profonde;1
+;A;Auber;green;très facile d'accès (ascenseur ou plain-pied);1
+;A;Front Populaire;black;facile d'accès, équipée d'escalator ou ascenseur sur tout le parcours entre la rue et le quai;1
+;A;Aubervilliers - Pantin - Quatre Chemins;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;A;Auguste Delaune;green;très facile d'accès (ascenseur ou plain-pied);1
+;A;Avenue de France;green;très facile d'accès (ascenseur ou plain-pied);1
+;A;Avenue du Président Kennedy Maison de Radio France;white;comportant uniquement des escaliers et peu profonde;1
+;A;Avenue Émile Zola;white;comportant uniquement des escaliers et peu profonde;1
+;A;Avenue Foch;white;comportant uniquement des escaliers et peu profonde;1
+;A;Avenue Henri Martin;white;comportant uniquement des escaliers et peu profonde;1
+;A;Avron;grey;comportant uniquement des escaliers et profonde;1
+METRO 4;B;Bagneux - Lucie Aubrac;black;facile d'accès, équipée d'escalator ou ascenseur sur tout le parcours entre la rue et le quai;2
+METRO 15;B;Bagneux - Lucie Aubrac;green;très facile d'accès (ascenseur ou plain-pied);2
+TRAM 3a;B;Balard;green;très facile d'accès (ascenseur ou plain-pied);2
+METRO 8;B;Balard;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;2
+;B;Barbara;black;facile d'accès, équipée d'escalator ou ascenseur sur tout le parcours entre la rue et le quai;1
+;B;Barbès - Rochechouart;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;B;Baron Le Roy;green;très facile d'accès (ascenseur ou plain-pied);1
+TRAM 5;B;Basilique de St-Denis;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;2
+TRAM 1;B;Basilique de St-Denis;green;très facile d'accès (ascenseur ou plain-pied);2
+;B;Bastille;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;B;Bécon-les-Bruyères;green;très facile d'accès (ascenseur ou plain-pied);1
+;B;Bel-Air;white;comportant uniquement des escaliers et peu profonde;1
+;B;Belleville;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;B;Belvédère;green;très facile d'accès (ascenseur ou plain-pied);1
+;B;Bérault;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+METRO 6;B;Bercy;grey;comportant uniquement des escaliers et profonde;2
+METRO 14;B;Bercy;green;très facile d'accès (ascenseur ou plain-pied);2
+;B;Beethoven - Concorde;green;très facile d'accès (ascenseur ou plain-pied);1
+;B;Bibliothèque François Mitterrand;green;très facile d'accès (ascenseur ou plain-pied);1
+;B;Billancourt;white;comportant uniquement des escaliers et peu profonde;1
+;B;Bir-Hakeim;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;B;Blanche;grey;comportant uniquement des escaliers et profonde;1
+TRAM 1;B;Bobigny - Pablo Picasso;green;très facile d'accès (ascenseur ou plain-pied);2
+METRO 5;B;Bobigny - Pablo Picasso;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;2
+;B;Bobigny - Pantin Raymond Queneau;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;B;Bois-Colombes;green;très facile d'accès (ascenseur ou plain-pied);1
+;B;Boissière;white;comportant uniquement des escaliers et peu profonde;1
+;B;Bolivar;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;B;Bonne Nouvelle;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;B;Botzaris;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;B;Boucicaut;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;B;Boulainvilliers;white;comportant uniquement des escaliers et peu profonde;1
+;B;Boulogne - Jean Jaurès;white;comportant uniquement des escaliers et peu profonde;1
+;B;Boulogne Pont de Saint-Cloud - Albert Kahn;white;comportant uniquement des escaliers et peu profonde;1
+;B;Bourse;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;B;Brancion;green;très facile d'accès (ascenseur ou plain-pied);1
+;B;Bréguet Sabin;white;comportant uniquement des escaliers et peu profonde;1
+;B;Brimborion;green;très facile d'accès (ascenseur ou plain-pied);1
+;B;Brochant;white;comportant uniquement des escaliers et peu profonde;1
+;B;Butte du Chapeau Rouge;green;très facile d'accès (ascenseur ou plain-pied);1
+;B;Buttes Chaumont;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;B;Buzenval;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;C;Cadet;white;comportant uniquement des escaliers et peu profonde;1
+;C;Cambronne;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;C;Campo Formio;white;comportant uniquement des escaliers et peu profonde;1
+;C;Canal Saint-Denis;green;très facile d'accès (ascenseur ou plain-pied);1
+;C;Cardinal Lemoine;white;comportant uniquement des escaliers et peu profonde;1
+;C;Carrefour Pleyel;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;C;Censier Daubenton;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;C;Champ de Mars - Tour Eiffel;white;comportant uniquement des escaliers et peu profonde;1
+;C;Champs-Élysées - Clemenceau;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;C;Chardon Lagache;white;comportant uniquement des escaliers et peu profonde;1
+;C;Charenton - Écoles;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;C;Charlebourg;green;très facile d'accès (ascenseur ou plain-pied);1
+METRO 6;C;Charles-de-Gaulle - Étoile;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;4
+METRO 1;C;Charles-de-Gaulle - Étoile;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;4
+METRO 2;C;Charles-de-Gaulle - Étoile;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;4
+RER A;C;Charles-de-Gaulle - Étoile;black;facile d'accès, équipée d'escalator ou ascenseur sur tout le parcours entre la rue et le quai;4
+;C;Charles Michels;white;comportant uniquement des escaliers et peu profonde;1
+;C;Charonne;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;C;Château d'Eau;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;C;Château de Vincennes;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;C;Châteaudun - Barbès;green;très facile d'accès (ascenseur ou plain-pied);1
+;G;Gare de l'Est;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;C;Château-Rouge;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+METRO 14;C;Châtelet;green;très facile d'accès (ascenseur ou plain-pied);4
+METRO 7;C;Châtelet;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;4
+METRO 4;C;Châtelet;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;4
+METRO 1;C;Châtelet;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;4
+RER A;C;Châtelet - Les Halles;green;très facile d'accès (ascenseur ou plain-pied);3
+RER B;C;Châtelet - Les Halles;green;très facile d'accès (ascenseur ou plain-pied);3
+RER D;C;Châtelet - Les Halles;green;très facile d'accès (ascenseur ou plain-pied);3
+METRO 13;C;Châtillon - Montrouge;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;3
+METRO 15;C;Châtillon - Montrouge;green;très facile d'accès (ascenseur ou plain-pied);3
+TRAM 6;C;Châtillon - Montrouge;green;très facile d'accès (ascenseur ou plain-pied);3
+METRO 7;C;Chaussée d'Antin - La Fayette;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;2
+METRO 9;C;Chaussée d'Antin - La Fayette;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;2
+;C;Chemin des Reniers;green;très facile d'accès (ascenseur ou plain-pied);1
+;C;Chemin Vert;white;comportant uniquement des escaliers et peu profonde;1
+;C;Chevaleret;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;C;Cimetière de Saint-Denis;green;très facile d'accès (ascenseur ou plain-pied);1
+;C;Cimetière Parisien d'Ivry;green;très facile d'accès (ascenseur ou plain-pied);1
+;C;Cité;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+RER B;C;Cité Universitaire;green;très facile d'accès (ascenseur ou plain-pied);2
+TRAM 3a;C;Cité Universitaire;white;comportant uniquement des escaliers et peu profonde;2
+TRAIN N;C;Clamart;white;comportant uniquement des escaliers et peu profonde;2
+METRO 15;C;Clamart;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;2
+;C;Clichy - Levallois;green;très facile d'accès (ascenseur ou plain-pied);1
+;C;Cluny - La Sorbonne;white;comportant uniquement des escaliers et peu profonde;1
+;C;Colette Besson;green;très facile d'accès (ascenseur ou plain-pied);1
+;C;Colombes;green;très facile d'accès (ascenseur ou plain-pied);1
+;C;Colonel Fabien;grey;comportant uniquement des escaliers et profonde;1
+;C;Commerce;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+METRO 1;C;Concorde;grey;comportant uniquement des escaliers et profonde;3
+METRO 12;C;Concorde;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;3
+METRO 8;C;Concorde;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;3
+;C;Convention;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;C;Corentin Cariou;white;comportant uniquement des escaliers et peu profonde;1
+;C;Corentin Celton;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;C;Cosmonautes;green;très facile d'accès (ascenseur ou plain-pied);1
+;C;Corvisart;white;comportant uniquement des escaliers et peu profonde;1
+;C;Cour Saint-Emilion;green;très facile d'accès (ascenseur ou plain-pied);1
+;C;Courbevoie;green;très facile d'accès (ascenseur ou plain-pied);1
+;C;Courcelles;white;comportant uniquement des escaliers et peu profonde;1
+;C;Couronnes;grey;comportant uniquement des escaliers et profonde;1
+METRO 8;C;Créteil - L'Échat;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;2
+METRO 15;C;Créteil - L'Échat;green;très facile d'accès (ascenseur ou plain-pied);2
+METRO 8;C;Créteil - Pointe du Lac;black;facile d'accès, équipée d'escalator ou ascenseur sur tout le parcours entre la rue et le quai;2
+CABLE C1;C;Créteil - Pointe du Lac;green;très facile d'accès (ascenseur ou plain-pied);2
+;C;Créteil - Préfecture;grey;comportant uniquement des escaliers et profonde;1
+;C;Créteil - Université;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;C;Crimée;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;C;Croix de Chavaux;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;D;Danton;green;très facile d'accès (ascenseur ou plain-pied);1
+;D;Danube;white;comportant uniquement des escaliers et peu profonde;1
+;D;Daumesnil;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;D;Delphine Seyrig;green;très facile d'accès (ascenseur ou plain-pied);1
+METRO 6;D;Denfert-Rochereau;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;2
+RER B;D;Denfert-Rochereau;green;très facile d'accès (ascenseur ou plain-pied);2
+;D;Desnouettes;green;très facile d'accès (ascenseur ou plain-pied);1
+;D;Diane Arbus (Porte des Poissonniers);green;très facile d'accès (ascenseur ou plain-pied);1
+;D;Didot;green;très facile d'accès (ascenseur ou plain-pied);1
+;D;Drancy - Avenir;green;très facile d'accès (ascenseur ou plain-pied);1
+;D;Dugommier;white;comportant uniquement des escaliers et peu profonde;1
+;D;Dupleix;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;D;Duroc;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;É;École Militaire;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;É;École Vétérinaire de Maisons-Alfort;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;E;Edgar Quinet;white;comportant uniquement des escaliers et peu profonde;1
+;É;Église d'Auteuil;white;comportant uniquement des escaliers et peu profonde;1
+;É;Église de Pantin;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;E;Ella Fitzgerald;green;très facile d'accès (ascenseur ou plain-pied);1
+;É;Epinettes - Pouchet;green;très facile d'accès (ascenseur ou plain-pied);1
+;E;Escadrille Normandie Niémen;green;très facile d'accès (ascenseur ou plain-pied);1
+;E;Esplanade de La Défense;green;très facile d'accès (ascenseur ou plain-pied);1
+;É;Étienne Marcel;white;comportant uniquement des escaliers et peu profonde;1
+;E;Europe;grey;comportant uniquement des escaliers et profonde;1
+;E;Exelmans;white;comportant uniquement des escaliers et peu profonde;1
+;F;Faidherbe - Chaligny;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;F;Falguière;white;comportant uniquement des escaliers et peu profonde;1
+;F;Faubourg de l'Arche;green;très facile d'accès (ascenseur ou plain-pied);1
+;F;Félix Faure;white;comportant uniquement des escaliers et peu profonde;1
+;F;Filles du Calvaire;white;comportant uniquement des escaliers et peu profonde;1
+;F;Fort d'Aubervilliers;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;F;Franklin D. Roosevelt;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;G;Gabriel Péri;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;G;Gaîté;white;comportant uniquement des escaliers et peu profonde;1
+;G;Gallieni;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;G;Gambetta;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+RER C;G;Gare d'Austerlitz;green;très facile d'accès (ascenseur ou plain-pied);3
+METRO 10;G;Gare d'Austerlitz;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;3
+METRO 5;G;Gare d'Austerlitz;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;3
+METRO 4;G;Gare de l'Est;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;3
+METRO 5;G;Gare de l'Est;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;3
+TRAIN P;G;Gare de l'Est;green;très facile d'accès (ascenseur ou plain-pied);3
+METRO 1;G;Gare de Lyon;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;5
+METRO 14;G;Gare de Lyon;green;très facile d'accès (ascenseur ou plain-pied);5
+RER A;G;Gare de Lyon;green;très facile d'accès (ascenseur ou plain-pied);5
+TRAIN R;G;Gare de Lyon;green;très facile d'accès (ascenseur ou plain-pied);5
+RER D;G;Gare de Lyon;green;très facile d'accès (ascenseur ou plain-pied);5
+;G;Montparnasse Bienvenue;green;très facile d'accès (ascenseur ou plain-pied);1
+;G;Gare Saint-Lazare;green;très facile d'accès (ascenseur ou plain-pied);1
+;G;Garibaldi;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;G;Gaston Roulaud;green;très facile d'accès (ascenseur ou plain-pied);1
+;G;Gennevilliers;green;très facile d'accès (ascenseur ou plain-pied);1
+;G;Gentilly;green;très facile d'accès (ascenseur ou plain-pied);1
+;G;Georges Brassens;green;très facile d'accès (ascenseur ou plain-pied);1
+;G;George V;white;comportant uniquement des escaliers et peu profonde;1
+;G;Germaine Tailleferre;green;très facile d'accès (ascenseur ou plain-pied);1
+;G;Glacière;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;G;Goncourt;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;G;Grands Boulevards;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;G;Guy Môquet;white;comportant uniquement des escaliers et peu profonde;1
+;H;Haussmann Saint-Lazare;green;très facile d'accès (ascenseur ou plain-pied);1
+;H;Havre Caumartin;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;H;Henri Farmann;green;très facile d'accès (ascenseur ou plain-pied);1
+;H;Hoche;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;H;Honoré de Balzac;green;très facile d'accès (ascenseur ou plain-pied);1
+;H;Hôpital Avicenne;green;très facile d'accès (ascenseur ou plain-pied);1
+;H;Hôpital Bicêtre;green;très facile d'accès (ascenseur ou plain-pied);1
+;H;Hôpital Delafontaine;green;très facile d'accès (ascenseur ou plain-pied);1
+;H;Hôpital Robert Debré;green;très facile d'accès (ascenseur ou plain-pied);1
+;H;Hôtel de Ville;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;H;Hotel de Ville de Bobigny;green;très facile d'accès (ascenseur ou plain-pied);1
+;H;Hôtel de Ville de la Courneuve;green;très facile d'accès (ascenseur ou plain-pied);1
+;I;Iéna;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;I;Invalides;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+METRO 15;I;Issy;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;2
+RER C;I;Issy;grey;comportant uniquement des escaliers et profonde;2
+RER C;I;Issy - Val de Seine;green;très facile d'accès (ascenseur ou plain-pied);2
+TRAM 2;I;Issy - Val de Seine;green;très facile d'accès (ascenseur ou plain-pied);2
+;I;Ivry-sur-Seine;white;comportant uniquement des escaliers et peu profonde;1
+;J;Jacqueline Auriol;green;très facile d'accès (ascenseur ou plain-pied);1
+;J;Jacques Bonsergent;white;comportant uniquement des escaliers et peu profonde;1
+;J;Jacques-Henri Lartigue;green;très facile d'accès (ascenseur ou plain-pied);1
+;J;Jasmin;white;comportant uniquement des escaliers et peu profonde;1
+METRO 7bis;J;Jaurès;grey;comportant uniquement des escaliers et profonde;2
+TRAIN P;J;Jaurès;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;2
+;J;Javel;green;très facile d'accès (ascenseur ou plain-pied);1
+;J;Jean Moulin;green;très facile d'accès (ascenseur ou plain-pied);1
+;J;Jean Rostand;green;très facile d'accès (ascenseur ou plain-pied);1
+;J;Jourdain;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;J;Jules Joffrin;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;J;Jussieu;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;K;Kléber;white;comportant uniquement des escaliers et peu profonde;1
+;L;L'Île Saint-Denis;green;très facile d'accès (ascenseur ou plain-pied);1
+;L;La Briqueterie;green;très facile d'accès (ascenseur ou plain-pied);1
+;L;La Chapelle;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;L;La Courneuve - Aubervilliers;green;très facile d'accès (ascenseur ou plain-pied);1
+;L;La Courneuve - Six Routes;green;très facile d'accès (ascenseur ou plain-pied);1
+METRO 7;L;La Courneuve - 8 Mai 1945;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;2
+TRAM 1;L;La Courneuve - 8 Mai 1945;green;très facile d'accès (ascenseur ou plain-pied);2
+;L;La Défense (Grande Arche);green;très facile d'accès (ascenseur ou plain-pied);1
+;L;La Ferme;green;très facile d'accès (ascenseur ou plain-pied);1
+;L;La Fourche;grey;comportant uniquement des escaliers et profonde;1
+;L;La Garenne-Colombes;green;très facile d'accès (ascenseur ou plain-pied);1
+METRO 8;L;La Motte-Picquet - Grenelle;black;facile d'accès, équipée d'escalator ou ascenseur sur tout le parcours entre la rue et le quai;2
+METRO 10;L;La Motte-Picquet - Grenelle;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;2
+;L;La Muette;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;L;La Noue;green;très facile d'accès (ascenseur ou plain-pied);1
+;L;La Plaine - Stade de France;green;très facile d'accès (ascenseur ou plain-pied);1
+;L;La Tour Maubourg;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;L;Lamarck Caulaincourt;black;facile d'accès, équipée d'escalator ou ascenseur sur tout le parcours entre la rue et le quai;1
+;L;Laplace;green;très facile d'accès (ascenseur ou plain-pied);1
+;L;Laumière;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;L;Le Kremlin-Bicêtre;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;L;Le Luth;green;très facile d'accès (ascenseur ou plain-pied);1
+;L;Le Peletier;white;comportant uniquement des escaliers et peu profonde;1
+;L;Le Stade;green;très facile d'accès (ascenseur ou plain-pied);1
+;L;Le Vert de Maisons;green;très facile d'accès (ascenseur ou plain-pied);1
+;L;Le Village;green;très facile d'accès (ascenseur ou plain-pied);1
+;L;Ledru-Rollin;white;comportant uniquement des escaliers et peu profonde;1
+METRO 15;L;Les Ardoines;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;2
+RER C;L;Les Ardoines;black;facile d'accès, équipée d'escalator ou ascenseur sur tout le parcours entre la rue et le quai;2
+;L;Les Agnettes;black;facile d'accès, équipée d'escalator ou ascenseur sur tout le parcours entre la rue et le quai;1
+;L;Les Coteaux;green;très facile d'accès (ascenseur ou plain-pied);1
+;L;Les Fauvelles;green;très facile d'accès (ascenseur ou plain-pied);1
+;L;Les Gobelins;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;L;Les Grésillons;grey;comportant uniquement des escaliers et profonde;1
+;L;Les Halles;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;L;Les Milons;green;très facile d'accès (ascenseur ou plain-pied);1
+;L;Les Moulineaux;green;très facile d'accès (ascenseur ou plain-pied);1
+;L;Les Sablons;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;L;Les Vallées;green;très facile d'accès (ascenseur ou plain-pied);1
+;L;Libération;green;très facile d'accès (ascenseur ou plain-pied);1
+;L;Liberté;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;L;Liège;grey;comportant uniquement des escaliers et profonde;1
+;L;Louis Blanc;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;L;Louise Michel;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;L;Lourmel;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;L;Louvre Rivoli;white;comportant uniquement des escaliers et peu profonde;1
+;L;Luxembourg;green;très facile d'accès (ascenseur ou plain-pied);1
+;M;Mabillon;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+METRO 12;M;Madeleine;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;3
+METRO 14;M;Madeleine;black;facile d'accès, équipée d'escalator ou ascenseur sur tout le parcours entre la rue et le quai;3
+METRO 8;M;Madeleine;green;très facile d'accès (ascenseur ou plain-pied);3
+;M;Magenta;green;très facile d'accès (ascenseur ou plain-pied);1
+;M;Mairie d'Aubervilliers;black;facile d'accès, équipée d'escalator ou ascenseur sur tout le parcours entre la rue et le quai;1
+;M;Mairie d'Issy;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;M;Mairie d'Ivry;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;M;Mairie de Clichy;grey;comportant uniquement des escaliers et profonde;1
+;M;Mairie de Montreuil;green;très facile d'accès (ascenseur ou plain-pied);1
+;M;Mairie de Montrouge;green;très facile d'accès (ascenseur ou plain-pied);1
+METRO 13;M;Mairie de Saint-Ouen;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;2
+METRO 14;M;Mairie de Saint-Ouen;green;très facile d'accès (ascenseur ou plain-pied);2
+;M;Mairie de Villeneuve-la-Garenne;green;très facile d'accès (ascenseur ou plain-pied);1
+;M;Mairie de Vitry-sur-Seine;green;très facile d'accès (ascenseur ou plain-pied);1
+;M;Mairie des Lilas;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+METRO 7;M;Maison Blanche;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;2
+METRO 14;M;Maison Blanche;green;très facile d'accès (ascenseur ou plain-pied);2
+;M;Maisons-Alfort - Alfortville;green;très facile d'accès (ascenseur ou plain-pied);1
+;M;Maisons-Alfort - Les Juilliottes;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;M;Maisons-Alfort - Stade;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;M;Malakoff - Plateau de Vanves;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;M;Malakoff - Rue Étienne Dolet;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;M;Malesherbes;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;M;Maraîchers;white;comportant uniquement des escaliers et peu profonde;1
+;M;Marcadet - Poissonniers;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;M;Marcel Sembat;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;M;Marché de Saint-Denis;green;très facile d'accès (ascenseur ou plain-pied);1
+;M;Porte d'Asnières - Marguerite Long;green;très facile d'accès (ascenseur ou plain-pied);1
+;M;Marie de Miribel;green;très facile d'accès (ascenseur ou plain-pied);1
+;M;Marx Dormoy;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;M;Maryse Bastié;green;très facile d'accès (ascenseur ou plain-pied);1
+;M;Maubert - Mutualité;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;M;Maurice Lachâtre;green;très facile d'accès (ascenseur ou plain-pied);1
+;M;Ménilmontant;grey;comportant uniquement des escaliers et profonde;1
+;M;Meudon-sur-Seine;green;très facile d'accès (ascenseur ou plain-pied);1
+;M;Michel Bizot;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;M;Michel-Ange - Auteuil;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+METRO 10;M;Michel-Ange - Molitor;white;comportant uniquement des escaliers et peu profonde;2
+METRO 9;M;Michel-Ange - Molitor;grey;comportant uniquement des escaliers et profonde;2
+;M;Mirabeau;white;comportant uniquement des escaliers et peu profonde;1
+;M;Miromesnil;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;M;Monceau;white;comportant uniquement des escaliers et peu profonde;1
+;M;Montempoivre;green;très facile d'accès (ascenseur ou plain-pied);1
+;M;Montgallet;white;comportant uniquement des escaliers et peu profonde;1
+;M;Funiculaire de Montmartre - Gare basse;green;très facile d'accès (ascenseur ou plain-pied);1
+;M;Montparnasse Bienvenue;green;très facile d'accès (ascenseur ou plain-pied);1
+;M;Montsouris;green;très facile d'accès (ascenseur ou plain-pied);1
+;M;Mouton Duvernet;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;M;Musée d'Orsay;white;comportant uniquement des escaliers et peu profonde;1
+;M;Musée de Sèvres;green;très facile d'accès (ascenseur ou plain-pied);1
+;M;Musée Mac Val;green;très facile d'accès (ascenseur ou plain-pied);1
+METRO 2;N;Nation;grey;comportant uniquement des escaliers et profonde;5
+METRO 6;N;Nation;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;5
+METRO 1;N;Nation;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;5
+METRO 9;N;Nation;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;5
+RER A;N;Nation;green;très facile d'accès (ascenseur ou plain-pied);5
+;N;Nationale;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+RER C;N;Neuilly - Porte Maillot;green;très facile d'accès (ascenseur ou plain-pied);2
+RER E;N;Neuilly - Porte Maillot;green;très facile d'accès (ascenseur ou plain-pied);2
+;N;Noisy-le-Sec;green;très facile d'accès (ascenseur ou plain-pied);1
+;N;Notre-Dame-de-Lorette;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;N;Notre-Dame-des-Champs;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;O;Oberkampf;grey;comportant uniquement des escaliers et profonde;1
+;O;Odéon;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;O;Olympiades;green;très facile d'accès (ascenseur ou plain-pied);1
+;O;Opéra;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;O;Ourcq;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;P;Palais Royal - Musée du Louvre;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;P;Pantin;green;très facile d'accès (ascenseur ou plain-pied);1
+;P;Parc de Saint-Cloud;green;très facile d'accès (ascenseur ou plain-pied);1
+;P;Parc des Chanteraines;green;très facile d'accès (ascenseur ou plain-pied);1
+;P;Parc Pierre Lagravère;green;très facile d'accès (ascenseur ou plain-pied);1
+;P;Parmentier;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;P;Passy;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+METRO 12;P;Pasteur;white;comportant uniquement des escaliers et peu profonde;2
+METRO 6;P;Pasteur;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;2
+;P;Pelleport;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;P;Père Lachaise;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;P;Pereire;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;P;Péreire Levallois;grey;comportant uniquement des escaliers et profonde;1
+;P;Pernety;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;P;Petit Noisy;green;très facile d'accès (ascenseur ou plain-pied);1
+;P;Philippe Auguste;grey;comportant uniquement des escaliers et profonde;1
+;P;Picpus;white;comportant uniquement des escaliers et peu profonde;1
+;P;Square de Geyter;green;très facile d'accès (ascenseur ou plain-pied);1
+;P;Pierre et Marie Curie;white;comportant uniquement des escaliers et peu profonde;1
+;P;Pigalle;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+METRO 6;P;Place d'Italie;white;comportant uniquement des escaliers et peu profonde;3
+METRO 5;P;Place d'Italie;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;3
+METRO 7;P;Place d'Italie;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;3
+;P;Place de Clichy;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;P;Place des Fêtes;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;P;Place Monge;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;P;Plaisance;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;P;Poissonnière;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+TRAIN L;P;Pont Cardinet;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;2
+METRO 14;P;Pont Cardinet;green;très facile d'accès (ascenseur ou plain-pied);2
+;P;Pont de Bondy;green;très facile d'accès (ascenseur ou plain-pied);1
+;P;Pont de Bezons;green;très facile d'accès (ascenseur ou plain-pied);1
+;P;Pont de l'Alma;white;comportant uniquement des escaliers et peu profonde;1
+;P;Pont de Levallois Bécon;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;P;Pont de Neuilly;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+METRO 9;P;Pont de Sèvres;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;2
+METRO 15;P;Pont de Sèvres;green;très facile d'accès (ascenseur ou plain-pied);2
+;P;Pont du Garigliano - Hôpital Européen G. Pompidou;green;très facile d'accès (ascenseur ou plain-pied);1
+;P;Pont Marie (Cité des Arts);white;comportant uniquement des escaliers et peu profonde;1
+;P;Pont Neuf;white;comportant uniquement des escaliers et peu profonde;1
+;P;Port Royal;green;très facile d'accès (ascenseur ou plain-pied);1
+;P;Porte d'Aubervilliers;green;très facile d'accès (ascenseur ou plain-pied);1
+;P;Porte d'Auteuil;grey;comportant uniquement des escaliers et profonde;1
+;P;Porte d'Issy;green;très facile d'accès (ascenseur ou plain-pied);1
+METRO 7;P;Porte d'Italie;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;2
+TRAM 3a;P;Porte d'Italie;green;très facile d'accès (ascenseur ou plain-pied);2
+METRO 7;P;Porte d'Ivry;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;2
+TRAM 3a;P;Porte d'Ivry;green;très facile d'accès (ascenseur ou plain-pied);2
+METRO 4;P;Porte d'Orléans;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;2
+TRAM 3a;P;Porte d'Orléans;green;très facile d'accès (ascenseur ou plain-pied);2
+METRO 2;P;Porte Dauphine;white;comportant uniquement des escaliers et peu profonde;2
+TRAM 3b;P;Porte Dauphine;green;très facile d'accès (ascenseur ou plain-pied);2
+METRO 3;P;Porte de Bagnolet;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;2
+TRAM 3a;P;Porte de Bagnolet;green;très facile d'accès (ascenseur ou plain-pied);2
+METRO 3;P;Porte de Champerret;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;2
+TRAM 3b;P;Porte de Champerret;green;très facile d'accès (ascenseur ou plain-pied);2
+METRO 8;P;Porte de Charenton;grey;comportant uniquement des escaliers et profonde;2
+TRAM 3a;P;Porte de Charenton;green;très facile d'accès (ascenseur ou plain-pied);2
+METRO 7;P;Porte de Choisy;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;2
+TRAM 9;P;Porte de Choisy;green;très facile d'accès (ascenseur ou plain-pied);2
+TRAM 3b;P;Porte de Clichy;grey;comportant uniquement des escaliers et profonde;2
+METRO 14;P;Porte de Clichy;green;très facile d'accès (ascenseur ou plain-pied);2
+METRO 4;P;Porte de Clignancourt;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;2
+TRAM 3b;P;Porte de Clignancourt;green;très facile d'accès (ascenseur ou plain-pied);2
+METRO 12;P;Porte de la Chapelle;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;2
+TRAM 3b;P;Porte de la Chapelle;green;très facile d'accès (ascenseur ou plain-pied);2
+METRO 7;P;Porte de la Villette;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;2
+TRAM 3b;P;Porte de la Villette;green;très facile d'accès (ascenseur ou plain-pied);2
+METRO 9;P;Porte de Montreuil;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;2
+TRAM 3b;P;Porte de Montreuil;green;très facile d'accès (ascenseur ou plain-pied);2
+METRO 5;P;Porte de Pantin;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;2
+TRAM 3b;P;Porte de Pantin;green;très facile d'accès (ascenseur ou plain-pied);2
+;P;Porte de Saint-Cloud;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+METRO 13;P;Porte de Saint-Ouen;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;2
+TRAM 3b;P;Porte de Saint-Ouen;green;très facile d'accès (ascenseur ou plain-pied);2
+METRO 13;P;Porte de Vanves;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;2
+TRAM 3a;P;Porte de Vanves;green;très facile d'accès (ascenseur ou plain-pied);2
+METRO 12;P;Porte de Versailles;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;2
+TRAM 3a;P;Porte de Versailles;green;très facile d'accès (ascenseur ou plain-pied);2
+METRO 1;P;Porte de Vincennes;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;3
+TRAM 3a;P;Porte de Vincennes;green;très facile d'accès (ascenseur ou plain-pied);3
+TRAM 3b;P;Porte de Vincennes;green;très facile d'accès (ascenseur ou plain-pied);3
+METRO 11;P;Porte des Lilas;black;facile d'accès, équipée d'escalator ou ascenseur sur tout le parcours entre la rue et le quai;3
+METRO 3bis;P;Porte des Lilas;black;facile d'accès, équipée d'escalator ou ascenseur sur tout le parcours entre la rue et le quai;3
+TRAM 3b;P;Porte des Lilas;green;très facile d'accès (ascenseur ou plain-pied);3
+METRO 8;P;Porte Dorée;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;2
+TRAM 3a;P;Porte Dorée;green;très facile d'accès (ascenseur ou plain-pied);2
+METRO 1;P;Porte Maillot - Palais des Congrès;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;2
+TRAM 3b;P;Porte Maillot - Palais des Congrès;green;très facile d'accès (ascenseur ou plain-pied);2
+;P;Poterne des Peupliers;green;très facile d'accès (ascenseur ou plain-pied);1
+;P;Pré-Saint-Gervais;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;P;Puteaux;green;très facile d'accès (ascenseur ou plain-pied);1
+METRO 7;P;Pyramides;grey;comportant uniquement des escaliers et profonde;2
+METRO 14;P;Pyramides;green;très facile d'accès (ascenseur ou plain-pied);2
+;P;Pyrénées;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;Q;Quai de la Gare;black;facile d'accès, équipée d'escalator ou ascenseur sur tout le parcours entre la rue et le quai;1
+;Q;Quai de la Rapée;white;comportant uniquement des escaliers et peu profonde;1
+;Q;Quatre Septembre;white;comportant uniquement des escaliers et peu profonde;1
+;R;Rambuteau;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;R;Ranelagh;white;comportant uniquement des escaliers et peu profonde;1
+;R;Raspail;white;comportant uniquement des escaliers et peu profonde;1
+;R;Réaumur - Sébastopol;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;R;Rennes;grey;comportant uniquement des escaliers et profonde;1
+METRO 8;R;République;grey;comportant uniquement des escaliers et profonde;5
+METRO 3;R;République;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;5
+METRO 11;R;République;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;5
+METRO 5;R;République;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;5
+METRO 9;R;République;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;5
+;R;Reuilly - Diderot;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;R;Richard-Lenoir;white;comportant uniquement des escaliers et peu profonde;1
+;R;Richelieu - Drouot;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;R;Riquet;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;R;Robespierre;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;R;Rome;grey;comportant uniquement des escaliers et profonde;1
+;R;Rosa Parks;green;très facile d'accès (ascenseur ou plain-pied);1
+;R;Rue de la Pompe;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;R;Rue des Boulets;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;R;Rue du Bac;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;R;Rue Saint-Maur;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;S;Saint-Ambroise;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;S;Saint-Augustin;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+TRAIN H;S;Saint-Denis;green;très facile d'accès (ascenseur ou plain-pied);4
+RER C ;S;Saint-Denis;green;très facile d'accès (ascenseur ou plain-pied);4
+TRAM 8;S;Saint-Denis;green;très facile d'accès (ascenseur ou plain-pied);4
+TRAM 1;S;Saint-Denis;green;très facile d'accès (ascenseur ou plain-pied);4
+;S;Saint-Denis – Pleyel;green;très facile d'accès (ascenseur ou plain-pied);1
+METRO 13;S;Saint-Denis - Porte de Paris;black;facile d'accès, équipée d'escalator ou ascenseur sur tout le parcours entre la rue et le quai;2
+TRAM 8;S;Saint-Denis - Porte de Paris;green;très facile d'accès (ascenseur ou plain-pied);2
+;S;Saint-Denis - Université;black;facile d'accès, équipée d'escalator ou ascenseur sur tout le parcours entre la rue et le quai;1
+;S;Saint-Fargeau;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;S;Saint-François Xavier;white;comportant uniquement des escaliers et peu profonde;1
+;S;Saint-Georges;white;comportant uniquement des escaliers et peu profonde;1
+;S;Saint-Germain-des-Prés;white;comportant uniquement des escaliers et peu profonde;1
+;S;Saint-Lazare;green;très facile d'accès (ascenseur ou plain-pied);1
+;S;Saint-Jacques;white;comportant uniquement des escaliers et peu profonde;1
+;S;Saint-Mandé;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;S;Saint-Marcel;white;comportant uniquement des escaliers et peu profonde;1
+METRO 4;S;Saint-Michel Notre-Dame;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+RER C;S;Saint-Michel - Notre-Dame;grey;comportant uniquement des escaliers et profonde;2
+RER B;S;Saint-Michel - Notre-Dame;green;très facile d'accès (ascenseur ou plain-pied);2
+;S;Saint-Ouen;green;très facile d'accès (ascenseur ou plain-pied);1
+;S;Saint-Paul (Le Marais);yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;S;Saint-Philippe du Roule;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;S;Saint-Placide;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;S;Saint-Sébastien Froissart;white;comportant uniquement des escaliers et peu profonde;1
+;S;Saint-Sulpice;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;S;Ségur;white;comportant uniquement des escaliers et peu profonde;1
+;S;Sentier;white;comportant uniquement des escaliers et peu profonde;1
+;S;Serge Gainsbourg;green;très facile d'accès (ascenseur ou plain-pied);1
+;S;Séverine;green;très facile d'accès (ascenseur ou plain-pied);1
+;S;Sèvres - Babylone;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;S;Sèvres - Lecourbe;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;S;Simplon;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;S;Solférino;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;S;Stade Charléty - Porte de Gentilly;green;très facile d'accès (ascenseur ou plain-pied);1
+;S;Stade de France - Saint-Denis;green;très facile d'accès (ascenseur ou plain-pied);1
+;S;Stade Géo André;green;très facile d'accès (ascenseur ou plain-pied);1
+;S;Stalingrad;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;S;Strasbourg - Saint-Denis;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;S;Square Sainte-Odile;green;très facile d'accès (ascenseur ou plain-pied);1
+;S;Sully Morland;white;comportant uniquement des escaliers et peu profonde;1
+;S;Suresnes - Longchamp;green;très facile d'accès (ascenseur ou plain-pied);1
+;S;Suzanne Lenglen;green;très facile d'accès (ascenseur ou plain-pied);1
+;T;Télégraphe;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;T;Temple;white;comportant uniquement des escaliers et peu profonde;1
+;T;Ternes;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;T;Théâtre Gérard Philipe;green;très facile d'accès (ascenseur ou plain-pied);1
+;T;Thérèse Pierre;green;très facile d'accès (ascenseur ou plain-pied);1
+;T;Timbaud;green;très facile d'accès (ascenseur ou plain-pied);1
+;T;Tolbiac;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;T;Trinité d'Estienne d'Orves;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;T;Trocadéro;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;T;Tuileries;white;comportant uniquement des escaliers et peu profonde;1
+;V;Vaneau;white;comportant uniquement des escaliers et peu profonde;1
+;V;Vanves - Malakoff;white;comportant uniquement des escaliers et peu profonde;1
+;V;Varenne;white;comportant uniquement des escaliers et peu profonde;1
+;V;Vaugirard;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;V;Vavin;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;V;Victor Basch;green;très facile d'accès (ascenseur ou plain-pied);1
+;V;Victor Hugo;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;V;Villejuif - Gustave Roussy;green;très facile d'accès (ascenseur ou plain-pied);1
+;V;Villejuif - Léo Lagrange;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+METRO 7;V;Villejuif - Louis Aragon;black;facile d'accès, équipée d'escalator ou ascenseur sur tout le parcours entre la rue et le quai;3
+TRAM 7;V;Villejuif - Louis Aragon;green;très facile d'accès (ascenseur ou plain-pied);3
+METRO 15;V;Villejuif - Louis Aragon;green;très facile d'accès (ascenseur ou plain-pied);3
+;V;Paul Vaillant Couturier;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;V;Villiers;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;V;Vincennes;green;très facile d'accès (ascenseur ou plain-pied);1
+;V;Vitry-sur-Seine;green;très facile d'accès (ascenseur ou plain-pied);1
+;V;Volontaires;white;comportant uniquement des escaliers et peu profonde;1
+;V;Voltaire;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1
+;W;Wagram;yellow;équipée d'au moins un escalator ou ascenseur sur le parcours entre la rue et le quai;1

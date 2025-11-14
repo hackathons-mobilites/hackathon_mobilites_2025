@@ -1,0 +1,27 @@
+[project]
+name = "hackathon-mobilites-2025"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "folium>=0.20.0",
+    "fastexcel>=0.16.0",
+    "geopandas>=1.1.1",
+    "huggingface-hub>=1.1.4",
+    "jupyter>=1.1.1",
+    "matplotlib>=3.10.7",
+    "openai>=2.7.2",
+    "pandas>=2.3.3",
+    "plotly>=6.4.0",
+    "polars>=1.35.2",
+    "streamlit>=1.51.0",
+    "streamlit-folium>=0.25.3",
+    "pyarrow>=21.0.0",
+    "python-dotenv>=1.2.1",
+    "scipy>=1.16.3",
+    "thefuzz>=0.22.1",
+    "uvicorn>=0.38.0",
+    "fastapi>=0.121.2",
+    "jupyterlab>=4.4.10",
+]
