@@ -52,7 +52,7 @@ def parse_args():
 
 
 def main():
-    API_BASE = "https://prim.iledefrance-mobilites.fr/marketplace/"
+    # API_BASE = "https://prim.iledefrance-mobilites.fr/marketplace/"
     API_KEY = "xxxxxxxxxxxxxxxxxxxxxxxx"  # remplacer par votre clé
     HEADERS = {"Accept": "application/json", "Content-Type": "application/json", "apikey": API_KEY}
     args = parse_args()
@@ -109,11 +109,14 @@ def main():
         json_resp = resp.json()
         # json_dump = json.dumps(json_resp, indent=4)
         # print("Response JSON:\n", json_dump)
+        # sys.exit(0)
         
         # On suppose qu'on a qu'une seule section dans la réponse
         geometry = json_resp[0]['sections'][0]['geometry']
         distance = json_resp[0]['distances']['total']
         duration = json_resp[0]['duration']
+        verticalLoss = json_resp[0]['sections'][0]['details']['verticalLoss']
+        verticalGain = json_resp[0]['sections'][0]['details']['verticalGain']
 
         # Précision non standard de 6 décimales pour geovelo. Polyline par défaut à 5.
         decoded_polyline = polyline.decode(geometry, precision=6)
@@ -123,7 +126,10 @@ def main():
         # Impression des résultats
         print(distance)
         print(duration)
+        print(verticalLoss)
+        print(verticalGain)
         print(line.wkt)
+
 
 if __name__ == '__main__':
     sys.exit(main())
