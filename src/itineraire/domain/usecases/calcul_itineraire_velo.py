@@ -6,14 +6,14 @@ from src.itineraire.domain.ports.source_handler import SourceHandler
 
 
 def calcul_itineraire_velo(
-    source_handler: SourceHandler, departure_name: str, arrival_name: str, to_parking: bool
+    source_handler: SourceHandler, departure_name: str, arrival_name: str, to_parking: bool, parking_filter: ParkingVeloFilters
 ) -> dict:
     departure_coordinates = source_handler.get_address_coordinates(address_name=departure_name)
     arrival_coordinates = source_handler.get_address_coordinates(address_name=arrival_name)
     logging.info(f"Departure coordinates: {departure_coordinates}, Arrival coordinates: {arrival_coordinates}")
 
     parking_coordinates = get_nearest_parking_velo(
-        arrival_coordinates, filtre=ParkingVeloFilters.privee_abris
+        arrival_coordinates, filtre=parking_filter
     )["geometry"]
     logging.info(f"Parking coordinates: {parking_coordinates}")
 
