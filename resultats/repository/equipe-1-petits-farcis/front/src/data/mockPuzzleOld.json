@@ -1,0 +1,27 @@
+{
+  "company_name": "ACME Mobility",
+  "puzzle_id": "puzz_2025_11_13",
+  "image_b64": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAwIiBoZWlnaHQ9IjYwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iNjAwIiBoZWlnaHQ9IjYwMCIgZmlsbD0iIzVmOTFlYSIvPjxjaXJjbGUgY3g9IjMwMCIgY3k9IjI1MCIgcj0iMTAwIiBmaWxsPSIjZmZkNzAwIi8+PHBhdGggZD0iTTMwMCAzNTBMMjAwIDQ1MEg0MDBaIiBmaWxsPSIjZmZkNzAwIi8+PHBhdGggZD0iTTI1MCA0NTBMMjAwIDU1MEgyNTBaIiBmaWxsPSIjZmY4YzAwIi8+PHBhdGggZD0iTTM1MCA0NTBMMzUwIDU1MEg0MDBaIiBmaWxsPSIjZmY4YzAwIi8+PHRleHQgeD0iMzAwIiB5PSI1MDAiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSI0MCIgZmlsbD0iI2ZmZiIgdGV4dC1hbmNob3I9Im1pZGRsZSI+8J+XvCBQYXJpczwvdGV4dD48L3N2Zz4=",
+  "unlocked_tiles": ["0_0", "0_1", "1_0", "1_2", "2_1", "2_3", "3_0", "3_3"],
+  "attempts_left": 3,
+  "total_tiles": 16,
+  "progress_percentage": 50,
+  "contributors": [
+    {
+      "user_id": "u_1",
+      "username": "Alice Martin",
+      "pieces_unlocked": 3
+    },
+    {
+      "user_id": "u_2",
+      "username": "Bob Durant",
+      "pieces_unlocked": 2
+    },
+    {
+      "user_id": "u_3",
+      "username": "Claire Rousseau",
+      "pieces_unlocked": 3
+    }
+  ],
+  "mystery_gift": "Tour Eiffel"
+}

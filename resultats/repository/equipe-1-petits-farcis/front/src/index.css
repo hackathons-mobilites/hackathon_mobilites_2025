@@ -1,0 +1,231 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 215 25% 27%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 27%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 27%;
+
+    /* IDFM Blue - Primary transport color */
+    --primary: 208 65% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Light blue for secondary actions */
+    --secondary: 208 45% 94%;
+    --secondary-foreground: 208 65% 35%;
+
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+
+    /* Orange for gamification - rewards, streaks */
+    --accent: 24 95% 53%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 208 65% 55%;
+
+    --radius: 0.75rem;
+
+    /* Gamification colors */
+    --reward-gold: 45 93% 58%;
+    --reward-gradient-start: 24 95% 53%;
+    --reward-gradient-end: 45 93% 58%;
+
+    /* Transport mode colors */
+    --mode-walking: 142 71% 45%;
+    --mode-rer: 208 65% 55%;
+    --mode-metro: 271 76% 53%;
+    --mode-bus: 142 71% 35%;
+
+    /* Ranking colors */
+    --rank-gold: 45 93% 58%;
+    --rank-silver: 0 0% 75%;
+    --rank-bronze: 28 80% 52%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Gradients and effects */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(208 75% 45%) 100%);
+    --gradient-reward: linear-gradient(135deg, hsl(var(--reward-gradient-start)) 0%, hsl(var(--reward-gradient-end)) 100%);
+    --shadow-card: 0 2px 8px hsla(215, 25%, 27%, 0.08);
+    --shadow-hover: 0 4px 16px hsla(215, 25%, 27%, 0.12);
+  }
+
+  .dark {
+    --background: 222 47% 11%;
+    --foreground: 210 40% 98%;
+
+    --card: 222 47% 11%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222 47% 11%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 208 65% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 24 95% 53%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 208 65% 55%;
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+
+    --shadow-card: 0 2px 8px hsla(0, 0%, 0%, 0.3);
+    --shadow-hover: 0 4px 16px hsla(0, 0%, 0%, 0.4);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer components {
+  /* Card variants for gamification */
+  .card-gradient {
+    background: var(--gradient-primary);
+    @apply text-primary-foreground shadow-lg;
+  }
+
+  .card-reward {
+    background: var(--gradient-reward);
+    @apply text-white shadow-lg;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-[var(--shadow-hover)] hover:scale-[1.02];
+  }
+
+  /* Transport mode badges */
+  .mode-badge {
+    @apply inline-flex items-center gap-1 px-2 py-1 rounded-full text-xs font-semibold;
+  }
+
+  .mode-walking {
+    @apply bg-green-100 text-green-800;
+  }
+
+  .mode-rer {
+    @apply text-white;
+  }
+
+  .mode-metro {
+    @apply bg-purple-100 text-purple-800;
+  }
+
+  .mode-bus {
+    @apply bg-green-700 text-white;
+  }
+
+  /* Ranking badges */
+  .rank-badge {
+    @apply inline-flex items-center justify-center w-8 h-8 rounded-full font-bold text-sm;
+  }
+
+  .rank-1 {
+    @apply bg-[hsl(var(--rank-gold))] text-white;
+  }
+
+  .rank-2 {
+    @apply bg-[hsl(var(--rank-silver))] text-gray-800;
+  }
+
+  .rank-3 {
+    @apply bg-[hsl(var(--rank-bronze))] text-white;
+  }
+
+  /* Animations */
+  .animate-slide-in {
+    animation: slideIn 0.3s ease-out;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.4s ease-out;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.3s ease-out;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

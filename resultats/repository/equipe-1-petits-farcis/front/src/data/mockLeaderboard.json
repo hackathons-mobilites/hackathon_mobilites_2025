@@ -1,0 +1,147 @@
+{
+  "employee_ranking": [
+    {
+      "rank": 1,
+      "user_id": "u_1",
+      "user": "Alice Martin",
+      "points": 2850,
+      "pieces": 23,
+      "delta": 5,
+      "level": "Senior Engineer"
+    },
+    {
+      "rank": 2,
+      "user_id": "u_2",
+      "user": "Bob Durant",
+      "points": 2640,
+      "pieces": 19,
+      "delta": -1,
+      "level": "Product Manager"
+    },
+    {
+      "rank": 3,
+      "user_id": "u_3",
+      "user": "Claire Rousseau",
+      "points": 2385,
+      "pieces": 18,
+      "delta": 2,
+      "level": "UX Designer"
+    },
+    {
+      "rank": 4,
+      "user_id": "u_4",
+      "user": "David Chen",
+      "points": 2120,
+      "pieces": 16,
+      "delta": 0,
+      "level": "Data Analyst"
+    },
+    {
+      "rank": 5,
+      "user_id": "u_5",
+      "user": "Emma Wilson",
+      "points": 1895,
+      "pieces": 14,
+      "delta": 3,
+      "level": "Marketing Lead"
+    },
+    {
+      "rank": 6,
+      "user_id": "u_6",
+      "user": "François Dubois",
+      "points": 1720,
+      "pieces": 13,
+      "delta": -2,
+      "level": "Developer"
+    },
+    {
+      "rank": 7,
+      "user_id": "u_7",
+      "user": "Gabrielle Petit",
+      "points": 1580,
+      "pieces": 12,
+      "delta": 1,
+      "level": "HR Manager"
+    },
+    {
+      "rank": 8,
+      "user_id": "u_8",
+      "user": "Hugo Leroy",
+      "points": 1420,
+      "pieces": 10,
+      "delta": 0,
+      "level": "Sales Executive"
+    }
+  ],
+  "company_ranking": [
+    {
+      "rank": 1,
+      "company_id": "c_1",
+      "company": "ACME Mobility",
+      "score": 18450,
+      "delta": 2,
+      "league": "Gold"
+    },
+    {
+      "rank": 2,
+      "company_id": "c_2",
+      "company": "GreenTech Solutions",
+      "score": 17280,
+      "delta": 0,
+      "league": "Gold"
+    },
+    {
+      "rank": 3,
+      "company_id": "c_3",
+      "company": "EcoTransport Inc",
+      "score": 16890,
+      "delta": -1,
+      "league": "Gold"
+    },
+    {
+      "rank": 4,
+      "company_id": "c_4",
+      "company": "Sustainable Ventures",
+      "score": 15320,
+      "delta": 1,
+      "league": "Silver"
+    },
+    {
+      "rank": 5,
+      "company_id": "c_5",
+      "company": "CleanCommute Co",
+      "score": 14750,
+      "delta": -1,
+      "league": "Silver"
+    },
+    {
+      "rank": 6,
+      "company_id": "c_6",
+      "company": "Urban Riders",
+      "score": 13980,
+      "delta": 2,
+      "league": "Silver"
+    },
+    {
+      "rank": 7,
+      "company_id": "c_7",
+      "company": "Metro Movers",
+      "score": 12650,
+      "delta": 0,
+      "league": "Bronze"
+    },
+    {
+      "rank": 8,
+      "company_id": "c_8",
+      "company": "Transit First",
+      "score": 11890,
+      "delta": 1,
+      "league": "Bronze"
+    }
+  ],
+  "current_user": {
+    "rank": 1,
+    "points": 2850,
+    "pieces": 23
+  }
+}

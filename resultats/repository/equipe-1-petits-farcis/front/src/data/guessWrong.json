@@ -1,0 +1,5 @@
+{
+  "message": "Incorrect guess. Try again!",
+  "remaining_attempts": 0,
+  "status": "wrong"
+}

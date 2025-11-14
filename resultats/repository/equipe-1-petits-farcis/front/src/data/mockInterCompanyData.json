@@ -1,0 +1,15 @@
+{
+  "emissionsComparison": [
+    { "company": "ACME Mobility", "co2": 3500 },
+    { "company": "GreenTech Solutions", "co2": 3200 },
+    { "company": "EcoTransport Inc", "co2": 4000 },
+    { "company": "Sustainable Ventures", "co2": 2800 },
+    { "company": "CleanCommute Co", "co2": 4500 }
+  ],
+  "modalShareComparison": [
+    { "mode": "TC", "ACME Mobility": 30, "GreenTech Solutions": 35, "EcoTransport Inc": 25, "Sustainable Ventures": 40, "CleanCommute Co": 20 },
+    { "mode": "Velo", "ACME Mobility": 20, "GreenTech Solutions": 25, "EcoTransport Inc": 15, "Sustainable Ventures": 30, "CleanCommute Co": 10 },
+    { "mode": "Voiture", "ACME Mobility": 40, "GreenTech Solutions": 30, "EcoTransport Inc": 50, "Sustainable Ventures": 20, "CleanCommute Co": 60 },
+    { "mode": "Mobilité Partagée", "ACME Mobility": 10, "GreenTech Solutions": 10, "EcoTransport Inc": 10, "Sustainable Ventures": 10, "CleanCommute Co": 10 }
+  ]
+}

@@ -83,7 +83,7 @@ GEOVELO_API_KEY=your_geovelo_api_key
 
 Lancez le serveur back-end :
 ```bash
-python server.py
+python main.py
 ```
 
 L'API back-end sera disponible à l'adresse http://localhost:5000.

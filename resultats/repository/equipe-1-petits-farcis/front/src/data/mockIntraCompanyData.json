@@ -1,0 +1,32 @@
+{
+  "co2SavedCurrentMonth": 2500,
+  "co2SavedTrend": [
+    { "month": "Jan", "co2Saved": 1000 },
+    { "month": "Fév", "co2Saved": 1200 },
+    { "month": "Mar", "co2Saved": 1500 },
+    { "month": "Avr", "co2Saved": 1800 },
+    { "month": "Mai", "co2Saved": 2500 }
+  ],
+  "modalShiftLastMonth": {
+    "Voiture": 50,
+    "TC": 30,
+    "Velo": 15,
+    "Mobilité Partagée": 5
+  },
+  "modalShiftCurrentMonth": {
+    "Voiture": 45,
+    "TC": 28,
+    "Velo": 22,
+    "Mobilité Partagée": 5
+  },
+  "bikeTripsThisMonth": 120,
+  "intermodalTripsThisMonth": 45,
+  "bikeDistanceThisMonth": 850,
+  "modalShiftTrend": [
+    { "month": "Jan", "Voiture": 60, "TC": 20, "Velo": 10, "Mobilité Partagée": 10 },
+    { "month": "Fév", "Voiture": 58, "TC": 22, "Velo": 12, "Mobilité Partagée": 8 },
+    { "month": "Mar", "Voiture": 55, "TC": 25, "Velo": 15, "Mobilité Partagée": 5 },
+    { "month": "Avr", "Voiture": 50, "TC": 28, "Velo": 18, "Mobilité Partagée": 4 },
+    { "month": "Mai", "Voiture": 48, "TC": 30, "Velo": 20, "Mobilité Partagée": 2 }
+  ]
+}
