@@ -1,0 +1,12 @@
+pandas==2.3.3
+pyarrow==21.0.0
+geopandas==1.1.1
+boto3==1.40.72
+requests==2.32.5
+python-dotenv==0.21.0
+streamlit==1.51.0
+folium==0.20.0
+streamlit-folium==0.25.3
+polyline==2.0.3
+googlemaps==4.10.0
+streamlit-searchbox==0.1.6
