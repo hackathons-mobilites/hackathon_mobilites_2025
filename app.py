@@ -42,6 +42,7 @@ def main():
         show_parking,
         map_style,
         to_parking,
+        use_train,
         get_forecast,
         parking_filter,
     ) = create_sidebar(gmaps)
@@ -52,6 +53,7 @@ def main():
             departure,
             arrival,
             to_parking,
+            use_train,
             travel_datetime,
             get_forecast,
             parking_filter,

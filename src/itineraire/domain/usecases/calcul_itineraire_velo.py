@@ -28,6 +28,7 @@ def calcul_itineraire_velo(
     itinerary_velo = []
     itineraire_transport = []
     itinerary_marche = []
+    sections_public_transport = []
 
     parking_coordinates = get_nearest_parking_velo(
         arrival_coordinates, filtre=parking_filter

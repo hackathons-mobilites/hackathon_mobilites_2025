@@ -59,6 +59,27 @@ def _extract_geojson_coordinates(geojson):
     return []
 
 
+def _get_transport_sections(itinerary_data):
+    if not itinerary_data:
+        return []
+    return _ensure_dict_list(itinerary_data.get('itinerary_transport'))
+
+
+def _transport_duration_minutes_from_sections(sections):
+    total_seconds = 0
+    for section in sections:
+        duration = section.get('duration') if isinstance(section, dict) else None
+        if isinstance(duration, (int, float)):
+            total_seconds += duration
+    if not total_seconds:
+        return 0
+    return int(round(total_seconds / 60))
+
+
+def _transport_duration_minutes(itinerary_data):
+    return _transport_duration_minutes_from_sections(_get_transport_sections(itinerary_data))
+
+
 def add_bike_routes_to_map(map_obj, itinerary_data):
     """Ajoute les itinéraires vélo à la carte."""
     if 'itinerary_velo' not in itinerary_data:
@@ -118,6 +139,10 @@ def _calculate_totals(bike_duration, bike_distance, itinerary_data):
         total_duration += walk_duration
         total_distance += walk_distance
 
+    transport_duration = _transport_duration_minutes(itinerary_data)
+    if transport_duration:
+        total_duration += transport_duration
+
     return total_duration, total_distance
 
 
@@ -156,11 +181,17 @@ def _create_button_text(title, bike_duration, total_duration, total_distance, it
     if walk_data:
         walk_duration_min = walk_data.get('duration', 0) // 60
 
+    transport_duration_min = _transport_duration_minutes(itinerary_data)
+
+    segment_parts = [f"🚴 {bike_duration}"]
+    if transport_duration_min > 0:
+        segment_parts.append(f"🚆 {transport_duration_min}")
     if walk_duration_min > 0:
-        return (f"{title}\n{total_duration} min (🚴 {bike_duration} +🚶{walk_duration_min}) • "
-                f"{total_distance/1000:.1f} km")
-    else:
-        return f"{title}\n🚴{total_duration} min • {total_distance/1000:.1f} km"
+        segment_parts.append(f"🚶 {walk_duration_min}")
+
+    segments_text = " +".join(segment_parts)
+    return (f"{title}\n{total_duration} min ({segments_text}) • "
+            f"{total_distance/1000:.1f} km")
 
 
 def _add_route_polylines(map_obj, itinerary_data):
@@ -211,14 +242,28 @@ def _display_selected_route_details(itinerary_data):
         walk_duration_min = walk_data.get('duration', 0) // 60
         total_duration_min += walk_duration_min
 
+    transport_duration_min = _transport_duration_minutes(itinerary_data)
+    if transport_duration_min:
+        total_duration_min += transport_duration_min
+
     # Afficher le détail
-    if walk_duration_min > 0:
-        st.info(f"🎯 **{route_title}** sélectionné : {total_duration_min} minutes total "
-                f"({bike_duration_min}min vélo + {walk_duration_min}min marche), "
-                f"{distance_m/1000:.1f} km")
+    segments = [f"{bike_duration_min}min vélo"]
+    if transport_duration_min:
+        segments.append(f"{transport_duration_min}min transport")
+    if walk_duration_min:
+        segments.append(f"{walk_duration_min}min marche")
+
+    if segments:
+        breakdown = " + ".join(segments)
+        st.info(
+            f"🎯 **{route_title}** sélectionné : {total_duration_min} minutes total "
+            f"({breakdown}), {distance_m/1000:.1f} km"
+        )
     else:
-        st.info(f"🎯 **{route_title}** sélectionné : {bike_duration_min} minutes, "
-                f"{distance_m/1000:.1f} km")
+        st.info(
+            f"🎯 **{route_title}** sélectionné : {bike_duration_min} minutes, "
+            f"{distance_m/1000:.1f} km"
+        )
 
 
 def add_departure_arrival_markers(map_obj, itinerary_data):
@@ -365,55 +410,44 @@ def display_transport_itinerary(transport_data):
         return
 
     st.markdown("---")
-    st.subheader("🚆 Option transports en commun")
+    with st.expander("🚆 Option transports en commun", expanded=False):
+        duration_minutes = _transport_duration_minutes_from_sections(sections)
+        co2_values = []
+        co2_unit = ''
+        for section in sections:
+            emission = section.get('co2_emission') or {}
+            value = emission.get('value')
+            if isinstance(value, (int, float)):
+                co2_values.append(value)
+                if not co2_unit:
+                    co2_unit = emission.get('unit', '')
+        co2_total = sum(co2_values) if co2_values else None
 
-    duration_total = sum(section.get('duration') or 0 for section in sections)
-    duration_minutes = int(round(duration_total / 60)) if duration_total else 0
+        transfers = max(len(sections) - 1, 0)
 
-    walking_total = sum(
-        section.get('duration') or 0
-        for section in sections
-        if (section.get('mode') or section.get('type')) in {'walking', 'street_network'}
-    )
-    walking_minutes = int(round(walking_total / 60)) if walking_total else 0
+        col_total, col_transfers, col_co2 = st.columns(3)
+        col_total.metric("Durée totale", f"{duration_minutes} min")
+        col_transfers.metric("Correspondances", str(transfers))
+        if isinstance(co2_total, (int, float)):
+            col_co2.metric("CO₂", f"{co2_total:.0f} {co2_unit}")
+        else:
+            col_co2.metric("CO₂", "N/A")
 
-    co2_values = []
-    co2_unit = ''
-    for section in sections:
-        emission = section.get('co2_emission') or {}
-        value = emission.get('value')
-        if isinstance(value, (int, float)):
-            co2_values.append(value)
-            if not co2_unit:
-                co2_unit = emission.get('unit', '')
-    co2_total = sum(co2_values) if co2_values else None
+        origin = _section_point_name(sections[0].get('from'))
+        destination = _section_point_name(sections[-1].get('to'))
+        if origin and destination:
+            st.caption(f"Trajet : {origin} → {destination}")
 
-    col_total, col_walk, col_co2 = st.columns(3)
-    col_total.metric("Durée totale", f"{duration_minutes} min")
-    col_walk.metric("Marche", f"{walking_minutes} min")
-    if isinstance(co2_total, (int, float)):
-        col_co2.metric("CO₂", f"{co2_total:.0f} {co2_unit}")
-    else:
-        col_co2.metric("CO₂", "N/A")
-
-    transfers = max(len(sections) - 1, 0)
-    st.caption(f"Segments : {len(sections)} • Correspondances : {transfers}")
-
-    origin = _section_point_name(sections[0].get('from'))
-    destination = _section_point_name(sections[-1].get('to'))
-    if origin and destination:
-        st.write(f"Trajet : {origin} → {destination}")
-
-    st.markdown("**Détails des étapes**")
-    for section in sections:
-        description = _describe_transport_section(section)
-        if description:
-            st.markdown(f"- {description}")
+        st.markdown("**Détails des étapes**")
+        for section in sections:
+            description = _describe_transport_section(section)
+            if description:
+                st.markdown(f"- {description}")
 
 
 def add_transport_route_to_map(map_obj, itinerary_data):
     """Trace les segments de transport en commun sur la carte."""
-    sections = _ensure_dict_list(itinerary_data.get('itinerary_transport'))
+    sections = _get_transport_sections(itinerary_data)
     if not sections:
         return
 

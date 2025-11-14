@@ -33,6 +33,7 @@ def calculate_itinerary(
     departure,
     arrival,
     to_parking: bool = True,
+    use_train: bool = True,
     travel_datetime: Optional[datetime] = None,
     get_forecast: bool = False,
     parking_filter: ParkingVeloFilters = ParkingVeloFilters.default,
@@ -51,6 +52,7 @@ def calculate_itinerary(
 
             st.session_state.get_forecast_requested = get_forecast
             st.session_state.parking_filter = parking_filter
+            st.session_state.use_train_enabled = use_train
 
             result = itineraire_parking_velo(
                 departure,
@@ -59,6 +61,7 @@ def calculate_itinerary(
                 travel_datetime=travel_datetime,
                 get_forecast=get_forecast,
                 parking_filter=parking_filter,
+                use_train=use_train,
             )
 
             result_dict = _first_dict(result)

@@ -69,7 +69,12 @@ def create_sidebar(gmaps):
         calculation_requested = _create_calculation_button(departure, arrival)
 
         # Options avancées
-        show_parking, map_style, to_parking, get_forecast, parking_filter = _create_advanced_options()
+        (show_parking,
+         map_style,
+         to_parking,
+         use_train,
+         get_forecast,
+         parking_filter) = _create_advanced_options()
 
         return (
             departure,
@@ -79,6 +84,7 @@ def create_sidebar(gmaps):
             show_parking,
             map_style,
             to_parking,
+            use_train,
             get_forecast,
             parking_filter,
         )
@@ -173,6 +179,13 @@ def _create_advanced_options():
             help=("Si décoché: le vélo va directement à la destination, "
                   "sans segment marche ajouté."),
         )
+        use_train_default = st.session_state.get("use_train_enabled", True)
+        use_train = st.checkbox(
+            "Autoriser les transports en commun",
+            value=use_train_default,
+            help="Quand activé, intègre les segments transport (train, RER, etc.) compatibles vélo.",
+        )
+        st.session_state.use_train_enabled = use_train
         map_style = st.selectbox(
             "Style carte",
             options=MAP_STYLES,
@@ -213,4 +226,4 @@ def _create_advanced_options():
             help="Récupère et affiche la température et les conditions prévues pour l'horaire choisi.",
         )
 
-    return show_parking, map_style, to_parking, get_forecast, parking_filter
+    return show_parking, map_style, to_parking, use_train, get_forecast, parking_filter
