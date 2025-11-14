@@ -18,3 +18,5 @@ ENDPOINT_URL = os.getenv("ENDPOINT_URL", "default")
 BUCKET = os.getenv("BUCKET", "default")
 
 GOOGLE_MAP_API_KEY = os.getenv("GOOGLE_MAP_API_KEY", "default")
+
+METEO_API_KEY = os.getenv("METEO_API_KEY", "default")
