@@ -19,6 +19,7 @@ from .route_components import (
 )
 
 from .sidebar_components import create_sidebar
+from .weather_components import display_weather_forecast
 
 __all__ = [
     'init_session_state',
@@ -29,5 +30,6 @@ __all__ = [
     'add_bike_routes_to_map',
     'add_departure_arrival_markers',
     'add_walking_route_to_map',
-    'create_sidebar'
+    'create_sidebar',
+    'display_weather_forecast'
 ]

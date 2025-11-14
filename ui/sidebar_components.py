@@ -2,11 +2,17 @@
 Composants de l'interface utilisateur (sidebar, inputs)
 """
 
+from datetime import UTC, datetime, time
+from zoneinfo import ZoneInfo
+
 import streamlit as st
 from streamlit_searchbox import st_searchbox  # type: ignore
 
 from .constants import PARIS_CENTER, MAP_STYLES
 from .styles import EXPANDER_CSS
+
+
+PARIS_TZ = ZoneInfo("Europe/Paris")
 
 
 def get_address_suggestions(query, gmaps):
@@ -53,13 +59,25 @@ def create_sidebar(gmaps):
         # Champs d'adresses
         departure, arrival = _create_address_inputs(gmaps)
 
+        # Date et heure du trajet
+        travel_datetime = _create_travel_datetime_input()
+
         # Bouton de calcul
         calculation_requested = _create_calculation_button(departure, arrival)
 
         # Options avancées
-        show_parking, map_style, to_parking = _create_advanced_options()
+        show_parking, map_style, to_parking, get_forecast = _create_advanced_options()
 
-        return departure, arrival, calculation_requested, show_parking, map_style, to_parking
+        return (
+            departure,
+            arrival,
+            travel_datetime,
+            calculation_requested,
+            show_parking,
+            map_style,
+            to_parking,
+            get_forecast,
+        )
 
 
 def _create_address_inputs(gmaps):
@@ -97,6 +115,35 @@ def _create_calculation_button(departure, arrival):
     return False
 
 
+def _create_travel_datetime_input():
+    """Crée les entrées de date et heure du trajet utilisateur."""
+    st.markdown(EXPANDER_CSS, unsafe_allow_html=True)
+
+    stored_datetime = st.session_state.get("travel_datetime", datetime.now(PARIS_TZ))
+    stored_datetime = stored_datetime.astimezone(PARIS_TZ)
+
+    with st.expander("🕑 heure de depart", expanded=False):
+        default_time = time(hour=stored_datetime.hour, minute=stored_datetime.minute)
+
+        selected_date = st.date_input(
+            "Date",
+            value=stored_datetime.date(),
+            key="travel_date",
+        )
+        selected_time = st.time_input(
+            "Heure",
+            value=default_time,
+            key="travel_time",
+        )
+
+        combined_datetime = datetime.combine(selected_date, selected_time, tzinfo=PARIS_TZ)
+        st.session_state.travel_datetime = combined_datetime
+        return combined_datetime.astimezone(UTC)
+
+    st.session_state.travel_datetime = stored_datetime
+    return stored_datetime.astimezone(UTC)
+
+
 def _create_advanced_options():
     """Crée les options avancées."""
     st.markdown("---")  # Séparateur
@@ -117,5 +164,10 @@ def _create_advanced_options():
             options=MAP_STYLES,
             index=0
         )
+        get_forecast = st.checkbox(
+            "Afficher les prévisions météo du trajet",
+            value=True,
+            help="Récupère et affiche la température et les conditions prévues pour l'horaire choisi.",
+        )
 
-    return show_parking, map_style, to_parking
+    return show_parking, map_style, to_parking, get_forecast
