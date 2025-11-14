@@ -1,8 +1,8 @@
-# Predict'Mob — Prédiction et Alternatives pour la Mobilité Francilienne
+# Predict'Mob — Plateforme de Mobilité Éco-Responsable pour l'Île-de-France
 
-**Predict'Mob** est une solution double-levier combinant **IA prédictive** et **gamification** pour anticiper les perturbations des transports franciliens et encourager les mobilités durables.
+**Predict'Mob** est une solution intelligente qui combine **anticipation des perturbations**, **alternatives éco-responsables** et **gamification RSE** pour accompagner les entreprises et leurs salariés vers une mobilité durable.
 
-> 💡 **En bref** : Anticipez les retards train/RER grâce à l'IA, recevez des alternatives pertinentes, et engagez vos salariés dans une mobilité bas-carbone avec un système de points et badges.
+> 💡 **En bref** : Une plateforme qui anticipe les aléas de transport, propose des alternatives bas-carbone avec score RSE, et engage les salariés via la gamification tout en fournissant des indicateurs RSE aux entreprises.
 
 ---
 
@@ -32,30 +32,31 @@ Aujourd'hui, les Franciliens font face à plusieurs défis :
 ### 💡 Notre proposition de valeur
 
 **Predict'Mob** combine :
-- ✅ **IA prédictive** pour anticiper les perturbations train/RER
-- ✅ **Identification de hotspots** (zones/gares à risque avec plusieurs salariés impactés)
 - ✅ **Alternatives éco-responsables avec score RSE** (covoiturage, vélo, télétravail) classées par impact environnemental
-- ✅ **Gamification** pour encourager les mobilités bas-carbone
-- ✅ **Reporting RSE** pour les entreprises (avec consentement RGPD strict)
+- ✅ **Anticipation intelligente** des perturbations et identification de hotspots (zones à risque)
+- ✅ **Gamification** pour encourager les mobilités bas-carbone et l'adoption des alternatives
+- ✅ **Reporting RSE** pour les entreprises avec indicateurs CO₂, trajets durables (consentement RGPD strict)
+- ✅ **Écosystème ouvert** pour intégrer les partenaires mobilité (Karos, Véligo, Klaxit...)
 
 ---
 
 ## La solution
 
-Predict'Mob repose sur **deux leviers complémentaires** :
+Predict'Mob repose sur **deux leviers complémentaires** orchestrés par un agent intelligent :
 
-### 🔮 Levier A — Predict System (IA + Hotspots)
+### 🌱 Levier A — Anticipation & Alternatives Éco-Responsables
 
-**Objectif** : Anticiper les aléas de service sur les trajets train/RER et identifier des zones à risque.
+**Objectif** : Anticiper les perturbations, identifier les zones à risque et proposer des alternatives bas-carbone avec score RSE.
 
 **Fonctionnement** :
-1. **Collecte des données** : PRIM (ponctualité), GTFS/GTFS-RT (horaires temps réel), Météo France, trajets habituels des employés
-2. **Moteur de prédiction** : Algorithme ML (XGBoost) calculant la probabilité de retard par trajet et identifiant la gare porteuse du risque
-3. **Agrégation en hotspots** : Détection automatique des zones où plusieurs salariés sont impactés simultanément
+1. **Collecte & analyse** : Données PRIM, GTFS/GTFS-RT, Météo France + trajets habituels des employés
+2. **Anticipation intelligente** : Algorithme ML identifiant les perturbations probables et les gares porteuses de risque
+3. **Détection de hotspots** : Agrégation automatique des zones où plusieurs salariés sont impactés
+4. **Génération d'alternatives** : Calcul automatique du **score RSE** (CO₂, temps, coût) pour chaque option de mobilité durable
 
 **APIs principales** :
-- `GET /v1/hotspots` : Liste des hotspots actifs
-- `GET /v1/alternatives` : Alternatives éco-responsables personnalisées avec score RSE (covoiturage, vélo, télétravail) classées selon leur impact environnemental
+- `GET /v1/hotspots` : Zones à risque détectées en temps réel
+- `GET /v1/alternatives` : Alternatives éco-responsables **classées par score RSE** (covoiturage, vélo, télétravail, bus de substitution)
 
 ### 🎮 Levier B — Mobility Tracker (Gamification + RSE)
 
