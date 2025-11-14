@@ -11,6 +11,16 @@
         "--reload"
       ],
       "jinja": true
+    },
+    {
+      "name": "Run Streamlit App",
+      "type": "python",
+      "request": "launch",
+      "module": "streamlit",
+      "args": [
+        "run",
+        "resultats/repository/geoparquet_app/main.py"
+      ]
     }
   ]
 }

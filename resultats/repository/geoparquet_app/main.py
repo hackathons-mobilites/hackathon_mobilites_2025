@@ -15,7 +15,13 @@ color_map = {
     'Etablissements hospitaliers': "#96FD96"         # Peach Puff
 }
 
-
+color_class = {
+    "1": "Priorité 1",
+    "2": "Priorité 2",
+    "3": "Priorité 3",
+    "4": "Priorité 4",
+    "5": "Priorité 5",         
+}
 
 # Set page config
 st.set_page_config(layout="wide")
@@ -30,7 +36,8 @@ def load_data():
     """Generates a sample DataFrame for the map."""
     # Create sample data (replace with your actual data loading)
 
-    PARQUET_FILE = p / "data/enrich/final_table.gpq"
+    PARQUET_FILE = p / "data/enrich/final_table_with_class.gbq"
+    
     # np.random.seed(42)
     # data = {
     #     'Lat': 34 + np.random.randn(1000) * 5,  # Sample latitudes
@@ -42,6 +49,22 @@ def load_data():
     df = gpd.read_parquet(PARQUET_FILE)
     df["Lon"] = df.geometry.x
     df["Lat"] = df.geometry.y
+    df["class_id"] = df['class_id'].astype(int).astype(str)
+    df["class_id_num"] = df['class_id'].astype(int).map({
+            1: 18,   # biggest
+            2: 15,
+            3: 12,
+            4: 9,
+            5: 6    # smallest
+        })
+    df["class_s"] = 2
+    df["class_sym"]= df['class_id'].astype(int).map({
+        1: "circle",
+        2: "triangle",
+        3: "square",
+        4: "star",
+        5: "marker",
+    })
 
     PARQUET_ET = p / "data/interim/etablissements.gpq"  # Corrected file path
 
@@ -63,17 +86,32 @@ df, dfe = load_data()
 def create_map(dataframe, dataframe_e, color_col):
     """Creates the Plotly Express Mapbox figure."""
 
-    
+    priority_colors = [
+        "#FF0000",  # 1 - high priority
+        "#FF7F00",  # 2 - orange
+        "#FFFF00",  # 3 - yellow
+        "#7FFF00",  # 4 - yellow-green
+        "#00CC00"   # 5 - low priority
+    ]
+
     fig = px.scatter_mapbox(
         dataframe,
         lat="Lat",
         lon="Lon",
         color=color_col,
-        # hover_name="City",
+        # size="class_id_num",
+        hover_name="nom_zda",
         # size="Magnitude",
-        color_continuous_scale=px.colors.cyclical.IceFire,
-        zoom=10,
-        height=600
+        color_discrete_map={
+            "1": "#FF0000",
+            "2": "#FF7F00",
+            "3": "#FFEA00",
+            "4": "#7FFF00",
+            "5": "#00CC00",
+        },
+        # symbol="class_sym",
+        zoom=11,
+        height=800
     )
 
     fig.add_trace(
@@ -110,8 +148,15 @@ def create_map(dataframe, dataframe_e, color_col):
     
     # Optional: Customize map style (requires a Mapbox token for some styles)
     # Using a free public style:
-    fig.update_layout(mapbox_style="carto-positron")
-    fig.update_layout(margin={"r":0, "t":0, "l":0, "b":0})
+    fig.update_layout(mapbox_style="carto-positron",
+        title={
+        "text": "Carte d'accessibilité",
+        "x": 0.5,        # centers the title horizontally
+        "xanchor": "center",
+        "yanchor": "top"
+        },
+        margin={"r":0, "t":1, "l":0, "b":0}
+    )
     
     return fig
 
@@ -119,7 +164,7 @@ def create_map(dataframe, dataframe_e, color_col):
 # Example of a user control that triggers a map update
 color_option = st.selectbox(
     'Select column to color points by:',
-    ('facilite_acces_code')
+    ('class_id','facilite_acces_code',)
 )
 
 
