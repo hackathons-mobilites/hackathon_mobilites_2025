@@ -30,6 +30,8 @@ Une interface web complète qui permet aux personnes à mobilité réduite (PMR)
 - Accessibilité sonore (annonces audio)
 - Accessibilité PMR globale (gares + véhicules + équipements)
 
+Les détails des calculs se trouvent dans le fichier `score_compute.ipynb` du dossier `repository`.
+
 🧭 **Guides détaillés étape par étape** incluant :
 - Instructions précises pour les correspondances ("En tête, un couloir perpendiculaire...")
 - Recommandations de positionnement dans les rames
@@ -39,8 +41,8 @@ Une interface web complète qui permet aux personnes à mobilité réduite (PMR)
 - API Navitia pour les itinéraires et informations de transport
 - `accessibilite-en-gare.csv` - Niveaux d'accessibilité des gares
 - `positionnement-dans-la-rame.csv` - Recommandations de positionnement
-- `metro_connexion_corresp_idfm_ref.csv` - Descriptions détaillées des correspondances
-- `metro_connexion_sorties_idfm_ref.csv` - Instructions de sortie des stations
+- `metro_connexion_corresp_idfm_ref.csv` - Descriptions détaillées des correspondances - données **metro-connexion.org**
+- `metro_connexion_sorties_idfm_ref.csv` - Instructions de sortie des stations - données **metro-connexion.org**
 
 **Fonctionnement :**
 1. L'utilisateur colle une URL de requête Navitia (avec départ/arrivée/horaires)
@@ -104,16 +106,13 @@ Une interface web complète qui permet aux personnes à mobilité réduite (PMR)
 
 ### Prérequis
 - Navigateur web moderne (Chrome, Firefox, Safari, Edge)
-- Connexion internet pour l'API Navitia
+- Connexion internet et accès à l'API Navitia
 
 ### Installation
 1. Cloner ou télécharger le projet
-```bash
-git clone [url-du-repo]
-cd hackaton
-```
-
 2. Ouvrir `interface_complete.html` dans un navigateur web
+
+**L'interface est développée en html et ne nécessite pas Python pour fonctionner.**
 
 ### Utilisation
 
@@ -122,9 +121,8 @@ cd hackaton
    - Copier l'URL complète de la requête de trajet (ex: `https://api.navitia.io/v1/coverage/fr-idf/journeys?from=...&to=...`)
    - Coller cette URL dans le champ "URL de la requête Navitia"
 
-2. **Charger les données (optionnel) :**
+2. **Charger les données :**
    - Uploader les fichiers CSV pour des données enrichies
-   - Ou utiliser les données de démonstration intégrées
 
 3. **Analyser l'accessibilité :**
    - Cliquer sur "🔍 Analyser l'accessibilité"
@@ -137,14 +135,12 @@ cd hackaton
 
 ### Structure des fichiers
 ```
-hackaton/
+presentation/
 ├── interface_complete.html      # Interface web principale
-├── appel_api.py                # Script Python pour l'API Navitia
-├── functions_score.py          # Fonctions de calcul des scores
-├── accessibilite-en-gare.csv   # Données d'accessibilité (optionnel)
-├── positionnement-dans-la-rame.csv  # Recommandations de positionnement (optionnel)
-├── metro_connexion_corresp_idfm_ref.csv  # Guides de correspondances (optionnel)
-├── metro_connexion_sorties_idfm_ref.csv  # Guides de sorties (optionnel)
+├── accessibilite-en-gare.csv   # Données d'accessibilité 
+├── positionnement-dans-la-rame.csv  # Recommandations de positionnement 
+├── metro_connexion_corresp_idfm_ref.csv  # Guides de correspondances 
+├── metro_connexion_sorties_idfm_ref.csv  # Guides de sorties 
 └── README.md                   # Ce fichier
 ```
 
