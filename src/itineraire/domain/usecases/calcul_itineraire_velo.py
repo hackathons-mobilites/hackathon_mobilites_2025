@@ -5,7 +5,9 @@ from src.parking_velo.domain.apps.nearest_parking_velo import get_nearest_parkin
 from src.itineraire.domain.ports.source_handler import SourceHandler
 
 
-def calcul_itineraire_velo(source_handler: SourceHandler, departure_name: str, arrival_name: str) -> dict:
+def calcul_itineraire_velo(
+    source_handler: SourceHandler, departure_name: str, arrival_name: str, to_parking: bool
+) -> dict:
     departure_coordinates = source_handler.get_address_coordinates(address_name=departure_name)
     arrival_coordinates = source_handler.get_address_coordinates(address_name=arrival_name)
     logging.info(f"Departure coordinates: {departure_coordinates}, Arrival coordinates: {arrival_coordinates}")
@@ -15,9 +17,15 @@ def calcul_itineraire_velo(source_handler: SourceHandler, departure_name: str, a
     )["geometry"]
     logging.info(f"Parking coordinates: {parking_coordinates}")
 
-    itinerary_velo = source_handler.get_itinerary_velo(departure_coordinates, parking_coordinates)
-    itinerary_marche = source_handler.get_itinerary_marche(parking_coordinates, arrival_coordinates)
-    return {
-        "itinerary_velo": itinerary_velo,
-        "itinerary_marche": itinerary_marche
-    }
+    if to_parking:
+        itinerary_velo = source_handler.get_itinerary_velo(departure_coordinates, parking_coordinates)
+        itinerary_marche = source_handler.get_itinerary_marche(parking_coordinates, arrival_coordinates)
+        return {
+            "itinerary_velo": itinerary_velo,
+            "itinerary_marche": itinerary_marche
+        }
+    else:
+        itinerary_velo = source_handler.get_itinerary_velo(departure_coordinates, arrival_coordinates)
+        return {
+            "itinerary_velo": itinerary_velo
+        }

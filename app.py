@@ -1,5 +1,5 @@
 """
-Application principale Vel'Octo - Planification d'itinéraires vélo
+Application principale CycloFlow - Planification d'itinéraires vélo
 """
 
 import streamlit as st
@@ -20,8 +20,8 @@ from ui import (
 )
 
 # Configuration de la page
-st.set_page_config(page_title="Vel'Octo", page_icon="🚴", layout="centered")
-st.markdown("<h1 style='text-align: center;'>🚴 Vel'Octo</h1>", unsafe_allow_html=True)
+st.set_page_config(page_title="CycloFlow", page_icon="🚴", layout="centered")
+st.markdown("<h1 style='text-align: center;'>🚴 CycloFlow</h1>", unsafe_allow_html=True)
 
 
 def main():
@@ -31,11 +31,11 @@ def main():
     gmaps = googlemaps.Client(key=GOOGLE_MAP_API_KEY)
 
     # Interface utilisateur - Sidebar
-    departure, arrival, calculation_requested, show_parking, map_style = create_sidebar(gmaps)
+    departure, arrival, calculation_requested, show_parking, map_style, to_parking = create_sidebar(gmaps)
 
     # Calcul d'itinéraire si demandé
     if calculation_requested:
-        calculate_itinerary(departure, arrival)
+        calculate_itinerary(departure, arrival, to_parking)
 
     # Créer la carte avec les options sélectionnées
     m = create_base_map(show_parking, map_style)

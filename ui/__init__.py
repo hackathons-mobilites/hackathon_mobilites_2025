@@ -1,5 +1,5 @@
 """
-Package UI pour l'application Vel'Octo
+Package UI pour l'application CycloFlow
 Contient tous les composants d'interface utilisateur
 """
 

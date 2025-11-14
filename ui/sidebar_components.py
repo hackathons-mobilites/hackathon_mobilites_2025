@@ -57,9 +57,9 @@ def create_sidebar(gmaps):
         calculation_requested = _create_calculation_button(departure, arrival)
 
         # Options avancées
-        show_parking, map_style = _create_advanced_options()
+        show_parking, map_style, to_parking = _create_advanced_options()
 
-        return departure, arrival, calculation_requested, show_parking, map_style
+        return departure, arrival, calculation_requested, show_parking, map_style, to_parking
 
 
 def _create_address_inputs(gmaps):
@@ -105,11 +105,17 @@ def _create_advanced_options():
     st.markdown(EXPANDER_CSS, unsafe_allow_html=True)
 
     with st.expander("⚙️ Options", expanded=False):
-        show_parking = st.checkbox("Parkings vélo", value=True)
+        show_parking = st.checkbox("Afficher les parkings vélo sur la carte", value=True)
+        to_parking = st.checkbox(
+            "Passer par un parking vélo proche de l'arrivée (segment marche)",
+            value=True,
+            help=("Si décoché: le vélo va directement à la destination, "
+                  "sans segment marche ajouté."),
+        )
         map_style = st.selectbox(
             "Style carte",
             options=MAP_STYLES,
             index=0
         )
 
-    return show_parking, map_style
+    return show_parking, map_style, to_parking

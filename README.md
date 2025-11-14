@@ -31,5 +31,14 @@ python3 src/parking_velo/domain/apps/create_filtered_parking_velo_data.py
 streamlit run app.py
 ```
 
+- Sidebar options
+
+Dans la barre latérale (expander "⚙️ Options") vous pouvez :
+
+- Cocher "Afficher les parkings vélo sur la carte" pour visualiser les emplacements.
+- Cocher "Passer par un parking vélo proche de l'arrivée (segment marche)" :
+	- Si coché (valeur par défaut) l'itinéraire vélo s'arrête au parking le plus proche puis un segment de marche est ajouté jusqu'à la destination finale (clé `itinerary_marche` présente dans la réponse).
+	- Si décoché l'itinéraire vélo va directement jusqu'à la destination et la clé `itinerary_marche` est absente.
+
 - Access the application
 Open your web browser and navigate to `http://localhost:8501` to access the application.

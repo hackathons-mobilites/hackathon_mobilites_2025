@@ -1,5 +1,5 @@
 """
-Constantes pour l'interface utilisateur de Vel'Octo
+Constantes pour l'interface utilisateur de CycloFlow
 """
 
 # Configuration DEBUG (à supprimer plus tard)

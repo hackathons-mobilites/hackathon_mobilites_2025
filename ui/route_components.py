@@ -107,7 +107,7 @@ def _create_button_text(title, bike_duration, total_duration, total_distance, it
         walk_duration_min = itinerary_data['itinerary_marche'].get('duration', 0) // 60
 
     if walk_duration_min > 0:
-        return (f"{title}\n{total_duration} min (🚴{bike_duration}+🚶{walk_duration_min}) • "
+        return (f"{title}\n{total_duration} min (🚴 {bike_duration} +🚶{walk_duration_min}) • "
                 f"{total_distance/1000:.1f} km")
     else:
         return f"{title}\n🚴{total_duration} min • {total_distance/1000:.1f} km"

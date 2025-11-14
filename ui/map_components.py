@@ -1,5 +1,5 @@
 """
-Gestion des cartes Folium pour Vel'Octo
+Gestion des cartes Folium pour CycloFlow
 """
 
 import folium

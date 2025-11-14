@@ -1,5 +1,5 @@
 """
-Logique métier pour l'application Vel'Octo
+Logique métier pour l'application CycloFlow
 """
 
 import streamlit as st
@@ -20,11 +20,15 @@ def init_session_state():
     st.session_state.arrival_selected = DEBUG_ADDRESSES["arrival"]
 
 
-def calculate_itinerary(departure, arrival):
-    """Calcule l'itinéraire entre deux points."""
+def calculate_itinerary(departure, arrival, to_parking: bool = True):
+    """Calcule l'itinéraire entre deux points.
+
+    to_parking: si True, l'itinéraire vélo s'arrête au parking puis ajoute un segment de marche.
+    Si False, l'itinéraire vélo va directement à l'adresse d'arrivée et aucune clé 'itinerary_marche' n'est renvoyée.
+    """
     with st.spinner("Calcul en cours..."):
         try:
-            result = itineraire_parking_velo(departure, arrival)
+            result = itineraire_parking_velo(departure, arrival, to_parking)
 
             # Vérifier que le résultat contient des données valides
             if not result:

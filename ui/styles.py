@@ -1,5 +1,5 @@
 """
-Styles CSS pour l'interface utilisateur de Vel'Octo
+Styles CSS pour l'interface utilisateur de CycloFlow
 """
 
 # CSS pour nettoyer les attributions de carte
