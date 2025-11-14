@@ -218,7 +218,7 @@ Notre roadmap converge vers un **agent autonome** orchestrant l'ensemble des mot
 | Rôle | Prénom | Responsabilités |
 |------|--------|-----------------|
 | **Architecture & Product** | Sofiene & David | Architecture technique, coordination : product vision |
-| **Data Science & IA** | Marc + Marc Stephane+ Corinne | Module IA de prédiction, pipeline ML, Doc |
+| **Data Science & IA** | Marc & Marc Stephane & Corinne | Module IA de prédiction, pipeline ML, Doc |
 | **Backend** | Gabriel | API FastAPI, logique métier, intégration BDD |base de données
 | **Frontend** | Sami | Back-office Streamlit, visualisations, dashboards |
 | **UX/UI Design** | David & Sami & Sofiene | Maquettes, wireframes, app mobile web |
