@@ -16,11 +16,11 @@ color_map = {
 }
 
 color_class = {
-    "1": "Priorité 1",
-    "2": "Priorité 2",
-    "3": "Priorité 3",
-    "4": "Priorité 4",
-    "5": "Priorité 5",         
+    "1": "Score E",
+    "2": "Score D",
+    "3": "Score C",
+    "4": "Score B",
+    "5": "Score A",         
 }
 
 # Set page config
@@ -49,22 +49,22 @@ def load_data():
     df = gpd.read_parquet(PARQUET_FILE)
     df["Lon"] = df.geometry.x
     df["Lat"] = df.geometry.y
-    df["class_id"] = df['class_id'].astype(int).astype(str)
-    df["class_id_num"] = df['class_id'].astype(int).map({
-            1: 18,   # biggest
-            2: 15,
-            3: 12,
-            4: 9,
-            5: 6    # smallest
-        })
-    df["class_s"] = 2
-    df["class_sym"]= df['class_id'].astype(int).map({
-        1: "circle",
-        2: "triangle",
-        3: "square",
-        4: "star",
-        5: "marker",
-    })
+    df["class_id"] = df['class_id'].astype(int).astype(str).map(color_class)
+    # df["class_id_num"] = df['class_id'].astype(int).map({
+    #         1: 18,   # biggest
+    #         2: 15,
+    #         3: 12,
+    #         4: 9,
+    #         5: 6    # smallest
+    #     })
+    # df["class_s"] = 2
+    # df["class_sym"]= df['class_id'].astype(int).map({
+    #     1: "circle",
+    #     2: "triangle",
+    #     3: "square",
+    #     4: "star",
+    #     5: "marker",
+    # })
 
     PARQUET_ET = p / "data/interim/etablissements.gpq"  # Corrected file path
 
@@ -89,7 +89,7 @@ def create_map(dataframe, dataframe_e, color_col):
     priority_colors = [
         "#FF0000",  # 1 - high priority
         "#FF7F00",  # 2 - orange
-        "#FFFF00",  # 3 - yellow
+        "#CABC1D",  # 3 - yellow
         "#7FFF00",  # 4 - yellow-green
         "#00CC00"   # 5 - low priority
     ]
@@ -103,11 +103,11 @@ def create_map(dataframe, dataframe_e, color_col):
         hover_name="nom_zda",
         # size="Magnitude",
         color_discrete_map={
-            "1": "#FF0000",
-            "2": "#FF7F00",
-            "3": "#FFEA00",
-            "4": "#7FFF00",
-            "5": "#00CC00",
+            "Score E": "#FF0000",
+            "Score D": "#FF7F00",
+            "Score C": "#CABC1D",
+            "Score B": "#7FFF00",
+            "Score A": "#00CC00",
         },
         # symbol="class_sym",
         zoom=11,
