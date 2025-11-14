@@ -1,5 +1,0 @@
-pyarrow
-geopandas
-shapely
-requests
-polyline
