@@ -37,7 +37,7 @@ const Puzzle = () => {
 
 
     const companyName = "TechCorp";
-    const puzzleId = "puzzle_eiffel_tower";
+    const puzzleId = "puzzle_colonne_vendome";
     const userId = "user_001";
 
     useEffect(() => {
