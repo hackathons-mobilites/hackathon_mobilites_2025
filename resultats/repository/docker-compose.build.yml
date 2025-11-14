@@ -1,0 +1,6 @@
+include:
+- services/database/tooling/database-compose.build.yml
+- services/migration/tooling/migration-compose.build.yml
+- services/backend/tooling/backend-compose.build.yml
+volumes:
+  db_data:

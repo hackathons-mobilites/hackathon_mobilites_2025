@@ -1,0 +1,21 @@
+x-flyway: &flyway
+  build:
+    context: ..
+    dockerfile: tooling/Dockerfile.build
+  command: migrate
+  env_file:
+    - ../../../.env
+  environment:
+    FLYWAY_URL: jdbc:postgresql://db:5432/${POSTGRES_DB}
+    FLYWAY_USER: ${POSTGRES_USER}
+    FLYWAY_PASSWORD: ${POSTGRES_PASSWORD}
+    FLYWAY_LOCATIONS: filesystem:/flyway/sql/versioned,filesystem:/flyway/sql/repeatable
+    FLYWAY_CLEAN_DISABLED: false
+  depends_on:
+    - db
+services:
+  migration-init:
+    <<: *flyway
+  migration:
+    <<: *flyway
+    entrypoint: ["flyway"]

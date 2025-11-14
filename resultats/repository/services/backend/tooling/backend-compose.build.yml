@@ -1,0 +1,12 @@
+services:
+  backend:
+    build:
+      context: ..
+      dockerfile: ./tooling/Dockerfile.build
+    depends_on:
+      - db
+      - migration-init
+    env_file:
+      - ../../../.env
+    ports:
+      - 8000:8000

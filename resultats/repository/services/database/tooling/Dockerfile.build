@@ -1,0 +1,3 @@
+FROM postgres:15
+# Ajoutez ici des COPY si vous souhaitez injecter un schéma ou des données initiales dans l'image
+# Exemple : COPY init.sql /docker-entrypoint-initdb.d/

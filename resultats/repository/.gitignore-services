@@ -1,0 +1,50 @@
+# If you update this file, please make sure to also update the .dockerignore file
+
+# ==============================
+# Byte-compiled and cache
+# ==============================
+**__pycache__/
+.*_cache
+
+# ==============================
+# config and secrets
+# ==============================
+**/.env
+
+# ==============================
+# virtualenv
+# ==============================
+**.venv/
+
+# ==============================
+# OS / IDE generated files
+# ==============================
+**.DS_Store
+.idea/
+.vscode/
+
+# ==============================
+# data files
+# ==============================
+docker/data*
+**.csv
+**.jpg
+**.jpeg
+**.tar
+**.zip
+**.joblib
+**.parquet
+
+# ==============================
+# logs folders and files
+# ==============================
+logs/
+**.log
+# for rolling log files
+**.log.*
+
+# ==============================
+# Notebooks
+# ==============================
+**.ipynb_checkpoints
+**.ipynb
