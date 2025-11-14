@@ -48,7 +48,7 @@ Les détails des calculs se trouvent dans le fichier `score_compute.ipynb` du do
 
 **Fonctionnement :**
 1. L'utilisateur colle une URL de requête Navitia (avec départ/arrivée/horaires)
-- Nous avons utilisé la requête ```https://prim.iledefrance-mobilites.fr/marketplace/v2/navitia/journeys?from=stop_area%3AIDFM%3A71056&to=stop_area%3AIDFM%3A72132&datetime=20251113T142800&```,, qui simule un trajet de Denfert-Rochereau à Asnières le 13 novembre 2025 à partir de 14h28.
+- Nous avons utilisé la requête ```https://prim.iledefrance-mobilites.fr/marketplace/v2/navitia/journeys?from=stop_area%3AIDFM%3A71056&to=stop_area%3AIDFM%3A72132&```, qui simule un trajet de Denfert-Rochereau à Asnières.
 2. Le système interroge l'API Navitia et enrichit les données avec les CSV
 3. Calcul automatique des scores d'accessibilité par section
 4. Affichage d'un itinéraire détaillé avec guides pratiques et recommandations
