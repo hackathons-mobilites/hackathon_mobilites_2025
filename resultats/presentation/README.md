@@ -4,6 +4,8 @@ Ce projet a été développé dans le cadre du Hackathon Mobilités 2025, organi
 
 Une interface web complète qui permet aux personnes à mobilité réduite (PMR) d'analyser l'accessibilité de leurs trajets en transports en commun avec des informations détaillées, des scores quantifiés et des guides pratiques étape par étape.
 
+Nous avons aussi réalisé une version visuelle de ce que pourrait être une telle interface dans une application mobile chez l'utilisateur: https://www.figma.com/proto/QUEfNDm095u9dM1yB0Si9n/Hackathon?node-id=3006-14103&t=7wHfianuwlZMlwlK-1&scaling=scale-down&content-scaling=fixed&page-id=7641%3A2142&starting-point-node-id=3006%3A14103&show-proto-sidebar=1
+
 ## Présentation du projet
 
 ### Le problème et la proposition de valeur 
