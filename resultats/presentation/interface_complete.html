@@ -1,0 +1,2238 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Interface Complète Accessibilité PMR</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+    
+    * { box-sizing: border-box; }
+    
+    body { 
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; 
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      margin: 0; 
+      padding: 20px; 
+      font-size: 14px; 
+      min-height: 100vh;
+      line-height: 1.5;
+    }
+    
+    .header { 
+      text-align: center; 
+      background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+      color: white; 
+      padding: 40px 20px; 
+      border-radius: 20px; 
+      margin-bottom: 30px; 
+      box-shadow: 0 10px 40px rgba(79, 70, 229, 0.3);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="white" opacity="0.1"/><circle cx="50" cy="10" r="0.5" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>') repeat;
+      pointer-events: none;
+    }
+    
+    .header h1 { 
+      margin: 0; 
+      font-size: 2.5em; 
+      font-weight: 700;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+      position: relative;
+      z-index: 1;
+    }
+    
+    .header p {
+      margin: 10px 0 0 0;
+      font-size: 1.1em;
+      opacity: 0.9;
+      font-weight: 500;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .container { max-width: 1200px; margin: 0 auto; }
+    
+    .input-section { 
+      background: white; 
+      padding: 30px; 
+      border-radius: 20px; 
+      margin-bottom: 30px; 
+      box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      backdrop-filter: blur(10px);
+    }
+    
+    .input-section label { 
+      display: block; 
+      margin-bottom: 12px; 
+      font-weight: 600; 
+      color: #1f2937;
+      font-size: 15px;
+    }
+    
+    .input-section input[type="url"], .input-section input[type="file"] { 
+      width: 100%; 
+      padding: 16px 20px; 
+      border: 2px solid #e5e7eb; 
+      border-radius: 12px; 
+      font-size: 15px; 
+      transition: all 0.3s ease;
+      background: #fafafa;
+    }
+    
+    .input-section input[type="url"]:focus, .input-section input[type="file"]:focus {
+      outline: none;
+      border-color: #4f46e5;
+      box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+      background: white;
+    }
+    
+    .input-section textarea { 
+      width: 100%; 
+      padding: 20px; 
+      border: 2px solid #e5e7eb; 
+      border-radius: 12px; 
+      font-size: 13px; 
+      height: 250px; 
+      font-family: 'SF Mono', Monaco, monospace;
+      background: #1a1a1a;
+      color: #e5e5e5;
+      resize: vertical;
+    }
+    
+    .buttons { 
+      display: flex; 
+      gap: 15px; 
+      margin-top: 25px; 
+      flex-wrap: wrap;
+    }
+    
+    .btn { 
+      padding: 16px 28px; 
+      border: none; 
+      border-radius: 12px; 
+      font-weight: 600; 
+      cursor: pointer; 
+      font-size: 15px;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .btn-primary { 
+      background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+      color: white; 
+      box-shadow: 0 4px 15px rgba(79, 70, 229, 0.4);
+    }
+    
+    .btn-primary:hover { 
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(79, 70, 229, 0.5);
+    }
+    
+    .btn-secondary { 
+      background: linear-gradient(135deg, #6b7280 0%, #4b5563 100%);
+      color: white; 
+      box-shadow: 0 4px 15px rgba(107, 114, 128, 0.3);
+    }
+    
+    .btn-secondary:hover { 
+      transform: translateY(-2px);
+      background: linear-gradient(135deg, #4b5563 0%, #374151 100%);
+    }
+    
+    .btn:disabled { 
+      background: #9ca3af; 
+      cursor: not-allowed; 
+      transform: none;
+      box-shadow: none;
+    }
+    
+    .status { 
+      padding: 16px 20px; 
+      border-radius: 12px; 
+      margin-top: 20px; 
+      font-weight: 500;
+      border-left: 4px solid;
+    }
+    
+    .status.success { 
+      background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%); 
+      color: #166534; 
+      border-left-color: #22c55e;
+    }
+    
+    .status.error { 
+      background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%); 
+      color: #991b1b; 
+      border-left-color: #ef4444;
+    }
+    
+    .status.info { 
+      background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%); 
+      color: #1e40af; 
+      border-left-color: #3b82f6;
+    }
+    
+    .journey-selector { 
+      background: white; 
+      padding: 25px; 
+      border-radius: 16px; 
+      margin-bottom: 25px; 
+      box-shadow: 0 8px 30px rgba(0,0,0,0.1); 
+      display: none; 
+    }
+    
+    .journey-selector select { 
+      width: 100%; 
+      padding: 14px 18px; 
+      font-size: 15px; 
+      border: 2px solid #e5e7eb; 
+      border-radius: 10px;
+      background: white;
+      font-weight: 500;
+    }
+    
+    .itinerary { 
+      background: white; 
+      border-radius: 20px; 
+      box-shadow: 0 10px 40px rgba(0,0,0,0.15); 
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+    
+    .step { 
+      display: flex; 
+      align-items: center; 
+      padding: 20px 25px; 
+      border-bottom: 1px solid #f1f5f9;
+      transition: background-color 0.2s ease;
+    }
+    
+    .step:hover {
+      background: #fafafa;
+    }
+    
+    .step:last-child { border-bottom: none; }
+    
+    .step-icon { 
+      width: 50px; 
+      height: 50px; 
+      border-radius: 50%; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      margin-right: 20px; 
+      color: white; 
+      font-weight: bold; 
+      font-size: 18px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+    
+    .transport { background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%); }
+    .transfer { background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); }
+    .walking { background: linear-gradient(135deg, #10b981 0%, #059669 100%); }
+    .waiting { background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%); }
+    
+    .step-content { flex: 1; }
+    
+    .route-line { 
+      font-weight: 600; 
+      margin-bottom: 6px; 
+      font-size: 16px;
+      color: #1f2937;
+    }
+    
+    .stations { 
+      color: #6b7280; 
+      font-size: 14px; 
+      font-weight: 500;
+    }
+    
+    .time { 
+      color: #059669; 
+      font-weight: 600; 
+      margin-left: auto; 
+      font-size: 15px;
+      background: #ecfdf5;
+      padding: 8px 12px;
+      border-radius: 8px;
+    }
+    
+    .accessibility-status { 
+      display: flex; 
+      gap: 10px; 
+      margin-top: 8px; 
+      flex-wrap: wrap;
+    }
+    
+    .badge { 
+      padding: 6px 12px; 
+      border-radius: 20px; 
+      font-size: 12px; 
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    
+    .badge-ok { background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%); color: #166534; }
+    .badge-warning { background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); color: #92400e; }
+    .badge-error { background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%); color: #991b1b; }
+    .badge-unknown { background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%); color: #475569; }
+    
+    .tabs { 
+      display: flex; 
+      background: white; 
+      border-radius: 16px 16px 0 0; 
+      overflow: hidden; 
+      margin-top: 30px; 
+      box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
+    }
+    
+    .tab { 
+      padding: 20px 30px; 
+      background: #f8fafc; 
+      border: none; 
+      cursor: pointer; 
+      font-weight: 600; 
+      font-size: 15px;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+    
+    .tab.active { 
+      background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%); 
+      color: white; 
+    }
+    
+    .tab:not(.active):hover {
+      background: #e2e8f0;
+    }
+    
+    .tab-content { 
+      background: white; 
+      padding: 30px; 
+      border-radius: 0 0 16px 16px; 
+      box-shadow: 0 10px 40px rgba(0,0,0,0.1); 
+    }
+    
+    /* Animation pour les scores */
+    @keyframes scoreAppear {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .accessibility-status > div {
+      animation: scoreAppear 0.5s ease forwards;
+    }
+    
+    /* Informations détaillées */
+    .detailed-info {
+      margin-top: 12px;
+      padding: 12px;
+      border-radius: 8px;
+      font-size: 13px;
+      line-height: 1.4;
+      border-left: 3px solid;
+      display: block; /* Affiché par défaut */
+      animation: slideDown 0.3s ease;
+    }
+    
+    .detailed-info strong {
+      color: #374151;
+    }
+    
+    @keyframes slideDown {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Légende d'accessibilité */
+    .legend-section {
+      background: white;
+      padding: 25px;
+      border-radius: 16px;
+      margin-bottom: 25px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+      border-left: 4px solid #4f46e5;
+    }
+    
+    .legend-header h3 {
+      margin: 0 0 20px 0;
+      color: #1f2937;
+      font-size: 18px;
+      font-weight: 600;
+    }
+    
+    .legend-category {
+      margin-bottom: 20px;
+    }
+    
+    .legend-category:last-child {
+      margin-bottom: 0;
+    }
+    
+    .legend-category h4 {
+      margin: 0 0 12px 0;
+      color: #374151;
+      font-size: 15px;
+      font-weight: 600;
+    }
+    
+    .legend-items {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 8px 0;
+      font-size: 14px;
+    }
+    
+    .legend-item span:first-child {
+      min-width: 120px;
+      flex-shrink: 0;
+    }
+    
+    .legend-item span:last-child {
+      color: #6b7280;
+      line-height: 1.4;
+    }
+
+    /* Responsive design */
+    @media (max-width: 768px) {
+      body { padding: 15px; }
+      .header h1 { font-size: 2em; }
+      .input-section { padding: 20px; }
+      .buttons { flex-direction: column; }
+      .btn { width: 100%; }
+      .step { padding: 15px 20px; }
+      .step-icon { width: 40px; height: 40px; font-size: 16px; }
+      .legend-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+      }
+      .legend-item span:first-child {
+        min-width: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>🦽 Interface Complète Accessibilité PMR</h1>
+      <p>Analysez l'accessibilité de vos itinéraires Navitia en temps réel</p>
+    </div>
+
+    <div class="input-section">
+      <label for="navitia-url">URL Navitia :</label>
+      <input type="url" id="navitia-url" placeholder="Collez votre URL Navitia ici..." value="">
+      
+      <label for="csv-accessibility" style="margin-top: 15px;">Fichier CSV Accessibilité (optionnel) :</label>
+      <input type="file" id="csv-accessibility" accept=".csv" placeholder="accessibilite-en-gare.csv">
+      
+      <label for="csv-transfers" style="margin-top: 10px;">Fichier CSV Transferts (optionnel) :</label>
+      <input type="file" id="csv-transfers" accept=".csv" placeholder="positionnement-dans-la-rame.csv">
+      
+      <label for="csv-correspondances" style="margin-top: 10px;">Fichier CSV Correspondances détaillées (optionnel) :</label>
+      <input type="file" id="csv-correspondances" accept=".csv" placeholder="metro_connexion_corresp_idfm_ref.csv">
+      
+      <label for="csv-sorties" style="margin-top: 10px;">Fichier CSV Sorties détaillées (optionnel) :</label>
+      <input type="file" id="csv-sorties" accept=".csv" placeholder="metro_connexion_sorties_idfm_ref.csv">
+      
+      <div class="buttons">
+        <button class="btn btn-primary" id="analyze-btn">🔍 Analyser l'accessibilité</button>
+        <button class="btn btn-secondary" id="load-example-btn">📋 Charger un exemple</button>
+      </div>
+      
+      <div id="status"></div>
+    </div>
+
+    <div class="tabs">
+      <button class="tab active" onclick="switchTab('visualization')">📊 Visualisation</button>
+      <button class="tab" onclick="switchTab('json')">📄 JSON brut</button>
+    </div>
+
+    <div class="tab-content">
+      <div id="tab-visualization">
+        <div id="journey-selector" class="journey-selector">
+          <label for="journey-select">Choisir un itinéraire :</label>
+          <select id="journey-select"></select>
+        </div>
+        
+        <div id="content"></div>
+        
+        <!-- Légende d'accessibilité - Déplacée en bas pour une meilleure UX -->
+        <div id="accessibility-legend" class="legend-section" style="display: none;">
+          <div class="legend-header">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <h3>📋 Légende des indicateurs d'accessibilité</h3>
+              <button id="toggle-legend-btn" class="btn" style="padding: 8px 16px; font-size: 14px; background: #f3f4f6; color: #374151;" onclick="toggleLegend()">
+                <span id="legend-toggle-text">Masquer</span>
+              </button>
+            </div>
+          </div>
+          <div class="legend-content">
+            <div class="legend-category">
+              <h4>🏢 Accessibilité des gares :</h4>
+              <div class="legend-items">
+                <div class="legend-item">
+                  <span class="badge badge-ok">✅ Accessible</span>
+                  <span>Gare entièrement accessible PMR (ascenseurs, rampes, signalétique)</span>
+                </div>
+                <div class="legend-item">
+                  <span class="badge badge-warning">⚠️ Partiel</span>
+                  <span>Gare partiellement accessible (quelques équipements manquants)</span>
+                </div>
+                <div class="legend-item">
+                  <span class="badge badge-error">❌ Non accessible</span>
+                  <span>Gare non accessible aux personnes à mobilité réduite</span>
+                </div>
+                <div class="legend-item">
+                  <span class="badge badge-unknown">❓ Non renseigné</span>
+                  <span>Information d'accessibilité non disponible</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="legend-category">
+              <h4>🚆 Matériel roulant :</h4>
+              <div class="legend-items">
+                <div class="legend-item">
+                  <span class="badge badge-ok">♿ Accessible</span>
+                  <span>Véhicule accessible (espace fauteuil roulant, plancher surbaissé)</span>
+                </div>
+                <div class="legend-item">
+                  <span class="badge badge-error">⚠♿ Non confirmé</span>
+                  <span>Véhicule sans équipements d'accessibilité confirmés</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="legend-category">
+              <h4>� Positionnement dans la rame :</h4>
+              <div class="legend-items">
+                <div class="legend-item">
+                  <span style="color: #22c55e; font-weight: bold;">🚋 Position recommandée</span>
+                  <span>Indique où se positionner dans la rame pour faciliter la correspondance suivante (Arrière, Milieu, Avant)</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="legend-category">
+              <h4>�📊 Scores d'accessibilité (0-100%) :</h4>
+              <div class="legend-items">
+                <div class="legend-item">
+                  <span style="color: #22c55e; font-weight: bold;">👁️ Score Visuel</span>
+                  <span>Présence d'annonces visuelles dans les gares et véhicules</span>
+                </div>
+                <div class="legend-item">
+                  <span style="color: #22c55e; font-weight: bold;">🔊 Score Sonore</span>
+                  <span>Présence d'annonces sonores dans les gares et véhicules</span>
+                </div>
+                <div class="legend-item">
+                  <span style="color: #22c55e; font-weight: bold;">♿ Score PMR</span>
+                  <span>Accessibilité globale (gares + matériel + équipements de transfert)</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="legend-category">
+              <h4>📍 Guides détaillés :</h4>
+              <div class="legend-items">
+                <div class="legend-item">
+                  <span style="color: #0ea5e9; font-weight: bold;">📍 Guide de correspondance</span>
+                  <span>Instructions détaillées pour effectuer les correspondances entre lignes (si fichier CSV chargé)</span>
+                </div>
+                <div class="legend-item">
+                  <span style="color: #22c55e; font-weight: bold;">🚪 Guide de sortie</span>
+                  <span>Instructions détaillées pour sortir de la dernière station du trajet (si fichier CSV chargé)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div id="tab-json" style="display: none;">
+        <textarea id="json-output" placeholder="Le JSON généré apparaîtra ici..." readonly></textarea>
+        <div class="buttons">
+          <button class="btn btn-secondary" id="download-json">💾 Télécharger JSON</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let allJourneys = [];
+    let currentJsonData = null;
+    let accessibilityData = {};
+    let transferData = {};
+    let correspondanceData = {};
+    let sortieData = {};
+
+    // Fonctions utilitaires
+    function cleanId(idStr) {
+      return idStr.trim().replace(/\ufeff/g, '').replace(/\t/g, '').replace(/\r/g, '').replace(/\n/g, '');
+    }
+
+    function extractIdNumber(idStr) {
+      const match = idStr.match(/(\d+)$/);
+      return match ? match[1] : cleanId(idStr);
+    }
+
+    function formatTime(dt) {
+      if (!dt || dt.length < 13) return '';
+      return `${dt.substring(9, 11)}:${dt.substring(11, 13)}`;
+    }
+
+    // Traitement des fichiers CSV
+    function parseCSV(csvText, delimiter = ';') {
+      const lines = csvText.trim().split('\n');
+      const headers = lines[0].split(delimiter).map(h => cleanId(h));
+      const data = [];
+      
+      for (let i = 1; i < lines.length; i++) {
+        const values = lines[i].split(delimiter);
+        const row = {};
+        headers.forEach((header, index) => {
+          row[header] = cleanId(values[index] || '');
+        });
+        data.push(row);
+      }
+      return data;
+    }
+
+    // Chargement des fichiers CSV locaux ou uploadés
+    async function loadCSVFile(file) {
+      return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onload = (e) => resolve(e.target.result);
+        reader.onerror = (e) => reject(e);
+        reader.readAsText(file, 'utf-8');
+      });
+    }
+
+    async function loadLocalCSV(filename) {
+      try {
+        const response = await fetch(filename);
+        if (!response.ok) {
+          throw new Error(`Impossible de charger ${filename}: ${response.status}`);
+        }
+        return await response.text();
+      } catch (error) {
+        throw new Error(`Erreur lors du chargement de ${filename}: ${error.message}`);
+      }
+    }
+
+    async function processCSVFiles() {
+      // Utiliser les fichiers uploadés ou des données par défaut
+      const accessibilityFile = document.getElementById('csv-accessibility').files[0];
+      const transfersFile = document.getElementById('csv-transfers').files[0];
+      const correspondancesFile = document.getElementById('csv-correspondances').files[0];
+      const sortiesFile = document.getElementById('csv-sorties').files[0];
+      
+      if (accessibilityFile && transfersFile) {
+        showStatus('Chargement des fichiers CSV uploadés...', 'info');
+        // Utiliser les fichiers uploadés
+        const accessibilityCsv = await loadCSVFile(accessibilityFile);
+        const transfersCsv = await loadCSVFile(transfersFile);
+        
+        // Parser les CSV
+        const accessibilityRows = parseCSV(accessibilityCsv);
+        const transferRows = parseCSV(transfersCsv);
+        
+        // Construire les dictionnaires
+        accessibilityData = {};
+        accessibilityRows.forEach(row => {
+          const stopId = cleanId(row.stop_point_id || '');
+          if (stopId) {
+            accessibilityData[stopId] = row.accessibility_level_id || '';
+          }
+        });
+        
+        transferData = {};
+        transferRows.forEach(row => {
+          const fromId = extractIdNumber(row.from_id || '');
+          const toId = extractIdNumber(row.to_id || '');
+          const key = `${fromId}-${toId}`;
+          const reverseKey = `${toId}-${fromId}`;
+          const equipmentType = row.equipment_type || '';
+          const positionAverage = row.position_average || '';
+          const lineName = row.line_name || '';
+          
+          transferData[key] = {
+            equipment_type: equipmentType,
+            position_average: positionAverage,
+            line_name: lineName
+          };
+          transferData[reverseKey] = {
+            equipment_type: equipmentType,
+            position_average: positionAverage,
+            line_name: lineName
+          };
+        });
+        
+        // Traiter les fichiers de correspondances et sorties si disponibles
+        if (correspondancesFile) {
+          const correspondancesCsv = await loadCSVFile(correspondancesFile);
+          correspondanceData = processCorrespondanceCSV(correspondancesCsv);
+        }
+        
+        if (sortiesFile) {
+          const sortiesCsv = await loadCSVFile(sortiesFile);
+          sortieData = processSortieCSV(sortiesCsv);
+        }
+        
+        showStatus(`✅ CSV chargés: ${Object.keys(accessibilityData).length} arrêts, ${Object.keys(transferData).length / 2} transferts, ${Object.keys(correspondanceData).length} correspondances, ${Object.keys(sortieData).length} sorties`, 'success');
+      } else {
+        // Utiliser des données de démonstration étendues
+        showStatus('📊 Utilisation de données de démonstration (uploadez vos CSV pour des données réelles)', 'info');
+        accessibilityData = {
+          'stop_point:IDFM:71056': '1',
+          'stop_point:IDFM:72132': '3',
+          'stop_point:IDFM:monomodalStopPlace:58566': '3',
+          'stop_point:IDFM:462969': '2',
+          'stop_area:IDFM:71056': '1',
+          'stop_area:IDFM:72132': '3'
+        };
+        transferData = {
+          '58566-72132': { equipment_type: 'escalator', position_average: 'Arrière', line_name: 'RER A' },
+          '72132-58566': { equipment_type: 'escalator', position_average: 'Arrière', line_name: 'RER A' },
+          '462969-58566': { equipment_type: 'elevator', position_average: 'Milieu', line_name: 'RER A' },
+          '58566-462969': { equipment_type: 'elevator', position_average: 'Milieu', line_name: 'RER A' }
+        };
+      }
+      
+      console.log(`Loaded ${Object.keys(accessibilityData).length} accessibility entries`);
+      console.log(`Loaded ${Object.keys(transferData).length / 2} transfer entries`);
+    }
+
+    // Nouvelles fonctions pour les descriptions détaillées de correspondances et sorties
+    function processCorrespondanceCSV(csvText) {
+      const rows = parseCSV(csvText, ',');
+      const data = {};
+      rows.forEach(row => {
+        const ligneProvenance = row['Ligne de Provenance'] || '';
+        const ligneDestination = row['Ligne de Destination'] || '';
+        const stationId = row['ID Zone arret ICAR'] || '';
+        const description = row['Description détaillée'] || '';
+        
+        if (ligneProvenance && ligneDestination && stationId) {
+          const key = `${ligneProvenance}-${ligneDestination}-${stationId}`;
+          data[key] = description;
+        }
+      });
+      return data;
+    }
+
+    function processSortieCSV(csvText) {
+      const rows = parseCSV(csvText, ',');
+      const data = {};
+      rows.forEach(row => {
+        const ligne = row['Ligne de Provenance'] || '';
+        const stationId = row['ID Zone arret ICAR'] || '';
+        const description = row['Description'] || '';
+        
+        if (ligne && stationId) {
+          const key = `${ligne}-${stationId}`;
+          data[key] = description;
+        }
+      });
+      return data;
+    }
+
+    function getTransferDescription(ligneEntree, ligneSortie, fromStationId) {
+      const key = `${ligneEntree}-${ligneSortie}-${fromStationId}`;
+      return correspondanceData[key] || "Pas d'information textuelle pour la correspondance";
+    }
+
+    function getSortieDescription(ligne, toStationId) {
+      const key = `${ligne}-${toStationId}`;
+      return sortieData[key] || "Pas d'information textuelle pour sortir de la gare";
+    }
+
+    // Appel API Navitia avec plusieurs tentatives
+    async function fetchNavitiaData(url) {
+      try {
+        // Extraire les paramètres de l'URL
+        const urlObj = new URL(url);
+        const apiKey = 'nbiBIMXcsnXaBOo6Q92QFMuIxVXiBR5L';
+        
+        // Méthode 1: Appel direct (fonctionne en HTTPS)
+        try {
+          showStatus('Tentative d\'appel API direct...', 'info');
+          const response = await fetch(url + (url.includes('?') ? '&' : '?') + `datetime=${new Date().toISOString().replace(/[-:]/g, '').substring(0, 15)}`, {
+            method: 'GET',
+            headers: {
+              'Accept': 'application/json',
+              'apikey': apiKey
+            }
+          });
+          
+          if (response.ok) {
+            showStatus('✓ Données récupérées avec succès depuis l\'API', 'success');
+            return await response.json();
+          } else {
+            throw new Error(`API Error: ${response.status}`);
+          }
+        } catch (directError) {
+          console.log('Appel direct échoué:', directError.message);
+        }
+        
+        // Méthode 2: Proxy local (si disponible)
+        try {
+          showStatus('Tentative via proxy local...', 'info');
+          const proxyResponse = await fetch('/api/navitia', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ url: url })
+          });
+          
+          if (proxyResponse.ok) {
+            showStatus('✓ Données récupérées via proxy local', 'success');
+            return await proxyResponse.json();
+          }
+        } catch (proxyError) {
+          console.log('Proxy local non disponible:', proxyError.message);
+        }
+        
+        // Méthode 3: Utiliser des données simulées réalistes
+        showStatus('⚠️ API non accessible, utilisation de données simulées réalistes', 'warning');
+        return generateSimulatedNavitiaData(url);
+        
+      } catch (error) {
+        console.warn('Toutes les tentatives ont échoué, utilisation de données simulées:', error);
+        showStatus('⚠️ Impossible de contacter l\'API, utilisation de données simulées', 'warning');
+        return generateSimulatedNavitiaData(url);
+      }
+    }
+
+    // Générer des données simulées réalistes basées sur l'URL
+    function generateSimulatedNavitiaData(url) {
+      const urlObj = new URL(url);
+      const from = urlObj.searchParams.get('from') || 'stop_area:IDFM:71056';
+      const to = urlObj.searchParams.get('to') || 'stop_area:IDFM:72132';
+      const datetime = urlObj.searchParams.get('datetime') || '20251121T073000';
+      
+      // Mapping des codes vers des noms lisibles
+      const stopNames = {
+        'stop_area:IDFM:71056': 'Châtelet-Les Halles',
+        'stop_area:IDFM:72132': 'Saint-Germain-en-Laye',
+        'stop_point:IDFM:71056': 'Châtelet-Les Halles',
+        'stop_point:IDFM:72132': 'Saint-Germain-en-Laye',
+        'stop_point:IDFM:monomodalStopPlace:58566': 'Gare Saint-Lazare',
+        'stop_point:IDFM:462969': 'Saint-Lazare RER'
+      };
+      
+      const fromName = stopNames[from] || 'Départ';
+      const toName = stopNames[to] || 'Arrivée';
+      
+      return {
+        journeys: [
+          {
+            duration: 2220, // 37 minutes avec marche
+            nb_transfers: 2,
+            departure_date_time: datetime.replace('T073000', 'T073100'),
+            arrival_date_time: datetime.replace('T073000', 'T080800'),
+            durations: {
+              total: 2220,
+              walking: 480, // 8 minutes de marche au total (2+3+3)
+              bike: 0,
+              car: 0
+            },
+            fare: { total: { value: "250" } },
+            sections: [
+              {
+                mode: "walking",
+                type: "crow_fly",
+                duration: 120, // 2 minutes
+                departure_date_time: datetime.replace('T073000', 'T073100'),
+                arrival_date_time: datetime.replace('T073000', 'T073300'),
+                from: {
+                  name: "Position de départ",
+                  equipments: []
+                },
+                to: {
+                  stop_point: {
+                    id: from.replace('stop_area:', 'stop_point:'),
+                    name: fromName,
+                    equipments: ["has_wheelchair_boarding", "has_visual_announcement"]
+                  }
+                },
+                display_informations: {
+                  label: "Marche à pied",
+                  equipments: []
+                }
+              },
+              {
+                type: "public_transport",
+                departure_date_time: datetime.replace('T073000', 'T073300'),
+                arrival_date_time: datetime.replace('T073000', 'T073700'),
+                from: {
+                  stop_point: {
+                    id: from.replace('stop_area:', 'stop_point:'),
+                    name: fromName,
+                    equipments: ["has_wheelchair_boarding", "has_visual_announcement"]
+                  }
+                },
+                to: {
+                  stop_point: {
+                    id: "stop_point:IDFM:monomodalStopPlace:58566",
+                    name: "Gare Saint-Lazare",
+                    equipments: ["has_wheelchair_boarding"]
+                  }
+                },
+                display_informations: {
+                  label: "RER A",
+                  equipments: ["has_wheelchair_accessibility", "has_air_conditioned"]
+                }
+              },
+              {
+                mode: "walking", 
+                type: "crow_fly",
+                duration: 180, // 3 minutes de correspondance
+                departure_date_time: datetime.replace('T073000', 'T073700'),
+                arrival_date_time: datetime.replace('T073000', 'T074000'),
+                from: {
+                  stop_point: {
+                    id: "stop_point:IDFM:monomodalStopPlace:58566",
+                    name: "Gare Saint-Lazare",
+                    equipments: ["has_wheelchair_boarding"]
+                  }
+                },
+                to: {
+                  stop_point: {
+                    id: "stop_point:IDFM:462969",
+                    name: "Saint-Lazare RER",
+                    equipments: ["has_audible_announcement"]
+                  }
+                },
+                display_informations: {
+                  label: "Correspondance (marche)",
+                  equipments: []
+                }
+              },
+              {
+                type: "public_transport",
+                departure_date_time: datetime.replace('T073000', 'T074000'),
+                arrival_date_time: datetime.replace('T073000', 'T080500'),
+                from: {
+                  stop_point: {
+                    id: "stop_point:IDFM:462969",
+                    name: "Saint-Lazare RER",
+                    equipments: ["has_audible_announcement"]
+                  }
+                },
+                to: {
+                  stop_point: {
+                    id: to.replace('stop_area:', 'stop_point:'),
+                    name: toName,
+                    equipments: []
+                  }
+                },
+                display_informations: {
+                  label: "RER A",
+                  equipments: ["has_wheelchair_accessibility"]
+                }
+              },
+              {
+                mode: "walking",
+                type: "crow_fly", 
+                duration: 180, // 3 minutes pour sortir de la gare
+                departure_date_time: datetime.replace('T073000', 'T080500'),
+                arrival_date_time: datetime.replace('T073000', 'T080800'),
+                from: {
+                  stop_point: {
+                    id: to.replace('stop_area:', 'stop_point:'),
+                    name: toName,
+                    equipments: []
+                  }
+                },
+                to: {
+                  name: "Destination finale",
+                  equipments: []
+                },
+                display_informations: {
+                  label: "Marche à pied",
+                  equipments: []
+                }
+              }
+            ]
+          },
+          {
+            duration: 1980, // 33 minutes
+            nb_transfers: 0,
+            departure_date_time: datetime.replace('T073000', 'T074500'),
+            arrival_date_time: datetime.replace('T073000', 'T081800'),
+            durations: {
+              total: 1980,
+              walking: 300, // 5 minutes de marche au total (2+3)
+              bike: 0,
+              car: 0
+            },
+            fare: { total: { value: "250" } },
+            sections: [
+              {
+                mode: "walking",
+                type: "crow_fly",
+                duration: 120, // 2 minutes
+                departure_date_time: datetime.replace('T073000', 'T074500'),
+                arrival_date_time: datetime.replace('T073000', 'T074700'),
+                from: {
+                  name: "Position de départ",
+                  equipments: []
+                },
+                to: {
+                  stop_point: {
+                    id: from.replace('stop_area:', 'stop_point:'),
+                    name: fromName,
+                    equipments: ["has_wheelchair_boarding", "has_visual_announcement"]
+                  }
+                },
+                display_informations: {
+                  label: "Marche à pied",
+                  equipments: []
+                }
+              },
+              {
+                type: "public_transport",
+                departure_date_time: datetime.replace('T073000', 'T074700'),
+                arrival_date_time: datetime.replace('T073000', 'T081500'),
+                from: {
+                  stop_point: {
+                    id: from.replace('stop_area:', 'stop_point:'),
+                    name: fromName,
+                    equipments: ["has_wheelchair_boarding", "has_visual_announcement"]
+                  }
+                },
+                to: {
+                  stop_point: {
+                    id: to.replace('stop_area:', 'stop_point:'),
+                    name: toName,
+                    equipments: []
+                  }
+                },
+                display_informations: {
+                  label: "RER A Direct",
+                  equipments: ["has_wheelchair_accessibility", "has_air_conditioned"]
+                }
+              },
+              {
+                mode: "walking",
+                type: "crow_fly",
+                duration: 180, // 3 minutes pour arriver à destination
+                departure_date_time: datetime.replace('T073000', 'T081500'),
+                arrival_date_time: datetime.replace('T073000', 'T081800'),
+                from: {
+                  stop_point: {
+                    id: to.replace('stop_area:', 'stop_point:'),
+                    name: toName,
+                    equipments: []
+                  }
+                },
+                to: {
+                  name: "Destination finale",
+                  equipments: []
+                },
+                display_informations: {
+                  label: "Marche à pied",
+                  equipments: []
+                }
+              }
+            ]
+          }
+        ]
+      };
+    }
+
+    document.getElementById('load-example-btn').addEventListener('click', function() {
+      document.getElementById('navitia-url').value = 'https://prim.iledefrance-mobilites.fr/marketplace/v2/navitia/journeys?from=stop_area:IDFM:71056&to=stop_area:IDFM:72132&datetime=20251121T073000';
+    });
+
+    document.getElementById('analyze-btn').addEventListener('click', async function() {
+      const url = document.getElementById('navitia-url').value.trim();
+      if (!url) {
+        showStatus('Veuillez entrer une URL Navitia', 'error');
+        return;
+      }
+
+      this.disabled = true;
+      
+      try {
+        // Charger et traiter les CSV
+        await processCSVFiles();
+        
+        // Récupérer les données Navitia
+        showStatus('Récupération des données Navitia...', 'info');
+        const navitiaData = await fetchNavitiaData(url);
+        
+        // Traiter les données d'accessibilité
+        showStatus('Traitement des données d\'accessibilité...', 'info');
+        const processedData = processAccessibilityData(navitiaData);
+        
+        // Trier les itinéraires par score PMR moyen (du meilleur au moins bon)
+        processedData.sort((a, b) => {
+          const scoreA = a.accessibility_scores?.score_PMR_moyen || 0;
+          const scoreB = b.accessibility_scores?.score_PMR_moyen || 0;
+          return scoreB - scoreA; // Tri décroissant
+        });
+        
+        allJourneys = processedData;
+        currentJsonData = processedData;
+
+        document.getElementById('json-output').value = JSON.stringify(processedData, null, 2);
+        
+        if (processedData.length > 0) {
+          showJourneySelector();
+          renderJourney(0);
+          showStatus(`Analyse terminée ! ${processedData.length} itinéraire(s) trouvé(s)`, 'success');
+        } else {
+          showStatus('Aucun itinéraire trouvé', 'error');
+        }
+
+      } catch (error) {
+        showStatus('Erreur lors de l\'analyse : ' + error.message, 'error');
+        console.error(error);
+      } finally {
+        this.disabled = false;
+      }
+    });
+
+    document.getElementById('download-json').addEventListener('click', function() {
+      if (currentJsonData) {
+        const blob = new Blob([JSON.stringify(currentJsonData, null, 2)], { type: 'application/json' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'resultat_accessibilite.json';
+        a.click();
+        URL.revokeObjectURL(url);
+      }
+    });
+
+    function showStatus(message, type) {
+      const statusDiv = document.getElementById('status');
+      statusDiv.className = `status ${type}`;
+      
+      // Ajouter une icône et une animation pour les différents types
+      let icon = '';
+      switch(type) {
+        case 'success': icon = '✅'; break;
+        case 'error': icon = '❌'; break;
+        case 'info': icon = '🔄'; break;
+        default: icon = 'ℹ️';
+      }
+      
+      if (type === 'info') {
+        statusDiv.innerHTML = `
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <div style="
+              width: 20px; 
+              height: 20px; 
+              border: 2px solid #3b82f6; 
+              border-top: 2px solid transparent; 
+              border-radius: 50%; 
+              animation: spin 1s linear infinite;
+            "></div>
+            <span>${message}</span>
+          </div>
+        `;
+      } else {
+        statusDiv.innerHTML = `
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <span style="font-size: 18px;">${icon}</span>
+            <span>${message}</span>
+          </div>
+        `;
+      }
+      
+      statusDiv.style.display = 'block';
+      
+      // Ajouter l'animation de rotation pour l'indicateur de chargement
+      if (!document.querySelector('#spin-animation')) {
+        const style = document.createElement('style');
+        style.id = 'spin-animation';
+        style.textContent = `
+          @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+          }
+        `;
+        document.head.appendChild(style);
+      }
+    }
+
+    function switchTab(tab) {
+      // Reset tabs
+      document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('[id^="tab-"]').forEach(t => t.style.display = 'none');
+      
+      // Activate selected tab
+      event.target.classList.add('active');
+      document.getElementById(`tab-${tab}`).style.display = 'block';
+    }
+    
+    function toggleLegend() {
+      const legend = document.getElementById('accessibility-legend');
+      const content = legend.querySelector('.legend-content');
+      const toggleText = document.getElementById('legend-toggle-text');
+      const toggleBtn = document.getElementById('toggle-legend-btn');
+      
+      if (content.style.display === 'none') {
+        content.style.display = 'block';
+        toggleText.textContent = 'Masquer';
+        toggleBtn.style.background = '#f3f4f6';
+      } else {
+        content.style.display = 'none';
+        toggleText.textContent = 'Afficher';
+        toggleBtn.style.background = '#4f46e5';
+        toggleBtn.style.color = 'white';
+      }
+    }
+    
+
+
+    function processAccessibilityData(navitiaData) {
+      const journeys = navitiaData.journeys || navitiaData || [];
+      const results = [];
+
+      journeys.forEach((journey, idx) => {
+        // Calculer le temps de marche total
+        let walkingTime = 0;
+        
+        // Méthode 1: Si on a durations.walking (API directe)
+        if (journey.durations && journey.durations.walking) {
+          walkingTime = journey.durations.walking;
+          console.log(`Journey ${idx + 1}: walking depuis durations =`, walkingTime, 'secondes');
+        } else {
+          // Méthode 2: Calculer depuis les sections
+          console.log(`Journey ${idx + 1}: calcul depuis sections`);
+          journey.sections?.forEach((section, sIndex) => {
+            const isWalking = section.mode === 'walking' || 
+                             section.type === 'walking' || 
+                             section.section_type === 'crow_fly' ||
+                             section.transfer_type === 'walking' ||
+                             (section.transport && section.transport.label === 'crow_fly');
+            
+            if (isWalking && section.duration) {
+              walkingTime += section.duration;
+              console.log(`  Section ${sIndex}: +${section.duration}s (total: ${walkingTime}s)`);
+            }
+          });
+        }
+
+        const journeyInfo = {
+          journey_id: idx + 1,
+          duration: journey.duration || 0,
+          durations: journey.durations || { walking: walkingTime }, // Préserver ou ajouter durations
+          nb_transfers: journey.nb_transfers || 0,
+          departure_time: formatTime(journey.departure_date_time || ''),
+          arrival_time: formatTime(journey.arrival_date_time || ''),
+          fare: journey.fare?.total?.value || journey.fare || '',
+          sections: [],
+          // Placeholder pour les scores - seront calculés après traitement des sections
+          accessibility_scores: null
+        };
+
+        const sections = journey.sections || [];
+        sections.forEach(section => {
+          const mode = section.type || section.mode || '';
+
+          // IDs des points
+          const fromId = cleanId(section.from?.stop_point?.id || '');
+          const toId = cleanId(section.to?.stop_point?.id || '');
+
+          const sectionObj = {
+            section_type: mode,
+            from: {
+              id: fromId,
+              name: section.from?.stop_point?.name || section.from?.name || '',
+              accessibility_level_id: accessibilityData[fromId] || '',
+              equipments: section.from?.stop_point?.equipments || []
+            },
+            to: {
+              id: toId,
+              name: section.to?.stop_point?.name || section.to?.name || '',
+              accessibility_level_id: accessibilityData[toId] || '',
+              equipments: section.to?.stop_point?.equipments || []
+            },
+            transport: {
+              label: section.display_informations?.label || mode,
+              equipments: section.display_informations?.equipments || []
+            },
+            departure_time: formatTime(section.departure_date_time || ''),
+            arrival_time: formatTime(section.arrival_date_time || ''),
+            intermediate_stops: []
+          };
+
+          // Équipement de transfert si applicable
+          if (mode === 'transfer') {
+            const fromNum = extractIdNumber(fromId);
+            const toNum = extractIdNumber(toId);
+            const transferKey = `${fromNum}-${toNum}`;
+            const transferInfo = transferData[transferKey] || {};
+            sectionObj.transfer_equipment_type = transferInfo.equipment_type || '';
+            sectionObj.position_recommendation = transferInfo.position_average || '';
+            sectionObj.line_name = transferInfo.line_name || '';
+          }
+
+          // Arrêts intermédiaires
+          if (section.stop_date_times) {
+            section.stop_date_times.forEach(sd => {
+              const spId = cleanId(sd.stop_point?.id || '');
+              sectionObj.intermediate_stops.push({
+                id: spId,
+                name: sd.stop_point?.name || '',
+                accessibility_level_id: accessibilityData[spId] || '',
+                equipments: sd.stop_point?.equipments || [],
+                arrival_time: formatTime(sd.arrival_date_time || '')
+              });
+            });
+          }
+
+          journeyInfo.sections.push(sectionObj);
+        });
+
+        results.push(journeyInfo);
+      });
+
+      // Calculer les scores d'accessibilité pour chaque itinéraire
+      results.forEach(itineraire => {
+        // Calculer le score global de l'itinéraire
+        const scoreGlobal = calculeScoreGlobal(itineraire);
+        itineraire.accessibility_scores = scoreGlobal;
+
+        // Calculer les scores pour chaque section (exclure crow_fly, transfer et waiting)
+        itineraire.sections.forEach(section => {
+          if (section.section_type !== "crow_fly" && 
+              section.section_type !== "transfer" && 
+              section.section_type !== "waiting" &&
+              section.type !== "waiting") {
+            const scoreSection = calculeScoresSection(section);
+            section.accessibility_scores = scoreSection;
+          }
+        });
+      });
+
+      return results;
+    }
+
+    function showJourneySelector() {
+      const selector = document.getElementById('journey-selector');
+      const legend = document.getElementById('accessibility-legend');
+      const select = document.getElementById('journey-select');
+      select.innerHTML = '';
+      
+      if (allJourneys.length > 1) {
+        allJourneys.forEach((journey, idx) => {
+          const option = document.createElement('option');
+          option.value = idx;
+          const duration = journey.duration ? Math.floor(journey.duration / 60) + 'min' : '';
+          const transfers = journey.nb_transfers !== undefined ? journey.nb_transfers + ' corresp.' : '';
+          const pmrScore = journey.accessibility_scores?.score_PMR_moyen ? ` - PMR: ${(journey.accessibility_scores.score_PMR_moyen * 100).toFixed(0)}%` : '';
+          option.text = `Itinéraire ${idx + 1} - ${journey.departure_time || ''} → ${journey.arrival_time || ''} (${duration}, ${transfers}${pmrScore})`;
+          select.appendChild(option);
+        });
+        
+        select.addEventListener('change', (e) => renderJourney(parseInt(e.target.value)));
+        selector.style.display = 'block';
+      } else {
+        selector.style.display = 'none';
+      }
+      
+      // Afficher la légende quand on a des résultats
+      if (allJourneys.length > 0) {
+        legend.style.display = 'block';
+      }
+    }
+
+    function texteAccessibilityLevel(level) {
+      const mapping = {
+        "1": "La gare n'est pas accessible PMR",
+        "3": "Il est possible de réserver une assistance en gare via le service Assist'en'Gare. Ce service doit être commandé 24h à l'avance",
+        "4": "Il est possible de demander une assistance en gare",
+        "6": "La gare est accessible en toute autonomie"
+      };
+      if (level in mapping) {
+        return mapping[level];
+      }
+      return "Pas d'informations d'accessibilité sur la gare";
+    }
+
+    function getAccessibilityBadge(levelId) {
+      if (!levelId) return '<span class="badge badge-unknown" title="Accessibilité inconnue">❓ Non renseigné</span>';
+      
+      const detailedText = texteAccessibilityLevel(levelId);
+      
+      switch(levelId) {
+        case '1': return '<span class="badge badge-error" title="' + detailedText + '">❌ Non accessible</span>';
+        case '2': return '<span class="badge badge-warning" title="Gare partiellement accessible PMR">⚠️ Partiel</span>';
+        case '3': return '<span class="badge badge-warning" title="' + detailedText + '">🆘 Assistance 24h</span>';
+        case '4': return '<span class="badge badge-warning" title="' + detailedText + '">🤝 Assistance</span>';
+        case '6': return '<span class="badge badge-ok" title="' + detailedText + '">✅ Autonome</span>';
+        default: return '<span class="badge badge-unknown" title="Niveau d\'accessibilité: ' + levelId + '">❓ Niveau ' + levelId + '</span>';
+      }
+    }
+
+    // === FONCTIONS DE CALCUL DES SCORES D'ACCESSIBILITÉ ===
+    
+    function hasWheelchairAccess(equipments) {
+      return equipments.some(e => e.includes('wheelchair'));
+    }
+    
+    // === NOUVELLES FONCTIONS POUR INFORMATIONS DÉTAILLÉES ===
+    
+    function cleanStopId(stopId) {
+      return stopId.split(':').pop();
+    }
+    
+    function texteAccessibilityLevel(level) {
+      const mapping = {
+        "1": "La gare n'est pas accessible PMR",
+        "3": "Il est possible de réserver une assistance en gare via le service Assist'en'Gare. Ce service doit être commandé 24h à l'avance",
+        "4": "Il est possible de demander une assistance en gare", 
+        "6": "La gare est accessible en toute autonomie"
+      };
+      return mapping[level] || "Pas d'informations d'accessibilité sur la gare";
+    }
+    
+    function textePosition(position) {
+      if (position) {
+        return `Position pour faciliter la correspondance : ${position}`;
+      }
+      return "Impossible de déterminer une position préférentielle pour la correspondance";
+    }
+    
+    function texteEquipementsLigne(equips) {
+      const hasWheelchair = equips.includes("has_wheelchair_accessibility");
+      const hasClim = equips.includes("has_air_conditioned");
+      
+      if (hasWheelchair && hasClim) {
+        return "Accessible au fauteuil roulant et présence de climatisation";
+      } else if (hasWheelchair) {
+        return "Accessible au fauteuil roulant";
+      } else if (hasClim) {
+        return "Présence de climatisation";
+      }
+      return "Pas d'information sur l'accessibilité UFR ou la présence de climatisation";
+    }
+    
+    function texteTypeTransfer(transferType) {
+      if (!transferType) {
+        return "Pas d'information disponible sur l'accessibilité PMR de la correspondance";
+      }
+      const type = transferType.toLowerCase();
+      if (type === "ascenseur" || type === "elevator") {
+        return "La correspondance est possible pour les usagers en fauteuil roulant";
+      } else if (type === "escalator") {
+        return "Attention, la correspondance nécessite une assistance en gare";
+      } else if (type === "escalier") {
+        return "Attention, la correspondance n'est pas directement accessible pour les usagers en fauteuil roulant. Faites appel à l'assistance";
+      }
+      return `Présence de ${transferType}`;
+    }
+    
+    function getAccessibilityInfo(equipments) {
+      const visuel = equipments.includes("has_visual_announcement");
+      const sonore = equipments.includes("has_audible_announcement");
+      
+      if (visuel && sonore) {
+        return "Accessibilité visuelle et sonore";
+      } else if (visuel) {
+        return "Accessibilité visuelle";
+      } else if (sonore) {
+        return "Accessibilité sonore";
+      }
+      return "Aucune information d'accessibilité visuelle/sonore";
+    }
+    
+    function getPositionRecommendation(position) {
+      if (!position) return '';
+      
+      const positionMap = {
+        'Arrière': '🚋 Positionnez-vous à l\'arrière de la rame',
+        'Milieu': '🚋 Positionnez-vous au milieu de la rame', 
+        'Avant': '🚋 Positionnez-vous à l\'avant de la rame'
+      };
+      
+      return positionMap[position] || `🚋 Position recommandée : ${position}`;
+    }
+
+    // Scores individuels
+    function scoreVisuel(station) {
+      const equipments = station.equipments || [];
+      return equipments.includes("has_visual_announcement") ? 1 : 0;
+    }
+
+    function scoreSonore(station) {
+      const equipments = station.equipments || [];
+      return equipments.includes("has_audible_announcement") ? 1 : 0;
+    }
+
+    function scoreStationPMR(station) {
+      const levelMap = {"1": 0.0, "3": 0.6, "4": 0.4, "6": 1.0};
+      const level = station.accessibility_level_id;
+      let baseScore = levelMap[level] || 0.0;
+      const equipments = station.equipments || [];
+
+      // Bonus si équipement fauteuil roulant
+      if (equipments.includes("has_wheelchair_boarding")) {
+        if (baseScore === 0.0) {
+          baseScore = 0.5;
+        } else if (baseScore < 1.0) {
+          baseScore = Math.min(1.0, baseScore + 0.2);
+        } else {
+          baseScore = 1.0;
+        }
+      }
+
+      return Math.round(baseScore * 100) / 100;
+    }
+
+    function scoreLignePMR(section) {
+      const equipments = section.transport?.equipments || [];
+      return equipments.includes("has_wheelchair_accessibility") ? 1.0 : 0.0;
+    }
+
+    // Calcul des scores pour une section
+    function calculeScoresSection(section) {
+      const sectionType = section.section_type;
+      const depart = section.from || {};
+      const arrivee = section.to || {};
+      const intermediaires = section.intermediate_stops || [];
+      const transport = section.transport || {};
+      const label = transport.label || "?";
+
+      let scoreVisuelTotal, scoreSonoreTotal, scorePMRTotal;
+
+      if (sectionType === "public_transport") {
+        // Filtrer les arrêts intermédiaires (exclure départ et arrivée)
+        const idDepart = depart.id;
+        const idArrivee = arrivee.id;
+        const inters = intermediaires.filter(s => s.id !== idDepart && s.id !== idArrivee);
+
+        // Pondération
+        let poidsDepart = 0.4, poidsArrivee = 0.4, poidsInter = 0.3;
+        if (inters.length === 0) {
+          poidsDepart = 0.5;
+          poidsArrivee = 0.5;
+          poidsInter = 0.0;
+        }
+
+        const sommePoids = poidsDepart + poidsArrivee + poidsInter;
+        poidsDepart /= sommePoids;
+        poidsArrivee /= sommePoids;
+        poidsInter /= sommePoids;
+
+        // Scores intermédiaires
+        let scoreVisuelInters = 0, scoreSonoreInters = 0;
+        if (inters.length > 0) {
+          const visuelInters = inters.map(s => scoreVisuel(s));
+          const sonoreInters = inters.map(s => scoreSonore(s));
+          scoreVisuelInters = visuelInters.reduce((a, b) => a + b, 0) / visuelInters.length;
+          scoreSonoreInters = sonoreInters.reduce((a, b) => a + b, 0) / sonoreInters.length;
+        }
+
+        // Scores totaux visuels et sonores
+        scoreVisuelTotal = (
+          scoreVisuel(depart) * poidsDepart +
+          scoreVisuel(arrivee) * poidsArrivee +
+          scoreVisuelInters * poidsInter
+        );
+
+        scoreSonoreTotal = (
+          scoreSonore(depart) * poidsDepart +
+          scoreSonore(arrivee) * poidsArrivee +
+          scoreSonoreInters * poidsInter
+        );
+
+        // Score PMR
+        const poidsPMR = {depart: 0.25, arrivee: 0.25, ligne: 0.25, inters: 0.25};
+        const scoreDepartPMR = scoreStationPMR(depart);
+        const scoreArriveePMR = scoreStationPMR(arrivee);
+        const scoreLignePMRVal = scoreLignePMR(section);
+        
+        let scoreIntersPMR = 0;
+        if (inters.length > 0) {
+          const intersScores = inters.map(s => scoreStationPMR(s));
+          scoreIntersPMR = intersScores.reduce((a, b) => a + b, 0) / intersScores.length;
+        }
+
+        scorePMRTotal = (
+          scoreDepartPMR * poidsPMR.depart +
+          scoreArriveePMR * poidsPMR.arrivee +
+          scoreLignePMRVal * poidsPMR.ligne +
+          scoreIntersPMR * poidsPMR.inters
+        );
+
+      } else {
+        // Autres types de sections (crow_fly, transfer, etc.)
+        scoreVisuelTotal = scoreSonoreTotal = scorePMRTotal = 0.0;
+      }
+
+      return {
+        type: sectionType,
+        label: label,
+        score_visuel: Math.round(scoreVisuelTotal * 100) / 100,
+        score_sonore: Math.round(scoreSonoreTotal * 100) / 100,
+        score_PMR: Math.round(scorePMRTotal * 100) / 100
+      };
+    }
+
+    // Calcul du score global d'un itinéraire
+    function calculeScoreGlobal(itineraire) {
+      const scores = [];
+      const lignes = [];
+
+      itineraire.sections?.forEach(section => {
+        const sectionType = section.section_type;
+        if (sectionType === "crow_fly" || sectionType === "transfer") return; // Exclure crow_fly et transfer
+
+        const result = calculeScoresSection(section);
+        scores.push(result);
+        
+        if (sectionType === "public_transport") {
+          const label = section.transport?.label;
+          if (label) {
+            lignes.push(String(label));
+          }
+        }
+      });
+
+      if (scores.length === 0) return null;
+
+      const n = scores.length;
+      const moyVisuel = scores.reduce((sum, s) => sum + s.score_visuel, 0) / n;
+      const moySonore = scores.reduce((sum, s) => sum + s.score_sonore, 0) / n;
+      const moyPMR = scores.reduce((sum, s) => sum + s.score_PMR, 0) / n;
+
+      return {
+        sections_comptees: n,
+        lignes_empruntees: lignes,
+        score_visuel_moyen: Math.round(moyVisuel * 100) / 100,
+        score_sonore_moyen: Math.round(moySonore * 100) / 100,
+        score_PMR_moyen: Math.round(moyPMR * 100) / 100
+      };
+    }
+
+    function renderJourney(journeyIndex) {
+      const journey = allJourneys[journeyIndex];
+      if (!journey) return;
+      
+      const content = document.getElementById('content');
+      const itinerary = document.createElement('div');
+      itinerary.className = 'itinerary';
+      
+      // En-tête avec infos du trajet
+      const header = document.createElement('div');
+      header.style.cssText = `
+        background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+        color: white;
+        padding: 25px;
+        margin-bottom: 0;
+        position: relative;
+        overflow: hidden;
+      `;
+      
+      // Ajouter un effet de texture subtile
+      header.innerHTML = `
+        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; 
+                    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23dots)"/></svg>') repeat;
+                    pointer-events: none;"></div>
+        <div style="position: relative; z-index: 1;"></div>
+      `;
+      
+      const contentDiv = header.querySelector('div:last-child');
+      
+      // Calcul des temps de marche - soit depuis durations.walking, soit en calculant depuis les sections
+      let walkingTimeText = '';
+      let totalWalkingTime = 0;
+      
+      console.log('Journey:', journey); // Debug
+      
+      if (journey.durations && journey.durations.walking) {
+        // Cas API directe avec durations
+        totalWalkingTime = journey.durations.walking;
+        console.log('Temps de marche depuis durations:', totalWalkingTime);
+      } else {
+        // Cas JSON traité - calculer depuis les sections de type crow_fly ou walking
+        console.log('Calcul depuis les sections:', journey.sections);
+        journey.sections.forEach((section, index) => {
+          const isWalking = section.section_type === 'crow_fly' || 
+                           section.mode === 'walking' || 
+                           section.type === 'walking' ||
+                           (section.transport && section.transport.label === 'crow_fly');
+          
+          console.log(`Section ${index}:`, {
+            section_type: section.section_type,
+            mode: section.mode,
+            type: section.type,
+            transport_label: section.transport?.label,
+            isWalking: isWalking,
+            duration: section.duration,
+            departure_time: section.departure_time,
+            arrival_time: section.arrival_time
+          });
+          
+          if (isWalking && section.duration) {
+            totalWalkingTime += section.duration;
+            console.log(`Ajout durée section ${index}:`, section.duration, 'Total:', totalWalkingTime);
+          } else if (isWalking) {
+            // Estimer si pas de durée disponible (différence entre heures)
+            const depTime = section.departure_time || section.departure_date_time;
+            const arrTime = section.arrival_time || section.arrival_date_time;
+            console.log(`Section ${index} - heures:`, depTime, '->', arrTime);
+            
+            if (depTime && arrTime && depTime !== arrTime) {
+              // Conversion plus robuste des heures
+              const depHour = parseInt(depTime.split(':')[0]);
+              const depMin = parseInt(depTime.split(':')[1]);
+              const arrHour = parseInt(arrTime.split(':')[0]);
+              const arrMin = parseInt(arrTime.split(':')[1]);
+              
+              const depTotalMin = depHour * 60 + depMin;
+              const arrTotalMin = arrHour * 60 + arrMin;
+              const diffMin = arrTotalMin - depTotalMin;
+              
+              if (diffMin > 0) {
+                const diffSec = diffMin * 60;
+                totalWalkingTime += diffSec;
+                console.log(`Section ${index} - différence calculée:`, diffMin, 'min =', diffSec, 'sec. Total:', totalWalkingTime);
+              }
+            }
+          }
+        });
+      }
+      
+      console.log('Temps de marche total final:', totalWalkingTime);
+      
+      if (totalWalkingTime > 0) {
+        const walkingMinutes = Math.floor(totalWalkingTime / 60);
+        const walkingSeconds = totalWalkingTime % 60;
+        walkingTimeText = ` | 🚶 Marche: ${walkingMinutes}min${walkingSeconds > 0 ? ` ${walkingSeconds}s` : ''}`;
+        console.log('Texte de marche généré:', walkingTimeText);
+      } else {
+        console.log('Aucun temps de marche détecté');
+      }
+
+
+
+      // Affichage des scores d'accessibilité
+      let scoresText = '';
+      if (journey.accessibility_scores) {
+        const scores = journey.accessibility_scores;
+        const getScoreColor = (score) => {
+          if (score >= 0.8) return '#22c55e'; // Vert
+          if (score >= 0.5) return '#f59e0b'; // Orange
+          return '#ef4444'; // Rouge
+        };
+        
+        scoresText = `
+          <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.2);">
+            <div style="font-weight: 600; margin-bottom: 12px; font-size: 16px;">🎯 Scores d'accessibilité</div>
+            <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+              <div style="background: rgba(255,255,255,0.15); padding: 12px 18px; border-radius: 25px; display: flex; align-items: center; gap: 8px;">
+                <span style="font-size: 16px;">👁️</span>
+                <span style="font-weight: 600;">Visuel: ${(scores.score_visuel_moyen * 100).toFixed(0)}%</span>
+                <div style="width: 40px; height: 6px; background: rgba(255,255,255,0.3); border-radius: 3px; overflow: hidden;">
+                  <div style="width: ${scores.score_visuel_moyen * 100}%; height: 100%; background: ${getScoreColor(scores.score_visuel_moyen)}; border-radius: 3px; transition: width 1s ease;"></div>
+                </div>
+              </div>
+              <div style="background: rgba(255,255,255,0.15); padding: 12px 18px; border-radius: 25px; display: flex; align-items: center; gap: 8px;">
+                <span style="font-size: 16px;">🔊</span>
+                <span style="font-weight: 600;">Sonore: ${(scores.score_sonore_moyen * 100).toFixed(0)}%</span>
+                <div style="width: 40px; height: 6px; background: rgba(255,255,255,0.3); border-radius: 3px; overflow: hidden;">
+                  <div style="width: ${scores.score_sonore_moyen * 100}%; height: 100%; background: ${getScoreColor(scores.score_sonore_moyen)}; border-radius: 3px; transition: width 1s ease;"></div>
+                </div>
+              </div>
+              <div style="background: rgba(255,255,255,0.15); padding: 12px 18px; border-radius: 25px; display: flex; align-items: center; gap: 8px;">
+                <span style="font-size: 16px;">♿</span>
+                <span style="font-weight: 600;">PMR: ${(scores.score_PMR_moyen * 100).toFixed(0)}%</span>
+                <div style="width: 40px; height: 6px; background: rgba(255,255,255,0.3); border-radius: 3px; overflow: hidden;">
+                  <div style="width: ${scores.score_PMR_moyen * 100}%; height: 100%; background: ${getScoreColor(scores.score_PMR_moyen)}; border-radius: 3px; transition: width 1s ease;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
+      }
+      
+      contentDiv.innerHTML = `
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;">
+          <div style="display: flex; gap: 20px; align-items: center; flex-wrap: wrap;">
+            <div style="background: rgba(255,255,255,0.2); padding: 8px 16px; border-radius: 20px; font-weight: 600;">
+              ⏱️ ${Math.floor(journey.duration / 60)}min
+            </div>
+            <div style="background: rgba(255,255,255,0.2); padding: 8px 16px; border-radius: 20px; font-weight: 600;">
+              🔄 ${journey.nb_transfers} corresp.
+            </div>
+            <div style="background: rgba(255,255,255,0.2); padding: 8px 16px; border-radius: 20px; font-weight: 600;">
+              💰 ${journey.fare ? (parseFloat(journey.fare)/100).toFixed(2) + '€' : 'N/A'}
+            </div>
+            ${walkingTimeText ? `<div style="background: rgba(255,255,255,0.2); padding: 8px 16px; border-radius: 20px; font-weight: 600;">${walkingTimeText.replace(' | ', '')}</div>` : ''}
+          </div>
+        </div>
+        ${scoresText}
+      `;
+      itinerary.appendChild(header);
+      
+      journey.sections.forEach((section, idx) => {
+        const step = document.createElement('div');
+        step.className = 'step';
+        
+        // Détection du type de section - compatible avec les différents formats
+        const isWalking = section.mode === 'walking' || 
+                         section.type === 'walking' || 
+                         section.section_type === 'crow_fly' ||
+                         (section.transport && section.transport.label === 'crow_fly');
+        const isTransfer = section.type === 'transfer' || section.section_type === 'transfer';
+        const isWaiting = section.type === 'waiting' || section.section_type === 'waiting';
+        const isTransport = !isWalking && !isTransfer && !isWaiting;
+        
+        // Variables pour les lignes précédente et suivante (utilisées pour les transferts)
+        let lignePrecedente = '?';
+        let ligneSuivante = '?';
+        
+        // Pour les sections de transfert, calculer les lignes précédente et suivante
+        if (isTransfer) {
+          // Chercher la ligne précédente (section public_transport avant cette section)
+          for (let i = idx - 1; i >= 0; i--) {
+            const prevSection = journey.sections[i];
+            if (prevSection.section_type === 'public_transport' || prevSection.type === 'public_transport') {
+              lignePrecedente = prevSection.display_informations?.label || prevSection.transport?.label || '?';
+              break;
+            }
+          }
+          
+          // Chercher la ligne suivante (section public_transport après cette section)
+          for (let i = idx + 1; i < journey.sections.length; i++) {
+            const nextSection = journey.sections[i];
+            if (nextSection.section_type === 'public_transport' || nextSection.type === 'public_transport') {
+              ligneSuivante = nextSection.display_informations?.label || nextSection.transport?.label || '?';
+              break;
+            }
+          }
+        }
+        
+        const icon = isTransfer ? '🔄' : isWalking ? '🚶' : isWaiting ? '⏱️' : '🚆';
+        const iconClass = isTransfer ? 'transfer' : isWalking ? 'walking' : isWaiting ? 'waiting' : 'transport';
+        
+        // Gérer les différents types de sections pour l'accessibilité
+        let fromEquipments = [];
+        let toEquipments = [];
+        let transportEquipments = [];
+        
+        // Format JSON traité par Python
+        if (section.from && section.from.equipments) {
+          fromEquipments = section.from.equipments || [];
+        }
+        if (section.to && section.to.equipments) {
+          toEquipments = section.to.equipments || [];
+        }
+        if (section.transport && section.transport.equipments) {
+          transportEquipments = section.transport.equipments || [];
+        }
+        
+        // Format API directe
+        if (section.from && section.from.stop_point) {
+          fromEquipments = section.from.stop_point.equipments || [];
+        } 
+        if (section.to && section.to.stop_point) {
+          toEquipments = section.to.stop_point.equipments || [];
+        } 
+        if (section.display_informations && section.display_informations.equipments) {
+          transportEquipments = section.display_informations.equipments || [];
+        }
+        
+        const fromAccess = getAccessibilityBadge(section.from?.accessibility_level_id);
+        const toAccess = getAccessibilityBadge(section.to?.accessibility_level_id);
+        const hasEquipment = hasWheelchairAccess([...fromEquipments, ...toEquipments, ...transportEquipments]);
+        
+        // Badge pour le matériel roulant
+        const vehicleAccessBadge = hasEquipment ? 
+          '<span class="badge badge-ok" title="Véhicule accessible PMR">♿ Accessible</span>' : 
+          '<span class="badge badge-error" title="Accessibilité véhicule non confirmée">⚠♿ Non confirmé</span>';
+
+        // Affichage des scores de la section
+        let sectionScoresText = '';
+        if (section.accessibility_scores && !isWaiting) {
+          const scores = section.accessibility_scores;
+          const getScoreColor = (score) => {
+            if (score >= 0.8) return '#22c55e'; // Vert
+            if (score >= 0.5) return '#f59e0b'; // Orange
+            return '#ef4444'; // Rouge
+          };
+          
+          sectionScoresText = `
+            <div style="display: flex; gap: 8px; margin-top: 8px; flex-wrap: wrap;">
+              <span style="
+                background: linear-gradient(135deg, ${getScoreColor(scores.score_visuel)}22, ${getScoreColor(scores.score_visuel)}44);
+                color: ${getScoreColor(scores.score_visuel)};
+                padding: 4px 10px;
+                border-radius: 12px;
+                font-size: 11px;
+                font-weight: 600;
+                border: 1px solid ${getScoreColor(scores.score_visuel)}44;
+              ">👁️ ${(scores.score_visuel * 100).toFixed(0)}%</span>
+              <span style="
+                background: linear-gradient(135deg, ${getScoreColor(scores.score_sonore)}22, ${getScoreColor(scores.score_sonore)}44);
+                color: ${getScoreColor(scores.score_sonore)};
+                padding: 4px 10px;
+                border-radius: 12px;
+                font-size: 11px;
+                font-weight: 600;
+                border: 1px solid ${getScoreColor(scores.score_sonore)}44;
+              ">🔊 ${(scores.score_sonore * 100).toFixed(0)}%</span>
+              <span style="
+                background: linear-gradient(135deg, ${getScoreColor(scores.score_PMR)}22, ${getScoreColor(scores.score_PMR)}44);
+                color: ${getScoreColor(scores.score_PMR)};
+                padding: 4px 10px;
+                border-radius: 12px;
+                font-size: 11px;
+                font-weight: 600;
+                border: 1px solid ${getScoreColor(scores.score_PMR)}44;
+              ">♿ ${(scores.score_PMR * 100).toFixed(0)}%</span>
+            </div>
+          `;
+        }
+        
+        // Afficher la durée pour les sections de marche
+        let durationText = '';
+        if (isWalking && section.duration) {
+          const minutes = Math.floor(section.duration / 60);
+          const seconds = section.duration % 60;
+          if (minutes > 0) {
+            durationText = ` (${minutes}min${seconds > 0 ? ` ${seconds}s` : ''})`;
+          } else {
+            durationText = ` (${seconds}s)`;
+          }
+        }
+        
+        // Noms des stations - gestion des différents formats
+        let fromName, toName, label;
+        
+        if (isWalking) {
+          // Pour la marche
+          fromName = section.from?.stop_point?.name || section.from?.name || 'Position de départ';
+          toName = section.to?.stop_point?.name || section.to?.name || 'Position d\'arrivée';
+          label = 'Marche à pied';
+        } else if (isWaiting) {
+          // Pour l'attente
+          fromName = section.from?.stop_point?.name || 
+                     section.from?.name || 
+                     section.departure_date_time?.name ||
+                     section.arrival_date_time?.name ||
+                     'Station inconnue';
+          toName = ''; // Pas de destination pour l'attente
+          
+          // Calculer la durée d'attente à partir des horaires
+          let minutes = 0;
+          const depTime = section.departure_time || section.departure_date_time;
+          const arrTime = section.arrival_time || section.arrival_date_time;
+          
+          if (depTime && arrTime) {
+            // Extraire les heures et minutes des timestamps
+            const depHour = parseInt(depTime.substr(-6, 2));
+            const depMin = parseInt(depTime.substr(-3, 2));
+            const arrHour = parseInt(arrTime.substr(-6, 2));
+            const arrMin = parseInt(arrTime.substr(-3, 2));
+            
+            // Calculer la différence en minutes
+            minutes = (arrHour * 60 + arrMin) - (depHour * 60 + depMin);
+          } else if (section.duration) {
+            minutes = Math.floor(section.duration / 60);
+          }
+          
+          label = minutes > 0 ? 
+                 `Temps d'attente : ${minutes} minute${minutes > 1 ? 's' : ''}` : 
+                 'Temps d\'attente';
+        } else if (isTransfer) {
+          // Pour les correspondances
+          fromName = section.from?.stop_point?.name || section.from?.name || 'Départ';
+          toName = section.to?.stop_point?.name || section.to?.name || 'Arrivée';
+          label = `De la ligne ${lignePrecedente} à la ligne ${ligneSuivante}`;
+        } else {
+          // Pour les transports publics - gérer les deux formats
+          fromName = section.from?.stop_point?.name || section.from?.name || 'Départ';
+          toName = section.to?.stop_point?.name || section.to?.name || 'Arrivée';
+          label = section.display_informations?.label || section.transport?.label || section.route?.name || 'Transport';
+        }
+        
+        // Gestion de l'heure d'affichage - compatible avec les deux formats
+        let timeDisplay = '';
+        const depTime = section.departure_time || section.departure_date_time;
+        const arrTime = section.arrival_time || section.arrival_date_time;
+        
+        if (depTime && arrTime) {
+          const dep = depTime.length === 5 ? depTime : depTime.substr(-6, 5); // HH:MM
+          const arr = arrTime.length === 5 ? arrTime : arrTime.substr(-6, 5);
+          timeDisplay = `${dep} - ${arr}`;
+        } else if (section.duration) {
+          const minutes = Math.floor(section.duration / 60);
+          timeDisplay = `${minutes}min`;
+        }
+        
+        // Générer les informations détaillées
+        let detailedInfo = '';
+        if (!isWalking && !isWaiting) {
+          const fromLevel = section.from?.accessibility_level_id;
+          const toLevel = section.to?.accessibility_level_id;
+          const fromEquipments = section.from?.equipments || [];
+          const toEquipments = section.to?.equipments || [];
+          
+          // Informations détaillées pour les transports publics
+          if (isTransport) {
+            const transportEquipments = section.transport?.equipments || [];
+            const vehicleInfo = texteEquipementsLigne(transportEquipments);
+            const fromAccessInfo = getAccessibilityInfo(fromEquipments);
+            const toAccessInfo = getAccessibilityInfo(toEquipments);
+            
+            // Arrêts intermédiaires avec accessibilité
+            const intermediateStops = section.intermediate_stops || [];
+            let intermediateStopsHtml = '';
+            
+            if (intermediateStops.length > 0) {
+              const stopsToShow = intermediateStops.filter(stop => 
+                stop.id !== section.from?.id && stop.id !== section.to?.id
+              );
+              
+              if (stopsToShow.length > 0) {
+                intermediateStopsHtml = `
+                  <div style="margin-top: 12px; padding-top: 12px; border-top: 1px solid #e2e8f0;">
+                    <div style="margin-bottom: 8px;"><strong>🚉 Arrêts intermédiaires (${stopsToShow.length}):</strong></div>
+                `;
+                
+                stopsToShow.forEach(stop => {
+                  const stopLevel = stop.accessibility_level_id;
+                  const stopEquipments = stop.equipments || [];
+                  const stopAccessInfo = getAccessibilityInfo(stopEquipments);
+                  const stopTime = stop.arrival_time || '';
+                  
+                  intermediateStopsHtml += `
+                    <div style="margin-left: 16px; margin-bottom: 6px; padding-left: 12px; border-left: 2px solid #cbd5e1;">
+                      <div style="font-weight: 600; color: #374151;">${stop.name || 'Arrêt inconnu'} ${stopTime ? `(${stopTime})` : ''}</div>
+                      <div style="font-size: 12px; color: #6b7280; margin-top: 2px;">
+                        ${stopLevel ? texteAccessibilityLevel(stopLevel) : 'Info d\'accessibilité non disponible'}
+                      </div>
+                      <div style="font-size: 12px; color: #9ca3af; margin-top: 1px;">→ ${stopAccessInfo}</div>
+                    </div>
+                  `;
+                });
+                
+                intermediateStopsHtml += '</div>';
+              }
+            }
+            
+            // Chercher s'il y a une correspondance après cette section pour donner une recommandation de position
+            let positionRecommendation = '';
+            for (let i = idx + 1; i < journey.sections.length; i++) {
+              const nextSection = journey.sections[i];
+              if (nextSection.section_type === 'transfer' || nextSection.type === 'transfer') {
+                const transferInfo = nextSection.position_recommendation || '';
+                if (transferInfo) {
+                  positionRecommendation = getPositionRecommendation(transferInfo);
+                }
+                break;
+              }
+            }
+            
+            // Vérifier si c'est la dernière section de transport pour ajouter les infos de sortie
+            let sortieInfo = '';
+            const isLastTransportSection = idx === journey.sections.length - 1 || 
+              !journey.sections.slice(idx + 1).some(s => s.section_type === 'public_transport' || s.type === 'public_transport');
+            
+            if (isLastTransportSection) {
+              // Debug : Essayer plusieurs sources pour l'ID de station de sortie
+              let stationId = 'non disponible';
+              let hasStationId = false;
+              
+              if (section.to?.stop_point?.id) {
+                stationId = extractIdNumber(section.to.stop_point.id);
+                hasStationId = true;
+              } else if (section.to?.id) {
+                stationId = extractIdNumber(section.to.id);
+                hasStationId = true;
+              } else if (section.from?.stop_point?.id) {
+                stationId = extractIdNumber(section.from.stop_point.id);
+                hasStationId = true;
+              } else if (section.from?.id) {
+                stationId = extractIdNumber(section.from.id);
+                hasStationId = true;
+              }
+              
+              const ligneActuelle = section.display_informations?.label || section.transport?.label || '';
+              
+              if (hasStationId && ligneActuelle) {
+                const sortieDescription = getSortieDescription(ligneActuelle, stationId);
+                
+                if (sortieDescription !== "Pas d'information textuelle pour sortir de la gare") {
+                  sortieInfo = `
+                    <div style="margin-top: 12px; padding: 12px; background: #f0fdf4; border-radius: 8px; border-left: 3px solid #22c55e;">
+                      <div style="font-weight: 600; color: #15803d; margin-bottom: 6px;">🚪 Guide de sortie détaillé :</div>
+                      <div style="font-size: 13px; line-height: 1.6; color: #374151;">${sortieDescription}</div>
+                    </div>
+                  `;
+                } else {
+                  sortieInfo = `
+                    <div style="margin-top: 12px; padding: 12px; background: #fff3cd; border-radius: 8px; border-left: 3px solid #ffc107;">
+                      <div style="font-weight: 600; color: #856404; margin-bottom: 6px;">⚠️ Informations de sortie :</div>
+                      <div style="font-size: 13px; line-height: 1.6; color: #856404;">Pas d'informations textuelle pour cette sortie (ligne: ${ligneActuelle}, station ID: ${stationId})</div>
+                    </div>
+                  `;
+                }
+              } else {
+                // Debug pour les sorties
+                const debugSortieInfo = `
+                  to.stop_point.id: ${section.to?.stop_point?.id || 'non'},
+                  to.id: ${section.to?.id || 'non'},
+                  from.stop_point.id: ${section.from?.stop_point?.id || 'non'},
+                  from.id: ${section.from?.id || 'non'}
+                `;
+                
+                sortieInfo = `
+                  <div style="margin-top: 12px; padding: 12px; background: #fee2e2; border-radius: 8px; border-left: 3px solid #dc2626;">
+                    <div style="font-weight: 600; color: #991b1b; margin-bottom: 6px;">🔍 Debug - Recherche de sortie impossible :</div>
+                    <div style="font-size: 13px; line-height: 1.6; color: #991b1b;">
+                      Dernière section: ${isLastTransportSection ? 'oui' : 'non'} | Ligne: "${ligneActuelle}" | Station ID: ${stationId}
+                      <br>Conditions: ligne OK (${ligneActuelle ? 'oui' : 'non'}), station ID OK (${hasStationId ? 'oui' : 'non'})
+                      <br><strong>Sources testées:</strong> ${debugSortieInfo}
+                    </div>
+                  </div>
+                `;
+              }
+            }
+
+            detailedInfo = `
+              <div class="detailed-info" style="background: #f0f9ff; border-left-color: #3b82f6;">
+                <div style="margin-bottom: 8px;"><strong>🚇 ${label}:</strong> ${vehicleInfo}</div>
+                ${positionRecommendation ? `<div style="padding: 8px 12px; background: #f0fdf4; border-radius: 6px; border-left: 3px solid #22c55e; margin-bottom: 8px;"><strong>${positionRecommendation}</strong></div>` : ''}
+                <div style="margin-bottom: 4px;"><strong>📍 ${fromName}:</strong> ${fromLevel ? texteAccessibilityLevel(fromLevel) : 'Pas d\'informations sur l\'accessibilité PMR de la gare.'}</div>
+                <div style="margin-bottom: 4px; padding-left: 16px; color: #6b7280;">→ ${fromAccessInfo}</div>
+                ${intermediateStopsHtml}
+                <div style="margin-bottom: 4px;"><strong>📍 ${toName}:</strong> ${toLevel ? texteAccessibilityLevel(toLevel) : 'Pas d\'informations sur l\'accessibilité PMR de la gare.'}</div>
+                <div style="padding-left: 16px; color: #6b7280;">→ ${toAccessInfo}</div>
+                ${sortieInfo}
+              </div>
+            `;
+          }
+        }
+        
+        // Informations pour les correspondances (en dehors du bloc précédent)
+        if (isTransfer) {
+          const transferType = section.transfer_equipment_type || '';
+          const transferInfo = texteTypeTransfer(transferType);
+          
+          // Récupérer les informations détaillées de correspondance
+          let detailedTransferInfo = '';
+          
+          // Debug : Essayer plusieurs sources pour l'ID de station
+          let stationId = 'non disponible';
+          let hasStationId = false;
+          
+          // Essayer différentes sources pour récupérer l'ID de station
+          if (section.from?.stop_point?.id) {
+            stationId = extractIdNumber(section.from.stop_point.id);
+            hasStationId = true;
+          } else if (section.from?.id) {
+            stationId = extractIdNumber(section.from.id);
+            hasStationId = true;
+          } else if (section.to?.stop_point?.id) {
+            stationId = extractIdNumber(section.to.stop_point.id);
+            hasStationId = true;
+          } else if (section.to?.id) {
+            stationId = extractIdNumber(section.to.id);
+            hasStationId = true;
+          }
+          
+          // Debug étendu
+          const debugInfo = `
+            from.stop_point.id: ${section.from?.stop_point?.id || 'non'},
+            from.id: ${section.from?.id || 'non'},
+            to.stop_point.id: ${section.to?.stop_point?.id || 'non'},
+            to.id: ${section.to?.id || 'non'}
+          `;
+          
+          if (lignePrecedente !== '?' && ligneSuivante !== '?' && hasStationId) {
+            const transferDescription = getTransferDescription(lignePrecedente, ligneSuivante, stationId);
+            if (transferDescription !== "Pas d'information textuelle pour la correspondance") {
+              detailedTransferInfo = `
+                <div style="margin-top: 12px; padding: 12px; background: #f8fafc; border-radius: 8px; border-left: 3px solid #0ea5e9;">
+                  <div style="font-weight: 600; color: #0c4a6e; margin-bottom: 6px;">📍 Guide de correspondance détaillé :</div>
+                  <div style="font-size: 13px; line-height: 1.6; color: #374151;">${transferDescription}</div>
+                </div>
+              `;
+            } else {
+              detailedTransferInfo = `
+                <div style="margin-top: 12px; padding: 12px; background: #fff3cd; border-radius: 8px; border-left: 3px solid #ffc107;">
+                  <div style="font-weight: 600; color: #856404; margin-bottom: 6px;">⚠️ Informations de correspondance :</div>
+                  <div style="font-size: 13px; line-height: 1.6; color: #856404;">Pas d'informations textuelle pour cette correspondance (${lignePrecedente} → ${ligneSuivante}, station ID: ${stationId})</div>
+                </div>
+              `;
+            }
+          } else {
+            // Afficher un message de debug quand les conditions ne sont pas remplies
+            detailedTransferInfo = `
+              <div style="margin-top: 12px; padding: 12px; background: #fee2e2; border-radius: 8px; border-left: 3px solid #dc2626;">
+                <div style="font-weight: 600; color: #991b1b; margin-bottom: 6px;">🔍 Debug - Recherche impossible :</div>
+                <div style="font-size: 13px; line-height: 1.6; color: #991b1b;">
+                  Ligne précédente: "${lignePrecedente}" | Ligne suivante: "${ligneSuivante}" | Station ID: ${stationId}
+                  <br>Conditions: lignes OK (${lignePrecedente !== '?' && ligneSuivante !== '?'}), station ID OK (${hasStationId ? 'oui' : 'non'})
+                  <br><strong>Sources testées:</strong> ${debugInfo}
+                </div>
+              </div>
+            `;
+          }
+          
+          detailedInfo = `
+            <div class="detailed-info" style="background: #fef3c7; border-left-color: #f59e0b;">
+              <div style="margin-bottom: 8px;"><strong>🔄 Correspondance:</strong> ${transferInfo}</div>
+              <div style="margin-bottom: 6px; font-size: 13px; color: #6b7280;">De ${lignePrecedente} vers ${ligneSuivante}</div>
+              ${detailedTransferInfo}
+            </div>
+          `;
+        }
+
+        step.innerHTML = `
+          <div class="step-icon ${iconClass}">${icon}</div>
+          <div class="step-content">
+            <div class="route-line">${label}${durationText}</div>
+            <div class="stations">${isWaiting ? (fromName !== 'Station inconnue' ? `en gare de ${fromName}` : 'en gare') : `${fromName} → ${toName}`}</div>
+            <div class="accessibility-status">
+              ${!isTransfer && !isWaiting ? `
+                <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 8px;">
+                  <span style="font-size: 12px; font-weight: 600; color: #6b7280;">Départ:</span> ${fromAccess}
+                  <span style="font-size: 12px; font-weight: 600; color: #6b7280;">Arrivée:</span> ${toAccess}
+                  ${!isWalking ? `<span style="font-size: 12px; font-weight: 600; color: #6b7280;">Véhicule:</span> ${vehicleAccessBadge}` : ''}
+                </div>
+              ` : ''}
+              ${sectionScoresText}
+            </div>
+            ${detailedInfo}
+          </div>
+          <div class="time">${timeDisplay}</div>
+        `;
+        itinerary.appendChild(step);
+      });
+      
+      content.innerHTML = '';
+      content.appendChild(itinerary);
+    }
+  </script>
+</body>
+</html>
