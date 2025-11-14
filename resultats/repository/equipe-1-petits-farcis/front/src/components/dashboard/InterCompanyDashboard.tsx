@@ -9,7 +9,7 @@ const InterCompanyDashboard = () => {
   const colors = ["hsl(var(--primary))", "hsl(208, 65%, 75%))", "hsl(208, 65%, 35%))", "hsl(var(--secondary-foreground))", "hsl(var(--muted-foreground))"];
 
   return (
-    <div className="grid gap-4 md:grid-cols-1 lg:grid-cols-2">
+    <div className="grid gap-4 md:grid-cols-1 lg:grid-cols-2 bg-blue-50">
       <Card className="col-span-1 bg-transparent border">
         <CardHeader>
           <CardTitle className="text-primary">Comparaison des Émissions de CO2 (kg CO2)</CardTitle>

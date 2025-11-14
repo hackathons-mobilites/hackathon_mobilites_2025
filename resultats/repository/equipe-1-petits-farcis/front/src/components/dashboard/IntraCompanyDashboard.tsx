@@ -89,7 +89,7 @@ const IntraCompanyDashboard = () => {
     };
 
     return (
-        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 bg-blue-50">
 
 
             <Card className="bg-transparent border">
@@ -209,16 +209,49 @@ const IntraCompanyDashboard = () => {
 
             
 
-                        <Card className="col-span-3 bg-transparent border" style={{height: '400px'}}>
+                                    <Card className="col-span-3 bg-transparent border flex flex-col min-h-[400px]">
 
             
-                <CardHeader>
-                    <CardTitle className="text-primary">Tracés GPS des Utilisateurs</CardTitle>
-                </CardHeader>
-                <CardContent className="h-full">
-                    <DashboardMap traces={formattedOdData}/>
-                </CardContent>
-            </Card>
+
+            
+
+                                        <CardHeader>
+
+            
+
+            
+
+                                            <CardTitle className="text-primary">OD des Utilisateurs</CardTitle>
+
+            
+
+            
+
+                                        </CardHeader>
+
+            
+
+            
+
+                                        <CardContent className="flex-1">
+
+            
+
+            
+
+                                            <DashboardMap traces={formattedOdData}/>
+
+            
+
+            
+
+                                        </CardContent>
+
+            
+
+            
+
+                                    </Card>
         </div>
     );
 };

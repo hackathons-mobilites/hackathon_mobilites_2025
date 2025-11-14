@@ -125,8 +125,8 @@ export const RouteCard = ({
         </div>
 
         <div className="flex items-center gap-1 font-semibold text-primary">
-          <Gift className="w-4 h-4" />
-          <span>+{puzzlePieces}</span>
+          <Gift className="w-6 h-6" />
+          <span className="text-base font-bold">+{puzzlePieces}</span>
         </div>
       </div>
     </Card>

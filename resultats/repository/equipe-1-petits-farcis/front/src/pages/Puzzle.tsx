@@ -9,6 +9,10 @@ import { toast } from "sonner";
 import config from "@/config";
 import useLocalStorage from "@/hooks/useLocalStorage";
 import mockPuzzleReveal from "@/data/mockPuzzleReveal.json";
+import puzzle_call_1 from "@/data/puzzle_call_1.json";
+import puzzle_call_2 from "@/data/puzzle_call_2.json";
+import puzzle_call_3 from "@/data/puzzle_call_3.json";
+import puzzle_all_revealed from "@/data/puzzle_all_revealed.json";
 import guessTrue from "@/data/guessTrue.json";
 import guessWrong from "@/data/guessWrong.json";
 import mockLeaderboard from "@/data/mockLeaderboard.json"; // For contributors
@@ -21,13 +25,16 @@ import mockLeaderboard from "@/data/mockLeaderboard.json"; // For contributors
 const Puzzle = () => {
     const navigate = useNavigate();
     const [guess, setGuess] = useState("");
-    const [attemptsLeft, setAttemptsLeft] = useLocalStorage("puzzle_attempts_left", 3);
+    const [attemptsLeft, setAttemptsLeft] = useState(3);
     const [isCorrect, setIsCorrect] = useState(false);
+    const [puzzleStage, setPuzzleStage] = useState(0);
+
     const [puzzleImage, setPuzzleImage] = useState("");
     const [unlockedTiles, setUnlockedTiles] = useState<string[]>([]);
     const [totalTiles, setTotalTiles] = useState(16);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
+
 
     const companyName = "TechCorp";
     const puzzleId = "puzzle_eiffel_tower";
@@ -40,11 +47,24 @@ const Puzzle = () => {
                 let revealData;
                 let cluesData;
 
+                const puzzleStages = [
+                    puzzle_call_1,
+                    puzzle_call_2,
+                    puzzle_call_3,
+                ];
+
                 if (config.useMockData) {
-                    revealData = mockPuzzleReveal;
-                    cluesData = mockPuzzleReveal; // Assuming mockPuzzleReveal contains all necessary data
+                    if (isCorrect) {
+                        revealData = puzzle_all_revealed;
+                        // When correct, all tiles are considered unlocked for progress display
+                        cluesData = { unlocked_tiles: Array.from({ length: 16 }, (_, i) => `${Math.floor(i / 4)}_${i % 4}`), total_tiles: 16 };
+                    } else {
+                        revealData = puzzleStages[Math.min(puzzleStage, puzzleStages.length - 1)];
+                        // For mock data, cluesData can be the same as revealData for simplicity
+                        cluesData = revealData;
+                    }
                 } else {
-                    // Fetch puzzle image
+                    // Existing backend logic for fetching puzzle image and clues
                     const revealResponse = await fetch(`${config.backend.puzzle.baseUrl}/reveal`, {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json' },
@@ -64,9 +84,13 @@ const Puzzle = () => {
                 }
 
                 setPuzzleImage(revealData.revealed_image_b64);
-
                 setUnlockedTiles(cluesData.unlocked_tiles || []);
                 setTotalTiles(cluesData.total_tiles || 16);
+
+                // Increment puzzle stage for next refresh, only if not yet fully revealed and not correct
+                if (!isCorrect && puzzleStage < puzzleStages.length - 1) {
+                    setPuzzleStage(prevStage => prevStage + 1);
+                }
 
             } catch (err) {
                 setError(err instanceof Error ? err.message : 'An unknown error occurred');
@@ -76,7 +100,7 @@ const Puzzle = () => {
         };
 
         fetchPuzzleData();
-    }, []);
+    }, [isCorrect, puzzleStage]); // Depend on isCorrect and puzzleStage to re-fetch when they change
 
     const handleGuess = async () => {
         if (!guess.trim()) {
@@ -88,7 +112,7 @@ const Puzzle = () => {
             let result;
 
             if (config.useMockData) {
-                if (guess.trim().toLowerCase() === 'eiffel tower') {
+                if (guess.trim().toLowerCase() === 'place vendome') {
                     result = guessTrue;
                 } else {
                     result = guessWrong;
@@ -114,6 +138,7 @@ const Puzzle = () => {
 
             if (result.status === "correct") {
                 setIsCorrect(true);
+                setPuzzleImage(puzzle_all_revealed.revealed_image_b64); // Immediately show the revealed image
                 toast.success("🎉 Correct ! Vous avez trouvé le cadeau mystère !", {
                     description: "Vous avez débloqué une récompense spéciale !",
                 });
@@ -172,6 +197,20 @@ const Puzzle = () => {
                             </p>
                         </div>
                     </div>
+                    {config.useMockData && (
+                        <Button
+                            variant="outline"
+                            onClick={() => {
+                                localStorage.removeItem("puzzle_stage");
+                                localStorage.removeItem("puzzle_is_correct");
+                                localStorage.removeItem("puzzle_attempts_left");
+                                window.location.reload();
+                            }}
+                            className="text-primary-foreground hover:bg-primary-foreground/20"
+                        >
+                            Reset Puzzle
+                        </Button>
+                    )}
                     <div className="text-right">
                         <p className="text-2xl font-bold">{progressPercentage.toFixed(0)}%</p>
                         <p className="text-xs opacity-80">Terminé</p>
