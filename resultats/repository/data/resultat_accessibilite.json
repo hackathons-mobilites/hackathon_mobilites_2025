@@ -1,0 +1,372 @@
+[
+  {
+    "section_type": "crow_fly",
+    "from": {
+      "id": "stop_area:IDFM:71056",
+      "name": "Denfert-Rochereau (Paris)",
+      "accessibility_level_id": "",
+      "equipments": []
+    },
+    "departure_time": "14:29",
+    "transport": {
+      "label": "crow_fly",
+      "equipments": []
+    },
+    "intermediate_stops": [],
+    "to": {
+      "id": "stop_point:IDFM:22151",
+      "name": "Denfert-Rochereau",
+      "accessibility_level_id": "",
+      "equipments": [
+        "has_visual_announcement",
+        "has_audible_announcement"
+      ]
+    },
+    "arrival_time": "14:29"
+  },
+  {
+    "section_type": "public_transport",
+    "from": {
+      "id": "stop_point:IDFM:22151",
+      "name": "Denfert-Rochereau",
+      "accessibility_level_id": "",
+      "equipments": [
+        "has_visual_announcement",
+        "has_audible_announcement"
+      ]
+    },
+    "departure_time": "14:29",
+    "transport": {
+      "label": "4",
+      "equipments": []
+    },
+    "intermediate_stops": [
+      {
+        "id": "stop_point:IDFM:22151",
+        "name": "Denfert-Rochereau",
+        "accessibility_level_id": "",
+        "equipments": [
+          "has_visual_announcement",
+          "has_audible_announcement"
+        ],
+        "arrival_time": "14:29"
+      },
+      {
+        "id": "stop_point:IDFM:463291",
+        "name": "Raspail",
+        "accessibility_level_id": "",
+        "equipments": [
+          "has_visual_announcement",
+          "has_audible_announcement"
+        ],
+        "arrival_time": "14:30"
+      },
+      {
+        "id": "stop_point:IDFM:22135",
+        "name": "Vavin",
+        "accessibility_level_id": "",
+        "equipments": [
+          "has_visual_announcement",
+          "has_audible_announcement"
+        ],
+        "arrival_time": "14:31"
+      },
+      {
+        "id": "stop_point:IDFM:462996",
+        "name": "Montparnasse Bienvenue",
+        "accessibility_level_id": "",
+        "equipments": [
+          "has_visual_announcement",
+          "has_audible_announcement"
+        ],
+        "arrival_time": "14:32"
+      }
+    ],
+    "to": {
+      "id": "stop_point:IDFM:462996",
+      "name": "Montparnasse Bienvenue",
+      "accessibility_level_id": "",
+      "equipments": [
+        "has_visual_announcement",
+        "has_audible_announcement"
+      ]
+    },
+    "arrival_time": "14:32"
+  },
+  {
+    "section_type": "transfer",
+    "from": {
+      "id": "stop_point:IDFM:462996",
+      "name": "Montparnasse Bienvenue",
+      "accessibility_level_id": "",
+      "equipments": [
+        "has_visual_announcement",
+        "has_audible_announcement"
+      ]
+    },
+    "departure_time": "14:32",
+    "transport": {
+      "label": "transfer",
+      "equipments": []
+    },
+    "transfer_equipment_type": "",
+    "intermediate_stops": [],
+    "to": {
+      "id": "stop_point:IDFM:462980",
+      "name": "Montparnasse Bienvenue",
+      "accessibility_level_id": "",
+      "equipments": [
+        "has_visual_announcement",
+        "has_audible_announcement"
+      ]
+    },
+    "arrival_time": "14:33"
+  },
+  {
+    "section_type": "public_transport",
+    "from": {
+      "id": "stop_point:IDFM:462980",
+      "name": "Montparnasse Bienvenue",
+      "accessibility_level_id": "",
+      "equipments": [
+        "has_visual_announcement",
+        "has_audible_announcement"
+      ]
+    },
+    "departure_time": "14:36",
+    "transport": {
+      "label": "12",
+      "equipments": []
+    },
+    "intermediate_stops": [
+      {
+        "id": "stop_point:IDFM:462980",
+        "name": "Montparnasse Bienvenue",
+        "accessibility_level_id": "",
+        "equipments": [
+          "has_visual_announcement",
+          "has_audible_announcement"
+        ],
+        "arrival_time": "14:36"
+      },
+      {
+        "id": "stop_point:IDFM:462965",
+        "name": "Notre-Dame des Champs",
+        "accessibility_level_id": "",
+        "equipments": [
+          "has_visual_announcement",
+          "has_audible_announcement"
+        ],
+        "arrival_time": "14:37"
+      },
+      {
+        "id": "stop_point:IDFM:462968",
+        "name": "Rennes",
+        "accessibility_level_id": "",
+        "equipments": [
+          "has_visual_announcement",
+          "has_audible_announcement"
+        ],
+        "arrival_time": "14:38"
+      },
+      {
+        "id": "stop_point:IDFM:462966",
+        "name": "Sèvres - Babylone",
+        "accessibility_level_id": "",
+        "equipments": [
+          "has_visual_announcement",
+          "has_audible_announcement"
+        ],
+        "arrival_time": "14:39"
+      },
+      {
+        "id": "stop_point:IDFM:22043",
+        "name": "Rue du Bac",
+        "accessibility_level_id": "",
+        "equipments": [
+          "has_visual_announcement",
+          "has_audible_announcement"
+        ],
+        "arrival_time": "14:41"
+      },
+      {
+        "id": "stop_point:IDFM:22045",
+        "name": "Solférino",
+        "accessibility_level_id": "",
+        "equipments": [
+          "has_visual_announcement",
+          "has_audible_announcement"
+        ],
+        "arrival_time": "14:42"
+      },
+      {
+        "id": "stop_point:IDFM:463123",
+        "name": "Assemblée Nationale",
+        "accessibility_level_id": "",
+        "equipments": [
+          "has_visual_announcement",
+          "has_audible_announcement"
+        ],
+        "arrival_time": "14:43"
+      },
+      {
+        "id": "stop_point:IDFM:22057",
+        "name": "Concorde",
+        "accessibility_level_id": "",
+        "equipments": [
+          "has_visual_announcement",
+          "has_audible_announcement"
+        ],
+        "arrival_time": "14:44"
+      },
+      {
+        "id": "stop_point:IDFM:463081",
+        "name": "Madeleine",
+        "accessibility_level_id": "",
+        "equipments": [
+          "has_visual_announcement",
+          "has_audible_announcement"
+        ],
+        "arrival_time": "14:46"
+      },
+      {
+        "id": "stop_point:IDFM:462969",
+        "name": "Saint-Lazare",
+        "accessibility_level_id": "",
+        "equipments": [
+          "has_visual_announcement",
+          "has_audible_announcement"
+        ],
+        "arrival_time": "14:48"
+      }
+    ],
+    "to": {
+      "id": "stop_point:IDFM:462969",
+      "name": "Saint-Lazare",
+      "accessibility_level_id": "",
+      "equipments": [
+        "has_visual_announcement",
+        "has_audible_announcement"
+      ]
+    },
+    "arrival_time": "14:48"
+  },
+  {
+    "section_type": "transfer",
+    "from": {
+      "id": "stop_point:IDFM:462969",
+      "name": "Saint-Lazare",
+      "accessibility_level_id": "",
+      "equipments": [
+        "has_visual_announcement",
+        "has_audible_announcement"
+      ]
+    },
+    "departure_time": "14:48",
+    "transport": {
+      "label": "transfer",
+      "equipments": []
+    },
+    "transfer_equipment_type": "Ascenseur",
+    "intermediate_stops": [],
+    "to": {
+      "id": "stop_point:IDFM:monomodalStopPlace:58566",
+      "name": "Gare Saint-Lazare",
+      "accessibility_level_id": "3",
+      "equipments": [
+        "has_wheelchair_boarding"
+      ]
+    },
+    "arrival_time": "14:52"
+  },
+  {
+    "section_type": "public_transport",
+    "from": {
+      "id": "stop_point:IDFM:monomodalStopPlace:58566",
+      "name": "Gare Saint-Lazare",
+      "accessibility_level_id": "3",
+      "equipments": [
+        "has_wheelchair_boarding"
+      ]
+    },
+    "departure_time": "14:56",
+    "transport": {
+      "label": "L",
+      "equipments": [
+        "has_wheelchair_accessibility",
+        "has_air_conditioned"
+      ]
+    },
+    "intermediate_stops": [
+      {
+        "id": "stop_point:IDFM:monomodalStopPlace:58566",
+        "name": "Gare Saint-Lazare",
+        "accessibility_level_id": "3",
+        "equipments": [
+          "has_wheelchair_boarding"
+        ],
+        "arrival_time": "14:56"
+      },
+      {
+        "id": "stop_point:IDFM:monomodalStopPlace:45493",
+        "name": "Pont Cardinet",
+        "accessibility_level_id": "3",
+        "equipments": [
+          "has_wheelchair_boarding"
+        ],
+        "arrival_time": "14:58"
+      },
+      {
+        "id": "stop_point:IDFM:monomodalStopPlace:43112",
+        "name": "Clichy - Levallois",
+        "accessibility_level_id": "3",
+        "equipments": [
+          "has_wheelchair_boarding"
+        ],
+        "arrival_time": "15:01"
+      },
+      {
+        "id": "stop_point:IDFM:monomodalStopPlace:43069",
+        "name": "Asnières-sur-Seine",
+        "accessibility_level_id": "3",
+        "equipments": [
+          "has_wheelchair_boarding"
+        ],
+        "arrival_time": "15:03"
+      }
+    ],
+    "to": {
+      "id": "stop_point:IDFM:monomodalStopPlace:43069",
+      "name": "Asnières-sur-Seine",
+      "accessibility_level_id": "3",
+      "equipments": [
+        "has_wheelchair_boarding"
+      ]
+    },
+    "arrival_time": "15:03"
+  },
+  {
+    "section_type": "crow_fly",
+    "from": {
+      "id": "stop_point:IDFM:monomodalStopPlace:43069",
+      "name": "Asnières-sur-Seine",
+      "accessibility_level_id": "3",
+      "equipments": [
+        "has_wheelchair_boarding"
+      ]
+    },
+    "departure_time": "15:03",
+    "transport": {
+      "label": "crow_fly",
+      "equipments": []
+    },
+    "intermediate_stops": [],
+    "to": {
+      "id": "stop_area:IDFM:72132",
+      "name": "Asnières-sur-Seine (Asnières-sur-Seine)",
+      "accessibility_level_id": "",
+      "equipments": []
+    },
+    "arrival_time": "15:03"
+  }
+]
