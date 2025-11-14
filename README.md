@@ -34,7 +34,7 @@ Aujourd'hui, les Franciliens font face à plusieurs défis :
 **Predict'Mob** combine :
 - ✅ **IA prédictive** pour anticiper les perturbations train/RER
 - ✅ **Identification de hotspots** (zones/gares à risque avec plusieurs salariés impactés)
-- ✅ **Alternatives personnalisées** (covoiturage, vélo, télétravail)
+- ✅ **Alternatives éco-responsables avec score RSE** (covoiturage, vélo, télétravail) classées par impact environnemental
 - ✅ **Gamification** pour encourager les mobilités bas-carbone
 - ✅ **Reporting RSE** pour les entreprises (avec consentement RGPD strict)
 
@@ -55,7 +55,7 @@ Predict'Mob repose sur **deux leviers complémentaires** :
 
 **APIs principales** :
 - `GET /v1/hotspots` : Liste des hotspots actifs
-- `GET /v1/alternatives` : Alternatives personnalisées selon le profil
+- `GET /v1/alternatives` : Alternatives éco-responsables personnalisées avec score RSE (covoiturage, vélo, télétravail) classées selon leur impact environnemental
 
 ### 🎮 Levier B — Mobility Tracker (Gamification + RSE)
 
@@ -66,7 +66,7 @@ Predict'Mob repose sur **deux leviers complémentaires** :
 - 📍 Déclarer ses déplacements (train, vélo, covoiturage, télétravail)
 - 🏆 Gagner des points et badges selon les modes de transport durables
 - ⚠️ Recevoir des alertes hotspots sur ses trajets habituels
-- 🚴 Consulter des alternatives en cas de perturbation
+- 🚴 Consulter des alternatives éco-responsables classées par score RSE (CO₂ évité, durée, coût)
 - 🔒 Contrôler le partage de données avec l'entreprise (opt-in RGPD)
 
 #### Pour les entreprises (Back-office Streamlit)
@@ -88,7 +88,7 @@ Tableau de bord RSE avec indicateurs agrégés (uniquement pour les salariés ay
 - **SIRENE** (INSEE) : identification des entreprises via SIREN
 
 ### Données internes
-Base PostgreSQL avec tables : `companies`, `employees`, `trajectories`, `predictions`, `hotspots`, `alternatives`, `commute_logs`, `mobility_events`, `employee_points`, `company_rse_snapshot`.
+Base PostgreSQL avec tables : `companies`, `employees`, `trajectories`, `predictions`, `hotspots`, `alternatives` (avec score RSE par option), `commute_logs`, `mobility_events`, `employee_points`, `company_rse_snapshot`.
 
 ### Respect de la vie privée
 - ✅ Consentement explicite (opt-in) pour le partage avec l'entreprise
@@ -122,7 +122,7 @@ Base PostgreSQL avec tables : `companies`, `employees`, `trajectories`, `predict
 
 ### 6. Écosystème ouvert pour partenaires
 **Défi** : Intégrer des opérateurs de mobilité (Karos, Klaxit, Véligo…) sans refonte complète  
-**Solution** : Endpoint `/partner/alternatives` pour propositions tierces, format standardisé, système de scoring
+**Solution** : Endpoint `/partner/alternatives` pour propositions tierces, format standardisé avec calcul automatique du score RSE (CO₂ évité, durée, coût) pour classer les alternatives selon leur impact environnemental
 
 ---
 
@@ -148,22 +148,47 @@ Base PostgreSQL avec tables : `companies`, `employees`, `trajectories`, `predict
 
 ## Et la suite ?
 
-Si nous avions plus de temps, voici les développements prioritaires :
+### 🤖 Vision : Agent Intelligent de Mobilité Éco-Responsable
+
+Notre roadmap converge vers un **agent autonome** orchestrant l'ensemble des moteurs (prédiction, hotspots, alternatives) avec un **calcul RSE en temps réel** :
+
+```
+┌─────────────────────────────────────────────────────┐
+│     AGENT MOBILITÉ ÉCO-RESPONSABLE (AME)           │
+│                                                     │
+│  ┌─────────────┐  ┌──────────────┐  ┌───────────┐ │
+│  │  Predict    │→ │   Hotspot    │→ │  Score    │ │
+│  │  Engine     │  │   Engine     │  │  RSE      │ │
+│  └─────────────┘  └──────────────┘  └───────────┘ │
+│         ↓                ↓                 ↓        │
+│  ┌──────────────────────────────────────────────┐  │
+│  │    Moteur d'Optimisation Multi-Objectifs    │  │
+│  │  (temps, coût, CO₂, confort, préférences)   │  │
+│  └──────────────────────────────────────────────┘  │
+│         ↓                                           │
+│  ┌──────────────────────────────────────────────┐  │
+│  │   Recommandations Personnalisées + Impact   │  │
+│  │        RSE (individuel & entreprise)         │  │
+│  └──────────────────────────────────────────────┘  │
+└─────────────────────────────────────────────────────┘
+```
+
+**Fonctionnement** : L'agent analyse en continu les données de mobilité, anticipe les perturbations, calcule automatiquement le score RSE de chaque alternative (CO₂, temps, coût) et propose la meilleure option selon le contexte et les préférences de l'utilisateur, tout en alimentant les indicateurs RSE de l'entreprise.
 
 ### 🚀 Court terme (1-3 mois)
-- **Intégration partenaires mobilité** : Karos, Klaxit (covoiturage), Véligo, Lime (vélos)
+- **Intégration partenaires mobilité** : Karos, Klaxit (covoiturage), Véligo, Lime (vélos) avec scoring RSE automatique
 - **Prédiction multi-modes** : Étendre aux bus, métro, tram (pas seulement train/RER)
-- **Notifications push** : Alertes proactives dès 7h le matin
+- **Notifications push proactives** : Alertes + alternatives éco-responsables dès 7h le matin
 
 ### 🌟 Moyen terme (3-6 mois)
-- **Moteur de recommandation hybride** : Combiner ML + règles métier, personnalisation selon profil
-- **PDE complet** : Simulation d'impact, générateur automatique, intégration outils RH
-- **Gamification avancée** : Défis d'équipe, récompenses réelles, système de parrainage
+- **Agent d'optimisation multi-critères** : IA combinant prédiction, alternatives et calcul RSE en temps réel
+- **Apprentissage des préférences** : L'agent apprend des choix passés pour affiner les recommandations
+- **PDE complet** : Simulation d'impact, générateur automatique, intégration outils RH avec métriques RSE automatisées
 
 ### 🔭 Long terme (6-12 mois)
-- **Extension géographique** : Adapter à d'autres métropoles françaises
-- **API publique Predict'Mob** : Ouvrir l'API aux développeurs tiers, marketplace d'alternatives
-- **Impact social** : Quartiers mal desservis, accessibilité PMR, partenariats associatifs
+- **Agent autonome décisionnel** : L'AME devient un copilote mobilité personnel avec scoring RSE prédictif
+- **API publique & Marketplace** : Ouvrir l'écosystème aux développeurs et partenaires mobilité
+- **Impact social** : Quartiers mal desservis, accessibilité PMR, partenariats associatifs avec calcul d'impact RSE global
 
 ---
 
@@ -193,9 +218,9 @@ Si nous avions plus de temps, voici les développements prioritaires :
 |------|--------|-----------------|
 | **Architecture & Product** | Sofiene | Architecture technique, coordination, David : product vision |
 | **Data Science** | Marc + Marc Stephane : Data | Module IA de prédiction, pipeline ML, base de données |
-| **Backend** | Gabriel + 1 Dev | API FastAPI, logique métier, intégration BDD |
-| **Frontend** | Samir | Back-office Streamlit, visualisations, dashboards |
-| **UX/UI Design** | David & Sami | Maquettes, wireframes, app mobile web |
+| **Backend** | Gabriel | API FastAPI, logique métier, intégration BDD |base de données
+| **Frontend** | Sami | Back-office Streamlit, visualisations, dashboards |
+| **UX/UI Design** | David & Sami & Sofiene | Maquettes, wireframes, app mobile web |
 
 ---
 
