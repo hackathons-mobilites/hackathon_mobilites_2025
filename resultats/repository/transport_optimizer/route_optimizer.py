@@ -33,16 +33,23 @@ class RouteOptimizer:
             f"Gares de destination trouvées: {len(destination_stations)} dans un rayon de {buffer_radius}m"
         )
 
+        # Calculer d'abord tous les trajets vélo uniques pour éviter les doublons d'appels API
+        self.logger.info("Calcul des itinéraires vélo uniques (rabattement et diffusion)...")
+        bike_routes_cache = self._calculate_unique_bike_routes(
+            origin_stations, destination_stations, origin_coords, destination_coords
+        )
+
         # Créer toutes les combinaisons possibles
         combinations_df = self._create_station_combinations(
             origin_stations, destination_stations
         )
+        combinations_df.drop_duplicates(inplace=True)
         self.logger.info(f"Combinaisons gare-à-gare créées: {len(combinations_df)}")
 
-        # Calculer les itinéraires vélo (rabattement et diffusion)
-        self.logger.info("Calcul des itinéraires vélo (rabattement et diffusion)...")
-        combinations_df = self._add_bike_routes(
-            combinations_df, origin_coords, destination_coords
+        # Ajouter les itinéraires vélo pré-calculés aux combinaisons
+        self.logger.info("Association des itinéraires vélo aux combinaisons...")
+        combinations_df = self._add_cached_bike_routes(
+            combinations_df, bike_routes_cache
         )
 
         # Calculer les itinéraires transport en commun
@@ -86,30 +93,49 @@ class RouteOptimizer:
 
         return combinations
 
-    def _add_bike_routes(self, df, origin_coords, destination_coords):
-        """Ajoute les itinéraires vélo (rabattement et diffusion)"""
-        self.logger.debug(f"Calcul de {len(df)} itinéraires vélo...")
+    def _calculate_unique_bike_routes(self, origin_stations, destination_stations, origin_coords, destination_coords):
+        """Calcule tous les trajets vélo uniques pour éviter les doublons d'appels API"""
+        bike_routes_cache = {}
+        
+        # Extraire les coordonnées uniques des gares d'origine
+        unique_origin_coords = {}
+        for _, station in origin_stations.iterrows():
+            station_coords = self.spatial_service.get_coordinates_from_geometry(station["geometry"])
+            unique_origin_coords[station["id_ref_zda"]] = station_coords
+        
+        # Extraire les coordonnées uniques des gares de destination
+        unique_dest_coords = {}
+        for _, station in destination_stations.iterrows():
+            station_coords = self.spatial_service.get_coordinates_from_geometry(station["geometry"])
+            unique_dest_coords[station["id_ref_zda"]] = station_coords
+        
+        # Calculer les trajets de rabattement uniques
+        self.logger.debug(f"Calcul de {len(unique_origin_coords)} trajets de rabattement uniques...")
+        for station_id, station_coords in unique_origin_coords.items():
+            route = self.geovelo_client.get_route(origin_coords, station_coords)
+            bike_routes_cache[f"rabattement_{station_id}"] = route
+        
+        # Calculer les trajets de diffusion uniques
+        self.logger.debug(f"Calcul de {len(unique_dest_coords)} trajets de diffusion uniques...")
+        for station_id, station_coords in unique_dest_coords.items():
+            route = self.geovelo_client.get_route(station_coords, destination_coords)
+            bike_routes_cache[f"diffusion_{station_id}"] = route
+        
+        total_api_calls = len(unique_origin_coords) + len(unique_dest_coords)
+        self.logger.info(f"Trajets vélo calculés avec {total_api_calls} appels API uniques")
+        
+        return bike_routes_cache
+
+    def _add_cached_bike_routes(self, df, bike_routes_cache):
+        """Ajoute les trajets vélo pré-calculés aux combinaisons"""
+        self.logger.debug(f"Association des trajets vélo à {len(df)} combinaisons...")
         results = []
         successful_routes = 0
 
         for idx, row in df.iterrows():
-            # Coordonnées des gares
-            origin_station_coords = self.spatial_service.get_coordinates_from_geometry(
-                row["geometry_ori"]
-            )
-            dest_station_coords = self.spatial_service.get_coordinates_from_geometry(
-                row["geometry_dest"]
-            )
-
-            # Rabattement: du point de départ à la gare d'origine
-            rabattement = self.geovelo_client.get_route(
-                origin_coords, origin_station_coords
-            )
-
-            # Diffusion: de la gare de destination au point d'arrivée
-            diffusion = self.geovelo_client.get_route(
-                dest_station_coords, destination_coords
-            )
+            # Récupérer les trajets pré-calculés
+            rabattement = bike_routes_cache.get(f"rabattement_{row['id_ref_zda_ori']}")
+            diffusion = bike_routes_cache.get(f"diffusion_{row['id_ref_zda_dest']}")
 
             # Ajouter les résultats à la ligne
             row_result = row.copy()
@@ -129,7 +155,7 @@ class RouteOptimizer:
             results.append(row_result)
 
         self.logger.info(
-            f"Itinéraires vélo calculés: {successful_routes}/{len(df)} complets"
+            f"Itinéraires vélo associés: {successful_routes}/{len(df)} complets"
         )
         return pd.DataFrame(results)
 

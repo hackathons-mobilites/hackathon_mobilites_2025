@@ -10,6 +10,7 @@ import json
 from datetime import datetime, timedelta
 from route_optimizer import RouteOptimizer
 import ast
+import requests
 
 # Configuration de la page
 st.set_page_config(
@@ -116,25 +117,38 @@ def add_geojson_to_map(folium_map, geojson_data, color, style_type="solid", weig
             }
         ).add_to(folium_map)
 
-def create_route_map(route_data):
+def create_route_map(route_data, origin_coords, destination_coords):
     """Crée une carte avec tous les GeoJSON d'un itinéraire"""
     # Créer la carte centrée sur l'Île-de-France
     m = folium.Map(location=[48.8566, 2.3522], zoom_start=10)
     
     # Couleurs pour les différents types de trajets
     colors = {
-        'rabattement': '#FF6B6B',  # Rouge pour rabattement (vélo)
-        'diffusion': '#4ECDC4',    # Turquoise pour diffusion (vélo)
+        'rabattement': '#4CAF50',  # Vert pour rabattement (vélo)
+        'diffusion': '#FF6B6B',    # Rouge pour diffusion (vélo)
         'transport': '#45B7D1'     # Bleu pour transport en commun
     }
     
-    # Ajouter les géométries des gares (points)
+    # Ajouter les marqueurs des points exacts d'origine et destination
+    folium.Marker(
+        [origin_coords[1], origin_coords[0]],  # lat, lon (inversion car origin_coords est en lon, lat)
+        popup="🟢 Point de départ exact",
+        icon=folium.Icon(color='green', icon='play')
+    ).add_to(m)
+    
+    folium.Marker(
+        [destination_coords[1], destination_coords[0]],  # lat, lon (inversion car destination_coords est en lon, lat)
+        popup="🔴 Point d'arrivée exact",
+        icon=folium.Icon(color='red', icon='stop')
+    ).add_to(m)
+    
+    # Ajouter les géométries des gares (points plus petits)
     if 'geometry_ori' in route_data and route_data['geometry_ori']:
         geom_ori = parse_geojson_string(route_data['geometry_ori'])
         if geom_ori:
             folium.GeoJson(
                 geom_ori,
-                marker=folium.Marker(icon=folium.Icon(color='green', icon='play'))
+                marker=folium.CircleMarker(radius=5, color='darkgreen', fill=True, popup="Gare d'origine")
             ).add_to(m)
     
     if 'geometry_dest' in route_data and route_data['geometry_dest']:
@@ -142,7 +156,7 @@ def create_route_map(route_data):
         if geom_dest:
             folium.GeoJson(
                 geom_dest,
-                marker=folium.Marker(icon=folium.Icon(color='red', icon='stop'))
+                marker=folium.CircleMarker(radius=5, color='darkred', fill=True, popup="Gare de destination")
             ).add_to(m)
     
     # Ajouter le trajet de rabattement (pointillés)
@@ -163,13 +177,53 @@ def create_route_map(route_data):
     
     return m
 
+def geocode_address(address):
+    """Géocode une adresse en utilisant l'API Nominatim d'OpenStreetMap"""
+    if not address.strip():
+        return None, None
+    
+    try:
+        # Ajouter "France" à la recherche pour améliorer la précision
+        search_query = f"{address}, France"
+        
+        # URL de l'API Nominatim
+        url = "https://nominatim.openstreetmap.org/search"
+        params = {
+            'q': search_query,
+            'format': 'json',
+            'limit': 1,
+            'countrycodes': 'fr',  # Limiter à la France
+            'bounded': 1,
+            'viewbox': '1.4,49.0,3.2,48.1'  # Bounding box approximative de l'Île-de-France
+        }
+        
+        headers = {
+            'User-Agent': 'StreamlitTransportApp/1.0'
+        }
+        
+        response = requests.get(url, params=params, headers=headers, timeout=5)
+        response.raise_for_status()
+        
+        data = response.json()
+        
+        if data and len(data) > 0:
+            lat = float(data[0]['lat'])
+            lon = float(data[0]['lon'])
+            return lat, lon
+        else:
+            return None, None
+            
+    except Exception as e:
+        st.error(f"Erreur lors du géocodage de '{address}': {str(e)}")
+        return None, None
+
 def format_datetime_for_api(date, time):
     """Formate la date et l'heure pour l'API Navitia"""
     dt = datetime.combine(date, time)
     return dt.strftime("%Y%m%dT%H%M%S")
 
 def main():
-    st.title("🚲🚇 Optimiseur d'Itinéraires Multimodaux")
+    st.title("🚲⚡️ Rayon d'Action")
     st.markdown("Trouvez le meilleur itinéraire combinant vélo et transport en commun en Île-de-France")
     
     # Sidebar pour les paramètres
@@ -178,79 +232,87 @@ def main():
     # Sélection des coordonnées
     st.sidebar.subheader("📍 Points de départ et d'arrivée")
     
-    # Initialiser les coordonnées dans le session state
-    if 'origin_lat' not in st.session_state:
-        st.session_state.origin_lat = 48.79715061389867  # Bagneux
-        st.session_state.origin_lon = 2.301582862195426
-    if 'dest_lat' not in st.session_state:
-        st.session_state.dest_lat = 48.98632597135369   # Limay
-        st.session_state.dest_lon = 1.7437261161738455
+    # Les coordonnées seront définies uniquement par géocodage d'adresses
     
-    # Saisie manuelle des coordonnées avec des sliders plus intuitifs
-    with st.sidebar.expander("🎯 Sélection manuelle des coordonnées", expanded=True):
-        st.write("**Point d'origine:**")
-        origin_lat = st.number_input(
-            "Latitude origine", 
-            min_value=48.0, max_value=49.5, 
-            value=st.session_state.origin_lat, 
-            step=0.0001, format="%.4f",
-            key="origin_lat_input"
-        )
-        origin_lon = st.number_input(
-            "Longitude origine", 
-            min_value=1.0, max_value=3.5, 
-            value=st.session_state.origin_lon, 
-            step=0.0001, format="%.4f",
-            key="origin_lon_input"
+    # Sélection par adresse
+    with st.sidebar.expander("📮 Sélection par adresse", expanded=True):
+        st.write("**Adresse de départ:**")
+        origin_address = st.text_input(
+            "Adresse de départ",
+            placeholder="Ex: 12 rue de la Paix, Paris",
+            key="origin_address_input"
         )
         
-        st.write("**Point de destination:**")
-        dest_lat = st.number_input(
-            "Latitude destination", 
-            min_value=48.0, max_value=49.5, 
-            value=st.session_state.dest_lat, 
-            step=0.0001, format="%.4f",
-            key="dest_lat_input"
-        )
-        dest_lon = st.number_input(
-            "Longitude destination", 
-            min_value=1.0, max_value=3.5, 
-            value=st.session_state.dest_lon, 
-            step=0.0001, format="%.4f",
-            key="dest_lon_input"
+        if st.button("🔍 Géocoder départ", key="geocode_origin"):
+            if origin_address:
+                st.session_state.geocoding_in_progress = True
+                with st.spinner("Géocodage en cours..."):
+                    lat, lon = geocode_address(origin_address)
+                    if lat and lon:
+                        st.session_state.origin_lat = lat
+                        st.session_state.origin_lon = lon
+                        st.success(f"✅ Adresse trouvée: {lat:.4f}, {lon:.4f}")
+                        # Nettoyer le flag et relancer
+                        if 'geocoding_in_progress' in st.session_state:
+                            del st.session_state.geocoding_in_progress
+                        st.rerun()
+                    else:
+                        st.error("❌ Adresse non trouvée. Essayez une adresse plus précise.")
+                        if 'geocoding_in_progress' in st.session_state:
+                            del st.session_state.geocoding_in_progress
+            else:
+                st.warning("⚠️ Veuillez saisir une adresse")
+        
+        st.write("**Adresse de destination:**")
+        dest_address = st.text_input(
+            "Adresse de destination",
+            placeholder="Ex: 5 avenue des Champs-Élysées, Paris",
+            key="dest_address_input"
         )
         
-        # Boutons pour définir des points prédéfinis
-        col1, col2 = st.columns(2)
-        with col1:
-            if st.button("📍 Bagneux → Limay", key="preset1"):
-                st.session_state.origin_lat = 48.79715061389867
-                st.session_state.origin_lon = 2.301582862195426
-                st.session_state.dest_lat = 48.98632597135369
-                st.session_state.dest_lon = 1.7437261161738455
-                st.rerun()
-        
-        with col2:
-            if st.button("📍 Châtelet → CDG", key="preset2"):
-                st.session_state.origin_lat = 48.8588
-                st.session_state.origin_lon = 2.3475
-                st.session_state.dest_lat = 49.0097
-                st.session_state.dest_lon = 2.5479
-                st.rerun()
+        if st.button("🔍 Géocoder destination", key="geocode_dest"):
+            if dest_address:
+                st.session_state.geocoding_in_progress = True
+                with st.spinner("Géocodage en cours..."):
+                    lat, lon = geocode_address(dest_address)
+                    if lat and lon:
+                        st.session_state.dest_lat = lat
+                        st.session_state.dest_lon = lon
+                        st.success(f"✅ Adresse trouvée: {lat:.4f}, {lon:.4f}")
+                        # Nettoyer le flag et relancer
+                        if 'geocoding_in_progress' in st.session_state:
+                            del st.session_state.geocoding_in_progress
+                        st.rerun()
+                    else:
+                        st.error("❌ Adresse non trouvée. Essayez une adresse plus précise.")
+                        if 'geocoding_in_progress' in st.session_state:
+                            del st.session_state.geocoding_in_progress
+            else:
+                st.warning("⚠️ Veuillez saisir une adresse")
     
-    # Mettre à jour les valeurs dans le session state
-    st.session_state.origin_lat = origin_lat
-    st.session_state.origin_lon = origin_lon
-    st.session_state.dest_lat = dest_lat
-    st.session_state.dest_lon = dest_lon
+
     
-    origin_coords = [origin_lat, origin_lon]
-    destination_coords = [dest_lat, dest_lon]
+    # Vérifier que les coordonnées sont disponibles (géocodées)
+    if ('origin_lat' not in st.session_state or 'origin_lon' not in st.session_state or
+        'dest_lat' not in st.session_state or 'dest_lon' not in st.session_state):
+        origin_coords = None
+        destination_coords = None
+    else:
+        # Utiliser les coordonnées géocodées
+        origin_coords = [st.session_state.origin_lat, st.session_state.origin_lon]
+        destination_coords = [st.session_state.dest_lat, st.session_state.dest_lon]
     
     # Affichage des coordonnées actuelles
     st.sidebar.write("**Coordonnées actuelles:**")
-    st.sidebar.write(f"🟢 **Origine:** {origin_coords[0]:.4f}, {origin_coords[1]:.4f}")
-    st.sidebar.write(f"🔴 **Destination:** {destination_coords[0]:.4f}, {destination_coords[1]:.4f}")
+    if origin_coords:
+        st.sidebar.write(f"🟢 **Origine:** {origin_coords[0]:.4f}, {origin_coords[1]:.4f}")
+    else:
+        st.sidebar.write("🟢 **Origine:** Non définie - Veuillez géocoder une adresse")
+    
+    if destination_coords:
+        st.sidebar.write(f"🔴 **Destination:** {destination_coords[0]:.4f}, {destination_coords[1]:.4f}")
+    else:
+        st.sidebar.write("🔴 **Destination:** Non définie - Veuillez géocoder une adresse")
     
     # Sélection de la date et de l'heure
     st.sidebar.subheader("📅 Date et heure de départ")
@@ -283,11 +345,14 @@ def main():
     
     # Bouton GO!
     if st.sidebar.button("🚀 GO! Calculer les itinéraires", type="primary"):
-        st.session_state.calculate = True
-        st.session_state.origin_coords = (origin_coords[1], origin_coords[0])  # lon, lat
-        st.session_state.destination_coords = (destination_coords[1], destination_coords[0])  # lon, lat
-        st.session_state.datetime_str = format_datetime_for_api(departure_date, departure_time)
-        st.session_state.radius = radius_m
+        if origin_coords and destination_coords:
+            st.session_state.calculate = True
+            st.session_state.origin_coords = (origin_coords[1], origin_coords[0])  # lon, lat
+            st.session_state.destination_coords = (destination_coords[1], destination_coords[0])  # lon, lat
+            st.session_state.datetime_str = format_datetime_for_api(departure_date, departure_time)
+            st.session_state.radius = radius_m
+        else:
+            st.sidebar.error("⚠️ Veuillez d'abord géocoder les adresses de départ ET de destination !")
     
     # Zone principale
     if hasattr(st.session_state, 'calculate') and st.session_state.calculate:
@@ -404,13 +469,13 @@ def main():
                     # Légende des couleurs
                     st.markdown("""
                     **Légende:**
-                    - 🔴 **Rouge (pointillés):** Trajet vélo de rabattement (origine → gare de départ)
+                    - 🟢 **Vert (pointillés):** Trajet vélo de rabattement (origine → gare de départ)
                     - 🔵 **Bleu (continu):** Trajet en transport en commun
-                    - 🟢 **Turquoise (pointillés):** Trajet vélo de diffusion (gare d'arrivée → destination)
+                    - 🔴 **Rouge (pointillés):** Trajet vélo de diffusion (gare d'arrivée → destination)
                     """)
                     
                     # Créer et afficher la carte
-                    route_map = create_route_map(selected_route)
+                    route_map = create_route_map(selected_route, st.session_state.origin_coords, st.session_state.destination_coords)
                     folium_static(route_map, width=1000, height=600)
                     
                     # Option de téléchargement des données
@@ -444,72 +509,73 @@ def main():
         
         ### Fonctionnalités
         - ✅ Calcul d'itinéraires multimodaux (vélo + transport en commun)
-        - ✅ Sélection manuelle des coordonnées avec présets
+        - ✅ Géocodage d'adresses automatique
         - ✅ Choix flexible de la date et de l'heure
         - ✅ Visualisation détaillée des trajets avec codes couleur
         - ✅ Téléchargement des résultats en CSV
         
         ### Légende des trajets
-        - 🔴 **Rouge pointillé**: Trajet vélo de rabattement 
+        - 🟢 **Vert pointillé**: Trajet vélo de rabattement 
         - 🔵 **Bleu continu**: Transport en commun
-        - 🟢 **Turquoise pointillé**: Trajet vélo de diffusion
+        - 🔴 **Rouge pointillé**: Trajet vélo de diffusion
         """)
         
         # Carte de prévisualisation avec les points sélectionnés
-        st.subheader("🗺️ Aperçu de vos points sélectionnés")
-        
-        # Créer une carte centrée entre les deux points
-        center_lat = (origin_coords[0] + destination_coords[0]) / 2
-        center_lon = (origin_coords[1] + destination_coords[1]) / 2
-        
-        preview_map = folium.Map(location=[center_lat, center_lon], zoom_start=9)
-        
-        # Ajouter les marqueurs
-        folium.Marker(
-            [origin_coords[0], origin_coords[1]], 
-            popup=f"🟢 Origine<br>{origin_coords[0]:.4f}, {origin_coords[1]:.4f}", 
-            icon=folium.Icon(color='green', icon='play')
-        ).add_to(preview_map)
-        
-        folium.Marker(
-            [destination_coords[0], destination_coords[1]], 
-            popup=f"🔴 Destination<br>{destination_coords[0]:.4f}, {destination_coords[1]:.4f}", 
-            icon=folium.Icon(color='red', icon='stop')
-        ).add_to(preview_map)
-        
-        # Ajouter une ligne droite entre les points pour visualiser
-        folium.PolyLine(
-            locations=[[origin_coords[0], origin_coords[1]], [destination_coords[0], destination_coords[1]]],
-            color='gray',
-            weight=2,
-            opacity=0.5,
-            dash_array='10,10',
-            popup='Distance à vol d\'oiseau'
-        ).add_to(preview_map)
-        
-        # Afficher la carte
-        folium_static(preview_map, width=700, height=400)
-        
-        # Informations sur la distance
-        import math
-        def haversine_distance(lat1, lon1, lat2, lon2):
-            R = 6371  # Rayon de la Terre en km
-            dlat = math.radians(lat2 - lat1)
-            dlon = math.radians(lon2 - lon1)
-            a = math.sin(dlat/2)**2 + math.cos(math.radians(lat1)) * math.cos(math.radians(lat2)) * math.sin(dlon/2)**2
-            c = 2 * math.asin(math.sqrt(a))
-            return R * c
-        
-        distance_km = haversine_distance(origin_coords[0], origin_coords[1], destination_coords[0], destination_coords[1])
-        
-        col1, col2, col3 = st.columns(3)
-        with col1:
-            st.metric("Distance à vol d'oiseau", f"{distance_km:.1f} km")
-        with col2:
-            st.metric("Rayon de recherche", f"{radius_km} km")
-        with col3:
-            estimated_time = distance_km * 0.8  # Estimation grossière
-            st.metric("Temps estimé en transport", f"{estimated_time:.0f} min")
+        if origin_coords and destination_coords:
+            st.subheader("🗺️ Aperçu de vos points sélectionnés")
+            
+            # Créer une carte centrée entre les deux points
+            center_lat = (origin_coords[0] + destination_coords[0]) / 2
+            center_lon = (origin_coords[1] + destination_coords[1]) / 2
+            
+            preview_map = folium.Map(location=[center_lat, center_lon], zoom_start=9)
+            
+            # Ajouter les marqueurs
+            folium.Marker(
+                [origin_coords[0], origin_coords[1]], 
+                popup=f"🟢 Origine<br>{origin_coords[0]:.4f}, {origin_coords[1]:.4f}", 
+                icon=folium.Icon(color='green', icon='play')
+            ).add_to(preview_map)
+            
+            folium.Marker(
+                [destination_coords[0], destination_coords[1]], 
+                popup=f"🔴 Destination<br>{destination_coords[0]:.4f}, {destination_coords[1]:.4f}", 
+                icon=folium.Icon(color='red', icon='stop')
+            ).add_to(preview_map)
+            
+            # Ajouter une ligne droite entre les points pour visualiser
+            folium.PolyLine(
+                locations=[[origin_coords[0], origin_coords[1]], [destination_coords[0], destination_coords[1]]],
+                color='gray',
+                weight=2,
+                opacity=0.5,
+                dash_array='10,10',
+                popup='Distance à vol d\'oiseau'
+            ).add_to(preview_map)
+            
+            # Afficher la carte
+            folium_static(preview_map, width=700, height=400)
+            
+            # Informations sur la distance
+            import math
+            def haversine_distance(lat1, lon1, lat2, lon2):
+                R = 6371  # Rayon de la Terre en km
+                dlat = math.radians(lat2 - lat1)
+                dlon = math.radians(lon2 - lon1)
+                a = math.sin(dlat/2)**2 + math.cos(math.radians(lat1)) * math.cos(math.radians(lat2)) * math.sin(dlon/2)**2
+                c = 2 * math.asin(math.sqrt(a))
+                return R * c
+            
+            distance_km = haversine_distance(origin_coords[0], origin_coords[1], destination_coords[0], destination_coords[1])
+            
+            col1, col2, col3 = st.columns(3)
+            with col1:
+                st.metric("Distance à vol d'oiseau", f"{distance_km:.1f} km")
+            with col2:
+                st.metric("Rayon de recherche", f"{radius_km} km")
+
+        else:
+            st.info("📮 **Géocodez d'abord vos adresses de départ et de destination** pour voir un aperçu sur la carte.")
 
 if __name__ == "__main__":
     main()

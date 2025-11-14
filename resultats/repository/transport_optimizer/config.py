@@ -3,7 +3,7 @@ import logging
 # API Geovelo
 GEOVELO_CONFIG = {
     "base_url": "https://prim.iledefrance-mobilites.fr/marketplace/computedroutes",
-    "api_key": "RIpBwKRzsMAwQAPN2ttH4iE9ISQ7dcEz",
+    "api_key": "GQP6YxRWmagxg9GIFL8oLIeMPpxnMtpP",
     "headers": {
         "Accept": "application/json", 
         "Content-Type": "application/json"
@@ -39,7 +39,7 @@ SPATIAL_CONFIG = {
 
 # Configuration vélo par défaut
 DEFAULT_BIKE_CONFIG = {
-    "profile": "MEDIAN",
+    "profile": "EXPERT",
     "bikeType": "TRADITIONAL", 
     "averageSpeed": 16,
     "eBike": False,
