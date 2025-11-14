@@ -5,8 +5,6 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
-    "boto3>=1.40.72",
-    "duckdb>=1.4.2",
     "folium>=0.20.0",
     "fastexcel>=0.16.0",
     "geopandas>=1.1.1",
@@ -26,5 +24,4 @@ dependencies = [
     "uvicorn>=0.38.0",
     "fastapi>=0.121.2",
     "jupyterlab>=4.4.10",
-    "pydeck>=0.9.1",
 ]

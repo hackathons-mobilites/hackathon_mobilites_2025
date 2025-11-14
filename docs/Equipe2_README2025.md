@@ -4,7 +4,7 @@
 
 Ce projet a été développé dans le cadre du Hackathon Mobilités 2025, organisé par Île-de-France Mobilités les 13 et 14 novembre 2025. Pour en savoir plus, voici le [Guide des participants et participantes](https://github.com/hackathons-mobilites/hackathon_mobilites_2025/).
 
-Ce projet répond au Défi 4 - Accessibilité et confort des usagers des transports publics 
+Ce projet répond au **Défi 4 - Accessibilité et confort des usagers des transports publics**
 
 ### Le problème et la proposition de valeur 
 
@@ -15,17 +15,17 @@ Je peux rentrer à Denfert, mais je ne peux pas sortir de beaucoup d’autres st
 Rendre accessible le réseau de transport en île de France est un vrai défi et va durer plusieurs années. La priorisation des actions est essentielle pour les personnes en charge de la maintenance des équipements et des de celles en charge des programmes de mécanisation ou de rénovation des stations et des gares ainsi que pour le du programme "Métro pour tous".
 
 **Nos usagers cibles** sont  : 
-- les mainteneurs sur le réseau
 - les décideurs des projets de rénovation, de mécanisation et de mise en accessibilité du réseau 
+- les mainteneurs sur le réseau
 
 ### La solution
 Il s'agit d'un démonstrateur agrégeant sur une même carte  : 
 * la facilité d'accès des gares et stations, 
 * les lieux générateurs de flux PMR (établissements spécialisés pour enfance/jeunesse handicapée, établissements et services pour adultes handicapé, établissements hospitaliers, Gares) 
 * les stations et gares sur lesquelles les validations de personnes âgées sont les plus importantes (validations de forfaits améthyste)
-* l'état des ascenseurs et escaliers mécaniques des espaces.
+* des indicateurs d'accessibilité de la station calculés à partir des descriptions textuelles du site métro-connexion
 
-Et calculant (et affichant sur la carte) un indicateur de type **score d'accessibilité** chaque station et gare du réseau afin d'aider les mainteneurs et les décideurs à prioriser les chantiers de rénovation et de mise en accessibilité du réseau.
+Et calculant (et affichant sur la carte) un indicateur de type **score d'accessibilité** de chaque station et gare du réseau afin d'aider les mainteneurs et les décideurs à prioriser les chantiers de rénovation et de mise en accessibilité du réseau.
 
 ## Les données mobilisées :
 
@@ -40,21 +40,27 @@ Par station et par ligne nous avons récupéré le niveau d'accessibilité issu 
 
 ### Données open sources utilisées
 
-1) Référentiel IDFM des stations du réseau (périmètre géographique issu du plan PMR).
+1) [Référentiel IDFM des stations du réseau] (https://data.iledefrance-mobilites.fr/explore/dataset/arrets-lignes/information/?disjunctive.route_long_name&disjunctive.id) (périmètre géographique issu du plan PMR).
 
 2) Jointure avec les noms de stations pour croiser avec les données de Metro Connexion.
 
-3) Metro Connexion  : données de description des trajets de correspondance entre les lignes au sein d'une station.
+3) Metro Connexion  : données de description des trajets de correspondance entre les lignes au sein d'une station mises à disposition gracieusement par IDFM pour ce Hackathon
 
-4) Données de validation : nombre de validations par jour sur l'ensemble des abonnements (améthyste, imagine'R, Navigo, ...) => historique sur 9mois
+4) Données de validation : nombre de validations par jour sur l'ensemble des abonnements (améthyste, imagine'R, Navigo, ...) => historique sur 9 mois : 
+* [Données de validation T1](https://data.iledefrance-mobilites.fr/explore/dataset/validations-reseau-ferre-nombre-validations-par-jour-1er-trimestre/export/)
+* [Données de validation T4](https://data.iledefrance-mobilites.fr/explore/dataset/validations-reseau-ferre-nombre-validations-par-jour-4eme-trimestre/export/)
+* [Données de validation T3](https://data.iledefrance-mobilites.fr/explore/dataset/validations-reseau-ferre-nombre-validations-par-jour-3eme-trimestre/export/)
+* [Données de validation T2](https://data.iledefrance-mobilites.fr/explore/dataset/validations-reseau-ferre-nombre-validations-par-jour-2eme-trimestre/export/)
 
 5) Lieux générateurs de flux PMR (données 2013 avec établissements en construction ou prévus au delà):
-            - Etablissements hospitaliers franciliens 
-            - Etablissements d'accueil d'adultes en situation de handicap
-            - Etablissements d'accueil d'enfants en situation de handicap
-    Coordonnées géographiques de ces lieux pour les associer aux stations les plus proches
+- [Etablissements hospitaliers franciliens] (https://data.iledefrance.fr/explore/dataset/les_etablissements_hospitaliers_franciliens/information/)
+- [Etablissements d'accueil d'adultes en situation de handicap] (https://data.iledefrance.fr/explore/dataset/etablissements_et_services_pour_adultes_handicapes/information/)
+- [Etablissements d'accueil d'enfants en situation de handicap] (https://data.iledefrance.fr/explore/dataset/etablissements_et_services_pour_l_enfance_et_la_jeunesse_handicapee/information/)
+
+Coordonnées géographiques de ces lieux pour les associer aux stations les plus proches.
 
 6) Référentiel des ascenseurs IDFM (13/11/25 20h): [Etat des ascenseurs](https://prim.iledefrance-mobilites.fr/fr/jeux-de-donnees/etat-des-ascenseurs)
+
     Nombre d'ascenseurs par station
 
 ### Données consolidées : 
@@ -66,17 +72,18 @@ Par station et par ligne nous avons récupéré le niveau d'accessibilité issu 
 6) Nombre moyen de mètres à parcourir,  
 7) Nombre d'étapes pour effectuer la correspondance (complexité)
 
-==> toutes ces données par station/ par ligne et géolocalisée (latitude /longitude) 
+==> Toutes ces données par station / par ligne et géolocalisées (latitude /longitude).
 
 ### Calcul du score d'accessibilité : 
-1) Prise en compte des 7 dimensions d'analyse 
-2) Classification par rapprochement de typologie de station (de A à E)
+1) Prise en compte de ces 7 dimensions d'analyse 
+2) Classification par rapprochement de typologie de station (de A à E) :
+_On s'est basé sur un algorithme simple, inspiré de la méthode des k-moyennes. On a décrété 5 profils-types de stations, sur lesquels des actions d'accessibilité sont plus ou moins prioritaires (1er profil : actions très prioritaires, 5e profil : actions peu prioritaires). On calcule ensuite la proximité de nos stations réelles avec ces 5 profils-types. Chaque station est enfin attribuée à la catégorie de son profil-type le plus proche._
 
 ### Les problèmes surmontés et les enjeux en matière de données
 1) Difficulté d'exploitation des données de la carte PMR : 
-    - Première passe LLM
-    - Deuxième passe à la main
-    - Facilité d'accès peut être différente selon la ligne empruntée d'une station
+    * Première passe LLM
+    * Deuxième passe à la main
+    * Facilité d'accès peut être différente selon la ligne empruntée d'une station
 
 2) Extraire les données d'accessibilité d'une correspondance depuis la description textuelle de métro connexion
 
@@ -85,8 +92,6 @@ Par station et par ligne nous avons récupéré le niveau d'accessibilité issu 
 4) Difficile de trouver les données des établissements privés générateurs de flux PMR (EHPAD, hôpitaux, établissements d'accueil de personnes en situation de handicap, ...)
 
 ### Et la suite ? 
-> [!TIP]
-> Ici vous vous projetez sur comment vous auriez aimé développer votre projet si vous aviez eu plus de temps ! (Quel cas d'usage pour la suite ? Quelles ressources à mobiliser ?)
 
 Le démonstrateur pourrait être enrichi avec d'autres sources de données génératrices de flux PMR (EHPAD, Cimetière...) et un état en temps réel des ascenseur (provenant de la GMAO RATP).
 
@@ -99,6 +104,8 @@ Un moteur de recommandations d'actions automatiques pourrait être ajouté et pr
 
 Dans un second temps, en pouvant coupler cet outil à une recherche d'itinéraire, nos usagers cibles pourraient aussi être des personnes en situation de handicap (mental, moteur, visuel, auditif, dû à l'âge) pour leur permettre de trouver des **itinéraires réellement accessibles** (avec des équipements fonctionnels à l'instant t et le parcours dans la station extrait de Metro connexion).
 
+## Implémentation technique
+TODO Julien
 
 ## Installation et utilisation
 
@@ -252,10 +259,8 @@ La pipeline se compose de plusieurs jobs orchestrés dans l’ordre suivant :
 
 ### Utilisation de l'IA / Frugalité
 Nous avons ponctuellement utilisé l'IA pour : 
-
-- Extraire les données de complexité d'une correspondance à partir de la description textuelle de Metro Connexion
-
-- Extraire les données de facilité d'accès de la carte PMR
+* Extraire les données de complexité d'une correspondance à partir de la description textuelle de Metro Connexion
+* Extraire les données de facilité d'accès de la carte PMR
 
 ## La licence
 
