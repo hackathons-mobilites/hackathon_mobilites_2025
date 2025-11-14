@@ -109,6 +109,9 @@ bun run dev
 
 L'application front-end sera disponible à l'adresse http://localhost:5173 (ou un autre port spécifié par Vite).
 
+Par defaut, l'application utilise des données mockées (pour faire une démo). Afin de connecter l'application front au back, if faut set le parametre "useMockData" à "false" dans front/src/config.ts
+
+
 ## La licence
 
 Le code et la documentation de ce projet sont sous licence [MIT](LICENSE).
