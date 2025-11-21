@@ -3,7 +3,7 @@ import logging
 # API Geovelo
 GEOVELO_CONFIG = {
     "base_url": "https://prim.iledefrance-mobilites.fr/marketplace/computedroutes",
-    "api_key": "GQP6YxRWmagxg9GIFL8oLIeMPpxnMtpP",
+    "api_key": "your-api-key",
     "headers": {
         "Accept": "application/json", 
         "Content-Type": "application/json"
@@ -23,7 +23,7 @@ GEOVELO_CONFIG = {
 # Configuration Navitia
 NAVITIA_CONFIG = {
     "base_url": "https://prim.iledefrance-mobilites.fr/marketplace/v2/navitia",
-    "api_key": "RIpBwKRzsMAwQAPN2ttH4iE9ISQ7dcEz",
+    "api_key": "your-api-key",
     "headers": {
         "Accept": "application/json"
     }
