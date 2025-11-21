@@ -1,0 +1,1964 @@
+{
+    "itinerary_velo": [
+        [
+            {
+                "sections": [
+                    {
+                        "transportMode": "BIKE",
+                        "duration": 243,
+                        "waypointsIndices": [
+                            0,
+                            47
+                        ],
+                        "geometry": "}que|AeilmCmEvAa@`@oBn@u@{@{BiCYa@aAoA}[_c@yAoBqBTw[dEiBs@oBq@]dDy@lH?|FcHpp@QrFqBp@aJxCw@ViGhBsJ|CsHhCsFrB^pDp@pG^vCp@nF@hCqErJkC`GkFdLsPv^gBzD{CtGmEbJsBjEkNbZcCrFaBzD{AsC[}@dAoBj@NZHqCxF",
+                        "estimatedDatetimeOfDeparture": "2025-11-14T14: 04: 54.142613", "estimatedDatetimeOfArrival": "2025-11-14T14: 08: 57.142613", "details": {"distances": {"total": 656, "normalRoads": 172, "recommendedRoads": 348, "discouragedRoads": 136, "cycleway": 102, "greenway": 0, "lane": 0, "livingstreet": 0, "sharebusway": 211, "footway": 35, "pedestrian": 0, "opposite": 0, "steps": 0, "zone30": 0, "residential": 156
+                            },
+                            "instructions": "None",
+                            "profile": "MEDIAN",
+                            "direction": "Place de l'Opéra, Rue Auber", "verticalGain": 0, "verticalLoss": 0, "calories": 15797, "elevations": "None", "ridesets": [], "averageSpeed": 15, "bikeType": "TRADITIONAL"
+                        },
+                        "waypoints": [
+                            {
+                                "longitude": 2.33337,
+                                "latitude": 48.868659,
+                                "title": "None"
+                            },
+                            {
+                                "longitude": 2.3296591,
+                                "latitude": 48.8723488,
+                                "title": "None"
+                            }
+                        ]
+                    }
+                ],
+                "distances": {
+                    "total": 656,
+                    "normalRoads": 172,
+                    "recommendedRoads": 348,
+                    "discouragedRoads": 136
+                },
+                "title": "RECOMMENDED",
+                "waypoints": [
+                    {
+                        "longitude": 2.33337,
+                        "latitude": 48.868659,
+                        "title": "None"
+                    },
+                    {
+                        "longitude": 2.3296591,
+                        "latitude": 48.8723488,
+                        "title": "None"
+                    }
+                ],
+                "estimatedDatetimeOfDeparture": "2025-11-14T14: 04: 54.142613",
+                "estimatedDatetimeOfArrival": "2025-11-14T14: 08: 57.142613",
+                "duration": 243,
+                "id": "bG9jPTQ4Ljg2ODY1OTAwMDQ3MDk2LDIuMzMzMzcwMDA0ODk0MTk0JmxvYz00OC44NzIzNDg4NDA3MTgyLDIuMzI5NjU5MTQ5NTc5MzU5I01FRElBTiNGYWxzZSNNRURJQU4jMTUjRmFsc2UjTm9uZSMyMDI1LTExLTE0IDE0OjA0OjU0LjE0MjYxMyNUUkFESVRJT05BTCMwIzAjUkVDT01NRU5ERUQjRmFsc2UjRmFsc2U="
+            },
+            {
+                "sections": [
+                    {
+                        "transportMode": "BIKE",
+                        "duration": 244,
+                        "waypointsIndices": [
+                            0,
+                            47
+                        ],
+                        "geometry": "}que|AeilmCmEvAa@`@oBn@u@{@{BiCYa@aAoA}[_c@yAoBqBTw[dEiBs@oBq@]dDy@lH?|FcHpp@QrFqBp@aJxCw@ViGhBsJ|CsHhCsFrB^pDp@pG^vCp@nF@hCqErJkC`GkFdLsPv^gBzD{CtGmEbJsBjEkNbZcCrFaBzD{AsC[}@dAoBj@NZHqCxF",
+                        "estimatedDatetimeOfDeparture": "2025-11-14T14: 04: 54.142613", "estimatedDatetimeOfArrival": "2025-11-14T14: 08: 58.142613", "details": {"distances": {"total": 656, "normalRoads": 172, "recommendedRoads": 348, "discouragedRoads": 136, "cycleway": 102, "greenway": 0, "lane": 0, "livingstreet": 0, "sharebusway": 211, "footway": 35, "pedestrian": 0, "opposite": 0, "steps": 0, "zone30": 0, "residential": 156
+                            },
+                            "instructions": "None",
+                            "profile": "BEGINNER",
+                            "direction": "Place de l'Opéra, Rue Auber", "verticalGain": 0, "verticalLoss": 0, "calories": 15862, "elevations": "None", "ridesets": [], "averageSpeed": 15, "bikeType": "TRADITIONAL"
+                        },
+                        "waypoints": [
+                            {
+                                "longitude": 2.33337,
+                                "latitude": 48.868659,
+                                "title": "None"
+                            },
+                            {
+                                "longitude": 2.3296591,
+                                "latitude": 48.8723488,
+                                "title": "None"
+                            }
+                        ]
+                    }
+                ],
+                "distances": {
+                    "total": 656,
+                    "normalRoads": 172,
+                    "recommendedRoads": 348,
+                    "discouragedRoads": 136
+                },
+                "title": "SAFER",
+                "waypoints": [
+                    {
+                        "longitude": 2.33337,
+                        "latitude": 48.868659,
+                        "title": "None"
+                    },
+                    {
+                        "longitude": 2.3296591,
+                        "latitude": 48.8723488,
+                        "title": "None"
+                    }
+                ],
+                "estimatedDatetimeOfDeparture": "2025-11-14T14: 04: 54.142613",
+                "estimatedDatetimeOfArrival": "2025-11-14T14: 08: 58.142613",
+                "duration": 244,
+                "id": "bG9jPTQ4Ljg2ODY1OTAwMDQ3MDk2LDIuMzMzMzcwMDA0ODk0MTk0JmxvYz00OC44NzIzNDg4NDA3MTgyLDIuMzI5NjU5MTQ5NTc5MzU5I0JFR0lOTkVSI0ZhbHNlI01FRElBTiMxNSNGYWxzZSNOb25lIzIwMjUtMTEtMTQgMTQ6MDQ6NTQuMTQyNjEzI1RSQURJVElPTkFMIzAjMCNTQUZFUiNGYWxzZSNGYWxzZQ=="
+            },
+            {
+                "sections": [
+                    {
+                        "transportMode": "BIKE",
+                        "duration": 243,
+                        "waypointsIndices": [
+                            0,
+                            47
+                        ],
+                        "geometry": "}que|AeilmCmEvAa@`@oBn@u@{@{BiCYa@aAoA}[_c@yAoBqBTw[dEiBs@oBq@]dDy@lH?|FcHpp@QrFqBp@aJxCw@ViGhBsJ|CsHhCsFrB^pDp@pG^vCp@nF@hCqErJkC`GkFdLsPv^gBzD{CtGmEbJsBjEkNbZcCrFaBzD{AsC[}@dAoBj@NZHqCxF",
+                        "estimatedDatetimeOfDeparture": "2025-11-14T14: 04: 54.142613", "estimatedDatetimeOfArrival": "2025-11-14T14: 08: 57.142613", "details": {"distances": {"total": 656, "normalRoads": 172, "recommendedRoads": 348, "discouragedRoads": 136, "cycleway": 102, "greenway": 0, "lane": 0, "livingstreet": 0, "sharebusway": 211, "footway": 35, "pedestrian": 0, "opposite": 0, "steps": 0, "zone30": 0, "residential": 156
+                            },
+                            "instructions": "None",
+                            "profile": "EXPERT",
+                            "direction": "Place de l'Opéra, Rue Auber", "verticalGain": 0, "verticalLoss": 0, "calories": 15797, "elevations": "None", "ridesets": [], "averageSpeed": 15, "bikeType": "TRADITIONAL"
+                        },
+                        "waypoints": [
+                            {
+                                "longitude": 2.33337,
+                                "latitude": 48.868659,
+                                "title": "None"
+                            },
+                            {
+                                "longitude": 2.3296591,
+                                "latitude": 48.8723488,
+                                "title": "None"
+                            }
+                        ]
+                    }
+                ],
+                "distances": {
+                    "total": 656,
+                    "normalRoads": 172,
+                    "recommendedRoads": 348,
+                    "discouragedRoads": 136
+                },
+                "title": "FASTER",
+                "waypoints": [
+                    {
+                        "longitude": 2.33337,
+                        "latitude": 48.868659,
+                        "title": "None"
+                    },
+                    {
+                        "longitude": 2.3296591,
+                        "latitude": 48.8723488,
+                        "title": "None"
+                    }
+                ],
+                "estimatedDatetimeOfDeparture": "2025-11-14T14: 04: 54.142613",
+                "estimatedDatetimeOfArrival": "2025-11-14T14: 08: 57.142613",
+                "duration": 243,
+                "id": "bG9jPTQ4Ljg2ODY1OTAwMDQ3MDk2LDIuMzMzMzcwMDA0ODk0MTk0JmxvYz00OC44NzIzNDg4NDA3MTgyLDIuMzI5NjU5MTQ5NTc5MzU5I0VYUEVSVCNGYWxzZSNNRURJQU4jMTUjRmFsc2UjTm9uZSMyMDI1LTExLTE0IDE0OjA0OjU0LjE0MjYxMyNUUkFESVRJT05BTCMwIzAjRkFTVEVSI0ZhbHNlI0ZhbHNl"
+            }
+        ],
+        [
+            {
+                "sections": [
+                    {
+                        "transportMode": "BIKE",
+                        "duration": 2114,
+                        "waypointsIndices": [
+                            0,
+                            507
+                        ],
+                        "geometry": "qa}o|A_`}}BgAcCMiCo@aCq@{@{@}Ai@_An@aAjTu]oA{BkAlBoArBeGzJGFI@IAuFiC{Ao@ICM?MHoAtBmAlBiYne@ePdXeAbBwKtQg@x@a@r@Yb@U^GNKXKd@St@[rAUjAYdB}AfGoEjHkBzCk@|@o@dAw@nA_@l@uEpHy^~l@yA`CiBpC_B`AWJWDS?UGMm@Qi@Uc@W_@[[UOGC]Ka@G_@?_@F_@N[R[ZW^Ud@Oh@Ml@Gn@En@IdAMt@YfAYt@i@~@OXsCtEsDdGuCxEmJjO{N|VgChEmG~JsSr\\kMtSsLxRiChE]n@c@z@qDtC{@~@aHzKaQxYqBlFyGtI{@jAyBrCwEjGyHjIkEdFkEnEqHvHuEzE}R`RcEnDk@f@[VyBlBkC|B{ApAm@h@qC`CyIvHyJrIyt@zo@{CvCeCtBaGrFeKpKmAxAsFxGsFpH_CpDeC~DyAfCuAnCgBtDqEzJeBfDYb@YZk@f@c@Xs@Ps@Gs@@q@Lo@ZaAK{@M{@[m@_@}@{@s@y@u@_BmBgEmBwEoA}DkBoGsAsFiCkLeDiOuCkMsDaPyBwIkAwEuBuHeBsFuCoHcDyHyE_MkGuMwCiEmGwMuGoMiDuF{E}GkDkEcDuDaE_EiC_CaFwDuFqD_EkC{CeB}~@_g@q@cCaAeAyB{AcAmA}@oAEcAKcAQ_AW{@Uk@Wi@e@c@{@o@cAYeAAg@Fe@Nu@d@_@`@ORo@lAc@zASfBEhB@RmAj@QRGVB`@PrAJdB?rAOx@If@RPj@d@lBpBh@f@jAdAiH|c@iB`LUpAYbBeVruAaCdP_Pxv@mC~MuIfg@yCh\\wBxY}DvPOxAQvBAbBDfBLbBb@nCyBjA_CbAQFUFa@Eu@UmA_@y@BaATs@f@s@`Ai@pA_AzBa@hBsNvp@}Z~tAig@hzBQpA?nA?pEIzNArEUfG[dB]pD]tD]nCs@tB{@xCw@v@c@f@{@~@}@^gBl@yCnB_C`CkArEcR~y@kIn_@yJpb@sRj|@_@dBcDpOwF~TYnAw@vDo@`EUtBg@bFc@xDy@~Fe@bCqBvIU~@MpAKrACbBCx@Kt@uN~l@oNtl@_DvMsDdIcSv{@_BbHu@hDy@nDkFrUu@bDeMvl@cClH{EfT{E`TeAxHyGzXsOzo@qDbK}A`Ie@fAkDfFYl@_@hAuBtJ]`BaH|a@}QdkAQpC?lCLnCRrC\\bAv@bBvAzBdArCh@bCd@fEP|CLxBLr@R`@r@vAs@`C_@|AiA|DCrBErC_BSaA@s@Ls@Vq@f@eAr@o@V}@XeALcAFy@?aBSkAa@cAc@o@Oq@?wA\\]eAq@eBuA_BuB|JgNdZ}Ptv@WhAiUt`AsKne@y@fNGbm@o@t`@EpCw@vS}BxMyYjk@aa@`z@aFjLeHpXu\\dsAmJh`@kFrTa@bBm@lC_Ojp@oIl]gDrNmKhd@iDlK}BfHuCfHmCxCkv@m_@gFw@cHgAod@uJuh@kU}OcH{PoGek@yQu`@aMmG}A_PPyNcHoGeJsFtgB_@jTArFn@z^PvWlA~^h@zFhA~HdG`_@lIze@RrFGnEa@lGcArIu@hDsBjHiHtRkIhQkEdJqFvOsOh`@gUz_@gIbKk@l@gErEgDdCcEhCuFjAaCT{ADyAKwASQC]Gg@AUHa@`@Yp@Kj@Ip@K^Y~@kA|BcDtFyAzAoElC{I~EuHjEcGlC{Dl@{FNyTDeZsA_BGsZgDoH}Aqp@qTeKqCqIqDyD_C_K{GcLkIYYSa@Qo@[kBkEe\\g@yCQk@Ya@SKUI[Ga@BgBj@qF~CgBhAaBhAcK`HwGnEkDbCqAt@_B^uADkAIyAc@aAk@{@e@iGoDoD{AyDmAkDa@GlEJlCVvCTbA`@h@Kv@oHnn@}MjgAo@hGcFbk@c@rK",
+                        "estimatedDatetimeOfDeparture": "2025-11-14T14: 04: 54.293240", "estimatedDatetimeOfArrival": "2025-11-14T14: 40: 08.293240", "details": {"distances": {"total": 7819, "normalRoads": 2310, "recommendedRoads": 3765, "discouragedRoads": 1744, "cycleway": 543, "greenway": 2292, "lane": 148, "livingstreet": 0, "sharebusway": 681, "footway": 101, "pedestrian": 0, "opposite": 0, "steps": 0, "zone30": 0, "residential": 836
+                                            },
+                                            "instructions": "None",
+                                            "profile": "MEDIAN",
+                                            "direction": "Boulevard de l'Oise, Chaussée Jules César", "verticalGain": 65, "verticalLoss": 65, "calories": 198394, "elevations": "None", "ridesets": [], "averageSpeed": 15, "bikeType": "TRADITIONAL"
+                                        },
+                                        "waypoints": [
+                                            {
+                                                "longitude": 2.0797809,
+                                                "latitude": 49.0363067,
+                                                "title": "None"
+                                            },
+                                            {
+                                                "longitude": 2.0259158,
+                                                "latitude": 49.0757579,
+                                                "title": "None"
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "distances": {
+                                    "total": 7819,
+                                    "normalRoads": 2310,
+                                    "recommendedRoads": 3765,
+                                    "discouragedRoads": 1744
+                                },
+                                "title": "RECOMMENDED",
+                                "waypoints": [
+                                    {
+                                        "longitude": 2.0797809,
+                                        "latitude": 49.0363067,
+                                        "title": "None"
+                                    },
+                                    {
+                                        "longitude": 2.0259158,
+                                        "latitude": 49.0757579,
+                                        "title": "None"
+                                    }
+                                ],
+                                "estimatedDatetimeOfDeparture": "2025-11-14T14: 04: 54.293240",
+                                "estimatedDatetimeOfArrival": "2025-11-14T14: 40: 08.293240",
+                                "duration": 2114,
+                                "id": "bG9jPTQ5LjAzNjMwNjY4MzEzMzk3LDIuMDc5NzgwOTQ5MDAxMzA3JmxvYz00OS4wNzU3NTc4OTk5ODY4LDIuMDI1OTE1OCNNRURJQU4jRmFsc2UjTUVESUFOIzE1I0ZhbHNlI05vbmUjMjAyNS0xMS0xNCAxNDowNDo1NC4yOTMyNDAjVFJBRElUSU9OQUwjMCMwI1JFQ09NTUVOREVEI0ZhbHNlI0ZhbHNl"
+                            },
+                            {
+                                "sections": [
+                                    {
+                                        "transportMode": "BIKE",
+                                        "duration": 2339,
+                                        "waypointsIndices": [
+                                            0,
+                                            501
+                                        ],
+                                        "geometry": "qa
+                                    }o|A_`
+                                }
+                            }BgAcCMiCo@aCq@{@{@
+                                }Ai@_An@aAjTu
+                            ]oA{BkAlBoArBeGzJGFI@IAuFiC{Ao@ICM?MHoAtBmAlBiYne@u@qA
+                                }[~f@
+                                }BtDsBfEQ^wA`DqBzEqB~DsCrEkBpCaH|K_ErG_CbK
+                            }GtLiPnWw@pAeBuD
+                        }DpFGC
+                    ]Ka@G_@?_@F_@N[R[ZW^Ud@Oh@Ml@Gn@En@IdAMt@YfAYt@i@~@OXsCtEsDdGuCxEmJjO{N|VgChEmG~JsSr\\kMtSsLxRiChE
+                            ]n@c@z@qDtC{@~@aHzKaQxYqBlFyGtI{@jAyBrCwEjGyHjIkEdFkEnEqHvHuEzE
+                                }R`RcEnDk@f@[VyBlBkC|B{ApAm@h@qC`CyIvHyJrIyt@zo@{CvCkAqCeKiUgBpCkB`CwBbCgDvCyStPu@Xo@Do@e@Yq@wC_KkDiMsAsEcJqZgPxNkFtE
+                                        }Q|N{@r@wAfAyBwIkAwEuBuHeBsFuCoHcDyHyE_MkGuMwCiEmGwMuGoMiDuF{E
+                                            }GkDkEcDuDaE_EiC_CaFwDuFqD_EkC{CeB
+                                            }~@_g@q@cCaAeAyB{AcAmA
+                                            }@oAEcAKcAQ_AW{@Uk@Wi@e@c@{@o@cAYeAAg@Fe@Nu@d@_@`@ORo@lAc@zASfBEhB@RmAj@QRGVB`@PrAJdB?rAOx@If@RPj@d@lBpBh@f@jAdAiH|c@iB`LUpAYbBeVruAaCdP_Pxv@mC~MuIfg@yCh\\wBxY
+                                                }DvPOxAQvBAbBDfBLbBb@nCyBjA_CbAQFUFa@Eu@UmA_@y@BaATs@f@s@`Ai@pA_AzBa@hBsNvp@
+                                            }Z~tAig@hzBQpA?nA?pEIzNArEUfG[dB
+                                            ]pD
+                                        ]tD
+                                    ]nCs@tB{@xCw@v@c@f@{@~@
+                                        }@^gBl@yCnB_C`CkArEcR~y@kIn_@yJpb@sRj|@_@dBcDpOwF~TYnAw@vDo@`EUtBg@bFc@xDy@~Fe@bCqBvIU~@MpAKrACbBCx@Kt@uN~l@oNtl@_DvMsDdIcSv{@_BbHu@hDy@nDkFrUu@bDeMvl@cClH{EfT{E`TeAxHyGzXsOzo@qDbK
+                                                }A`Ie@fAkDfFYl@_@hAuBtJ
+                                            ]`B
+                                        }Ao@yBa@
+                                    }ID
+                                }BX
+                            }EvCkAp@eFrFwVj\\wHbImK|GuDbAqDEyHaBoBc@sB{EeA_@m@j@[x@m@MqCk@wDc@w\\yFeOmEsMmHeEeBan@k
+                                ]
+                            }CcBqEgCyLwF{BkAAoBWqA
+                            }@iAcAOaA^_@f@Wt@K`@mC
+                        ]kFgAqTNk\\LsEFwZPiC@qEs@wPuDcLgAm@IuB
+                    ]wFwA
+                }BiA
+            }@i@_Ao@aAaAq@eB_@mBOuB?gC@a@xBeJfByMdAaKZcGy@yA_@KeA`@_AlBaBtLMp@uAvJcCnTQrDCvFTlQPlJHfFw@jD_BhCwBt@sBK_SkC
+        }Ec@s^eDcD[ue@iEse@_DaBUkA_A
+        }CaRmAyEyAyC{NgViX_c@cBeBcD{AsDw@gEaBsEq@EdAgDpYaBhVWpDy@lQCPCT{@bG{BxW
+                    }E`VuFhTwg@fdBiKl\\_DfP{AbR_AphAeBp\\yXxbCwF~
+                    ][hBiKda@km@n
+                    }@scAtsAuMfR_OrPeFhDyf@j^oX`WwBdCcJ`M
+                }KhO_GrHiGjHiDnDeFnFiPzMiPfKyHlE{EjB{AlAmCrDiZzr@_G|PkIr
+                    ]mC|LeEhRuDbNyEfTkBlJuAvIkB~L_@vB_AdFk@~DG`BE~CAtM@bd@PnPT~El@jLZ~Ep@zKNzEJxCFhJDvSIbBQvA[tA
+                    ]`At@`B~ClJlB`GtBfHDHpB`Gx@rB^`AhA~BxD`HlBvCR\\pBxCvBnCFFfD~Ch@`@f@RtDd@QrI_BlRsD~QcAnGWdDKhCA~FKfF[`EqAjHaChNs@bEu@fF_@tHCnGT~HVnEf@~EtA~Kb@pBpAm@dMaG`G{BbK
+                        ]|Lb@tFv@~BPc@rK", "estimatedDatetimeOfDeparture": "2025-11-14T14: 04: 54.293240", "estimatedDatetimeOfArrival": "2025-11-14T14: 43: 53.293240", "details": {"distances": {"total": 8169, "normalRoads": 3643, "recommendedRoads": 3383, "discouragedRoads": 1143, "cycleway": 289, "greenway": 1988, "lane": 505, "livingstreet": 0, "sharebusway": 509, "footway": 92, "pedestrian": 0, "opposite": 0, "steps": 0, "zone30": 0, "residential": 1672
+                    },
+                    "instructions": "None",
+                    "profile": "BEGINNER",
+                    "direction": "Rue Henri Léchauguette,  (C 2)",
+                    "verticalGain": 93,
+                    "verticalLoss": 93,
+                    "calories": 239282,
+                    "elevations": "None",
+                    "ridesets": [],
+                    "averageSpeed": 15,
+                    "bikeType": "TRADITIONAL"
+                },
+                "waypoints": [
+                    {
+                        "longitude": 2.0797809,
+                        "latitude": 49.0363067,
+                        "title": "None"
+                    },
+                    {
+                        "longitude": 2.0259158,
+                        "latitude": 49.0757579,
+                        "title": "None"
+                    }
+                ]
+            }
+        ],
+        "distances": {
+            "total": 8169,
+            "normalRoads": 3643,
+            "recommendedRoads": 3383,
+            "discouragedRoads": 1143
+        },
+        "title": "SAFER",
+        "waypoints": [
+            {
+                "longitude": 2.0797809,
+                "latitude": 49.0363067,
+                "title": "None"
+            },
+            {
+                "longitude": 2.0259158,
+                "latitude": 49.0757579,
+                "title": "None"
+            }
+        ],
+        "estimatedDatetimeOfDeparture": "2025-11-14T14: 04: 54.293240",
+        "estimatedDatetimeOfArrival": "2025-11-14T14: 43: 53.293240",
+        "duration": 2339,
+        "id": "bG9jPTQ5LjAzNjMwNjY4MzEzMzk3LDIuMDc5NzgwOTQ5MDAxMzA3JmxvYz00OS4wNzU3NTc4OTk5ODY4LDIuMDI1OTE1OCNCRUdJTk5FUiNGYWxzZSNNRURJQU4jMTUjRmFsc2UjTm9uZSMyMDI1LTExLTE0IDE0OjA0OjU0LjI5MzI0MCNUUkFESVRJT05BTCMwIzAjU0FGRVIjRmFsc2UjRmFsc2U="
+    },
+    {
+        "sections": [
+            {
+                "transportMode": "BIKE",
+                "duration": 2114,
+                "waypointsIndices": [
+                    0,
+                    508
+                ],
+                "geometry": "qa
+            }o|A_`
+        }
+    }BgAcCMiCo@aCq@{@{@
+        }Ai@_An@aAjTu
+    ]oA{BkAlBoArBeGzJGFI@IAuFiC{Ao@ICM?MHoAtBmAlBiYne@ePdXeAbBwKtQg@x@a@r@Yb@U^GNKXKd@St@[rAUjAYdB
+            }AfGoEjHkBzCk@|@o@dAw@nA_@l@uEpHy^~l@yA`CiBpC_B`AWJWDS?UGMm@Qi@Uc@W_@[
+                [UOGC
+                ]Ka@G_@?_@F_@N[R[ZW^Ud@Oh@Ml@Gn@En@IdAMt@YfAYt@i@~@OXsCtEsDdGuCxEmJjO{N|VgChEmG~JsSr\\kMtSsLxRiChE
+                        ]n@c@z@qDtC{@~@aHzKaQxYqBlFyGtI{@jAyBrCwEjGyHjIkEdFkEnEqHvHuEzE
+                            }R`RcEnDk@f@[VyBlBkC|B{ApAm@h@qC`CyIvHyJrIyt@zo@{CvCeCtBaGrFeKpKmAxAsFxGsFpH_CpDeC~DyAfCuAnCgBtDqEzJeBfDYb@YZk@f@c@Xs@Ps@Gs@@q@Lo@ZaAK{@M{@[m@_@
+                                                }@{@s@y@u@_BmBgEmBwEoA
+                                                }DkBoGsAsFiCkLeDiOuCkMsDaPyBwIkAwEuBuHeBsFuCoHcDyHyE_MkGuMwCiEmGwMuGoMiDuF{E
+                                                }GkDkEcDuDaE_EiC_CaFwDuFqD_EkC{CeB
+                                                }~@_g@q@cCaAeAyB{AcAmA
+                                                }@oAEcAKcAQ_AW{@Uk@Wi@e@c@{@o@cAYeAAg@Fe@Nu@d@_@`@ORo@lAc@zASfBEhB@RmAj@QRGVB`@PrAJdB?rAOx@If@RPj@d@lBpBh@f@jAdAiH|c@iB`LUpAYbBeVruAaCdP_Pxv@mC~MuIfg@yCh\\wBxY
+                                                    }DvPOxAQvBAbBDfBLbBb@nCyBjA_CbAQFUFa@Eu@UmA_@y@BaATs@f@s@`Ai@pA_AzBa@hBsNvp@
+                                                }Z~tAig@hzBQpA?nA?pEIzNArEUfG[dB
+                                                ]pD
+                                            ]tD
+                                        ]nCs@tB{@xCw@v@c@f@{@~@
+                                            }@^gBl@yCnB_C`CkArEcR~y@kIn_@yJpb@sRj|@_@dBcDpOwF~TYnAw@vDo@`EUtBg@bFc@xDy@~Fe@bCqBvIU~@MpAKrACbBCx@Kt@uN~l@oNtl@_DvMsDdIcSv{@_BbHu@hDy@nDkFrUu@bDeMvl@cClH{EfT{E`TeAxHyGzXsOzo@qDbK
+                                                    }A`Ie@fAkDfFYl@_@hAuBtJ
+                                                ]`BaH|a@
+                                            }QdkAQpC?lCLnCRrC\\bAv@bBvAzBdArCh@bCd@fEP|CLxBLr@R`@r@vAs@`C_@|AiA|DCrBErC_BSaA@s@Ls@Vq@f@eAr@o@V
+                                        }@XeALcAFy@?aBSkAa@cAc@o@Oq@?wA\\
+                                    ]eAq@eBuA_BuB|JgNdZ
+                                }Ptv@WhAiUt`AsKne@y@fNGbm@o@t`@EpCw@vS
+                            }BxMyYjk@aa@`z@aFjLeHpXu\\dsAmJh`@kFrTa@bBm@lC_Ojp@oIl
+                        ]gDrNmKhd@iDlK
+                    }BfHuCfHmCxCkv@m_@gFw@cHgAod@uJuh@kU
+                }OcH{PoGek@yQu`@aMmG
+                }A_PPyNcHoGeJsFtgB_@jTArFn@z^PvWlA~^h@zFhA~HdG`_@lIze@RrFGnEa@lGcArIu@hDsBjHiHtRkIhQkEdJqFvOsOh`@gUz_@gIbKk@l@gErEgDdCcEhCuFjAaCT{ADyAKwASQC
+                ]Gg@AUHa@`@Yp@Kj@Ip@K^Y~@kA|BcDtFyAzAoElC{I~EuHjEcGlC{Dl@{FNyTDeZsA_BGsZgDoH
+                        }Aqp@qTeKqCqIqDyD_C_K{GcLkIYYSa@Qo@[kBkEe\\g@yCQk@Ya@SKUI[Ga@BgBj@qF~CgBhAaBhAcK`HwGnEkDbCqAt@_B^uADkAIyAc@aAk@{@e@iGoDoD{AyDmAkDa@GlEJlCVvCTbA`@h@Kv@oHnn@
+                                        }MjgAo@hGcFbk@c@rK", "estimatedDatetimeOfDeparture": "2025-11-14T14: 04: 54.293240", "estimatedDatetimeOfArrival": "2025-11-14T14: 40: 08.293240", "details": {"distances": {"total": 7819, "normalRoads": 2310, "recommendedRoads": 3765, "discouragedRoads": 1744, "cycleway": 543, "greenway": 2292, "lane": 148, "livingstreet": 0, "sharebusway": 681, "footway": 101, "pedestrian": 0, "opposite": 0, "steps": 0, "zone30": 0, "residential": 836
+                                    },
+                                    "instructions": "None",
+                                    "profile": "EXPERT",
+                                    "direction": "Boulevard de l"Oise, Chaussée Jules César", "verticalGain": 65, "verticalLoss": 65, "calories": 198394, "elevations": "None", "ridesets": [], "averageSpeed": 15, "bikeType": "TRADITIONAL"
+                                },
+                                "waypoints": [
+                                    {
+                                        "longitude": 2.0797809,
+                                        "latitude": 49.0363067,
+                                        "title": "None"
+                                    },
+                                    {
+                                        "longitude": 2.0259158,
+                                        "latitude": 49.0757579,
+                                        "title": "None"
+                                    }
+                                ]
+                            }
+                        ],
+                        "distances": {
+                            "total": 7819,
+                            "normalRoads": 2310,
+                            "recommendedRoads": 3765,
+                            "discouragedRoads": 1744
+                        },
+                        "title": "FASTER",
+                        "waypoints": [
+                            {
+                                "longitude": 2.0797809,
+                                "latitude": 49.0363067,
+                                "title": "None"
+                            },
+                            {
+                                "longitude": 2.0259158,
+                                "latitude": 49.0757579,
+                                "title": "None"
+                            }
+                        ],
+                        "estimatedDatetimeOfDeparture": "2025-11-14T14: 04: 54.293240",
+                        "estimatedDatetimeOfArrival": "2025-11-14T14: 40: 08.293240",
+                        "duration": 2114,
+                        "id": "bG9jPTQ5LjAzNjMwNjY4MzEzMzk3LDIuMDc5NzgwOTQ5MDAxMzA3JmxvYz00OS4wNzU3NTc4OTk5ODY4LDIuMDI1OTE1OCNFWFBFUlQjRmFsc2UjTUVESUFOIzE1I0ZhbHNlI05vbmUjMjAyNS0xMS0xNCAxNDowNDo1NC4yOTMyNDAjVFJBRElUSU9OQUwjMCMwI0ZBU1RFUiNGYWxzZSNGYWxzZQ=="
+                    }
+                ]
+            ],
+            "itinerary_transport": {
+                "duration": 2690,
+                "nb_transfers": 0,
+                "departure_date_time": "20251114T141419",
+                "arrival_date_time": "20251114T145909",
+                "requested_date_time": "20251114T140452",
+                "type": "best",
+                "status": "SIGNIFICANT_DELAYS",
+                "tags": [
+                    "walking",
+                    "ecologic"
+                ],
+                "co2_emission": {
+                    "value": 160.9390688308,
+                    "unit": "gEC"
+                },
+                "air_pollutants": {
+                    "unit": "g",
+                    "values": {
+                        "nox": 0.0,
+                        "pm": 0.0
+                    }
+                },
+                "durations": {
+                    "total": 2690,
+                    "walking": 575,
+                    "bike": 0,
+                    "car": 0,
+                    "ridesharing": 0,
+                    "taxi": 0
+                },
+                "distances": {
+                    "walking": 598,
+                    "bike": 0,
+                    "car": 0,
+                    "ridesharing": 0,
+                    "taxi": 0
+                },
+                "fare": {
+                    "found": True,
+                    "total": {
+                        "value": "250.0",
+                        "currency": "centime"
+                    },
+                    "links": [
+                        {
+                            "templated": False,
+                            "rel": "tickets",
+                            "internal": True,
+                            "type": "ticket",
+                            "id": "ticket_1_0"
+                        }
+                    ]
+                },
+                "calendars": [
+                    {
+                        "week_pattern": {
+                            "monday": False,
+                            "tuesday": False,
+                            "wednesday": False,
+                            "thursday": False,
+                            "friday": True,
+                            "saturday": False,
+                            "sunday": False
+                        },
+                        "active_periods": [
+                            {
+                                "begin": "20251114",
+                                "end": "20251114"
+                            }
+                        ]
+                    }
+                ],
+                "sections": [
+                    {
+                        "id": "sUaeF6RFocmidkGPNL3j5Y_0",
+                        "duration": 526,
+                        "co2_emission": {
+                            "value": 0.0,
+                            "unit": "gEC"
+                        },
+                        "departure_date_time": "20251114T141419",
+                        "arrival_date_time": "20251114T142305",
+                        "to": {
+                            "id": "stop_point:IDFM:monomodalStopPlace: 45873",
+                            "name": "Auber (Paris)",
+                            "quality": 0,
+                            "stop_point": {
+                                "id": "stop_point:IDFM:monomodalStopPlace: 45873",
+                                "name": "Auber",
+                                "codes": [
+                                    {
+                                        "type": "netex_monomodal_stopplace",
+                                        "value": "monomodalStopPlace: 45873"
+                                    },
+                                    {
+                                        "type": "netex_zder_quay",
+                                        "value": "412806"
+                                    },
+                                    {
+                                        "type": "netex_zder_quay",
+                                        "value": "473924"
+                                    },
+                                    {
+                                        "type": "netex_zder_quay",
+                                        "value": "473925"
+                                    },
+                                    {
+                                        "type": "netex_zder_quay",
+                                        "value": "monomodalStopPlace: 45873"
+                                    },
+                                    {
+                                        "type": "source",
+                                        "value": "FR: :monomodalStopPlace: 45873:FR1"
+                                    }
+                                ],
+                                "label": "Auber (Paris)",
+                                "coord": {
+                                    "lon": "2.329659149579359",
+                                    "lat": "48.8723488407182"
+                                },
+                                "links": [],
+                                "administrative_regions": [
+                                    {
+                                        "id": "admin:fr: 75056",
+                                        "name": "Paris",
+                                        "level": 8,
+                                        "zip_code": "75000;75001;75002;75003;75004;75005;75006;75007;75008;75009;75010;75011;75012;75013;75014;75015;75016;75017;75018;75019;75020;75116",
+                                        "label": "Paris (75000-75116)",
+                                        "insee": "75056",
+                                        "coord": {
+                                            "lon": "2.3483915",
+                                            "lat": "48.8534951"
+                                        }
+                                    },
+                                    {
+                                        "id": "admin:fr: 75109",
+                                        "name": "Paris 9e Arrondissement",
+                                        "level": 9,
+                                        "zip_code": "75009",
+                                        "label": "Paris 9e Arrondissement (75009)",
+                                        "insee": "75109",
+                                        "coord": {
+                                            "lon": "2.339962",
+                                            "lat": "48.876019"
+                                        }
+                                    },
+                                    {
+                                        "id": "admin:admin:osm:relation: 2189601",
+                                        "name": "Quartier de la Chaussée-d"Antin", "level": 10, "zip_code": "75009", "label": "Quartier de la Chaussée-d"Antin (75009)",
+                                        "insee": "",
+                                        "coord": {
+                                            "lon": "2.332270748378339",
+                                            "lat": "48.87354754952364"
+                                        }
+                                    }
+                                ],
+                                "stop_area": {
+                                    "id": "stop_area:IDFM: 478926",
+                                    "name": "Auber",
+                                    "codes": [
+                                        {
+                                            "type": "TN_PA",
+                                            "value": "483"
+                                        },
+                                        {
+                                            "type": "source",
+                                            "value": "FR: :multimodalStopPlace: 478926:FR1"
+                                        }
+                                    ],
+                                    "timezone": "Europe/Paris",
+                                    "label": "Auber (Paris)",
+                                    "coord": {
+                                        "lon": "2.329726949991952",
+                                        "lat": "48.87286449112577"
+                                    },
+                                    "links": []
+                                },
+                                "equipments": [
+                                    "has_wheelchair_boarding"
+                                ],
+                                "address": {
+                                    "id": "2.3296591495793595;48.872348840718196",
+                                    "name": "Rue Auber",
+                                    "house_number": 0,
+                                    "coord": {
+                                        "lon": "2.329659149579359",
+                                        "lat": "48.8723488407182"
+                                    },
+                                    "label": "6B Rue Auber (Paris)"
+                                },
+                                "fare_zone": {
+                                    "name": "1"
+                                }
+                            },
+                            "embedded_type": "stop_point"
+                        },
+                        "from": {
+                            "id": "2.33337;48.868659",
+                            "name": "34 Avenue de l"Opéra (Paris)", "quality": 0, "embedded_type": "address", "address": {"id": "2.33337;48.868659", "coord": {"lon": "2.333370004894194", "lat": "48.86865900047096"
+                        },
+                        "house_number": 34,
+                        "label": "34 Avenue de l"Opéra (Paris)", "name": "34 Avenue de l"Opéra",
+                        "administrative_regions": [
+                            {
+                                "id": "admin:osm:relation: 2189366",
+                                "insee": "",
+                                "name": "Quartier Gaillon",
+                                "label": "Quartier Gaillon (75002)",
+                                "level": 10,
+                                "coord": {
+                                    "lon": "2.333430854098391",
+                                    "lat": "48.869305941542514"
+                                },
+                                "zip_code": "75002"
+                            },
+                            {
+                                "id": "admin:fr: 75056",
+                                "insee": "75056",
+                                "name": "Paris",
+                                "label": "Paris (75000-75116)",
+                                "level": 8,
+                                "coord": {
+                                    "lon": "2.3483915",
+                                    "lat": "48.8534951"
+                                },
+                                "zip_code": "75000-75116"
+                            },
+                            {
+                                "id": "admin:osm:relation: 71525",
+                                "insee": "75",
+                                "name": "Paris",
+                                "label": "Paris",
+                                "level": 6,
+                                "coord": {
+                                    "lon": "2.3483915",
+                                    "lat": "48.8534951"
+                                },
+                                "zip_code": "None"
+                            },
+                            {
+                                "id": "admin:osm:relation: 8649",
+                                "insee": "11",
+                                "name": "Île-de-France",
+                                "label": "Île-de-France",
+                                "level": 4,
+                                "coord": {
+                                    "lon": "2.3483915",
+                                    "lat": "48.8534951"
+                                },
+                                "zip_code": "None"
+                            },
+                            {
+                                "id": "admin:osm:relation: 2202162",
+                                "insee": "",
+                                "name": "France",
+                                "label": "France",
+                                "level": 2,
+                                "coord": {
+                                    "lon": "2.3483915",
+                                    "lat": "48.8534951"
+                                },
+                                "zip_code": "None"
+                            },
+                            {
+                                "id": "admin:osm:relation: 20727",
+                                "insee": "75101",
+                                "name": "Paris 1er Arrondissement",
+                                "label": "Paris 1er Arrondissement (75001)",
+                                "level": 9,
+                                "coord": {
+                                    "lon": "2.334396",
+                                    "lat": "48.8646144"
+                                },
+                                "zip_code": "75001"
+                            }
+                        ]
+                    }
+                },
+                "geojson": {
+                    "type": "LineString",
+                    "coordinates": [
+                        [
+                            2.3333700049,
+                            48.8686590005
+                        ],
+                        [
+                            2.333131,
+                            48.868721
+                        ],
+                        [
+                            2.333103,
+                            48.868796
+                        ],
+                        [
+                            2.333028,
+                            48.868976
+                        ],
+                        [
+                            2.332844,
+                            48.869018
+                        ],
+                        [
+                            2.332733,
+                            48.869042
+                        ],
+                        [
+                            2.33267,
+                            48.869068
+                        ],
+                        [
+                            2.331635,
+                            48.86952
+                        ],
+                        [
+                            2.331518,
+                            48.869572
+                        ],
+                        [
+                            2.33142,
+                            48.869615
+                        ],
+                        [
+                            2.3306,
+                            48.869956
+                        ],
+                        [
+                            2.330521,
+                            48.86999
+                        ],
+                        [
+                            2.330154,
+                            48.870164
+                        ],
+                        [
+                            2.330045,
+                            48.870273
+                        ],
+                        [
+                            2.330001,
+                            48.870405
+                        ],
+                        [
+                            2.329982,
+                            48.870465
+                        ],
+                        [
+                            2.329981,
+                            48.870527
+                        ],
+                        [
+                            2.330497,
+                            48.871597
+                        ],
+                        [
+                            2.330521,
+                            48.871648
+                        ],
+                        [
+                            2.33053,
+                            48.871668
+                        ],
+                        [
+                            2.330584,
+                            48.871778
+                        ],
+                        [
+                            2.330406,
+                            48.871881
+                        ],
+                        [
+                            2.330304,
+                            48.871939
+                        ],
+                        [
+                            2.32995,
+                            48.872139
+                        ],
+                        [
+                            2.3299881185,
+                            48.8721689645
+                        ]
+                    ],
+                    "properties": [
+                        {
+                            "length": 529
+                        }
+                    ]
+                },
+                "mode": "walking",
+                "type": "street_network",
+                "links": [
+                    {
+                        "href": "https: //api-idfm.navitia.io/v1/coverage/idfm/elevations?polyline=erue%7CAsjlmC%7BB%7CMuCv%40gJtCsAnJo%40%7CEs%40%7CBg%5Bt_AgBhFuAbEiTfr%40cA%7CC%7BI%7CUyExEgGvAwBd%40%7BB%40%7BaAg_%40eBo%40g%40Q%7BEkBmEbJsBjEoKbU%7B%40kA",
+                        "templated": False,
+                        "rel": "elevations",
+                        "type": "elevations"
+                    }
+                ],
+                "path": [
+                    {
+                        "length": 30,
+                        "name": "Avenue de l"Opéra", "duration": 29, "direction": 0, "instruction": "Marchez vers le nord sur Avenue de l"Opéra. Continuez sur 30 m.",
+                        "instruction_start_coordinate": {
+                            "lon": "2.333131",
+                            "lat": "48.868721"
+                        }
+                    },
+                    {
+                        "length": 438,
+                        "name": "Rue Daunou",
+                        "duration": 395,
+                        "direction": -56,
+                        "instruction": "Tournez à gauche dans Rue Daunou. Continuez sur 438 m.",
+                        "instruction_start_coordinate": {
+                            "lon": "2.333028",
+                            "lat": "48.868976"
+                        }
+                    },
+                    {
+                        "length": 61,
+                        "name": "Rue Auber",
+                        "duration": 64,
+                        "direction": -67,
+                        "instruction": "Tournez à gauche dans Rue Auber. Continuez sur 61 m.",
+                        "instruction_start_coordinate": {
+                            "lon": "2.330584",
+                            "lat": "48.871778"
+                        }
+                    },
+                    {
+                        "length": 0,
+                        "name": "",
+                        "duration": 0,
+                        "direction": 0,
+                        "instruction": "Vous êtes arrivé à votre destination.",
+                        "instruction_start_coordinate": {
+                            "lon": "2.32995",
+                            "lat": "48.872139"
+                        }
+                    },
+                    {
+                        "length": 31,
+                        "name": "r. Auber",
+                        "duration": 39,
+                        "direction": 0,
+                        "instruction": "Accédez à Auber (Paris) via r. Auber.",
+                        "via_uri": "access_point:IDFM:StopPlaceEntrance:50148555"
+                    }
+                ],
+                "vias": [
+                    {
+                        "id": "access_point:IDFM:StopPlaceEntrance:50148555",
+                        "name": "r. Auber",
+                        "access_point": {
+                            "id": "access_point:IDFM:StopPlaceEntrance:50148555",
+                            "name": "r. Auber",
+                            "coord": {
+                                "lon": "2.329988118494011",
+                                "lat": "48.87216896450126"
+                            },
+                            "access_point_code": "1",
+                            "embedded_type": "pt_access_point"
+                        },
+                        "is_entrance": True,
+                        "is_exit": True,
+                        "length": 31,
+                        "traversal_time": 39,
+                        "pathway_mode": 1
+                    }
+                ]
+            },
+            {
+                "id": "section_0_0_0",
+                "duration": 2115,
+                "co2_emission": {
+                    "value": 160.9390688308,
+                    "unit": "gEC"
+                },
+                "departure_date_time": "20251114T142305",
+                "arrival_date_time": "20251114T145820",
+                "base_departure_date_time": "20251114T142305",
+                "base_arrival_date_time": "20251114T145820",
+                "data_freshness": "base_schedule",
+                "to": {
+                    "id": "stop_point:IDFM:monomodalStopPlace:44559",
+                    "name": "Cergy Préfecture (Cergy)",
+                    "quality": 0,
+                    "stop_point": {
+                        "id": "stop_point:IDFM:monomodalStopPlace:44559",
+                        "name": "Cergy Préfecture",
+                        "codes": [
+                            {
+                                "type": "netex_monomodal_stopplace",
+                                "value": "monomodalStopPlace:44559"
+                            },
+                            {
+                                "type": "netex_zder_quay",
+                                "value": "411352"
+                            },
+                            {
+                                "type": "netex_zder_quay",
+                                "value": "472439"
+                            },
+                            {
+                                "type": "netex_zder_quay",
+                                "value": "472932"
+                            },
+                            {
+                                "type": "netex_zder_quay",
+                                "value": "monomodalStopPlace:44559"
+                            },
+                            {
+                                "type": "source",
+                                "value": "FR::monomodalStopPlace:44559:FR1"
+                            }
+                        ],
+                        "label": "Cergy Préfecture (Cergy)",
+                        "coord": {
+                            "lon": "2.079780949001307",
+                            "lat": "49.03630668313397"
+                        },
+                        "links": [],
+                        "administrative_regions": [
+                            {
+                                "id": "admin:fr:95127",
+                                "name": "Cergy",
+                                "level": 8,
+                                "zip_code": "95000;95800",
+                                "label": "Cergy (95000-95800)",
+                                "insee": "95127",
+                                "coord": {
+                                    "lon": "2.0388736",
+                                    "lat": "49.0527528"
+                                }
+                            },
+                            {
+                                "id": "admin:admin:osm:relation:14352438",
+                                "name": "Grand Centre",
+                                "level": 10,
+                                "zip_code": "",
+                                "label": "Grand Centre",
+                                "insee": "",
+                                "coord": {
+                                    "lon": "2.074918090485015",
+                                    "lat": "49.0376962651574"
+                                }
+                            }
+                        ],
+                        "stop_area": {
+                            "id": "stop_area:IDFM:66696",
+                            "name": "Cergy Préfecture",
+                            "codes": [
+                                {
+                                    "type": "TN_PA",
+                                    "value": "351"
+                                },
+                                {
+                                    "type": "source",
+                                    "value": "FR::multimodalStopPlace:66696:FR1"
+                                }
+                            ],
+                            "timezone": "Europe/Paris",
+                            "label": "Cergy Préfecture (Cergy)",
+                            "coord": {
+                                "lon": "2.080097613845449",
+                                "lat": "49.03657438251047"
+                            },
+                            "links": []
+                        },
+                        "equipments": [
+                            "has_wheelchair_boarding"
+                        ],
+                        "address": {
+                            "id": "2.0797809490013073;49.036306683133965",
+                            "name": "Grand"Place du Général de Gaulle", "house_number": 0, "coord": {"lon": "2.079780949001307", "lat": "49.03630668313397"}, "label": "Grand"Place du Général de Gaulle (Cergy)"
+                        },
+                        "fare_zone": {
+                            "name": "5"
+                        }
+                    },
+                    "embedded_type": "stop_point"
+                },
+                "from": {
+                    "id": "stop_point:IDFM:monomodalStopPlace:45873",
+                    "name": "Auber (Paris)",
+                    "quality": 0,
+                    "stop_point": {
+                        "id": "stop_point:IDFM:monomodalStopPlace:45873",
+                        "name": "Auber",
+                        "codes": [
+                            {
+                                "type": "netex_monomodal_stopplace",
+                                "value": "monomodalStopPlace:45873"
+                            },
+                            {
+                                "type": "netex_zder_quay",
+                                "value": "412806"
+                            },
+                            {
+                                "type": "netex_zder_quay",
+                                "value": "473924"
+                            },
+                            {
+                                "type": "netex_zder_quay",
+                                "value": "473925"
+                            },
+                            {
+                                "type": "netex_zder_quay",
+                                "value": "monomodalStopPlace:45873"
+                            },
+                            {
+                                "type": "source",
+                                "value": "FR::monomodalStopPlace:45873:FR1"
+                            }
+                        ],
+                        "label": "Auber (Paris)",
+                        "coord": {
+                            "lon": "2.329659149579359",
+                            "lat": "48.8723488407182"
+                        },
+                        "links": [],
+                        "administrative_regions": [
+                            {
+                                "id": "admin:fr:75056",
+                                "name": "Paris",
+                                "level": 8,
+                                "zip_code": "75000;75001;75002;75003;75004;75005;75006;75007;75008;75009;75010;75011;75012;75013;75014;75015;75016;75017;75018;75019;75020;75116",
+                                "label": "Paris (75000-75116)",
+                                "insee": "75056",
+                                "coord": {
+                                    "lon": "2.3483915",
+                                    "lat": "48.8534951"
+                                }
+                            },
+                            {
+                                "id": "admin:fr:75109",
+                                "name": "Paris 9e Arrondissement",
+                                "level": 9,
+                                "zip_code": "75009",
+                                "label": "Paris 9e Arrondissement (75009)",
+                                "insee": "75109",
+                                "coord": {
+                                    "lon": "2.339962",
+                                    "lat": "48.876019"
+                                }
+                            },
+                            {
+                                "id": "admin:admin:osm:relation:2189601",
+                                "name": "Quartier de la Chaussée-d"Antin", "level": 10, "zip_code": "75009", "label": "Quartier de la Chaussée-d"Antin (75009)",
+                                "insee": "",
+                                "coord": {
+                                    "lon": "2.332270748378339",
+                                    "lat": "48.87354754952364"
+                                }
+                            }
+                        ],
+                        "stop_area": {
+                            "id": "stop_area:IDFM:478926",
+                            "name": "Auber",
+                            "codes": [
+                                {
+                                    "type": "TN_PA",
+                                    "value": "483"
+                                },
+                                {
+                                    "type": "source",
+                                    "value": "FR::multimodalStopPlace:478926:FR1"
+                                }
+                            ],
+                            "timezone": "Europe/Paris",
+                            "label": "Auber (Paris)",
+                            "coord": {
+                                "lon": "2.329726949991952",
+                                "lat": "48.87286449112577"
+                            },
+                            "links": []
+                        },
+                        "equipments": [
+                            "has_wheelchair_boarding"
+                        ],
+                        "address": {
+                            "id": "2.3296591495793595;48.872348840718196",
+                            "name": "Rue Auber",
+                            "house_number": 0,
+                            "coord": {
+                                "lon": "2.329659149579359",
+                                "lat": "48.8723488407182"
+                            },
+                            "label": "6B Rue Auber (Paris)"
+                        },
+                        "fare_zone": {
+                            "name": "1"
+                        }
+                    },
+                    "embedded_type": "stop_point"
+                },
+                "additional_informations": [
+                    "regular"
+                ],
+                "geojson": {
+                    "type": "LineString",
+                    "coordinates": [
+                        [
+                            2.3296591496,
+                            48.8723488407
+                        ],
+                        [
+                            2.2952314476,
+                            48.8741727596
+                        ],
+                        [
+                            2.2384185963,
+                            48.8922298016
+                        ],
+                        [
+                            2.222986243,
+                            48.8958867731
+                        ],
+                        [
+                            2.1851757042,
+                            48.9203475791
+                        ],
+                        [
+                            2.1572200389,
+                            48.9376952936
+                        ],
+                        [
+                            2.1446722659,
+                            48.9457406075
+                        ],
+                        [
+                            2.0777265247,
+                            48.9706435708
+                        ],
+                        [
+                            2.0746499246,
+                            48.9911562873
+                        ],
+                        [
+                            2.0783488206,
+                            49.0137427594
+                        ],
+                        [
+                            2.079780949,
+                            49.0363066831
+                        ]
+                    ],
+                    "properties": [
+                        {
+                            "length": 29261
+                        }
+                    ]
+                },
+                "type": "public_transport",
+                "display_informations": {
+                    "commercial_mode": "RER",
+                    "network": "RER",
+                    "direction": "Cergy le Haut (Cergy)",
+                    "label": "A",
+                    "color": "EB2132",
+                    "code": "A",
+                    "headsign": "UZAR",
+                    "name": "A",
+                    "links": [
+                        {
+                            "templated": False,
+                            "rel": "disruptions",
+                            "internal": True,
+                            "type": "disruption",
+                            "id": "d7cec5aa-ee3f-4f8d-92af-5a85966b49cc"
+                        },
+                        {
+                            "templated": False,
+                            "rel": "terminus",
+                            "internal": True,
+                            "type": "stop_area",
+                            "id": "stop_area:IDFM:66834"
+                        }
+                    ],
+                    "text_color": "FFFFFF",
+                    "trip_short_name": "UZAR91",
+                    "company": "SNCF",
+                    "description": "",
+                    "physical_mode": "RER",
+                    "equipments": [
+                        "has_wheelchair_accessibility",
+                        "has_air_conditioned"
+                    ]
+                },
+                "links": [
+                    {
+                        "type": "company",
+                        "id": "company:IDFM:800"
+                    },
+                    {
+                        "type": "vehicle_journey",
+                        "id": "vehicle_journey:IDFM:TN:SNCF:1bbe0130-ca52-4423-a0ef-dafc552e4a7a"
+                    },
+                    {
+                        "type": "line",
+                        "id": "line:IDFM:C01742"
+                    },
+                    {
+                        "type": "route",
+                        "id": "route:IDFM:SNCF:67e33873-faad-384a-b9a9-175c5a776e27"
+                    },
+                    {
+                        "type": "commercial_mode",
+                        "id": "commercial_mode:RapidTransit"
+                    },
+                    {
+                        "type": "physical_mode",
+                        "id": "physical_mode:RapidTransit"
+                    },
+                    {
+                        "type": "network",
+                        "id": "network:IDFM:71"
+                    },
+                    {
+                        "templated": False,
+                        "rel": "tickets",
+                        "internal": True,
+                        "type": "ticket",
+                        "id": "ticket_1_0"
+                    }
+                ],
+                "stop_date_times": [
+                    {
+                        "departure_date_time": "20251114T142305",
+                        "base_departure_date_time": "20251114T142305",
+                        "arrival_date_time": "20251114T142225",
+                        "base_arrival_date_time": "20251114T142225",
+                        "stop_point": {
+                            "id": "stop_point:IDFM:monomodalStopPlace:45873",
+                            "name": "Auber",
+                            "codes": [
+                                {
+                                    "type": "netex_monomodal_stopplace",
+                                    "value": "monomodalStopPlace:45873"
+                                },
+                                {
+                                    "type": "netex_zder_quay",
+                                    "value": "412806"
+                                },
+                                {
+                                    "type": "netex_zder_quay",
+                                    "value": "473924"
+                                },
+                                {
+                                    "type": "netex_zder_quay",
+                                    "value": "473925"
+                                },
+                                {
+                                    "type": "netex_zder_quay",
+                                    "value": "monomodalStopPlace:45873"
+                                },
+                                {
+                                    "type": "source",
+                                    "value": "FR::monomodalStopPlace:45873:FR1"
+                                }
+                            ],
+                            "label": "Auber (Paris)",
+                            "coord": {
+                                "lon": "2.329659149579359",
+                                "lat": "48.8723488407182"
+                            },
+                            "links": [],
+                            "equipments": [
+                                "has_wheelchair_boarding"
+                            ],
+                            "address": {
+                                "id": "2.3296591495793595;48.872348840718196",
+                                "name": "Rue Auber",
+                                "house_number": 0,
+                                "coord": {
+                                    "lon": "2.329659149579359",
+                                    "lat": "48.8723488407182"
+                                },
+                                "label": "6B Rue Auber (Paris)"
+                            },
+                            "fare_zone": {
+                                "name": "1"
+                            }
+                        },
+                        "additional_informations": [],
+                        "links": []
+                    },
+                    {
+                        "departure_date_time": "20251114T142611",
+                        "base_departure_date_time": "20251114T142611",
+                        "arrival_date_time": "20251114T142531",
+                        "base_arrival_date_time": "20251114T142531",
+                        "stop_point": {
+                            "id": "stop_point:IDFM:monomodalStopPlace:58759",
+                            "name": "Charles de Gaulle - Etoile",
+                            "codes": [
+                                {
+                                    "type": "netex_monomodal_stopplace",
+                                    "value": "monomodalStopPlace:58759"
+                                },
+                                {
+                                    "type": "netex_zder_quay",
+                                    "value": "412807"
+                                },
+                                {
+                                    "type": "netex_zder_quay",
+                                    "value": "473922"
+                                },
+                                {
+                                    "type": "netex_zder_quay",
+                                    "value": "473923"
+                                },
+                                {
+                                    "type": "netex_zder_quay",
+                                    "value": "monomodalStopPlace:58759"
+                                },
+                                {
+                                    "type": "source",
+                                    "value": "FR::monomodalStopPlace:58759:FR1"
+                                }
+                            ],
+                            "label": "Charles de Gaulle - Etoile (Paris)",
+                            "coord": {
+                                "lon": "2.295231447641207",
+                                "lat": "48.87417275956538"
+                            },
+                            "links": [],
+                            "equipments": [
+                                "has_wheelchair_boarding"
+                            ],
+                            "address": {
+                                "id": "2.295231447641207;48.874172759565376",
+                                "name": "Place Charles de Gaulle",
+                                "house_number": 0,
+                                "coord": {
+                                    "lon": "2.295231447641207",
+                                    "lat": "48.87417275956538"
+                                },
+                                "label": "Place Charles de Gaulle (Paris)"
+                            },
+                            "fare_zone": {
+                                "name": "1"
+                            }
+                        },
+                        "additional_informations": [],
+                        "links": []
+                    },
+                    {
+                        "departure_date_time": "20251114T143014",
+                        "base_departure_date_time": "20251114T143014",
+                        "arrival_date_time": "20251114T142945",
+                        "base_arrival_date_time": "20251114T142945",
+                        "stop_point": {
+                            "id": "stop_point:IDFM:monomodalStopPlace:470549",
+                            "name": "La Défense",
+                            "codes": [
+                                {
+                                    "type": "netex_monomodal_stopplace",
+                                    "value": "monomodalStopPlace:470549"
+                                },
+                                {
+                                    "type": "netex_zder_quay",
+                                    "value": "40951"
+                                },
+                                {
+                                    "type": "netex_zder_quay",
+                                    "value": "470974"
+                                },
+                                {
+                                    "type": "netex_zder_quay",
+                                    "value": "472137"
+                                },
+                                {
+                                    "type": "netex_zder_quay",
+                                    "value": "472283"
+                                },
+                                {
+                                    "type": "netex_zder_quay",
+                                    "value": "473934"
+                                },
+                                {
+                                    "type": "netex_zder_quay",
+                                    "value": "473935"
+                                },
+                                {
+                                    "type": "netex_zder_quay",
+                                    "value": "473936"
+                                },
+                                {
+                                    "type": "netex_zder_quay",
+                                    "value": "473937"
+                                },
+                                {
+                                    "type": "netex_zder_quay",
+                                    "value": "484165"
+                                },
+                                {
+                                    "type": "netex_zder_quay",
+                                    "value": "484166"
+                                },
+                                {
+                                    "type": "netex_zder_quay",
+                                    "value": "monomodalStopPlace:470549"
+                                },
+                                {
+                                    "type": "source",
+                                    "value": "FR::monomodalStopPlace:470549:FR1"
+                                }
+                            ],
+                            "label": "La Défense (Puteaux)",
+                            "coord": {
+                                "lon": "2.238418596250407",
+                                "lat": "48.89222980156821"
+                            },
+                            "links": [],
+                            "equipments": [
+                                "has_wheelchair_boarding"
+                            ],
+                            "address": {
+                                "id": "2.238418596250407;48.892229801568206",
+                                "name": "Parvis de la Défense",
+                                "house_number": 2,
+                                "coord": {
+                                    "lon": "2.238418596250407",
+                                    "lat": "48.89222980156821"
+                                },
+                                "label": "2 Parvis de la Défense (Puteaux)"
+                            },
+                            "fare_zone": {
+                                "name": "3"
+                            }
+                        },
+                        "additional_informations": [],
+                        "links": []
+                    },
+                    {
+                        "departure_date_time": "20251114T143400",
+                        "base_departure_date_time": "20251114T143400",
+                        "arrival_date_time": "20251114T143150",
+                        "base_arrival_date_time": "20251114T143150",
+                        "stop_point": {
+                            "id": "stop_point:IDFM:monomodalStopPlace:43169",
+                            "name": "Nanterre Préfecture",
+                            "codes": [
+                                {
+                                    "type": "netex_monomodal_stopplace",
+                                    "value": "monomodalStopPlace:43169"
+                                },
+                                {
+                                    "type": "netex_zder_quay",
+                                    "value": "40916"
+                                },
+                                {
+                                    "type": "netex_zder_quay",
+                                    "value": "474051"
+                                },
+                                {
+                                    "type": "netex_zder_quay",
+                                    "value": "474052"
+                                },
+                                {
+                                    "type": "netex_zder_quay",
+                                    "value": "474054"
+                                },
+                                {
+                                    "type": "netex_zder_quay",
+                                    "value": "474057"
+                                },
+                                {
+                                    "type": "netex_zder_quay",
+                                    "value": "monomodalStopPlace:43169"
+                                },
+                                {
+                                    "type": "source",
+                                    "value": "FR::monomodalStopPlace:43169:FR1"
+                                }
+                            ],
+                            "label": "Nanterre Préfecture (Nanterre)",
+                            "coord": {
+                                "lon": "2.222986242991368",
+                                "lat": "48.89588677306467"
+                            },
+                            "links": [],
+                            "equipments": [
+                                "has_wheelchair_boarding"
+                            ],
+                            "address": {
+                                "id": "2.2229862429913676;48.895886773064674",
+                                "name": "Esplanade Charles de Gaulle",
+                                "house_number": 6,
+                                "coord": {
+                                    "lon": "2.222986242991368",
+                                    "lat": "48.89588677306467"
+                                },
+                                "label": "6 Esplanade Charles de Gaulle (Nanterre)"
+                            },
+                            "fare_zone": {
+                                "name": "3"
+                            }
+                        },
+                        "additional_informations": [],
+                        "links": []
+                    },
+                    {
+                        "departure_date_time": "20251114T143820",
+                        "base_departure_date_time": "20251114T143820",
+                        "arrival_date_time": "20251114T143750",
+                        "base_arrival_date_time": "20251114T143750",
+                        "stop_point": {
+                            "id": "stop_point:IDFM:monomodalStopPlace:43082",
+                            "name": "Houilles - Carrières-sur-Seine",
+                            "codes": [
+                                {
+                                    "type": "netex_monomodal_stopplace",
+                                    "value": "monomodalStopPlace:43082"
+                                },
+                                {
+                                    "type": "netex_zder_quay",
+                                    "value": "411357"
+                                },
+                                {
+                                    "type": "netex_zder_quay",
+                                    "value": "470891"
+                                },
+                                {
+                                    "type": "netex_zder_quay",
+                                    "value": "471638"
+                                },
+                                {
+                                    "type": "netex_zder_quay",
+                                    "value": "472203"
+                                },
+                                {
+                                    "type": "netex_zder_quay",
+                                    "value": "472389"
+                                },
+                                {
+                                    "type": "netex_zder_quay",
+                                    "value": "472409"
+                                },
+                                {
+                                    "type": "netex_zder_quay",
+                                    "value": "monomodalStopPlace:43082"
+                                },
+                                {
+                                    "type": "source",
+                                    "value": "FR::monomodalStopPlace:43082:FR1"
+                                }
+                            ],
+                            "label": "Houilles - Carrières-sur-Seine (Houilles)",
+                            "coord": {
+                                "lon": "2.185175704201871",
+                                "lat": "48.92034757911033"
+                            },
+                            "links": [],
+                            "equipments": [
+                                "has_wheelchair_boarding"
+                            ],
+                            "address": {
+                                "id": "2.1851757042018707;48.92034757911033",
+                                "name": "Rue du 4 Septembre",
+                                "house_number": 6,
+                                "coord": {
+                                    "lon": "2.185175704201871",
+                                    "lat": "48.92034757911033"
+                                },
+                                "label": "6 Rue du 4 Septembre (Houilles)"
+                            },
+                            "fare_zone": {
+                                "name": "4"
+                            }
+                        },
+                        "additional_informations": [],
+                        "links": []
+                    },
+                    {
+                        "departure_date_time": "20251114T144130",
+                        "base_departure_date_time": "20251114T144130",
+                        "arrival_date_time": "20251114T144100",
+                        "base_arrival_date_time": "20251114T144100",
+                        "stop_point": {
+                            "id": "stop_point:IDFM:monomodalStopPlace:43191",
+                            "name": "Sartrouville",
+                            "codes": [
+                                {
+                                    "type": "netex_monomodal_stopplace",
+                                    "value": "monomodalStopPlace:43191"
+                                },
+                                {
+                                    "type": "netex_zder_quay",
+                                    "value": "411360"
+                                },
+                                {
+                                    "type": "netex_zder_quay",
+                                    "value": "470846"
+                                },
+                                {
+                                    "type": "netex_zder_quay",
+                                    "value": "471244"
+                                },
+                                {
+                                    "type": "netex_zder_quay",
+                                    "value": "471763"
+                                },
+                                {
+                                    "type": "netex_zder_quay",
+                                    "value": "472009"
+                                },
+                                {
+                                    "type": "netex_zder_quay",
+                                    "value": "472440"
+                                },
+                                {
+                                    "type": "netex_zder_quay",
+                                    "value": "480207"
+                                },
+                                {
+                                    "type": "netex_zder_quay",
+                                    "value": "monomodalStopPlace:43191"
+                                },
+                                {
+                                    "type": "source",
+                                    "value": "FR::monomodalStopPlace:43191:FR1"
+                                }
+                            ],
+                            "label": "Sartrouville (Sartrouville)",
+                            "coord": {
+                                "lon": "2.157220038850732",
+                                "lat": "48.93769529363442"
+                            },
+                            "links": [],
+                            "equipments": [
+                                "has_wheelchair_boarding"
+                            ],
+                            "address": {
+                                "id": "2.1572200388507317;48.93769529363442",
+                                "name": "Rue Turgot",
+                                "house_number": 4,
+                                "coord": {
+                                    "lon": "2.157220038850732",
+                                    "lat": "48.93769529363442"
+                                },
+                                "label": "4 Rue Turgot (Sartrouville)"
+                            },
+                            "fare_zone": {
+                                "name": "4"
+                            }
+                        },
+                        "additional_informations": [],
+                        "links": []
+                    },
+                    {
+                        "departure_date_time": "20251114T144330",
+                        "base_departure_date_time": "20251114T144330",
+                        "arrival_date_time": "20251114T144300",
+                        "base_arrival_date_time": "20251114T144300",
+                        "stop_point": {
+                            "id": "stop_point:IDFM:monomodalStopPlace:473109",
+                            "name": "Maisons-Laffitte",
+                            "codes": [
+                                {
+                                    "type": "netex_monomodal_stopplace",
+                                    "value": "monomodalStopPlace:473109"
+                                },
+                                {
+                                    "type": "netex_zder_quay",
+                                    "value": "41527"
+                                },
+                                {
+                                    "type": "netex_zder_quay",
+                                    "value": "470784"
+                                },
+                                {
+                                    "type": "netex_zder_quay",
+                                    "value": "471617"
+                                },
+                                {
+                                    "type": "netex_zder_quay",
+                                    "value": "471907"
+                                },
+                                {
+                                    "type": "netex_zder_quay",
+                                    "value": "472928"
+                                },
+                                {
+                                    "type": "netex_zder_quay",
+                                    "value": "monomodalStopPlace:473109"
+                                },
+                                {
+                                    "type": "source",
+                                    "value": "FR::monomodalStopPlace:473109:FR1"
+                                }
+                            ],
+                            "label": "Maisons-Laffitte (Maisons-Laffitte)",
+                            "coord": {
+                                "lon": "2.144672265933885",
+                                "lat": "48.94574060746957"
+                            },
+                            "links": [],
+                            "equipments": [
+                                "has_wheelchair_boarding"
+                            ],
+                            "address": {
+                                "id": "2.1446722659338855;48.94574060746957",
+                                "name": "Pont Jean Monnet",
+                                "house_number": 0,
+                                "coord": {
+                                    "lon": "2.144672265933885",
+                                    "lat": "48.94574060746957"
+                                },
+                                "label": "Pont Jean Monnet (Maisons-Laffitte)"
+                            },
+                            "fare_zone": {
+                                "name": "4"
+                            }
+                        },
+                        "additional_informations": [],
+                        "links": []
+                    },
+                    {
+                        "departure_date_time": "20251114T144950",
+                        "base_departure_date_time": "20251114T144950",
+                        "arrival_date_time": "20251114T144920",
+                        "base_arrival_date_time": "20251114T144920",
+                        "stop_point": {
+                            "id": "stop_point:IDFM:monomodalStopPlace:46647",
+                            "name": "Achères Ville",
+                            "codes": [
+                                {
+                                    "type": "netex_monomodal_stopplace",
+                                    "value": "monomodalStopPlace:46647"
+                                },
+                                {
+                                    "type": "netex_zder_quay",
+                                    "value": "41528"
+                                },
+                                {
+                                    "type": "netex_zder_quay",
+                                    "value": "471010"
+                                },
+                                {
+                                    "type": "netex_zder_quay",
+                                    "value": "473017"
+                                },
+                                {
+                                    "type": "netex_zder_quay",
+                                    "value": "monomodalStopPlace:46647"
+                                },
+                                {
+                                    "type": "source",
+                                    "value": "FR::monomodalStopPlace:46647:FR1"
+                                }
+                            ],
+                            "label": "Achères Ville (Achères)",
+                            "coord": {
+                                "lon": "2.077726524656543",
+                                "lat": "48.97064357081442"
+                            },
+                            "links": [],
+                            "equipments": [
+                                "has_wheelchair_boarding"
+                            ],
+                            "address": {
+                                "id": "2.0777265246565433;48.970643570814424",
+                                "name": "Rue Camille Jenatzy",
+                                "house_number": 2,
+                                "coord": {
+                                    "lon": "2.077726524656543",
+                                    "lat": "48.97064357081442"
+                                },
+                                "label": "2 Rue Camille Jenatzy (Achères)"
+                            },
+                            "fare_zone": {
+                                "name": "5"
+                            }
+                        },
+                        "additional_informations": [],
+                        "links": []
+                    },
+                    {
+                        "departure_date_time": "20251114T145230",
+                        "base_departure_date_time": "20251114T145230",
+                        "arrival_date_time": "20251114T145200",
+                        "base_arrival_date_time": "20251114T145200",
+                        "stop_point": {
+                            "id": "stop_point:IDFM:monomodalStopPlace:43114",
+                            "name": "Conflans Fin d"Oise", "codes": [{"type": "netex_monomodal_stopplace", "value": "monomodalStopPlace: 43114"}, {"type": "netex_zder_quay", "value": "411350"}, {"type": "netex_zder_quay", "value": "471418"}, {"type": "netex_zder_quay", "value": "471534"}, {"type": "netex_zder_quay", "value": "471751"}, {"type": "netex_zder_quay", "value": "472478"}, {"type": "netex_zder_quay", "value": "monomodalStopPlace: 43114"}, {"type": "source", "value": "FR: :monomodalStopPlace: 43114:FR1"}], "label": "Conflans Fin d"Oise (Conflans-Sainte-Honorine)",
+                            "coord": {
+                                "lon": "2.074649924571019",
+                                "lat": "48.99115628725848"
+                            },
+                            "links": [],
+                            "equipments": [
+                                "has_wheelchair_boarding"
+                            ],
+                            "address": {
+                                "id": "2.0746499245710193;48.991156287258484",
+                                "name": "Rue du Maréchal Maunoury",
+                                "house_number": 73,
+                                "coord": {
+                                    "lon": "2.074649924571019",
+                                    "lat": "48.99115628725848"
+                                },
+                                "label": "73 Rue du Maréchal Maunoury (Conflans-Sainte-Honorine)"
+                            },
+                            "fare_zone": {
+                                "name": "5"
+                            }
+                        },
+                        "additional_informations": [],
+                        "links": []
+                    },
+                    {
+                        "departure_date_time": "20251114T145530",
+                        "base_departure_date_time": "20251114T145530",
+                        "arrival_date_time": "20251114T145500",
+                        "base_arrival_date_time": "20251114T145500",
+                        "stop_point": {
+                            "id": "stop_point:IDFM:monomodalStopPlace:47879",
+                            "name": "Neuville Université",
+                            "codes": [
+                                {
+                                    "type": "netex_monomodal_stopplace",
+                                    "value": "monomodalStopPlace:47879"
+                                },
+                                {
+                                    "type": "netex_zder_quay",
+                                    "value": "411321"
+                                },
+                                {
+                                    "type": "netex_zder_quay",
+                                    "value": "471126"
+                                },
+                                {
+                                    "type": "netex_zder_quay",
+                                    "value": "472481"
+                                },
+                                {
+                                    "type": "netex_zder_quay",
+                                    "value": "monomodalStopPlace:47879"
+                                },
+                                {
+                                    "type": "source",
+                                    "value": "FR::monomodalStopPlace:47879:FR1"
+                                }
+                            ],
+                            "label": "Neuville Université (Neuville-sur-Oise)",
+                            "coord": {
+                                "lon": "2.078348820578231",
+                                "lat": "49.01374275942672"
+                            },
+                            "links": [],
+                            "equipments": [
+                                "has_wheelchair_boarding"
+                            ],
+                            "address": {
+                                "id": "2.078348820578231;49.01374275942672",
+                                "name": "Boulevard Condorcet",
+                                "house_number": 0,
+                                "coord": {
+                                    "lon": "2.078348820578231",
+                                    "lat": "49.01374275942672"
+                                },
+                                "label": "Boulevard Condorcet (Neuville-sur-Oise)"
+                            },
+                            "fare_zone": {
+                                "name": "5"
+                            }
+                        },
+                        "additional_informations": [],
+                        "links": []
+                    },
+                    {
+                        "departure_date_time": "20251114T145850",
+                        "base_departure_date_time": "20251114T145850",
+                        "arrival_date_time": "20251114T145820",
+                        "base_arrival_date_time": "20251114T145820",
+                        "stop_point": {
+                            "id": "stop_point:IDFM:monomodalStopPlace:44559",
+                            "name": "Cergy Préfecture",
+                            "codes": [
+                                {
+                                    "type": "netex_monomodal_stopplace",
+                                    "value": "monomodalStopPlace:44559"
+                                },
+                                {
+                                    "type": "netex_zder_quay",
+                                    "value": "411352"
+                                },
+                                {
+                                    "type": "netex_zder_quay",
+                                    "value": "472439"
+                                },
+                                {
+                                    "type": "netex_zder_quay",
+                                    "value": "472932"
+                                },
+                                {
+                                    "type": "netex_zder_quay",
+                                    "value": "monomodalStopPlace:44559"
+                                },
+                                {
+                                    "type": "source",
+                                    "value": "FR::monomodalStopPlace:44559:FR1"
+                                }
+                            ],
+                            "label": "Cergy Préfecture (Cergy)",
+                            "coord": {
+                                "lon": "2.079780949001307",
+                                "lat": "49.03630668313397"
+                            },
+                            "links": [],
+                            "equipments": [
+                                "has_wheelchair_boarding"
+                            ],
+                            "address": {
+                                "id": "2.0797809490013073;49.036306683133965",
+                                "name": "Grand"Place du Général de Gaulle", "house_number": 0, "coord": {"lon": "2.079780949001307", "lat": "49.03630668313397"}, "label": "Grand"Place du Général de Gaulle (Cergy)"
+                            },
+                            "fare_zone": {
+                                "name": "5"
+                            }
+                        },
+                        "additional_informations": [],
+                        "links": []
+                    }
+                ]
+            },
+            {
+                "id": "fwbnoxuoMdUkyjHBHZT3ZK_0",
+                "duration": 49,
+                "co2_emission": {
+                    "value": 0.0,
+                    "unit": "gEC"
+                },
+                "departure_date_time": "20251114T145820",
+                "arrival_date_time": "20251114T145909",
+                "to": {
+                    "id": "2.080018;49.036721",
+                    "name": "16 Grand"Place - Place du Général de Gaulle (Cergy)", "quality": 0, "embedded_type": "address", "address": {"id": "2.080018;49.036721", "coord": {"lon": "2.080097618840849", "lat": "49.03657438300014"}, "house_number": 16, "label": "16 Grand"Place - Place du Général de Gaulle (Cergy)",
+                    "name": "16 Grand"Place - Place du Général de Gaulle", "administrative_regions": [{"id": "admin:osm:relation: 14352438", "insee": "", "name": "Grand Centre", "label": "Grand Centre", "level": 10, "coord": {"lon": "2.074918087476725", "lat": "49.03769930235835"}, "zip_code": "None"}, {"id": "admin:osm:relation: 7433", "insee": "95", "name": "Val-d"Oise",
+                    "label": "Val-d"Oise", "level": 6, "coord": {"lon": "2.0388736", "lat": "49.0527528"}, "zip_code": "None"}, {"id": "admin:osm:relation: 8649", "insee": "11", "name": "Île-de-France", "label": "Île-de-France", "level": 4, "coord": {"lon": "2.3483915", "lat": "48.8534951"}, "zip_code": "None"}, {"id": "admin:osm:relation: 2202162", "insee": "", "name": "France", "label": "France", "level": 2, "coord": {"lon": "2.3483915", "lat": "48.8534951"}, "zip_code": "None"}, {"id": "admin:fr: 95127", "insee": "95127", "name": "Cergy", "label": "Cergy (95000-95800)", "level": 8, "coord": {"lon": "2.0388736", "lat": "49.0527528"}, "zip_code": "95000-95800"}]}}, "from": {"id": "stop_point:IDFM:monomodalStopPlace: 44559", "name": "Cergy Préfecture (Cergy)", "quality": 0, "stop_point": {"id": "stop_point:IDFM:monomodalStopPlace: 44559", "name": "Cergy Préfecture", "codes": [{"type": "netex_monomodal_stopplace", "value": "monomodalStopPlace: 44559"}, {"type": "netex_zder_quay", "value": "411352"}, {"type": "netex_zder_quay", "value": "472439"}, {"type": "netex_zder_quay", "value": "472932"}, {"type": "netex_zder_quay", "value": "monomodalStopPlace: 44559"}, {"type": "source", "value": "FR: :monomodalStopPlace: 44559:FR1"}], "label": "Cergy Préfecture (Cergy)", "coord": {"lon": "2.079780949001307", "lat": "49.03630668313397"}, "links": [], "administrative_regions": [{"id": "admin:fr: 95127", "name": "Cergy", "level": 8, "zip_code": "95000;95800", "label": "Cergy (95000-95800)", "insee": "95127", "coord": {"lon": "2.0388736", "lat": "49.0527528"}}, {"id": "admin:admin:osm:relation: 14352438", "name": "Grand Centre", "level": 10, "zip_code": "", "label": "Grand Centre", "insee": "", "coord": {"lon": "2.074918090485015", "lat": "49.0376962651574"}}], "stop_area": {"id": "stop_area:IDFM: 66696", "name": "Cergy Préfecture", "codes": [{"type": "TN_PA", "value": "351"}, {"type": "source", "value": "FR: :multimodalStopPlace: 66696:FR1"}], "timezone": "Europe/Paris", "label": "Cergy Préfecture (Cergy)", "coord": {"lon": "2.080097613845449", "lat": "49.03657438251047"}, "links": []}, "equipments": ["has_wheelchair_boarding"], "address": {"id": "2.0797809490013073;49.036306683133965", "name": "Grand"Place du Général de Gaulle",
+                    "house_number": 0,
+                    "coord": {
+                        "lon": "2.079780949001307",
+                        "lat": "49.03630668313397"
+                    },
+                    "label": "Grand"Place du Général de Gaulle (Cergy)"}, "fare_zone": {"name": "5"}}, "embedded_type": "stop_point"}, "geojson": {"type": "LineString", "coordinates": [[2.0795819428, 49.0363456235], [2.079822, 49.036413], [2.079887, 49.036451], [2.079914, 49.036431], [2.07993, 49.036422], [2.079944, 49.036416], [2.07997, 49.036433], [2.080017, 49.036464], [2.080049, 49.036484], [2.0800976188, 49.036574383]], "properties": [{"length": 23}]}, "mode": "walking", "type": "street_network", "links": [{"href": "https: //api-idfm.navitia.io/v1/coverage/idfm/elevations?polyline=sb%7Do%7CA%7Bt%7C%7DBeC_NkAaCf%40u%40P_%40J%5Ba%40s%40%7D%40%7DAg%40_AsDaB", "templated": False, "rel": "elevations", "type": "elevations"}], "path": [{"length": 15, "name": "bd de l"Oise", "duration": 19, "direction": 0, "instruction": "Sortez de Cergy Préfecture (Cergy) via bd de l"Oise.", "via_uri": "access_point:IDFM:StopPlaceEntrance:50170232"}, {"length": 6, "name": "", "duration": 5, "direction": 0, "instruction": "Marchez vers le nord-est sur l"allée. Continuez sur 6 m.", "instruction_start_coordinate": {"lon": "2.079822", "lat": "49.036413"}}, {"length": 6, "name": "", "duration": 5, "direction": 84, "instruction": "Tournez à droite dans l"allée. Continuez sur 6 m.", "instruction_start_coordinate": {"lon": "2.079887", "lat": "49.036451"}}, {"length": 11, "name": "", "duration": 20, "direction": -88, "instruction": "Tournez à gauche dans l"allée. Continuez sur 11 m.", "instruction_start_coordinate": {"lon": "2.079944", "lat": "49.036416"}}, {"length": 0, "name": "", "duration": 0, "direction": 0, "instruction": "Vous êtes arrivé à votre destination.", "instruction_start_coordinate": {"lon": "2.080049", "lat": "49.03648399999999"}}], "vias": [{"id": "access_point:IDFM:StopPlaceEntrance:50170232", "name": "bd de l"Oise", "access_point": {"id": "access_point:IDFM:StopPlaceEntrance:50170232", "name": "bd de l"Oise", "coord": {"lon": "2.079581942758337", "lat": "49.03634562350902"}, "embedded_type": "pt_access_point"}, "is_entrance": True, "is_exit": True, "length": 15, "traversal_time": 19, "pathway_mode": 1}]}], "links": [{"href": "https://api-idfm.navitia.io/v1/coverage/idfm/journeys?allowed_id%5B%5D=stop_point%3AIDFM%3AmonomodalStopPlace%3A45873&allowed_id%5B%5D=stop_point%3AIDFM%3AmonomodalStopPlace%3A44559&datetime=20251114T141419&datetime_representss=20251114T130452&from=2.333370004894194%3B48.86865900047096&to=2.080097618840849%3B49.03657438300014&first_section_mode%5B%5D=walking&last_section_mode%5B%5D=walking&min_nb_transfers=0&direct_path="None"&min_nb_journeys=5&is_journey_schedules=True&_pt_planner=kraken", "templated": False, "rel": "same_journey_schedules", "type": "journeys"}, {"href": "https://api-idfm.navitia.io/v1/coverage/idfm/journeys?allowed_id%5B%5D=stop_point%3AIDFM%3AmonomodalStopPlace%3A45873&allowed_id%5B%5D=stop_point%3AIDFM%3AmonomodalStopPlace%3A44559&datetime=20251114T141419&datetime_representss=20251114T130452&from=2.333370004894194%3B48.86865900047096&to=2.080097618840849%3B49.03657438300014&first_section_mode%5B%5D=walking&last_section_mode%5B%5D=walking&min_nb_transfers=0&direct_path="None"&min_nb_journeys=1&is_journey_schedules=True&count=1", "templated": False, "rel": "this_journey", "type": "journeys"}]}, "itinerary_marche": [{"duration": 6889, "nb_transfers": 0, "departure_date_time": "20251114T140454", "arrival_date_time": "20251114T155943", "requested_date_time": "20251114T140454", "type": "non_pt_walk", "status": "", "tags": ["walking", "non_pt", "non_pt_walking", "ecologic"], "co2_emission": {"value": 0.0, "unit": "gEC"}, "air_pollutants": {"unit": "g", "values": {"nox": 0.0, "pm": 0.0}}, "durations": {"total": 6889, "walking": 6889, "bike": 0, "car": 0, "ridesharing": 0, "taxi": 0}, "distances": {"walking": 7252, "bike": 0, "car": 0, "ridesharing": 0, "taxi": 0}, "fare": {"found": False, "links": []}, "sections": [{"id": "section_0_0", "duration": 6889, "co2_emission": {"value": 0.0, "unit": "gEC"}, "departure_date_time": "20251114T140454", "arrival_date_time": "20251114T155943", "to": {"id": "2.080018;49.036721", "name": "16 Grand"Place - Place du Général de Gaulle (Cergy)", "quality": 0, "embedded_type": "address", "address": {"id": "2.080018;49.036721", "coord": {"lon": "2.080097618840849", "lat": "49.03657438300014"}, "house_number": 16, "label": "16 Grand"Place - Place du Général de Gaulle (Cergy)", "name": "16 Grand"Place - Place du Général de Gaulle", "administrative_regions": [{"id": "admin:osm:relation:14352438", "insee": "", "name": "Grand Centre", "label": "Grand Centre", "level": 10, "coord": {"lon": "2.074918087476725", "lat": "49.03769930235835"}, "zip_code": "None"}, {"id": "admin:osm:relation:7433", "insee": "95", "name": "Val-d"Oise", "label": "Val-d"Oise", "level": 6, "coord": {"lon": "2.0388736", "lat": "49.0527528"}, "zip_code": "None"}, {"id": "admin:osm:relation:8649", "insee": "11", "name": "Île-de-France", "label": "Île-de-France", "level": 4, "coord": {"lon": "2.3483915", "lat": "48.8534951"}, "zip_code": "None"}, {"id": "admin:osm:relation:2202162", "insee": "", "name": "France", "label": "France", "level": 2, "coord": {"lon": "2.3483915", "lat": "48.8534951"}, "zip_code": "None"}, {"id": "admin:fr:95127", "insee": "95127", "name": "Cergy", "label": "Cergy (95000-95800)", "level": 8, "coord": {"lon": "2.0388736", "lat": "49.0527528"}, "zip_code": "95000-95800"}]}}, "from": {"id": "2.025992;49.07589", "name": "2 Avenue de la Gare (Boissy-l"Aillerie)", "quality": 0, "embedded_type": "address", "address": {"id": "2.025992;49.07589", "coord": {"lon": "2.0259158", "lat": "49.0757578999868"}, "house_number": 2, "label": "2 Avenue de la Gare (Boissy-l"Aillerie)", "name": "2 Avenue de la Gare", "administrative_regions": [{"id": "admin:osm:relation:7433", "insee": "95", "name": "Val-d"Oise", "label": "Val-d"Oise", "level": 6, "coord": {"lon": "2.0388736", "lat": "49.0527528"}, "zip_code": "None"}, {"id": "admin:osm:relation:8649", "insee": "11", "name": "Île-de-France", "label": "Île-de-France", "level": 4, "coord": {"lon": "2.3483915", "lat": "48.8534951"}, "zip_code": "None"}, {"id": "admin:osm:relation:2202162", "insee": "", "name": "France", "label": "France", "level": 2, "coord": {"lon": "2.3483915", "lat": "48.8534951"}, "zip_code": "None"}, {"id": "admin:fr:95078", "insee": "95078", "name": "Boissy-l"Aillerie", "label": "Boissy-l"Aillerie (95650)", "level": 8, "coord": {"lon": "2.0291683", "lat": "49.0770562"}, "zip_code": "95650"}]}}, "geojson": {"type": "LineString", "coordinates": [[2.0259158, 49.0757579], [2.026131, 49.075805], [2.026837, 49.075691], [2.02697, 49.075667], [2.028128, 49.075427], [2.028888, 49.075276], [2.028916, 49.07527], [2.028932, 49.07525], [2.029037, 49.075192], [2.029103, 49.075151], [2.029136, 49.075141], [2.029165, 49.075133], [2.029119, 49.075045], [2.029031, 49.074912], [2.029012, 49.074882], [2.02899, 49.074849], [2.028972, 49.074804], [2.028967, 49.074765], [2.02897, 49.074723], [2.028986, 49.074675], [2.029009, 49.074633], [2.029069, 49.074545], [2.029183, 49.074408], [2.029328, 49.074214], [2.029365, 49.074161], [2.029397, 49.074112], [2.029482, 49.073992], [2.029504, 49.07394], [2.029509, 49.073907], [2.029493, 49.073881], [2.029458, 49.073859], [2.029375, 49.073841], [2.029234, 49.073811], [2.028866, 49.073744], [2.028633, 49.073488], [2.028492, 49.073296], [2.028428, 49.073203], [2.028339, 49.073034], [2.028266, 49.072839], [2.027921, 49.072046], [2.027874, 49.071894], [2.02779, 49.071452], [2.027786, 49.071404], [2.027744, 49.070969], [2.027747, 49.07062], [2.027755, 49.070494], [2.027778, 49.0704], [2.027849, 49.07027], [2.027951, 49.070115], [2.028063, 49.069941], [2.028133, 49.069837], [2.02818, 49.069792], [2.028303, 49.069709], [2.028366, 49.069672], [2.028398, 49.069659], [2.028414, 49.069653], [2.028439, 49.069648], [2.028461, 49.069642], [2.028486, 49.069629], [2.028503, 49.069612], [2.028508, 49.069601], [2.028507, 49.069581], [2.028503, 49.069566], [2.028501, 49.069557], [2.028491, 49.069513], [2.028485, 49.069468], [2.028488, 49.069422], [2.028499, 49.069357], [2.028537, 49.069234], [2.028606, 49.069136], [2.028673, 49.069052], [2.028779, 49.068952], [2.028802, 49.06893], [2.028996, 49.068766], [2.029521, 49.06841], [2.030055, 49.068144], [2.030323, 49.068022], [2.030502, 49.067921], [2.030795, 49.067755], [2.03111, 49.067606], [2.03126, 49.067548], [2.031345, 49.067521], [2.031515, 49.067487], [2.03165, 49.06747], [2.031754, 49.067466], [2.031876, 49.067476], [2.032498, 49.067643], [2.033011, 49.067774], [2.033171, 49.067811], [2.033297, 49.067832], [2.033809, 49.067871], [2.034205, 49.06788], [2.034715, 49.067904], [2.034836, 49.067903], [2.035179, 49.067887], [2.036854, 49.067765], [2.036928, 49.067758], [2.037064, 49.067743], [2.037257, 49.067698], [2.037455, 49.067637], [2.03763, 49.067566], [2.038076, 49.067361], [2.038421, 49.067174], [2.039359, 49.066751], [2.040412, 49.066183], [2.040623, 49.066067], [2.041065, 49.065824], [2.041205, 49.065752], [2.04155, 49.065578], [2.041708, 49.065508], [2.041747, 49.065484], [2.041778, 49.065461], [2.041791, 49.065448], [2.041796, 49.065434], [2.041794, 49.065419], [2.041792, 49.065412], [2.041792, 49.065397], [2.041798, 49.065383], [2.04181, 49.065371], [2.041819, 49.065365], [2.041769, 49.065302], [2.041294, 49.064573], [2.041246, 49.064507], [2.041199, 49.064428], [2.041002, 49.06407], [2.040919, 49.063802], [2.040835, 49.063361], [2.040778, 49.062852], [2.040754, 49.06269], [2.040687, 49.062229], [2.040674, 49.061928], [2.040682, 49.061832], [2.040699, 49.061782], [2.040735, 49.061713], [2.040773, 49.061668], [2.040828, 49.06162], [2.040949, 49.061527], [2.041183, 49.061348], [2.041412, 49.061197], [2.041645, 49.060991], [2.041914, 49.060648], [2.042118, 49.060231], [2.042424, 49.059649], [2.042444, 49.059609], [2.042518, 49.059606], [2.043057, 49.059582], [2.043795, 49.059578], [2.044039, 49.059549], [2.044655, 49.059347], [2.045705, 49.05899], [2.045743, 49.058978], [2.046634, 49.058691], [2.047069, 49.058447], [2.047161, 49.05832], [2.047126, 49.058305], [2.047141, 49.058261], [2.047141, 49.058236], [2.047133, 49.058212], [2.047115, 49.058178], [2.047097, 49.05814], [2.047088, 49.058091], [2.047088, 49.058061], [2.047092, 49.058028], [2.047099, 49.057993], [2.047112, 49.057962], [2.047124, 49.057938], [2.04715, 49.057903], [2.04717, 49.057878], [2.047182, 49.057852], [2.047189, 49.057826], [2.04719, 49.057793], [2.047179, 49.057745], [2.047254, 49.057742], [2.047312, 49.05774], [2.047407, 49.057703], [2.047454, 49.057687], [2.047424, 49.057663], [2.047408, 49.057646], [2.047392, 49.057626], [2.047381, 49.057606], [2.047372, 49.05758], [2.047356, 49.057536], [2.04729, 49.057332], [2.047244, 49.057166], [2.047142, 49.056903], [2.047111, 49.056825], [2.047071, 49.056734], [2.047048, 49.05669], [2.047015, 49.056636], [2.046985, 49.056587], [2.046961, 49.056531], [2.046943, 49.056472], [2.046907, 49.056332], [2.046809, 49.055933], [2.046788, 49.055819], [2.046784, 49.055735], [2.046788, 49.05565], [2.046794, 49.055585], [2.046807, 49.055505], [2.046822, 49.055419], [2.04683, 49.055346], [2.046838, 49.055187], [2.046817, 49.054686], [2.046814, 49.054565], [2.046826, 49.054342], [2.046827, 49.054311], [2.046834, 49.054269], [2.046847, 49.054228], [2.046869, 49.054181], [2.046895, 49.054167], [2.046925, 49.054148], [2.046951, 49.054126], [2.046972, 49.054102], [2.046988, 49.054077], [2.046999, 49.05405], [2.047005, 49.054016], [2.047003, 49.053982], [2.046993, 49.053948], [2.046974, 49.053916], [2.046948, 49.053886], [2.046915, 49.05386], [2.046875, 49.053837], [2.046822, 49.053781], [2.046799, 49.053746], [2.046777, 49.053703], [2.046764, 49.053669], [2.046754, 49.053628], [2.046743, 49.053553], [2.046735, 49.05344], [2.046675, 49.052507], [2.046673, 49.052447], [2.046674, 49.052407], [2.046681, 49.052379], [2.046698, 49.052333], [2.046719, 49.052291], [2.046744, 49.052245], [2.046789, 49.052215], [2.046828, 49.052181], [2.046859, 49.052143], [2.046882, 49.052104], [2.046891, 49.052077], [2.04692, 49.05205], [2.046939, 49.052033], [2.046963, 49.052016], [2.046991, 49.052001], [2.04703, 49.051988], [2.047073, 49.05198], [2.047414, 49.051943], [2.047468, 49.051938], [2.047535, 49.051931], [2.04759, 49.051925], [2.047667, 49.051918], [2.049414, 49.051744], [2.049634, 49.051722], [2.049619, 49.051656], [2.049607, 49.051604], [2.04959, 49.051529], [2.049572, 49.051451], [2.049527, 49.051257], [2.049524, 49.05123], [2.049525, 49.051211], [2.049533, 49.051193], [2.049548, 49.051174], [2.049566, 49.051158], [2.049594, 49.051141], [2.050568, 49.050579], [2.050713, 49.050495], [2.050738, 49.05048], [2.05099, 49.050334], [2.051504, 49.050039], [2.051538, 49.050017], [2.051561, 49.049999], [2.051581, 49.049974], [2.0516, 49.049942], [2.051612, 49.049913], [2.051625, 49.049873], [2.051689, 49.049669], [2.051783, 49.049369], [2.051905, 49.04899], [2.052067, 49.048494], [2.052111, 49.048353], [2.052117, 49.048333], [2.052124, 49.04831], [2.052129, 49.048289], [2.052133, 49.048267], [2.052133, 49.048246], [2.052131, 49.048212], [2.052121, 49.048158], [2.052115, 49.04813], [2.052108, 49.048097], [2.052019, 49.04771], [2.052018, 49.047704], [2.052014, 49.047691], [2.052012, 49.047683], [2.052004, 49.047646], [2.052113, 49.047635], [2.05217, 49.04763], [2.052482, 49.047599], [2.053063, 49.047542], [2.053394, 49.047508], [2.054878, 49.04736], [2.055115, 49.047336], [2.055315, 49.047315], [2.055587, 49.047287], [2.055879, 49.047258], [2.056238, 49.047222], [2.056658, 49.04718], [2.059049, 49.04694], [2.05915, 49.04693], [2.059116, 49.046782], [2.059311, 49.046763], [2.060634, 49.046632], [2.060947, 49.046601], [2.061162, 49.046581], [2.061323, 49.046568], [2.061457, 49.046559], [2.061673, 49.046547], [2.06186, 49.04654], [2.062136, 49.046532], [2.062332, 49.046532], [2.062535, 49.046533], [2.062697, 49.046538], [2.062979, 49.046551], [2.063092, 49.046557], [2.063511, 49.046584], [2.06382, 49.046604], [2.064032, 49.046614], [2.064203, 49.046618], [2.064386, 49.046618], [2.064522, 49.046617], [2.064676, 49.04661], [2.064959, 49.046592], [2.06522, 49.046573], [2.065247, 49.046572], [2.065378, 49.046559], [2.065501, 49.046543], [2.06568, 49.04652], [2.06586, 49.046494], [2.066045, 49.046465], [2.066235, 49.046433], [2.066425, 49.046396], [2.066671, 49.046343], [2.066872, 49.046294], [2.067073, 49.046242], [2.067223, 49.046199], [2.067396, 49.046146], [2.06765, 49.046064], [2.067815, 49.046009], [2.067937, 49.04597], [2.068008, 49.045949], [2.068065, 49.045934], [2.068147, 49.045912], [2.068217, 49.045891], [2.068304, 49.045858], [2.068393, 49.045821], [2.068438, 49.045797], [2.068479, 49.045771], [2.06851, 49.045746], [2.06852, 49.045735], [2.068571, 49.045684], [2.06857, 49.04566], [2.068575, 49.045636], [2.068586, 49.045612], [2.068601, 49.04559], [2.068622, 49.04557], [2.068647, 49.045551], [2.068685, 49.045532], [2.068727, 49.045517], [2.068774, 49.045509], [2.068822, 49.045506], [2.068856, 49.045507], [2.068885, 49.0455], [2.068913, 49.045491], [2.068952, 49.045475], [2.069003, 49.04545], [2.069143, 49.045368], [2.06933, 49.045253], [2.06948, 49.045154], [2.069603, 49.045067], [2.069737, 49.044966], [2.069911, 49.044824], [2.070089, 49.044669], [2.070201, 49.044564], [2.07033, 49.044438], [2.070394, 49.04437], [2.070465, 49.044291], [2.070723, 49.044006], [2.071035, 49.043671], [2.071517, 49.043136], [2.071628, 49.043013], [2.071635, 49.043005], [2.071648, 49.042991], [2.071688, 49.042946], [2.071748, 49.042879], [2.071813, 49.042807], [2.071831, 49.042787], [2.071879, 49.042734], [2.071918, 49.042691], [2.072265, 49.042305], [2.072404, 49.04217], [2.072569, 49.042008], [2.072766, 49.041831], [2.07291, 49.041704], [2.073032, 49.041604], [2.073065, 49.041576], [2.07313, 49.041523], [2.073148, 49.041509], [2.07349, 49.041236], [2.073559, 49.041188], [2.07402, 49.040879], [2.074049, 49.040859], [2.074166, 49.040778], [2.074197, 49.040757], [2.074283, 49.040698], [2.074993, 49.040209], [2.075274, 49.040016], [2.075434, 49.039905], [2.075484, 49.039877], [2.075595, 49.039816], [2.075689, 49.039763], [2.075798, 49.039689], [2.076287, 49.039371], [2.076452, 49.039254], [2.076515, 49.03921], [2.076773, 49.039036], [2.076792, 49.039023], [2.076824, 49.038995], [2.076843, 49.038972], [2.076861, 49.038944], [2.076865, 49.038937], [2.076879, 49.038912], [2.076879, 49.038895], [2.076883, 49.038879], [2.07689, 49.038864], [2.0769, 49.038849], [2.076914, 49.038835], [2.076931, 49.038823], [2.07695, 49.038813], [2.076971, 49.038804], [2.076993, 49.038797], [2.077017, 49.038793], [2.077042, 49.038791], [2.07706, 49.038791], [2.077129, 49.038738], [2.077174, 49.038705], [2.077194, 49.038689], [2.078037, 49.038103], [2.07819, 49.037997], [2.078214, 49.037981], [2.078254, 49.037953], [2.078288, 49.037929], [2.07832, 49.037907], [2.078399, 49.037853], [2.078657, 49.037674], [2.078693, 49.037657], [2.078718, 49.037648], [2.078735, 49.03764], [2.078763, 49.037623], [2.078788, 49.037607], [2.07881, 49.037593], [2.079648, 49.037019], [2.080188, 49.03665], [2.080223, 49.036625], [2.0800976188, 49.036574383]], "properties": [{"length": 7252}]}, "mode": "walking", "type": "street_network", "links": [{"href": "https://api-idfm.navitia.io/v1/coverage/idfm/elevations?polyline=%7Bajr%7CAwzszB%7DAmLbFck%40n%40iG~MkgAlHon%40Jw%40f%40_%40rBqEpAcCRaANy%40nDzAhGnDz%40d%40%60Aj%40xAb%40lAHrAE~A_%40rAm%40nDwBpGcFbKaHhBiA%60B_AnFiDfBk%40%60AIr%40%5Ej%40dAb%40dDz%40xGdC~U~NpM~JxGxD~BpIpDdKpCpp%40pTnH%7CArZfD~AFdZrAxTEzFOzDm%40bGmCtHkEzI_FnEkCxA%7DAdDuFhA%7DBX_AJ_%40Hq%40Jk%40Xq%40%60%40a%40TIf%40%40%5CFPBvARxAJzAE%60CUtFkAbEiCfDeCfEsEj%40m%40fIcKfUy_%40rOk%60%40rFwOhEeJjIiQhHuRrBkHt%40iDbAsI%60%40mGFoESsFmI%7Be%40eGa_%40iA_Ii%40%7BFmA__%40QwWo%40%7B%5E%40qF%5EmTrFugBLsC%5CoGxAaKxBkKlC%7DIxK%7BZtJqTlYsy%40nb%40y%60AfFeLdNsZnCwGzIqTjC%7BHn%40mAl%40%7D%40XYZI%5CBLB%5C%3FZKVWJQ%7CBbBpl%40t%5CbC~A%7CC%7CAjUhKvOdDpZfDx%5EpBbIn%40x%5BdCxQX~DObBa%40hCgAxAkA~AmBxDqFdJsMlHiMzKqMlTyO%60YwKjc%40cRnAg%40DsCn%40u%60%40Fcm%40x%40gNrKoe%40hUs%60AVkA%7CPuv%40fNeZ%7CFwD%5CdAvA%5Dp%40%3Fn%40NbAb%40jAb%40%60BPz%40%3F%60AGdAM%7C%40Yn%40WdAs%40p%40g%40r%40Wr%40M%60AA~ATDuCBsBhA%7DD%5E%7DAn%40z%40%60%40%5Ef%40%5Ef%40Tr%40PvA%5EvKbCjIzAlOjEzC%7C%40tDnAvAl%40jB%60A%60Bz%40nBn%40tBb%40vGfA%7CWbEbFh%40fDFhDG%60CK~CYjD%5DpCO%7CHOh%5Eh%40pFD%7CLW%7C%40ArAMpAY%7CAk%40Zs%40d%40%7B%40j%40s%40n%40i%40p%40_%40t%40UbAKbABbAR~%40d%40z%40r%40r%40%60Al%40nAnBhBdAl%40tAj%40bAXpARtCT%60FNhy%40vBvBBnAAv%40MzAa%40rAi%40zAq%40z%40yAbAmAjA%7D%40lAm%40t%40Qt%40y%40%60%40e%40%60%40o%40%5Cw%40XmANuAhAiTHkBLeCJmBLyCzIelBj%40wLbC%5CfBVtC%60%40zCb%40bKxAt%40Dd%40Ab%40Od%40%5D%5Ec%40%60%40w%40bb%40%7B%7B%40fDaH%5Cq%40bHwNlQc_%40j%40cAb%40m%40p%40g%40~%40e%40x%40WnAYvK_CvQ%7BDtVsF~%5DcIxGwAf%40Kl%40Mh%40Ij%40Gh%40%3FbABjBRv%40J%60ALdWpDJ%40XFNBhANTyEHqB%7C%40oRpBic%40bAuSfHw%7BAn%40yMh%40oKv%40_Px%40gQfAmUrAgY~MmtCRiEfHbAd%40eKdGuqA%7C%40qRf%40mLXaIPkGVoLLuJNgP%3FgKAuKIcIYsPKaFu%40eYg%40iRSgLGuI%3FmJ%40oGLsHb%40uPd%40iO%40u%40XeG%5EuFl%40eJr%40gJx%40qJ~%40%7BJhA%7BJhBkN%60BqKfBqKtAkHhByIbD%7BNlBiIlAsFh%40mC%5CqBj%40cDh%40kC%60AmDhAqDn%40yAr%40qAp%40%7D%40TSdBeBn%40%40n%40In%40Uj%40%5Df%40i%40d%40q%40d%40kA%5CsAN%7DAD_BAcALy%40Pw%40%5EmAp%40eBbDwGdFuJdEkHlDuFhEkGzG%7BItHcJpE_FzFaGfC_C%7CCmCxPcO%7CSoRl%60%40c%5DtF%7DENMZYxAoAdCwBnCaCf%40c%40hB_BtAmAbWuTlGuGbIiI%60JiK%7CF_HfEsFv%40aAhBaCZc%40%60PkT~AiChRy%5Bf%40y%40%60DiFh%40%7D%40tBkDp%5Dkk%40%60KqP%7CE_Iv%40cBxB%7DEhB%7BDrCyEzRq%5DhFiIvA%7DBzIcOXe%40v%40_Al%40e%40v%40c%40LGp%40%5B%60%40%3F%5EG%5CM%5CSZ%5BVa%40Re%40Pi%40Lk%40Fo%40Bq%40%3Fc%40hBiC%60AyA%5Eg%40rc%40us%40rEqH%5Eo%40v%40oAn%40cAj%40_AjB%7DCdJcO%60%40gAPq%40Na%40%60%40w%40%5Eq%40Zk%40zb%40ks%40%60Vw%60%40p%40eAdBxF", "templated": False, "rel": "elevations", "type": "elevations"}], "path": [{"length": 212, "name": "Avenue de la Gare", "duration": 186, "direction": 0, "instruction": "Marchez vers l"est sur Avenue de la Gare. Continuez sur 212 m.", "instruction_start_coordinate": {"lon": "2.026131", "lat": "49.075805"}}, {"length": 24, "name": "Avenue de la Gare", "duration": 21, "direction": 26, "instruction": "Restez à droite pour rester sur Avenue de la Gare. Continuez sur 24 m.", "instruction_start_coordinate": {"lon": "2.028916", "lat": "49.07527"}}, {"length": 48, "name": "Rue de la République", "duration": 43, "direction": 75, "instruction": "Tournez à droite dans Rue de la République/D 22. Continuez sur 48 m.", "instruction_start_coordinate": {"lon": "2.029165", "lat": "49.075133"}}, {"length": 99, "name": "Rue Pasteur", "duration": 99, "direction": -32, "instruction": "Restez à gauche dans Rue Pasteur/D 92. Continuez sur 99 m.", "instruction_start_coordinate": {"lon": "2.02897", "lat": "49.074723"}}, {"length": 52, "name": "Rue Pasteur", "duration": 56, "direction": 80, "instruction": "Tournez à droite pour rester sur Rue Pasteur/D 92. Continuez sur 52 m.", "instruction_start_coordinate": {"lon": "2.029509", "lat": "49.073907"}}, {"length": 460, "name": "Rue Pasteur", "duration": 389, "direction": -43, "instruction": "Restez à gauche pour rester sur Rue Pasteur/D 92. Continuez sur 460 m.", "instruction_start_coordinate": {"lon": "2.028866", "lat": "49.073744"}}, {"length": 37, "name": "D 92", "duration": 35, "direction": -20, "instruction": "Restez à gauche pour rester sur D 92. Continuez sur 37 m.", "instruction_start_coordinate": {"lon": "2.02818", "lat": "49.069792"}}, {"length": 1169, "name": "D 92", "duration": 1153, "direction": 53, "instruction": "Restez à droite pour rester sur D 92. Continuez sur 1169 m.", "instruction_start_coordinate": {"lon": "2.028503", "lat": "49.06956599999999"}}, {"length": 19, "name": "D 92", "duration": 19, "direction": 23, "instruction": "Restez à droite pour rester sur D 92. Continuez sur 19 m.", "instruction_start_coordinate": {"lon": "2.041708", "lat": "49.065508"}}, {"length": 690, "name": "Rue de Marines", "duration": 783, "direction": 57, "instruction": "Tournez à droite dans Rue de Marines. Continuez sur 690 m.", "instruction_start_coordinate": {"lon": "2.041819", "lat": "49.065365"}}, {"length": 369, "name": "Chaussée Jules César", "duration": 360, "direction": -67, "instruction": "Tournez à gauche dans Chaussée Jules César. Continuez sur 369 m.", "instruction_start_coordinate": {"lon": "2.042444", "lat": "49.05960899999999"}}, {"length": 16, "name": "Chaussée Jules César", "duration": 19, "direction": 24, "instruction": "Restez à droite pour rester sur Chaussée Jules César. Continuez sur 16 m.", "instruction_start_coordinate": {"lon": "2.047069", "lat": "49.058447"}}, {"length": 3, "name": "", "duration": 3, "direction": 82, "instruction": "Tournez à droite dans l"allée. Continuez sur 3 m.", "instruction_start_coordinate": {"lon": "2.047161", "lat": "49.05831999999999"}}, {"length": 64, "name": "", "duration": 68, "direction": -70, "instruction": "Tournez à gauche. Continuez sur 64 m.", "instruction_start_coordinate": {"lon": "2.047126", "lat": "49.058305"}}, {"length": 21, "name": "", "duration": 21, "direction": -93, "instruction": "Tournez à gauche. Continuez sur 21 m.", "instruction_start_coordinate": {"lon": "2.047179", "lat": "49.057745"}}, {"length": 415, "name": "", "duration": 431, "direction": 83, "instruction": "Tournez à droite. Continuez sur 415 m.", "instruction_start_coordinate": {"lon": "2.047454", "lat": "49.05768699999999"}}, {"length": 26, "name": "", "duration": 23, "direction": 40, "instruction": "Restez à droite à la fourche. Continuez sur 26 m.", "instruction_start_coordinate": {"lon": "2.046999", "lat": "49.05405"}}, {"length": 180, "name": "Boulevard d"Osny", "duration": 177, "direction": -13, "instruction": "Restez à gauche pour prendre Boulevard d"Osny. Continuez sur 180 m.", "instruction_start_coordinate": {"lon": "2.046875", "lat": "49.05383699999999"}}, {"length": 22, "name": "D 14", "duration": 24, "direction": -17, "instruction": "Restez à gauche dans D 14. Continuez sur 22 m.", "instruction_start_coordinate": {"lon": "2.046744", "lat": "49.052245"}}, {"length": 207, "name": "Boulevard de la Paix", "duration": 186, "direction": -7, "instruction": "Restez à gauche pour prendre Boulevard de la Paix/D 14. Continuez sur 207 m.", "instruction_start_coordinate": {"lon": "2.046891", "lat": "49.052077"}}, {"length": 59, "name": "Rue des Champs", "duration": 61, "direction": 90, "instruction": "Tournez à droite dans Rue des Champs. Continuez sur 59 m.", "instruction_start_coordinate": {"lon": "2.049634", "lat": "49.051722"}}, {"length": 465, "name": "Rue des Champs", "duration": 395, "direction": -46, "instruction": "Tournez à gauche pour rester sur Rue des Champs. Continuez sur 465 m.", "instruction_start_coordinate": {"lon": "2.049533", "lat": "49.051193"}}, {"length": 1276, "name": "Boulevard de l"Oise", "duration": 1109, "direction": -89, "instruction": "Tournez à gauche dans Boulevard de l"Oise. Continuez sur 1276 m.", "instruction_start_coordinate": {"lon": "2.052004", "lat": "49.047646"}}, {"length": 17, "name": "Boulevard de l"Oise", "duration": 13, "direction": -51, "instruction": "Tournez à gauche pour rester sur Boulevard de l"Oise. Continuez sur 17 m.", "instruction_start_coordinate": {"lon": "2.068647", "lat": "49.045551"}}, {"length": 777, "name": "Boulevard de l"Oise", "duration": 704, "direction": 13, "instruction": "Restez à droite pour rester sur Boulevard de l"Oise. Continuez sur 777 m.", "instruction_start_coordinate": {"lon": "2.068856", "lat": "49.045507"}}, {"length": 170, "name": "Boulevard de l"Oise", "duration": 174, "direction": -1, "instruction": "Restez à droite pour rester sur Boulevard de l"Oise. Continuez sur 170 m.", "instruction_start_coordinate": {"lon": "2.075274", "lat": "49.04001599999999"}}, {"length": 22, "name": "Boulevard du Port", "duration": 20, "direction": 15, "instruction": "Restez à droite dans Boulevard du Port. Continuez sur 22 m.", "instruction_start_coordinate": {"lon": "2.076879", "lat": "49.038912"}}, {"length": 170, "name": "", "duration": 162, "direction": 46, "instruction": "Tournez à droite. Continuez sur 170 m.", "instruction_start_coordinate": {"lon": "2.07706", "lat": "49.038791"}}, {"length": 163, "name": "", "duration": 156, "direction": -9, "instruction": "Restez à droite à la fourche. Continuez sur 163 m.", "instruction_start_coordinate": {"lon": "2.078657", "lat": "49.037674"}}, {"length": 0, "name": "", "duration": 0, "direction": 0, "instruction": "Vous êtes arrivé à votre destination.", "instruction_start_coordinate": {"lon": "2.080223", "lat": "49.036625"}}]}]}], "meteo_forecast": {"insee": "75056", "cp": 75000, "latitude": 48.8542, "longitude": 2.3574, "datetime": "2025-11-14T13:04:52.606786+00:00", "temp2m": 17, "rh2m": 50, "wind10m": 8, "gust10m": 30, "dirwind10m": 166, "rr10": 0.0, "rr1": 0.0, "probarain": 0, "weather": 43, "probafrost": 0, "probafog": 0, "probawind70": 0, "probawind100": 0, "tsoil1": 15, "tsoil2": 14, "gustx": 30, "iso0": 2730}}
